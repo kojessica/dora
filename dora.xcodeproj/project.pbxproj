@@ -19,6 +19,23 @@
 		126B186118EBAEAB005A8475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B184918EBAEAB005A8475 /* UIKit.framework */; };
 		126B186918EBAEAB005A8475 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 126B186718EBAEAB005A8475 /* InfoPlist.strings */; };
 		126B186B18EBAEAB005A8475 /* doraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 126B186A18EBAEAB005A8475 /* doraTests.m */; };
+		126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126B187618EBB039005A8475 /* GroupPickerViewController.m */; };
+		126B187918EBB039005A8475 /* GroupPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126B187718EBB039005A8475 /* GroupPickerViewController.xib */; };
+		126B187D18EBB153005A8475 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 126B187C18EBB153005A8475 /* User.m */; };
+		126B188218EBB287005A8475 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B188118EBB287005A8475 /* AudioToolbox.framework */; };
+		126B188418EBB296005A8475 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B188318EBB296005A8475 /* CFNetwork.framework */; };
+		126B188618EBB2AC005A8475 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B188518EBB2AC005A8475 /* CoreLocation.framework */; };
+		126B188818EBB2B4005A8475 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B188718EBB2B4005A8475 /* libz.dylib */; };
+		126B188A18EBB2BE005A8475 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B188918EBB2BE005A8475 /* MobileCoreServices.framework */; };
+		126B188C18EBB2C6005A8475 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B188B18EBB2C6005A8475 /* QuartzCore.framework */; };
+		126B188E18EBB2D3005A8475 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B188D18EBB2D3005A8475 /* Security.framework */; };
+		126B189018EBB2DB005A8475 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B188F18EBB2DB005A8475 /* StoreKit.framework */; };
+		126B189218EBB2E5005A8475 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189118EBB2E5005A8475 /* SystemConfiguration.framework */; };
+		126B189618EBBDE7005A8475 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126B189418EBBDE7005A8475 /* HomeViewController.m */; };
+		126B189718EBBDE7005A8475 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126B189518EBBDE7005A8475 /* HomeViewController.xib */; };
+		126B189918EBBF38005A8475 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189818EBBF38005A8475 /* CoreData.framework */; };
+		126B189B18EBC077005A8475 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189A18EBC077005A8475 /* Parse.framework */; };
+		FA0F9C6E5EAA471E8A36CF13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBED152A4FC44210BF13ECC7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +65,27 @@
 		126B186618EBAEAB005A8475 /* doraTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "doraTests-Info.plist"; sourceTree = "<group>"; };
 		126B186818EBAEAB005A8475 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		126B186A18EBAEAB005A8475 /* doraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = doraTests.m; sourceTree = "<group>"; };
+		126B187518EBB039005A8475 /* GroupPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupPickerViewController.h; sourceTree = "<group>"; };
+		126B187618EBB039005A8475 /* GroupPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupPickerViewController.m; sourceTree = "<group>"; };
+		126B187718EBB039005A8475 /* GroupPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupPickerViewController.xib; sourceTree = "<group>"; };
+		126B187B18EBB153005A8475 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		126B187C18EBB153005A8475 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		126B188118EBB287005A8475 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		126B188318EBB296005A8475 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		126B188518EBB2AC005A8475 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		126B188718EBB2B4005A8475 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		126B188918EBB2BE005A8475 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		126B188B18EBB2C6005A8475 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		126B188D18EBB2D3005A8475 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		126B188F18EBB2DB005A8475 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		126B189118EBB2E5005A8475 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		126B189318EBBDE7005A8475 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		126B189418EBBDE7005A8475 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		126B189518EBBDE7005A8475 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		126B189818EBBF38005A8475 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		126B189A18EBC077005A8475 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
+		CBED152A4FC44210BF13ECC7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB384C70D53B426E9E9A171C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +93,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				126B189918EBBF38005A8475 /* CoreData.framework in Frameworks */,
+				126B189218EBB2E5005A8475 /* SystemConfiguration.framework in Frameworks */,
+				126B189018EBB2DB005A8475 /* StoreKit.framework in Frameworks */,
+				126B188E18EBB2D3005A8475 /* Security.framework in Frameworks */,
+				126B189B18EBC077005A8475 /* Parse.framework in Frameworks */,
+				126B188C18EBB2C6005A8475 /* QuartzCore.framework in Frameworks */,
+				126B188A18EBB2BE005A8475 /* MobileCoreServices.framework in Frameworks */,
+				126B188818EBB2B4005A8475 /* libz.dylib in Frameworks */,
+				126B188618EBB2AC005A8475 /* CoreLocation.framework in Frameworks */,
 				126B184818EBAEAB005A8475 /* CoreGraphics.framework in Frameworks */,
+				126B188418EBB296005A8475 /* CFNetwork.framework in Frameworks */,
+				126B188218EBB287005A8475 /* AudioToolbox.framework in Frameworks */,
 				126B184A18EBAEAB005A8475 /* UIKit.framework in Frameworks */,
 				126B184618EBAEAB005A8475 /* Foundation.framework in Frameworks */,
+				FA0F9C6E5EAA471E8A36CF13 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +131,7 @@
 				126B186418EBAEAB005A8475 /* doraTests */,
 				126B184418EBAEAB005A8475 /* Frameworks */,
 				126B184318EBAEAB005A8475 /* Products */,
+				DB384C70D53B426E9E9A171C /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,10 +147,22 @@
 		126B184418EBAEAB005A8475 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				126B189A18EBC077005A8475 /* Parse.framework */,
+				126B189818EBBF38005A8475 /* CoreData.framework */,
+				126B189118EBB2E5005A8475 /* SystemConfiguration.framework */,
+				126B188F18EBB2DB005A8475 /* StoreKit.framework */,
+				126B188D18EBB2D3005A8475 /* Security.framework */,
+				126B188B18EBB2C6005A8475 /* QuartzCore.framework */,
+				126B188918EBB2BE005A8475 /* MobileCoreServices.framework */,
+				126B188718EBB2B4005A8475 /* libz.dylib */,
+				126B188518EBB2AC005A8475 /* CoreLocation.framework */,
+				126B188318EBB296005A8475 /* CFNetwork.framework */,
+				126B188118EBB287005A8475 /* AudioToolbox.framework */,
 				126B184518EBAEAB005A8475 /* Foundation.framework */,
 				126B184718EBAEAB005A8475 /* CoreGraphics.framework */,
 				126B184918EBAEAB005A8475 /* UIKit.framework */,
 				126B185E18EBAEAB005A8475 /* XCTest.framework */,
+				CBED152A4FC44210BF13ECC7 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +170,9 @@
 		126B184B18EBAEAB005A8475 /* dora */ = {
 			isa = PBXGroup;
 			children = (
+				126B187E18EBB187005A8475 /* Client */,
+				126B187A18EBB13D005A8475 /* Models */,
+				126B187418EBAFF3005A8475 /* ViewControllers */,
 				126B185418EBAEAB005A8475 /* AppDelegate.h */,
 				126B185518EBAEAB005A8475 /* AppDelegate.m */,
 				126B185718EBAEAB005A8475 /* Images.xcassets */,
@@ -144,6 +210,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		126B187418EBAFF3005A8475 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				126B187518EBB039005A8475 /* GroupPickerViewController.h */,
+				126B187618EBB039005A8475 /* GroupPickerViewController.m */,
+				126B187718EBB039005A8475 /* GroupPickerViewController.xib */,
+				126B189318EBBDE7005A8475 /* HomeViewController.h */,
+				126B189418EBBDE7005A8475 /* HomeViewController.m */,
+				126B189518EBBDE7005A8475 /* HomeViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		126B187A18EBB13D005A8475 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				126B187B18EBB153005A8475 /* User.h */,
+				126B187C18EBB153005A8475 /* User.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		126B187E18EBB187005A8475 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 126B186E18EBAEAB005A8475 /* Build configuration list for PBXNativeTarget "dora" */;
 			buildPhases = (
+				7E727FB1F8AF4E2BA1F11003 /* Check Pods Manifest.lock */,
 				126B183E18EBAEAB005A8475 /* Sources */,
 				126B183F18EBAEAB005A8475 /* Frameworks */,
 				126B184018EBAEAB005A8475 /* Resources */,
+				A6C96E5F893C47E681F613FF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,6 +318,8 @@
 			files = (
 				126B185018EBAEAB005A8475 /* InfoPlist.strings in Resources */,
 				126B185818EBAEAB005A8475 /* Images.xcassets in Resources */,
+				126B187918EBB039005A8475 /* GroupPickerViewController.xib in Resources */,
+				126B189718EBBDE7005A8475 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,12 +333,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7E727FB1F8AF4E2BA1F11003 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A6C96E5F893C47E681F613FF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		126B183E18EBAEAB005A8475 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				126B187D18EBB153005A8475 /* User.m in Sources */,
+				126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */,
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,
+				126B189618EBBDE7005A8475 /* HomeViewController.m in Sources */,
 				126B185218EBAEAB005A8475 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,12 +491,15 @@
 		};
 		126B186F18EBAEAB005A8475 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB384C70D53B426E9E9A171C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dora/dora-Prefix.pch";
 				INFOPLIST_FILE = "dora/dora-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -369,12 +507,15 @@
 		};
 		126B187018EBAEAB005A8475 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB384C70D53B426E9E9A171C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dora/dora-Prefix.pch";
 				INFOPLIST_FILE = "dora/dora-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -439,6 +580,7 @@
 				126B187018EBAEAB005A8475 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		126B187118EBAEAB005A8475 /* Build configuration list for PBXNativeTarget "doraTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +589,7 @@
 				126B187318EBAEAB005A8475 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

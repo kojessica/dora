@@ -7,13 +7,35 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "User.h"
+#import "GroupPickerViewController.h"
+#import "HomeViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"e5GVHmwRsDeEOS26KVa79eSxxjsHWsVBqsa7L3nu"
+                  clientKey:@"91vZaVvE7tzF99CfrXee3fn65UdkCmU5VqLMcMWf"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    User *currentUser = [User currentUser];
+    if ([User currentUser]) {
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
+        self.window.rootViewController = nav;
+        nav.navigationBar.hidden = YES;
+        NSLog(@"%@", currentUser);
+    } else {
+        [User setCurrentUser];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[GroupPickerViewController alloc] init]];
+        self.window.rootViewController = nav;
+        nav.navigationBar.hidden = YES;
+    }
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

@@ -10,4 +10,11 @@
 
 @interface User : NSObject
 
+@property (nonatomic, strong) NSMutableDictionary *data;
++ (User *)currentUser;
++ (User *)setCurrentUser;
++ (NSDictionary *)currentUserDictionary;
++ (NSString *)setRandomKey;
+- (id)initWithDictionary:(NSDictionary *)data;
+
 @end
