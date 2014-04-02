@@ -7,3 +7,8 @@ Detail view - chats within a group
 Editor view
 Settings view
 Search view
+
+Benchmarking
+Secret
+Whisper
+Breakr
