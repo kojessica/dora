@@ -33,7 +33,6 @@
 		126B189218EBB2E5005A8475 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189118EBB2E5005A8475 /* SystemConfiguration.framework */; };
 		126B189618EBBDE7005A8475 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126B189418EBBDE7005A8475 /* HomeViewController.m */; };
 		126B189718EBBDE7005A8475 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126B189518EBBDE7005A8475 /* HomeViewController.xib */; };
-		126B189918EBBF38005A8475 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189818EBBF38005A8475 /* CoreData.framework */; };
 		126B189B18EBC077005A8475 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189A18EBC077005A8475 /* Parse.framework */; };
 		FA0F9C6E5EAA471E8A36CF13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBED152A4FC44210BF13ECC7 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -93,7 +92,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				126B189918EBBF38005A8475 /* CoreData.framework in Frameworks */,
 				126B189218EBB2E5005A8475 /* SystemConfiguration.framework in Frameworks */,
 				126B189018EBB2DB005A8475 /* StoreKit.framework in Frameworks */,
 				126B188E18EBB2D3005A8475 /* Security.framework in Frameworks */,

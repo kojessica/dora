@@ -19,8 +19,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
-    [Parse setApplicationId:@"e5GVHmwRsDeEOS26KVa79eSxxjsHWsVBqsa7L3nu"
-                  clientKey:@"91vZaVvE7tzF99CfrXee3fn65UdkCmU5VqLMcMWf"];
+    [Parse setApplicationId:@"8bV5UK3dsmvpzryGKdo1ZEPavEpVfneYmx3Qu8S0"
+                  clientKey:@"MylibgnIyThCTzlI9tkU0jDZOGkciX2osY73LKY8"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     User *currentUser = [User currentUser];
