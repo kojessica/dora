@@ -7,14 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CoreLocation/CoreLocation.h"
 
-@interface User : NSObject
+@interface User : NSObject <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *data;
 + (User *)currentUser;
 + (User *)setCurrentUser;
 + (NSDictionary *)currentUserDictionary;
 + (NSString *)setRandomKey;
++ (CLLocationManager *)locationManager;
 - (id)initWithDictionary:(NSDictionary *)data;
 
 @end

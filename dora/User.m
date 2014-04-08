@@ -8,9 +8,15 @@
 
 #import "User.h"
 #import <Parse/Parse.h>
+#import "CoreLocation/CoreLocation.h"
+
+@interface User()
+
+@end
 
 @implementation User
 
+static CLLocationManager *_locationManager;
 static User *currentUser = nil;
 
 - (id)initWithDictionary:(NSMutableDictionary *)data {
@@ -19,6 +25,18 @@ static User *currentUser = nil;
     }
     
     return self;
+}
+
++ (CLLocationManager *)locationManager {
+    if (_locationManager != nil) {
+        return _locationManager;
+    }
+    
+    _locationManager = [[CLLocationManager alloc] init];
+    [_locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
+    [_locationManager setDelegate:self];
+    
+    return _locationManager;
 }
 
 + (User *)currentUser {
@@ -36,9 +54,20 @@ static User *currentUser = nil;
     NSMutableDictionary *dictionary =  [[NSMutableDictionary alloc] init];
     [dictionary setObject:[self setRandomKey] forKey: @"key"];
     [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:dictionary] forKey:@"current_user"];
+
+    [[self locationManager] startUpdatingLocation];
+    CLLocation *location = _locationManager.location;
+    location.timestamp
+    [[self locationManager] stopUpdatingLocation];
+    CLLocationCoordinate2D cooridnate = [location coordinate];
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:cooridnate.latitude longitude:cooridnate.longitude];
+    
     currentUser = [[User alloc] initWithDictionary:dictionary];
     PFObject *user = [PFObject objectWithClassName:@"Users"];
     user[@"key"] = [currentUser.data objectForKey:@"key"];
+    user[@"age"] = [currentUser.data objectForKey:@"age"];
+    user[@"gender"] = [currentUser.data objectForKey:@"gender"];
+    user[@"location"] = geoPoint;
     [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         NSLog(@"saved!");
     }];
