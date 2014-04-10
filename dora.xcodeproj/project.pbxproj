@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1252856618F3A63500E45C86 /* Discussion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252856518F3A63500E45C86 /* Discussion.m */; };
 		1252856918F3A64800E45C86 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252856818F3A64800E45C86 /* Company.m */; };
+		1252858518F5088C00E45C86 /* CustomAutocompleteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252858418F5088C00E45C86 /* CustomAutocompleteObject.m */; };
+		1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252859118F508FB00E45C86 /* CustomAutocompleteCell.m */; };
+		1252859C18F5133A00E45C86 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252859618F5133A00E45C86 /* MLPAutoCompleteTextField.m */; };
+		1252859D18F5133A00E45C86 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252859B18F5133A00E45C86 /* NSString+Levenshtein.m */; };
 		126B184618EBAEAB005A8475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B184518EBAEAB005A8475 /* Foundation.framework */; };
 		126B184818EBAEAB005A8475 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B184718EBAEAB005A8475 /* CoreGraphics.framework */; };
 		126B184A18EBAEAB005A8475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B184918EBAEAB005A8475 /* UIKit.framework */; };
@@ -54,6 +58,17 @@
 		1252856518F3A63500E45C86 /* Discussion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Discussion.m; sourceTree = "<group>"; };
 		1252856718F3A64800E45C86 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
 		1252856818F3A64800E45C86 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
+		1252858318F5088C00E45C86 /* CustomAutocompleteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAutocompleteObject.h; sourceTree = "<group>"; };
+		1252858418F5088C00E45C86 /* CustomAutocompleteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAutocompleteObject.m; sourceTree = "<group>"; };
+		1252859018F508FB00E45C86 /* CustomAutocompleteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAutocompleteCell.h; sourceTree = "<group>"; };
+		1252859118F508FB00E45C86 /* CustomAutocompleteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAutocompleteCell.m; sourceTree = "<group>"; };
+		1252859518F5133A00E45C86 /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPAutoCompleteTextField.h; path = Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.h; sourceTree = SOURCE_ROOT; };
+		1252859618F5133A00E45C86 /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLPAutoCompleteTextField.m; path = Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m; sourceTree = SOURCE_ROOT; };
+		1252859718F5133A00E45C86 /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPAutoCompleteTextFieldDataSource.h; path = Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextFieldDataSource.h; sourceTree = SOURCE_ROOT; };
+		1252859818F5133A00E45C86 /* MLPAutoCompleteTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPAutoCompleteTextFieldDelegate.h; path = Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextFieldDelegate.h; sourceTree = SOURCE_ROOT; };
+		1252859918F5133A00E45C86 /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPAutoCompletionObject.h; path = Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompletionObject.h; sourceTree = SOURCE_ROOT; };
+		1252859A18F5133A00E45C86 /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Levenshtein.h"; path = "Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.h"; sourceTree = SOURCE_ROOT; };
+		1252859B18F5133A00E45C86 /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Levenshtein.m"; path = "Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m"; sourceTree = SOURCE_ROOT; };
 		126B184218EBAEAB005A8475 /* dora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		126B184518EBAEAB005A8475 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		126B184718EBAEAB005A8475 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +143,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1252858218F5087300E45C86 /* Autocomplete */ = {
+			isa = PBXGroup;
+			children = (
+				1252859518F5133A00E45C86 /* MLPAutoCompleteTextField.h */,
+				1252859618F5133A00E45C86 /* MLPAutoCompleteTextField.m */,
+				1252859718F5133A00E45C86 /* MLPAutoCompleteTextFieldDataSource.h */,
+				1252859818F5133A00E45C86 /* MLPAutoCompleteTextFieldDelegate.h */,
+				1252859918F5133A00E45C86 /* MLPAutoCompletionObject.h */,
+				1252859A18F5133A00E45C86 /* NSString+Levenshtein.h */,
+				1252859B18F5133A00E45C86 /* NSString+Levenshtein.m */,
+				1252858318F5088C00E45C86 /* CustomAutocompleteObject.h */,
+				1252858418F5088C00E45C86 /* CustomAutocompleteObject.m */,
+				1252859018F508FB00E45C86 /* CustomAutocompleteCell.h */,
+				1252859118F508FB00E45C86 /* CustomAutocompleteCell.m */,
+			);
+			name = Autocomplete;
+			sourceTree = "<group>";
+		};
 		126B183918EBAEAB005A8475 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +207,7 @@
 		126B184B18EBAEAB005A8475 /* dora */ = {
 			isa = PBXGroup;
 			children = (
+				1252858218F5087300E45C86 /* Autocomplete */,
 				126B187E18EBB187005A8475 /* Client */,
 				126B187A18EBB13D005A8475 /* Models */,
 				126B187418EBAFF3005A8475 /* ViewControllers */,
@@ -380,12 +414,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				126B187D18EBB153005A8475 /* User.m in Sources */,
+				1252858518F5088C00E45C86 /* CustomAutocompleteObject.m in Sources */,
+				1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */,
 				1252856618F3A63500E45C86 /* Discussion.m in Sources */,
 				126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */,
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,
 				126B189618EBBDE7005A8475 /* HomeViewController.m in Sources */,
 				126B185218EBAEAB005A8475 /* main.m in Sources */,
 				1252856918F3A64800E45C86 /* Company.m in Sources */,
+				1252859C18F5133A00E45C86 /* MLPAutoCompleteTextField.m in Sources */,
+				1252859D18F5133A00E45C86 /* NSString+Levenshtein.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

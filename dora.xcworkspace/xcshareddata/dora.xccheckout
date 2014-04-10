@@ -10,6 +10,8 @@
 	<string>dora</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>4A31409B-99BC-43A6-A05A-887827BD16A0</key>
+		<string>git://github.com/TarasRoshko/TRAutocompleteView.git</string>
 		<key>6A267C34-AD8D-4C49-8759-8AA2DAD709CA</key>
 		<string>https://github.com/kojessica/dora.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>dora.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>4A31409B-99BC-43A6-A05A-887827BD16A0</key>
+		<string>../thirdparty/TRAutocompleteView</string>
 		<key>6A267C34-AD8D-4C49-8759-8AA2DAD709CA</key>
 		<string>..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>6A267C34-AD8D-4C49-8759-8AA2DAD709CA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>dora</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4A31409B-99BC-43A6-A05A-887827BD16A0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TRAutocompleteView</string>
 		</dict>
 	</array>
 </dict>

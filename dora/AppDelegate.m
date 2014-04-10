@@ -11,6 +11,7 @@
 #import "User.h"
 #import "GroupPickerViewController.h"
 #import "HomeViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation AppDelegate
 
@@ -25,7 +26,8 @@
     
     User *currentUser = [User currentUser];
     if ([User currentUser]) {
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
+        //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[GroupPickerViewController alloc] init]];
         self.window.rootViewController = nav;
         nav.navigationBar.hidden = YES;
         NSLog(@"%@", currentUser);

@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupPickerViewController">
             <connections>
+                <outlet property="autocompleteTextField" destination="idq-jQ-BJx" id="vUK-5g-Elg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,14 +15,19 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  Where do you work?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idq-jQ-BJx">
-                    <rect key="frame" x="20" y="244" width="280" height="46"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  Where do you work?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idq-jQ-BJx" customClass="MLPAutoCompleteTextField">
+                    <rect key="frame" x="20" y="165" width="280" height="46"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="autoCompleteDataSource" destination="-1" id="JU5-pN-irA"/>
+                        <outlet property="autoCompleteDelegate" destination="-1" id="cnY-vS-F6S"/>
+                        <outlet property="delegate" destination="-1" id="eOR-yA-TV8"/>
+                    </connections>
                 </textField>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Totally anonymous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A27-bG-7hP">
-                    <rect key="frame" x="86" y="206" width="148" height="21"/>
+                    <rect key="frame" x="86" y="127" width="148" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

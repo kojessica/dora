@@ -16,7 +16,6 @@
 + (User *)setCurrentUser;
 + (NSDictionary *)currentUserDictionary;
 + (NSString *)setRandomKey;
-+ (CLLocationManager *)locationManager;
 - (id)initWithDictionary:(NSDictionary *)data;
 
 @end
