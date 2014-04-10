@@ -40,6 +40,7 @@
 		126B189618EBBDE7005A8475 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126B189418EBBDE7005A8475 /* HomeViewController.m */; };
 		126B189718EBBDE7005A8475 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126B189518EBBDE7005A8475 /* HomeViewController.xib */; };
 		126B189B18EBC077005A8475 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189A18EBC077005A8475 /* Parse.framework */; };
+		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
 		FA0F9C6E5EAA471E8A36CF13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBED152A4FC44210BF13ECC7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,8 @@
 		126B189518EBBDE7005A8475 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		126B189818EBBF38005A8475 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		126B189A18EBC077005A8475 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
+		479BEA8918F636C60035A6BC /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		479BEA8A18F636C60035A6BC /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		CBED152A4FC44210BF13ECC7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB384C70D53B426E9E9A171C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +210,7 @@
 		126B184B18EBAEAB005A8475 /* dora */ = {
 			isa = PBXGroup;
 			children = (
+				479BEA8818F636B50035A6BC /* Utilities */,
 				1252858218F5087300E45C86 /* Autocomplete */,
 				126B187E18EBB187005A8475 /* Client */,
 				126B187A18EBB13D005A8475 /* Models */,
@@ -279,6 +283,15 @@
 			children = (
 			);
 			name = Client;
+			sourceTree = "<group>";
+		};
+		479BEA8818F636B50035A6BC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				479BEA8918F636C60035A6BC /* LocationController.h */,
+				479BEA8A18F636C60035A6BC /* LocationController.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +434,7 @@
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,
 				126B189618EBBDE7005A8475 /* HomeViewController.m in Sources */,
 				126B185218EBAEAB005A8475 /* main.m in Sources */,
+				479BEA8B18F636C60035A6BC /* LocationController.m in Sources */,
 				1252856918F3A64800E45C86 /* Company.m in Sources */,
 				1252859C18F5133A00E45C86 /* MLPAutoCompleteTextField.m in Sources */,
 				1252859D18F5133A00E45C86 /* NSString+Levenshtein.m in Sources */,
