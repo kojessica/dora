@@ -49,6 +49,7 @@ static User *currentUser = nil;
             currentUser = [[User alloc] initWithDictionary:dictionary];
         }
     }
+    NSLog(@"%@", currentUser.data);
     return currentUser;
 }
 
@@ -68,8 +69,6 @@ static User *currentUser = nil;
     currentUser = [[User alloc] initWithDictionary:dictionary];
     PFObject *user = [PFObject objectWithClassName:@"Users"];
     user[@"key"] = [currentUser.data objectForKey:@"key"];
-    /*user[@"age"] = [currentUser.data objectForKey:@"age"];
-    user[@"gender"] = [currentUser.data objectForKey:@"gender"];*/
     //user[@"location"] = geoPoint;
     [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         NSLog(@"saved!");
@@ -92,6 +91,39 @@ static User *currentUser = nil;
     NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"current_user"];
     NSDictionary *dictionary = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     return dictionary;
+}
+
++ (void)setUserGroup:(NSString *)groupName {
+    NSString *userKey = currentUser.data[@"key"];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Users"];
+    [query whereKey:@"key" equalTo:userKey];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        object[@"defaultGroup"] = groupName;
+        [object saveInBackground];
+    }];
+}
+
++ (void)setUserAge:(NSNumber *)age {
+    NSString *userKey = currentUser.data[@"key"];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Users"];
+    [query whereKey:@"key" equalTo:userKey];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        object[@"age"] = age;
+        [object saveInBackground];
+    }];
+}
+
++ (void)setUserGender:(NSString *)gender {
+    NSString *userKey = currentUser.data[@"key"];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Users"];
+    [query whereKey:@"key" equalTo:userKey];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        object[@"gender"] = gender;
+        [object saveInBackground];
+    }];
 }
 
 @end

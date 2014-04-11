@@ -12,6 +12,7 @@
 #import "CustomAutocompleteObject.h"
 #import "HomeViewController.h"
 #import <Parse/Parse.h>
+#import "User.h"
 
 @interface GroupPickerViewController ()
 
@@ -156,6 +157,7 @@
     } else {
         NSLog(@"selected string '%@' from autocomplete menu", selectedString);
     }
+    [User setUserGroup:[selectedObject autocompleteString]];
     [self loadHomeView];
 }
 
