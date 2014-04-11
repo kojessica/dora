@@ -9,16 +9,16 @@
 #import "CustomAutocompleteObject.h"
 
 @interface CustomAutocompleteObject ()
-@property (strong) NSString *countryName;
+@property (strong) NSString *groupName;
 @end
 
 @implementation CustomAutocompleteObject
 
-- (id)initWithCountry:(NSString *)name
+- (id)initWithGroup:(NSString *)name
 {
     self = [super init];
     if (self) {
-        [self setCountryName:name];
+        [self setGroupName:name];
     }
     return self;
 }
@@ -27,7 +27,7 @@
 
 - (NSString *)autocompleteString
 {
-    return self.countryName;
+    return self.groupName;
 }
 
 @end
