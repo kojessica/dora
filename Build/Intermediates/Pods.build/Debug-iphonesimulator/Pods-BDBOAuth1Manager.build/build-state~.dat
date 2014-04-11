@@ -1,0 +1,301 @@
+TPods-BDBOAuth1Manager
+v6
+r1
+cCheck dependencies
+cProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch.pch Pods-BDBOAuth1Manager-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-fqdjkwxvykjvfcemwzsyqtfmhtwa/Pods-BDBOAuth1Manager-prefix.pch.pch Pods-BDBOAuth1Manager-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestOperationManager.o /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestSerializer.o /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1SessionManager.o /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSDictionary+BDBOAuth1Manager.o /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSString+BDBOAuth1Manager.o /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/Pods-BDBOAuth1Manager-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-BDBOAuth1Manager.a normal i386
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000531EB0760000000000A90C10
+t1394520182
+s11078672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
+c0000000053119F8A0000000000000198
+t1393663882
+s408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c00000000531EB08000000000000003B4
+t1394520192
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531EB085000000000000019E
+t1394520197
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include/module.map
+c00000000531EB0A10000000000000ADC
+t1394520225
+s2780
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestOperationManager.o
+t1397097084
+s38316
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestSerializer.o
+t1397097084
+s71148
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1SessionManager.o
+t1397097084
+s36860
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSDictionary+BDBOAuth1Manager.o
+t1397097084
+s13256
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSString+BDBOAuth1Manager.o
+t1397097084
+s6648
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/Pods-BDBOAuth1Manager-dummy.o
+t1397097084
+s3472
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/Pods-BDBOAuth1Manager.LinkFileList
+c000000005346027C00000000000003F6
+t1397097084
+s1014
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch.pch
+t1397097084
+s127592
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-fqdjkwxvykjvfcemwzsyqtfmhtwa/Pods-BDBOAuth1Manager-prefix.pch.pch
+t1397097084
+s127184
+
+N/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-BDBOAuth1Manager.a
+t2
+s0
+
+N/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m
+c00000000533C33F80000000000001791
+t1396454392
+s6033
+
+N/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.m
+c00000000533C33F800000000000042E5
+t1396454392
+s17125
+
+N/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.m
+c00000000533C33F8000000000000182C
+t1396454392
+s6188
+
+N/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.m
+c00000000533C33F800000000000008DA
+t1396454392
+s2266
+
+N/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m
+c00000000533C33F80000000000000861
+t1396454392
+s2145
+
+N/Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-dummy.m
+c00000000533C33F80000000000000092
+t1396454392
+s146
+
+N/Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-prefix.pch
+c00000000533C33F8000000000000004D
+t1396454392
+s77
+
+CBuild AST from /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m
+r0
+
+CBuild AST from /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.m
+r0
+
+CBuild AST from /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.m
+r0
+
+CBuild AST from /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.m
+r0
+
+CBuild AST from /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m
+r0
+
+CBuild AST from /Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-dummy.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies2862b5fc39f6b841^76dfb5fc39f6b841^---0#1#1#--18"Check dependencies36"BD056A30-0A4D-449B-A6A5-F237C4CBABB5-
+
+CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestOperationManager.o /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418789884.741253
+e418789884.800760
+r1
+xCompileC
+x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestOperationManager.o
+x/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m319"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestOperationManager.o BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler5ad6bdfc39f6b841^0003cdfc39f6b841^---0#0#1#-19%DVTDocumentLocation2@118"file:///Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m0000000000000000^4338"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestOperationManager.o BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestOperationManager.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestOperationManager.dia -c /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestOperationManager.o36"68B6D875-A510-4FF9-A570-9B20A5B2A498-
+b39AB8682-A33A-4862-A2C6-BAF991D87EB4
+
+CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestSerializer.o /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418789884.741445
+e418789884.804041
+r1
+xCompileC
+x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestSerializer.o
+x/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.m
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.h
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compile /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.m307"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestSerializer.o BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerace2bdfc39f6b841^d0d6cdfc39f6b841^---0#0#1#-19%DVTDocumentLocation2@112"file:///Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.m0000000000000000^4302"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestSerializer.o BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestSerializer.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestSerializer.dia -c /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestSerializer.o36"CA9049EF-F6B1-4F4D-B79D-04DFD6D35F7E-
+b39AB8682-A33A-4862-A2C6-BAF991D87EB4
+
+CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1SessionManager.o /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418789884.741642
+e418789884.800715
+r1
+xCompileC
+x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1SessionManager.o
+x/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.m
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestSerializer.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.m301"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1SessionManager.o BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler90f8bdfc39f6b841^69feccfc39f6b841^---0#0#1#-19%DVTDocumentLocation2@109"file:///Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.m0000000000000000^4284"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1SessionManager.o BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1SessionManager.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1SessionManager.dia -c /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1SessionManager.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1SessionManager.o36"DF3E2763-77B7-4725-A30C-90C9FDDF1FE5-
+b39AB8682-A33A-4862-A2C6-BAF991D87EB4
+
+CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSDictionary+BDBOAuth1Manager.o /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418789884.741870
+e418789884.776549
+r1
+xCompileC
+x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSDictionary+BDBOAuth1Manager.o
+x/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.m
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.h
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Compile /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.m324"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSDictionary+BDBOAuth1Manager.o BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler3106befc39f6b841^e6ccc6fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@126"file:///Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.m0000000000000000^4342"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSDictionary+BDBOAuth1Manager.o BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSDictionary+BDBOAuth1Manager.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSDictionary+BDBOAuth1Manager.dia -c /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSDictionary+BDBOAuth1Manager.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSDictionary+BDBOAuth1Manager.o36"CB7E29A5-57A7-44AD-80CB-AB4E04CEBC15-
+b39AB8682-A33A-4862-A2C6-BAF991D87EB4
+
+CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSString+BDBOAuth1Manager.o /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418789884.742362
+e418789884.772922
+r1
+xCompileC
+x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSString+BDBOAuth1Manager.o
+x/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m
+d/Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compile /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m316"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSString+BDBOAuth1Manager.o BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler8924befc39f6b841^59dec5fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@122"file:///Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m0000000000000000^4318"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSString+BDBOAuth1Manager.o BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSString+BDBOAuth1Manager.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSString+BDBOAuth1Manager.dia -c /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/NSString+BDBOAuth1Manager.o36"C8613AD3-BF12-49DA-B25B-C85EA0F1A8BE-
+b39AB8682-A33A-4862-A2C6-BAF991D87EB4
+
+CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/Pods-BDBOAuth1Manager-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418789884.742912
+e418789884.772398
+r1
+xCompileC
+x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/Pods-BDBOAuth1Manager-dummy.o
+x/Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-dummy.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-dummy.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-dummy.m275"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/Pods-BDBOAuth1Manager-dummy.o Pods-BDBOAuth1Manager-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler7444befc39f6b841^99b8c5fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-dummy.m0000000000000000^4229"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/Pods-BDBOAuth1Manager-dummy.o Pods-BDBOAuth1Manager-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-fqdjkwxvykjvfcemwzsyqtfmhtwa/Pods-BDBOAuth1Manager-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/Pods-BDBOAuth1Manager-dummy.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/Pods-BDBOAuth1Manager-dummy.dia -c /Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-dummy.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/Pods-BDBOAuth1Manager-dummy.o36"308A31F9-1399-492E-8BB4-4DA2CB9790E8-
+b39AB8682-A33A-4862-A2C6-BAF991D87EB4
+
+CLibtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-BDBOAuth1Manager.a normal i386
+s418789884.804711
+e418789884.808937
+r1
+xLibtool
+x/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-BDBOAuth1Manager.a
+xnormal
+xi386
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Libtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-BDBOAuth1Manager.a normal i386121"Libtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-BDBOAuth1Manager.a normal i386d80ecefc39f6b841^f017cffc39f6b841^---0#0#1#--1048"Libtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-BDBOAuth1Manager.a normal i386    cd /Users/benjaminchang/Development/dora/Pods    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -filelist /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/Pods-BDBOAuth1Manager.LinkFileList -framework Foundation -o /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-BDBOAuth1Manager.a36"89C5128C-09EB-43B7-9D20-BC82576987BF-
+b39AB8682-A33A-4862-A2C6-BAF991D87EB4
+
+CProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch.pch Pods-BDBOAuth1Manager-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418789884.710933
+e418789884.740739
+r1
+xProcessPCH
+x/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch.pch
+xPods-BDBOAuth1Manager-prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-prefix.pch
+d/Users/benjaminchang/Development/dora/Pods/Pods-environment.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile Pods-BDBOAuth1Manager-prefix.pch283"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch.pch Pods-BDBOAuth1Manager-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler6615b6fc39f6b841^a5a2bdfc39f6b841^---0#0#1#-19%DVTDocumentLocation2@82"file:///Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-prefix.pch0000000000000000^4086"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch.pch Pods-BDBOAuth1Manager-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch.dia -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch.d -c /Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-prefix.pch -o /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-cxqowcdyzkgqkncvwrspcnajsjux/Pods-BDBOAuth1Manager-prefix.pch.pch36"B022104A-50D7-411E-9498-DC20BCA41EAE-
+b39AB8682-A33A-4862-A2C6-BAF991D87EB4
+
+CProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-fqdjkwxvykjvfcemwzsyqtfmhtwa/Pods-BDBOAuth1Manager-prefix.pch.pch Pods-BDBOAuth1Manager-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418789884.711153
+e418789884.740174
+r1
+xProcessPCH
+x/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-fqdjkwxvykjvfcemwzsyqtfmhtwa/Pods-BDBOAuth1Manager-prefix.pch.pch
+xPods-BDBOAuth1Manager-prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-prefix.pch
+d/Users/benjaminchang/Development/dora/Pods/Pods-environment.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile Pods-BDBOAuth1Manager-prefix.pch283"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-fqdjkwxvykjvfcemwzsyqtfmhtwa/Pods-BDBOAuth1Manager-prefix.pch.pch Pods-BDBOAuth1Manager-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler691cb6fc39f6b841^077dbdfc39f6b841^---0#0#1#-19%DVTDocumentLocation2@82"file:///Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-prefix.pch0000000000000000^4075"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-fqdjkwxvykjvfcemwzsyqtfmhtwa/Pods-BDBOAuth1Manager-prefix.pch.pch Pods-BDBOAuth1Manager-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/Pods-BDBOAuth1Manager-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-BDBOAuth1Manager.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-fqdjkwxvykjvfcemwzsyqtfmhtwa/Pods-BDBOAuth1Manager-prefix.pch.dia -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-fqdjkwxvykjvfcemwzsyqtfmhtwa/Pods-BDBOAuth1Manager-prefix.pch.d -c /Users/benjaminchang/Development/dora/Pods/Pods-BDBOAuth1Manager-prefix.pch -o /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-fqdjkwxvykjvfcemwzsyqtfmhtwa/Pods-BDBOAuth1Manager-prefix.pch.pch36"CC55B985-3550-4C0B-B1E0-4A4168945DD6-
+b39AB8682-A33A-4862-A2C6-BAF991D87EB4
+
+CProcessPCH /Users/benjaminchang/Library/Developer/Xcode/DerivedData/dora-geofnltwqdjsgsgzxmieuohrrhrb/Index/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-fdjaswjdeawrujcholcjtrijktpv_ast/Pods-BDBOAuth1Manager-prefix.pch.pch Pods-BDBOAuth1Manager-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/benjaminchang/Library/Developer/Xcode/DerivedData/dora-geofnltwqdjsgsgzxmieuohrrhrb/Index/PrecompiledHeaders/Pods-BDBOAuth1Manager-prefix-hfugnlolmtdjuudsxzztssqnjfth_ast/Pods-BDBOAuth1Manager-prefix.pch.pch Pods-BDBOAuth1Manager-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
