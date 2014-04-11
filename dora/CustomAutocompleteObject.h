@@ -11,6 +11,6 @@
 
 @interface CustomAutocompleteObject : NSObject <MLPAutoCompletionObject>
 
-- (id)initWithCountry:(NSString *)name;
+- (id)initWithGroup:(NSString *)name;
 
 @end

@@ -16,6 +16,9 @@
 + (User *)setCurrentUser;
 + (NSDictionary *)currentUserDictionary;
 + (NSString *)setRandomKey;
++ (void)setUserGroup:(NSString *)groupName;
++ (void)setUserAge:(NSNumber *)age;
++ (void)setUserGender:(NSString *)gender;
 - (id)initWithDictionary:(NSDictionary *)data;
 
 @end

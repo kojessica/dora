@@ -13,9 +13,9 @@
 + (Company*) setCompany{
     PFObject *company = [PFObject objectWithClassName:@"Company"];
     company[@"name"]= nil;
-    company[@"id"] = nil;
-    company[@"popularity"] = nil;
-    company[@"posts"] = nil;
+    company[@"objectId"] = nil;
+    company[@"popularIndex"] = nil;
+    company[@"totalPosts"] = nil;
     return nil;
 }
 @end
