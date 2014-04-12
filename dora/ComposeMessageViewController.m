@@ -7,7 +7,7 @@
 //
 
 #import "ComposeMessageViewController.h"
-
+#import "LocationController.h"
 @interface ComposeMessageViewController ()
 
 @end
@@ -36,7 +36,6 @@
 }
 
 - (IBAction)didClickSend:(id)sender {
-    PFObject *discussion = [PFObject objectWithClassName:@"Discussion"];
-   
+    [Post postWithUser:[User currentUser] group:[self group] text:[self composedText].text location:[[LocationController sharedLocationController] locationManager].location];
 }
 @end

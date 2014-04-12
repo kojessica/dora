@@ -1,5 +1,6 @@
 dependencies: /Users/benjaminchang/Development/dora/dora/AppDelegate.m \
   /Users/benjaminchang/Development/dora/dora/AppDelegate.h \
+  /Users/benjaminchang/Development/dora/dora/TabsController.h \
   /Users/benjaminchang/Development/dora/Frameworks/Parse.framework/Headers/Parse.h \
   /Users/benjaminchang/Development/dora/Frameworks/Parse.framework/Headers/PFACL.h \
   /Users/benjaminchang/Development/dora/Frameworks/Parse.framework/Headers/PFAnalytics.h \
@@ -34,4 +35,6 @@ dependencies: /Users/benjaminchang/Development/dora/dora/AppDelegate.m \
   /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextFieldDataSource.h \
   /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextFieldDelegate.h \
   /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompletionObject.h \
-  /Users/benjaminchang/Development/dora/dora/HomeViewController.h
+  /Users/benjaminchang/Development/dora/dora/HomeViewController.h \
+  /Users/benjaminchang/Development/dora/dora/LocationController.h \
+  /Users/benjaminchang/Development/dora/dora/ListViewController.h

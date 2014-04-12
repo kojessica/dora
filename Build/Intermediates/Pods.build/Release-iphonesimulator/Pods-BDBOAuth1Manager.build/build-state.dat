@@ -263,7 +263,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies60e9f48709f9b841^d960f58709f9b841^---0#1#1#--18"Check dependencies36"7510E1A6-42A9-45EA-8F22-1C11A86D0143-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesd1e777adeef9b841^b54e78adeef9b841^---0#1#1#--18"Check dependencies36"BA32B08D-F529-41D3-81D3-30D7BE41AC89-
 
 CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-BDBOAuth1Manager.build/Objects-normal/i386/BDBOAuth1RequestOperationManager.o /Users/benjaminchang/Development/dora/Pods/BDBOAuth1Manager/BDBOAuth1Manager/BDBOAuth1RequestOperationManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s418970417.989877

@@ -45,6 +45,8 @@
 		129D762018F9DAEE003EB2E7 /* TabsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D761E18F9DAEE003EB2E7 /* TabsController.xib */; };
 		129D762418F9E338003EB2E7 /* GroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D762218F9E338003EB2E7 /* GroupCell.m */; };
 		129D762518F9E338003EB2E7 /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D762318F9E338003EB2E7 /* GroupCell.xib */; };
+		47435D3A18F9EF9000E1F5CE /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3718F9EF9000E1F5CE /* Group.m */; };
+		47435D3B18F9EF9000E1F5CE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3918F9EF9000E1F5CE /* Post.m */; };
 		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
 		47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */; };
 		47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */; };
@@ -118,6 +120,10 @@
 		129D762118F9E338003EB2E7 /* GroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupCell.h; sourceTree = "<group>"; };
 		129D762218F9E338003EB2E7 /* GroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupCell.m; sourceTree = "<group>"; };
 		129D762318F9E338003EB2E7 /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
+		47435D3618F9EF9000E1F5CE /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		47435D3718F9EF9000E1F5CE /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		47435D3818F9EF9000E1F5CE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		47435D3918F9EF9000E1F5CE /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		479BEA8918F636C60035A6BC /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		479BEA8A18F636C60035A6BC /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeMessageViewController.xib; sourceTree = "<group>"; };
@@ -294,6 +300,10 @@
 		126B187A18EBB13D005A8475 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				47435D3618F9EF9000E1F5CE /* Group.h */,
+				47435D3718F9EF9000E1F5CE /* Group.m */,
+				47435D3818F9EF9000E1F5CE /* Post.h */,
+				47435D3918F9EF9000E1F5CE /* Post.m */,
 				126B187B18EBB153005A8475 /* User.h */,
 				126B187C18EBB153005A8475 /* User.m */,
 				129D762118F9E338003EB2E7 /* GroupCell.h */,
@@ -463,11 +473,13 @@
 				129D761B18F9D8A4003EB2E7 /* ListViewController.m in Sources */,
 				1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */,
 				126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */,
+				47435D3B18F9EF9000E1F5CE /* Post.m in Sources */,
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,
 				129D761F18F9DAEE003EB2E7 /* TabsController.m in Sources */,
 				126B189618EBBDE7005A8475 /* HomeViewController.m in Sources */,
 				126B185218EBAEAB005A8475 /* main.m in Sources */,
 				479BEA8B18F636C60035A6BC /* LocationController.m in Sources */,
+				47435D3A18F9EF9000E1F5CE /* Group.m in Sources */,
 				1252859C18F5133A00E45C86 /* MLPAutoCompleteTextField.m in Sources */,
 				1252859D18F5133A00E45C86 /* NSString+Levenshtein.m in Sources */,
 			);
