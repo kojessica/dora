@@ -43,6 +43,8 @@
 		126B189718EBBDE7005A8475 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126B189518EBBDE7005A8475 /* HomeViewController.xib */; };
 		126B189B18EBC077005A8475 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189A18EBC077005A8475 /* Parse.framework */; };
 		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
+		47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */; };
+		47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */; };
 		FA0F9C6E5EAA471E8A36CF13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBED152A4FC44210BF13ECC7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +113,9 @@
 		126B189A18EBC077005A8475 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
 		479BEA8918F636C60035A6BC /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		479BEA8A18F636C60035A6BC /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeMessageViewController.xib; sourceTree = "<group>"; };
+		47C1067718F9B99100EE78F2 /* ComposeMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeMessageViewController.h; sourceTree = "<group>"; };
+		47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeMessageViewController.m; sourceTree = "<group>"; };
 		CBED152A4FC44210BF13ECC7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB384C70D53B426E9E9A171C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,6 +267,9 @@
 			isa = PBXGroup;
 			children = (
 				126B187518EBB039005A8475 /* GroupPickerViewController.h */,
+				47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */,
+				47C1067718F9B99100EE78F2 /* ComposeMessageViewController.h */,
+				47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */,
 				126B187618EBB039005A8475 /* GroupPickerViewController.m */,
 				126B187718EBB039005A8475 /* GroupPickerViewController.xib */,
 				126B189318EBBDE7005A8475 /* HomeViewController.h */,
@@ -380,6 +388,7 @@
 				125285F318F8DC6900E45C86 /* write_icon.png in Resources */,
 				126B185018EBAEAB005A8475 /* InfoPlist.strings in Resources */,
 				126B185818EBAEAB005A8475 /* Images.xcassets in Resources */,
+				47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */,
 				126B187918EBB039005A8475 /* GroupPickerViewController.xib in Resources */,
 				125285F518F8DCD500E45C86 /* write_17_icon.png in Resources */,
 				126B189718EBBDE7005A8475 /* HomeViewController.xib in Resources */,
@@ -434,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */,
 				126B187D18EBB153005A8475 /* User.m in Sources */,
 				1252858518F5088C00E45C86 /* CustomAutocompleteObject.m in Sources */,
 				1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */,
