@@ -1,806 +1,0 @@
-TPods-AFNetworking
-v6
-r1
-cCheck dependencies
-cProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gemamjoerqgbjydjmpltjzfgcjts/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperationManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIActivityIndicatorView+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIAlertView+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIButton+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIImageView+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIProgressView+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIRefreshControl+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIWebView+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLibtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a normal i386
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c00000000531EB07500000000004D7BC0
-t1394520181
-s5077952
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c00000000531EB0760000000000A90C10
-t1394520182
-s11078672
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-c00000000531EB0760000000000210E90
-t1394520182
-s2166416
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Security.framework/Security
-c00000000531EB0770000000000186D60
-t1394520183
-s1600864
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
-c00000000531EB07700000000001A2B00
-t1394520183
-s1714944
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
-c0000000053119F8A0000000000000198
-t1393663882
-s408
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
-c00000000531EB08000000000000003B4
-t1394520192
-s948
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
-c00000000531EB085000000000000019E
-t1394520197
-s414
-
-N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include/module.map
-c00000000531EB0A10000000000000ADC
-t1394520225
-s2780
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.o
-t1397097084
-s44720
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperationManager.o
-t1397097084
-s54420
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.o
-t1397097084
-s66372
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.o
-t1397097084
-s33388
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.o
-t1397097084
-s44084
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.o
-t1397097084
-s43856
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.o
-t1397097084
-s197524
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.o
-t1397097084
-s222052
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.o
-t1397097084
-s89560
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.o
-t1397097084
-s194868
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking-dummy.o
-t1397097084
-s3440
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking.LinkFileList
-c000000005346027C0000000000000B74
-t1397097084
-s2932
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIActivityIndicatorView+AFNetworking.o
-t1397097084
-s50424
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIAlertView+AFNetworking.o
-t1397097084
-s27676
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIButton+AFNetworking.o
-t1397097084
-s76568
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIImageView+AFNetworking.o
-t1397097084
-s72112
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIProgressView+AFNetworking.o
-t1397097084
-s68180
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIRefreshControl+AFNetworking.o
-t1397097084
-s51796
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIWebView+AFNetworking.o
-t1397097084
-s68120
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch.pch
-t1397097084
-s127480
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gemamjoerqgbjydjmpltjzfgcjts/Pods-AFNetworking-prefix.pch.pch
-t1397097084
-s127072
-
-N/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a
-t1397097084
-s1425720
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
-c00000000533C33F80000000000001192
-t1396454392
-s4498
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m
-c00000000533C33F80000000000001CFD
-t1396454392
-s7421
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.h
-c00000000533C33F800000000000048F0
-t1396454392
-s18672
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m
-c00000000533C33F8000000000000291C
-t1396454392
-s10524
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h
-c00000000533C33F800000000000038E4
-t1396454392
-s14564
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m
-c00000000533C33F80000000000003019
-t1396454392
-s12313
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
-c00000000533C33F80000000000001D1F
-t1396454392
-s7455
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m
-c00000000533C33F80000000000002520
-t1396454392
-s9504
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-c00000000533C33F8000000000000141B
-t1396454392
-s5147
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m
-c00000000533C33F80000000000002A47
-t1396454392
-s10823
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-c00000000533C33F80000000000004621
-t1396454392
-s17953
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m
-c00000000533C33F800000000000068B9
-t1396454392
-s26809
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
-c00000000533C33F80000000000005009
-t1396454392
-s20489
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m
-c00000000533C33F8000000000000B7BC
-t1396454392
-s47036
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-c00000000533C33F800000000000027A4
-t1396454392
-s10148
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m
-c00000000533C33F80000000000005DA7
-t1396454392
-s23975
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
-c00000000533C33F80000000000006DC8
-t1396454392
-s28104
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m
-c00000000533C33F8000000000000A00A
-t1396454392
-s40970
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h
-c00000000533C33F80000000000000EC1
-t1396454392
-s3777
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m
-c00000000533C33F8000000000000190C
-t1396454392
-s6412
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h
-c00000000533C33F800000000000009C9
-t1396454392
-s2505
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m
-c00000000533C33F80000000000000F19
-t1396454392
-s3865
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.h
-c00000000533C33F8000000000000143A
-t1396454392
-s5178
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m
-c00000000533C33F80000000000001642
-t1396454392
-s5698
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h
-c00000000533C33F80000000000001F95
-t1396454392
-s8085
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m
-c00000000533C33F80000000000001D5B
-t1396454392
-s7515
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h
-c00000000533C33F80000000000001C53
-t1396454392
-s7251
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m
-c00000000533C33F80000000000001D77
-t1396454392
-s7543
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h
-c00000000533C33F80000000000000D89
-t1396454392
-s3465
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m
-c00000000533C33F80000000000001EDC
-t1396454392
-s7900
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h
-c00000000533C33F800000000000009BC
-t1396454392
-s2492
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m
-c00000000533C33F80000000000000EFC
-t1396454392
-s3836
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h
-c00000000533C33F80000000000001734
-t1396454392
-s5940
-
-N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m
-c00000000533C33F80000000000001927
-t1396454392
-s6439
-
-N/Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-dummy.m
-c00000000533C33F8000000000000008A
-t1396454392
-s138
-
-N/Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-prefix.pch
-c00000000533C33F80000000000000053
-t1396454392
-s83
-
-N/Users/benjaminchang/Development/dora/Pods/Pods-environment.h
-c000000005345FEBC0000000000000A89
-t1397096124
-s2697
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-dummy.m
-r0
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies098c858c3af6b841^6805868c3af6b841^---0#1#1#--18"Check dependencies36"BABB1E2E-1D16-4D16-B9A7-30B132716244-
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.283325
-e418789884.451180
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m287"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.o AFNetworking/AFNetworking/AFHTTPRequestOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler83a348fc39f6b841^528173fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m0000000000000000^4194"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.o AFNetworking/AFNetworking/AFHTTPRequestOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.o36"83E0E640-23FD-461F-8025-5B24B1188243-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperationManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.283759
-e418789884.447000
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperationManager.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m301"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperationManager.o AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler86e448fc39f6b841^1e6f72fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@107"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m0000000000000000^4236"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperationManager.o AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperationManager.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperationManager.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperationManager.o36"137EE7DF-81F0-4223-8D90-E43591F93169-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.284867
-e418789884.466703
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m283"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.o AFNetworking/AFNetworking/AFHTTPSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler2a1c49fc39f6b841^3e7a77fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m0000000000000000^4182"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.o AFNetworking/AFNetworking/AFHTTPSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.o36"B17E4862-BC1E-4202-A097-437B5F1732D6-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.391513
-e418789884.474187
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m315"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.o AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler865564fc39f6b841^c76479fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@117"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m0000000000000000^4272"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.o AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.o36"537089A8-DA41-4DCD-B0D2-DF04EDD6F64D-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.392505
-e418789884.488960
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m299"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.o AFNetworking/AFNetworking/AFNetworkReachabilityManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler539364fc39f6b841^f12c7dfc39f6b841^---0#0#1#-19%DVTDocumentLocation2@106"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m0000000000000000^4230"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.o AFNetworking/AFNetworking/AFNetworkReachabilityManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.o36"C0D4ED4B-2AA5-46AA-AA92-49D414FC9B8E-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.433503
-e418789884.508403
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m275"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.o AFNetworking/AFNetworking/AFSecurityPolicy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler5e126ffc39f6b841^af2782fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m0000000000000000^4158"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.o AFNetworking/AFNetworking/AFSecurityPolicy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.o36"CD2C900A-6422-4102-BD22-6DB849760052-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.447206
-e418789884.648592
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m291"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.o AFNetworking/AFNetworking/AFURLConnectionOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilera79572fc39f6b841^a60aa6fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m0000000000000000^4206"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.o AFNetworking/AFNetworking/AFURLConnectionOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.o36"EF11E0EE-7B7C-4266-9156-6138745B8F12-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.451617
-e418789884.671891
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m293"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.o AFNetworking/AFNetworking/AFURLRequestSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler62bf73fc39f6b841^eb00acfc39f6b841^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m0000000000000000^4212"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.o AFNetworking/AFNetworking/AFURLRequestSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.o36"C687532F-1840-477C-9C88-41A3132755E6-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.466952
-e418789884.572958
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m295"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.o AFNetworking/AFNetworking/AFURLResponseSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerdee477fc39f6b841^d6ad92fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m0000000000000000^4218"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.o AFNetworking/AFNetworking/AFURLResponseSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.o36"E16671BC-788E-4E6A-9291-C42763FDCE9C-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.474417
-e418789884.670757
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m281"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.o AFNetworking/AFNetworking/AFURLSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerf88b79fc39f6b841^bbb6abfc39f6b841^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m0000000000000000^4176"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.o AFNetworking/AFNetworking/AFURLSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.o36"6C2A71B2-763B-489B-AD12-A06DFE75A4EE-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.489169
-e418789884.524901
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking-dummy.o
-x/Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-dummy.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-dummy.m
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-dummy.m263"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking-dummy.o Pods-AFNetworking-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler8f527dfc39f6b841^5f6086fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@75"file:///Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-dummy.m0000000000000000^4137"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking-dummy.o Pods-AFNetworking-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gemamjoerqgbjydjmpltjzfgcjts/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking-dummy.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking-dummy.dia -c /Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-dummy.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking-dummy.o36"126EC272-3DAB-4D44-B438-68F38A69D3E8-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIActivityIndicatorView+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.508605
-e418789884.593185
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIActivityIndicatorView+AFNetworking.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m321"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIActivityIndicatorView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler946b82fc39f6b841^05dc97fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@120"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m0000000000000000^4290"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIActivityIndicatorView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIActivityIndicatorView+AFNetworking.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIActivityIndicatorView+AFNetworking.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIActivityIndicatorView+AFNetworking.o36"555A83F3-A08C-4F1B-AEED-C2F16A8E393C-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIAlertView+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.525342
-e418789884.595155
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIAlertView+AFNetworking.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m297"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIAlertView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler529986fc39f6b841^7f3098fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@108"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m0000000000000000^4218"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIAlertView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIAlertView+AFNetworking.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIAlertView+AFNetworking.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIAlertView+AFNetworking.o36"778FDF17-5D79-41AA-A36E-49CFE32B6F5F-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIButton+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.554578
-e418789884.655949
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIButton+AFNetworking.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m291"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIButton+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler0e128efc39f6b841^25eca7fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@105"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m0000000000000000^4200"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIButton+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIButton+AFNetworking.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIButton+AFNetworking.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIButton+AFNetworking.o36"1FF44B70-07B7-4030-A99F-F51BEEAB6D6E-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIImageView+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.558352
-e418789884.654825
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIImageView+AFNetworking.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m297"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIImageView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler143e8ffc39f6b841^01a3a7fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@108"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m0000000000000000^4218"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIImageView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIImageView+AFNetworking.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIImageView+AFNetworking.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIImageView+AFNetworking.o36"B4DC0C81-39AB-4F37-A100-F9496D4BFDFC-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIProgressView+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.582435
-e418789884.679735
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIProgressView+AFNetworking.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m303"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIProgressView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler2f3295fc39f6b841^2904aefc39f6b841^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m0000000000000000^4236"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIProgressView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIProgressView+AFNetworking.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIProgressView+AFNetworking.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIProgressView+AFNetworking.o36"C3F0182D-A912-4365-84D5-B78C55210DBF-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIRefreshControl+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.595427
-e418789884.678865
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIRefreshControl+AFNetworking.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m307"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIRefreshControl+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler738498fc39f6b841^d1caadfc39f6b841^---0#0#1#-19%DVTDocumentLocation2@113"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m0000000000000000^4248"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIRefreshControl+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIRefreshControl+AFNetworking.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIRefreshControl+AFNetworking.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIRefreshControl+AFNetworking.o36"C582BA0C-5BB5-4764-89AE-CF4EDCC2CA76-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIWebView+AFNetworking.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.600870
-e418789884.691924
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIWebView+AFNetworking.o
-x/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
-d/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m293"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIWebView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler4c369afc39f6b841^ea22b1fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@106"file:///Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m0000000000000000^4206"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIWebView+AFNetworking.o AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIWebView+AFNetworking.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIWebView+AFNetworking.dia -c /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIWebView+AFNetworking.o36"7FF3A469-4C65-424C-A73C-A9A854D4FA1F-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CLibtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a normal i386
-s418789884.692974
-e418789884.704196
-r1
-xLibtool
-x/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a
-xnormal
-xi386
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Libtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a normal i386117"Libtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a normal i3862a71b1fc39f6b841^1748b4fc39f6b841^---0#0#1#--1137"Libtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a normal i386    cd /Users/benjaminchang/Development/dora/Pods    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -filelist /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking.LinkFileList -framework CoreGraphics -framework Foundation -framework MobileCoreServices -framework Security -framework SystemConfiguration -o /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-AFNetworking.a36"C2DA99D6-E027-48F9-97A2-E59796A14E6D-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.050337
-e418789884.282498
-r1
-xProcessPCH
-x/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch.pch
-xPods-AFNetworking-prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-prefix.pch
-d/Users/benjaminchang/Development/dora/Pods/Pods-environment.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Precompile Pods-AFNetworking-prefix.pch271"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compileradf60cfc39f6b841^596b48fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-prefix.pch0000000000000000^4002"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch.dia -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch.d -c /Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-prefix.pch -o /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-boqptolzudevppbzfvypobftmnzk/Pods-AFNetworking-prefix.pch.pch36"F92694A9-FC59-452A-B59C-C59CE7FEA0F2-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gemamjoerqgbjydjmpltjzfgcjts/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.050584
-e418789884.282493
-r1
-xProcessPCH
-x/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gemamjoerqgbjydjmpltjzfgcjts/Pods-AFNetworking-prefix.pch.pch
-xPods-AFNetworking-prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-prefix.pch
-d/Users/benjaminchang/Development/dora/Pods/Pods-environment.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Precompile Pods-AFNetworking-prefix.pch271"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gemamjoerqgbjydjmpltjzfgcjts/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler520b0dfc39f6b841^b85948fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-prefix.pch0000000000000000^3991"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gemamjoerqgbjydjmpltjzfgcjts/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/Pods-AFNetworking-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-AFNetworking.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gemamjoerqgbjydjmpltjzfgcjts/Pods-AFNetworking-prefix.pch.dia -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gemamjoerqgbjydjmpltjzfgcjts/Pods-AFNetworking-prefix.pch.d -c /Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-prefix.pch -o /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-gemamjoerqgbjydjmpltjzfgcjts/Pods-AFNetworking-prefix.pch.pch36"98CCBB28-1AFA-4E9D-A206-65DE816FB0C7-
-b7A00D5BD-0EFD-4681-BB75-47560418D2A2
-
-CProcessPCH /Users/benjaminchang/Library/Developer/Xcode/DerivedData/dora-geofnltwqdjsgsgzxmieuohrrhrb/Index/PrecompiledHeaders/Pods-AFNetworking-prefix-aibpmtztwwvgnmevcngnxbdpgrox_ast/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /Users/benjaminchang/Library/Developer/Xcode/DerivedData/dora-geofnltwqdjsgsgzxmieuohrrhrb/Index/PrecompiledHeaders/Pods-AFNetworking-prefix-dfdtgfzdioarikabjbcstqwnycme_ast/Pods-AFNetworking-prefix.pch.pch Pods-AFNetworking-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-

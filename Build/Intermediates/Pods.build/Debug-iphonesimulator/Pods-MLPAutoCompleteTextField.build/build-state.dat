@@ -1,228 +1,0 @@
-TPods-MLPAutoCompleteTextField
-v6
-r1
-cCheck dependencies
-cProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cehqlefttmewkfbqmzbqufrjphrl/Pods-MLPAutoCompleteTextField-prefix.pch.pch Pods-MLPAutoCompleteTextField-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cxdifjfmibbfzfdbgzndqwdmapbw/Pods-MLPAutoCompleteTextField-prefix.pch.pch Pods-MLPAutoCompleteTextField-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/MLPAutoCompleteTextField.o /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/NSString+Levenshtein.o /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/Pods-MLPAutoCompleteTextField-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLibtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-MLPAutoCompleteTextField.a normal i386
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c00000000531EB0760000000000A90C10
-t1394520182
-s11078672
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
-c0000000053119F8A0000000000000198
-t1393663882
-s408
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
-c00000000531EB08000000000000003B4
-t1394520192
-s948
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
-c00000000531EB085000000000000019E
-t1394520197
-s414
-
-N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include/module.map
-c00000000531EB0A10000000000000ADC
-t1394520225
-s2780
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/MLPAutoCompleteTextField.o
-t1397097084
-s229152
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/NSString+Levenshtein.o
-t1397097084
-s9868
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/Pods-MLPAutoCompleteTextField-dummy.o
-t1397097084
-s3536
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/Pods-MLPAutoCompleteTextField.LinkFileList
-c000000005346027C0000000000000211
-t1397097084
-s529
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cehqlefttmewkfbqmzbqufrjphrl/Pods-MLPAutoCompleteTextField-prefix.pch.pch
-t1397097084
-s128404
-
-N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cxdifjfmibbfzfdbgzndqwdmapbw/Pods-MLPAutoCompleteTextField-prefix.pch.pch
-t1397097084
-s127412
-
-N/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-MLPAutoCompleteTextField.a
-t1397097084
-s247320
-
-N/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.h
-c000000005345FEBC0000000000000FAB
-t1397096124
-s4011
-
-N/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m
-c000000005345FEBC000000000000997E
-t1397096124
-s39294
-
-N/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextFieldDataSource.h
-c000000005345FEBC00000000000008E6
-t1397096124
-s2278
-
-N/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextFieldDelegate.h
-c000000005345FEBC0000000000000A58
-t1397096124
-s2648
-
-N/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompletionObject.h
-c000000005345FEBC0000000000000795
-t1397096124
-s1941
-
-N/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.h
-c000000005345FEBC000000000000081E
-t1397096124
-s2078
-
-N/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m
-c000000005345FEBC0000000000001195
-t1397096124
-s4501
-
-N/Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-dummy.m
-c000000005345FEBC00000000000000A2
-t1397096124
-s162
-
-N/Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-prefix.pch
-c000000005345FEBC000000000000004D
-t1397096124
-s77
-
-N/Users/benjaminchang/Development/dora/Pods/Pods-environment.h
-c000000005345FEBC0000000000000A89
-t1397096124
-s2697
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m
-r0
-
-CBuild AST from /Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-dummy.m
-r0
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesf294858c3af6b841^8811868c3af6b841^---0#1#1#--18"Check dependencies36"EDA9EAA1-D943-43FB-BCA7-2DDE3E2940C9-
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/MLPAutoCompleteTextField.o /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.283367
-e418789884.554337
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/MLPAutoCompleteTextField.o
-x/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m
-d/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.h
-d/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextFieldDataSource.h
-d/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextFieldDelegate.h
-d/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompletionObject.h
-d/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Compile /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m327"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/MLPAutoCompleteTextField.o MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler7aa548fc39f6b841^e2e98dfc39f6b841^---0#0#1#-19%DVTDocumentLocation2@126"file:///Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m0000000000000000^4481"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/MLPAutoCompleteTextField.o MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cehqlefttmewkfbqmzbqufrjphrl/Pods-MLPAutoCompleteTextField-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/MLPAutoCompleteTextField.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/MLPAutoCompleteTextField.dia -c /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompleteTextField.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/MLPAutoCompleteTextField.o36"12DA1EC0-5464-45FA-AEF5-8957F7B1DCCB-
-bAC503C9D-A51E-407C-8421-4CE43BE69EA5
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/NSString+Levenshtein.o /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.283762
-e418789884.432650
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/NSString+Levenshtein.o
-x/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m
-d/Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compile /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m319"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/NSString+Levenshtein.o MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerf7ca48fc39f6b841^7ac26efc39f6b841^---0#0#1#-19%DVTDocumentLocation2@122"file:///Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m0000000000000000^4457"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/NSString+Levenshtein.o MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cehqlefttmewkfbqmzbqufrjphrl/Pods-MLPAutoCompleteTextField-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/NSString+Levenshtein.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/NSString+Levenshtein.dia -c /Users/benjaminchang/Development/dora/Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/NSString+Levenshtein.o36"10E22BE6-D9BA-41B6-A830-0E7410FE6E70-
-bAC503C9D-A51E-407C-8421-4CE43BE69EA5
-
-CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/Pods-MLPAutoCompleteTextField-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.285028
-e418789884.390259
-r1
-xCompileC
-x/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/Pods-MLPAutoCompleteTextField-dummy.o
-x/Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-dummy.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-dummy.m
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-dummy.m299"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/Pods-MLPAutoCompleteTextField-dummy.o Pods-MLPAutoCompleteTextField-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler043849fc39f6b841^25e863fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-dummy.m0000000000000000^4413"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/Pods-MLPAutoCompleteTextField-dummy.o Pods-MLPAutoCompleteTextField-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -include /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cxdifjfmibbfzfdbgzndqwdmapbw/Pods-MLPAutoCompleteTextField-prefix.pch -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/Pods-MLPAutoCompleteTextField-dummy.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/Pods-MLPAutoCompleteTextField-dummy.dia -c /Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-dummy.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/Pods-MLPAutoCompleteTextField-dummy.o36"E25DB901-FC21-4E70-A11F-02EF502A9766-
-bAC503C9D-A51E-407C-8421-4CE43BE69EA5
-
-CLibtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-MLPAutoCompleteTextField.a normal i386
-s418789884.573161
-e418789884.582009
-r1
-xLibtool
-x/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-MLPAutoCompleteTextField.a
-xnormal
-xi386
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"Libtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-MLPAutoCompleteTextField.a normal i386129"Libtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-MLPAutoCompleteTextField.a normal i38657ce92fc39f6b841^22ff94fc39f6b841^---0#0#1#--1080"Libtool /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-MLPAutoCompleteTextField.a normal i386    cd /Users/benjaminchang/Development/dora/Pods    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -filelist /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Objects-normal/i386/Pods-MLPAutoCompleteTextField.LinkFileList -framework Foundation -o /Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/libPods-MLPAutoCompleteTextField.a36"657A84F3-6841-4628-9578-5927231885F6-
-bAC503C9D-A51E-407C-8421-4CE43BE69EA5
-
-CProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cehqlefttmewkfbqmzbqufrjphrl/Pods-MLPAutoCompleteTextField-prefix.pch.pch Pods-MLPAutoCompleteTextField-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.024442
-e418789884.282614
-r1
-xProcessPCH
-x/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cehqlefttmewkfbqmzbqufrjphrl/Pods-MLPAutoCompleteTextField-prefix.pch.pch
-xPods-MLPAutoCompleteTextField-prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-prefix.pch
-d/Users/benjaminchang/Development/dora/Pods/Pods-environment.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Precompile Pods-MLPAutoCompleteTextField-prefix.pch307"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cehqlefttmewkfbqmzbqufrjphrl/Pods-MLPAutoCompleteTextField-prefix.pch.pch Pods-MLPAutoCompleteTextField-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler195906fc39f6b841^ee6048fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-prefix.pch0000000000000000^4277"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cehqlefttmewkfbqmzbqufrjphrl/Pods-MLPAutoCompleteTextField-prefix.pch.pch Pods-MLPAutoCompleteTextField-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator -fobjc-arc -DOS_OBJECT_USE_OBJC=0 --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cehqlefttmewkfbqmzbqufrjphrl/Pods-MLPAutoCompleteTextField-prefix.pch.dia -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cehqlefttmewkfbqmzbqufrjphrl/Pods-MLPAutoCompleteTextField-prefix.pch.d -c /Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-prefix.pch -o /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cehqlefttmewkfbqmzbqufrjphrl/Pods-MLPAutoCompleteTextField-prefix.pch.pch36"E7A3F29B-4ADF-4D17-8AD8-777F9741F5FF-
-bAC503C9D-A51E-407C-8421-4CE43BE69EA5
-
-CProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cxdifjfmibbfzfdbgzndqwdmapbw/Pods-MLPAutoCompleteTextField-prefix.pch.pch Pods-MLPAutoCompleteTextField-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s418789884.024807
-e418789884.282339
-r1
-xProcessPCH
-x/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cxdifjfmibbfzfdbgzndqwdmapbw/Pods-MLPAutoCompleteTextField-prefix.pch.pch
-xPods-MLPAutoCompleteTextField-prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-prefix.pch
-d/Users/benjaminchang/Development/dora/Pods/Pods-environment.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Precompile Pods-MLPAutoCompleteTextField-prefix.pch307"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cxdifjfmibbfzfdbgzndqwdmapbw/Pods-MLPAutoCompleteTextField-prefix.pch.pch Pods-MLPAutoCompleteTextField-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerdd7906fc39f6b841^664948fc39f6b841^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-prefix.pch0000000000000000^4243"ProcessPCH /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cxdifjfmibbfzfdbgzndqwdmapbw/Pods-MLPAutoCompleteTextField-prefix.pch.pch Pods-MLPAutoCompleteTextField-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/Pods-MLPAutoCompleteTextField-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator/include -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders -I/Users/benjaminchang/Development/dora/Pods/BuildHeaders/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/DerivedSources/i386 -I/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-MLPAutoCompleteTextField.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cxdifjfmibbfzfdbgzndqwdmapbw/Pods-MLPAutoCompleteTextField-prefix.pch.dia -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cxdifjfmibbfzfdbgzndqwdmapbw/Pods-MLPAutoCompleteTextField-prefix.pch.d -c /Users/benjaminchang/Development/dora/Pods/Pods-MLPAutoCompleteTextField-prefix.pch -o /Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cxdifjfmibbfzfdbgzndqwdmapbw/Pods-MLPAutoCompleteTextField-prefix.pch.pch36"820848E2-F622-439D-8CF2-2E66B951389F-
-bAC503C9D-A51E-407C-8421-4CE43BE69EA5
-
-CProcessPCH /Users/benjaminchang/Library/Developer/Xcode/DerivedData/dora-geofnltwqdjsgsgzxmieuohrrhrb/Index/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-cyezrspjrblqcmdtwqbgpwlobrtn_ast/Pods-MLPAutoCompleteTextField-prefix.pch.pch Pods-MLPAutoCompleteTextField-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /Users/benjaminchang/Library/Developer/Xcode/DerivedData/dora-geofnltwqdjsgsgzxmieuohrrhrb/Index/PrecompiledHeaders/Pods-MLPAutoCompleteTextField-prefix-epoqhffmiombfwdjjrdvneqvmxat_ast/Pods-MLPAutoCompleteTextField-prefix.pch.pch Pods-MLPAutoCompleteTextField-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
