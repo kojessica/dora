@@ -9,5 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface Discussion : NSObject
+@property (nonatomic, strong) NSMutableDictionary *data;
+- (id)initWithDictionary:(NSDictionary *)data;
 
+@property (strong, nonatomic) NSString *companyId;
+@property (strong, nonatomic) NSString *id;
+@property (strong, nonatomic) NSString *text;
+@property (strong, nonatomic) NSString *userId;
+@property (assign, nonatomic) NSInteger *likes;
+@property (assign, nonatomic) NSInteger *dislikes;
+@property (assign, nonatomic) NSInteger *popularity;
 @end

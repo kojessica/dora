@@ -35,4 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)didClickSend:(id)sender {
+    PFObject *discussion = [PFObject objectWithClassName:@"Discussion"];
+   
+}
 @end

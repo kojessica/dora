@@ -10,6 +10,13 @@
 #import "Parse/Parse.h"
 @implementation Discussion
 
+- (id)initWithDictionary:(NSMutableDictionary *)data {
+    if (self = [super init]) {
+        _data = data;
+    }
+    
+    return self;
+}
 
 + (Discussion*) setDiscussion{
     PFObject *discussion = [PFObject objectWithClassName:@"Discussion"];

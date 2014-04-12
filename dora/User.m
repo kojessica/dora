@@ -27,20 +27,6 @@ static User *currentUser = nil;
     return self;
 }
 
-/*
-+ (CLLocationManager *)locationManager {
-    if (_locationManager != nil) {
-        return _locationManager;
-    }
-    
-    _locationManager = [[CLLocationManager alloc] init];
-    [_locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
-    [_locationManager setDelegate:self];
-    
-    return _locationManager;
-}
-*/
-
 + (User *)currentUser {
     if (currentUser == nil) {
         NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"current_user"];
