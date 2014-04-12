@@ -35,7 +35,7 @@
     pfGroup[@"popularIndex"] = 0;
     pfGroup[@"totalPosts"] = 0;
 
-    [pfGroup save];
+    [pfGroup saveInBackground];
     Group *group = [[Group alloc] init];
     group.data[@"name"] = name;
     group.data[@"objectId"] = pfGroup[@"objectId"];
