@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1252856618F3A63500E45C86 /* Discussion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252856518F3A63500E45C86 /* Discussion.m */; };
-		1252856918F3A64800E45C86 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252856818F3A64800E45C86 /* Company.m */; };
 		1252858518F5088C00E45C86 /* CustomAutocompleteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252858418F5088C00E45C86 /* CustomAutocompleteObject.m */; };
 		1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252859118F508FB00E45C86 /* CustomAutocompleteCell.m */; };
 		1252859C18F5133A00E45C86 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252859618F5133A00E45C86 /* MLPAutoCompleteTextField.m */; };
@@ -64,10 +62,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1252856418F3A63500E45C86 /* Discussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Discussion.h; sourceTree = "<group>"; };
-		1252856518F3A63500E45C86 /* Discussion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Discussion.m; sourceTree = "<group>"; };
-		1252856718F3A64800E45C86 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
-		1252856818F3A64800E45C86 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
 		1252858318F5088C00E45C86 /* CustomAutocompleteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAutocompleteObject.h; sourceTree = "<group>"; };
 		1252858418F5088C00E45C86 /* CustomAutocompleteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAutocompleteObject.m; sourceTree = "<group>"; };
 		1252859018F508FB00E45C86 /* CustomAutocompleteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAutocompleteCell.h; sourceTree = "<group>"; };
@@ -302,10 +296,6 @@
 			children = (
 				126B187B18EBB153005A8475 /* User.h */,
 				126B187C18EBB153005A8475 /* User.m */,
-				1252856418F3A63500E45C86 /* Discussion.h */,
-				1252856518F3A63500E45C86 /* Discussion.m */,
-				1252856718F3A64800E45C86 /* Company.h */,
-				1252856818F3A64800E45C86 /* Company.m */,
 				129D762118F9E338003EB2E7 /* GroupCell.h */,
 				129D762218F9E338003EB2E7 /* GroupCell.m */,
 				129D762318F9E338003EB2E7 /* GroupCell.xib */,
@@ -472,14 +462,12 @@
 				1252858518F5088C00E45C86 /* CustomAutocompleteObject.m in Sources */,
 				129D761B18F9D8A4003EB2E7 /* ListViewController.m in Sources */,
 				1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */,
-				1252856618F3A63500E45C86 /* Discussion.m in Sources */,
 				126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */,
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,
 				129D761F18F9DAEE003EB2E7 /* TabsController.m in Sources */,
 				126B189618EBBDE7005A8475 /* HomeViewController.m in Sources */,
 				126B185218EBAEAB005A8475 /* main.m in Sources */,
 				479BEA8B18F636C60035A6BC /* LocationController.m in Sources */,
-				1252856918F3A64800E45C86 /* Company.m in Sources */,
 				1252859C18F5133A00E45C86 /* MLPAutoCompleteTextField.m in Sources */,
 				1252859D18F5133A00E45C86 /* NSString+Levenshtein.m in Sources */,
 			);

@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Company.h"
 #import "User.h"
-#import "Discussion.h"
 #import "Parse/Parse.h"
 
 @interface ComposeMessageViewController : UIViewController
-@property (strong, nonatomic) Company *company;
+//@property (strong, nonatomic) Company *company;
 @property (strong, nonatomic) User *user;
 - (IBAction)didClickSend:(id)sender;
 
