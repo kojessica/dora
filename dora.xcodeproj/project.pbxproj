@@ -42,6 +42,11 @@
 		126B189618EBBDE7005A8475 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126B189418EBBDE7005A8475 /* HomeViewController.m */; };
 		126B189718EBBDE7005A8475 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126B189518EBBDE7005A8475 /* HomeViewController.xib */; };
 		126B189B18EBC077005A8475 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189A18EBC077005A8475 /* Parse.framework */; };
+		129D761B18F9D8A4003EB2E7 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D761A18F9D8A4003EB2E7 /* ListViewController.m */; };
+		129D761F18F9DAEE003EB2E7 /* TabsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D761D18F9DAEE003EB2E7 /* TabsController.m */; };
+		129D762018F9DAEE003EB2E7 /* TabsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D761E18F9DAEE003EB2E7 /* TabsController.xib */; };
+		129D762418F9E338003EB2E7 /* GroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D762218F9E338003EB2E7 /* GroupCell.m */; };
+		129D762518F9E338003EB2E7 /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D762318F9E338003EB2E7 /* GroupCell.xib */; };
 		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
 		47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */; };
 		47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */; };
@@ -111,6 +116,14 @@
 		126B189518EBBDE7005A8475 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		126B189818EBBF38005A8475 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		126B189A18EBC077005A8475 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
+		129D761918F9D8A4003EB2E7 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		129D761A18F9D8A4003EB2E7 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		129D761C18F9DAEE003EB2E7 /* TabsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabsController.h; sourceTree = "<group>"; };
+		129D761D18F9DAEE003EB2E7 /* TabsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabsController.m; sourceTree = "<group>"; };
+		129D761E18F9DAEE003EB2E7 /* TabsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabsController.xib; sourceTree = "<group>"; };
+		129D762118F9E338003EB2E7 /* GroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupCell.h; sourceTree = "<group>"; };
+		129D762218F9E338003EB2E7 /* GroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupCell.m; sourceTree = "<group>"; };
+		129D762318F9E338003EB2E7 /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
 		479BEA8918F636C60035A6BC /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		479BEA8A18F636C60035A6BC /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeMessageViewController.xib; sourceTree = "<group>"; };
@@ -266,6 +279,11 @@
 		126B187418EBAFF3005A8475 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				129D761918F9D8A4003EB2E7 /* ListViewController.h */,
+				129D761A18F9D8A4003EB2E7 /* ListViewController.m */,
+				129D761C18F9DAEE003EB2E7 /* TabsController.h */,
+				129D761D18F9DAEE003EB2E7 /* TabsController.m */,
+				129D761E18F9DAEE003EB2E7 /* TabsController.xib */,
 				126B187518EBB039005A8475 /* GroupPickerViewController.h */,
 				47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */,
 				47C1067718F9B99100EE78F2 /* ComposeMessageViewController.h */,
@@ -288,6 +306,9 @@
 				1252856518F3A63500E45C86 /* Discussion.m */,
 				1252856718F3A64800E45C86 /* Company.h */,
 				1252856818F3A64800E45C86 /* Company.m */,
+				129D762118F9E338003EB2E7 /* GroupCell.h */,
+				129D762218F9E338003EB2E7 /* GroupCell.m */,
+				129D762318F9E338003EB2E7 /* GroupCell.xib */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -388,10 +409,12 @@
 				125285F318F8DC6900E45C86 /* write_icon.png in Resources */,
 				126B185018EBAEAB005A8475 /* InfoPlist.strings in Resources */,
 				126B185818EBAEAB005A8475 /* Images.xcassets in Resources */,
+				129D762518F9E338003EB2E7 /* GroupCell.xib in Resources */,
 				47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */,
 				126B187918EBB039005A8475 /* GroupPickerViewController.xib in Resources */,
 				125285F518F8DCD500E45C86 /* write_17_icon.png in Resources */,
 				126B189718EBBDE7005A8475 /* HomeViewController.xib in Resources */,
+				129D762018F9DAEE003EB2E7 /* TabsController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,13 +466,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				129D762418F9E338003EB2E7 /* GroupCell.m in Sources */,
 				47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */,
 				126B187D18EBB153005A8475 /* User.m in Sources */,
 				1252858518F5088C00E45C86 /* CustomAutocompleteObject.m in Sources */,
+				129D761B18F9D8A4003EB2E7 /* ListViewController.m in Sources */,
 				1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */,
 				1252856618F3A63500E45C86 /* Discussion.m in Sources */,
 				126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */,
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,
+				129D761F18F9DAEE003EB2E7 /* TabsController.m in Sources */,
 				126B189618EBBDE7005A8475 /* HomeViewController.m in Sources */,
 				126B185218EBAEAB005A8475 /* main.m in Sources */,
 				479BEA8B18F636C60035A6BC /* LocationController.m in Sources */,

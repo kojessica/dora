@@ -12,6 +12,8 @@
 #import "GroupPickerViewController.h"
 #import "HomeViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ListViewController.h"
+#import "TabsController.h"
 
 @implementation AppDelegate
 
@@ -27,9 +29,23 @@
     User *currentUser = [User currentUser];
     if ([User currentUser]) {
         //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[GroupPickerViewController alloc] init]];
-        self.window.rootViewController = nav;
-        nav.navigationBar.hidden = YES;
+        //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[GroupPickerViewController alloc] init]];
+        //nav.navigationBar.hidden = YES;
+        
+        //Test viewcontroller
+        ListViewController *listViewController1 = [[ListViewController alloc] init];
+        ListViewController *listViewController2 = [[ListViewController alloc] init];
+        
+        listViewController1.title = @"RELEVANT";
+        listViewController2.title = @"POPULAR";
+        
+        NSArray *viewControllers = @[listViewController1, listViewController2];
+        TabsController *tabBarController = [[TabsController alloc] init];
+        
+        tabBarController.delegate = self;
+        tabBarController.viewControllers = viewControllers;
+
+        self.window.rootViewController = tabBarController;
         NSLog(@"%@", currentUser);
     } else {
         [User setCurrentUser];

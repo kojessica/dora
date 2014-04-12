@@ -13,6 +13,6 @@
 - (IBAction)OnRelevantButton:(id)sender;
 - (IBAction)OnPopularButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *selectedBar;
-@property (weak, nonatomic) IBOutlet UICollectionView *groupCollectionView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end
