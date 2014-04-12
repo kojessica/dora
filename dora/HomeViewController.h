@@ -10,4 +10,9 @@
 
 @interface HomeViewController : UIViewController
 
+- (IBAction)OnRelevantButton:(id)sender;
+- (IBAction)OnPopularButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *selectedBar;
+@property (weak, nonatomic) IBOutlet UICollectionView *groupCollectionView;
+
 @end

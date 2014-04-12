@@ -13,6 +13,8 @@
 		1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252859118F508FB00E45C86 /* CustomAutocompleteCell.m */; };
 		1252859C18F5133A00E45C86 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252859618F5133A00E45C86 /* MLPAutoCompleteTextField.m */; };
 		1252859D18F5133A00E45C86 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252859B18F5133A00E45C86 /* NSString+Levenshtein.m */; };
+		125285F318F8DC6900E45C86 /* write_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 125285F218F8DC6900E45C86 /* write_icon.png */; };
+		125285F518F8DCD500E45C86 /* write_17_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 125285F418F8DCD500E45C86 /* write_17_icon.png */; };
 		126B184618EBAEAB005A8475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B184518EBAEAB005A8475 /* Foundation.framework */; };
 		126B184818EBAEAB005A8475 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B184718EBAEAB005A8475 /* CoreGraphics.framework */; };
 		126B184A18EBAEAB005A8475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B184918EBAEAB005A8475 /* UIKit.framework */; };
@@ -70,6 +72,8 @@
 		1252859918F5133A00E45C86 /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPAutoCompletionObject.h; path = Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/MLPAutoCompletionObject.h; sourceTree = SOURCE_ROOT; };
 		1252859A18F5133A00E45C86 /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Levenshtein.h"; path = "Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.h"; sourceTree = SOURCE_ROOT; };
 		1252859B18F5133A00E45C86 /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Levenshtein.m"; path = "Pods/MLPAutoCompleteTextField/MLPAutoCompleteTextField/NSString+Levenshtein.m"; sourceTree = SOURCE_ROOT; };
+		125285F218F8DC6900E45C86 /* write_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = write_icon.png; path = Images/write_icon.png; sourceTree = SOURCE_ROOT; };
+		125285F418F8DCD500E45C86 /* write_17_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = write_17_icon.png; path = Images/write_17_icon.png; sourceTree = SOURCE_ROOT; };
 		126B184218EBAEAB005A8475 /* dora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		126B184518EBAEAB005A8475 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		126B184718EBAEAB005A8475 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -226,7 +230,9 @@
 		126B184C18EBAEAB005A8475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				125285F418F8DCD500E45C86 /* write_17_icon.png */,
 				126B184D18EBAEAB005A8475 /* dora-Info.plist */,
+				125285F218F8DC6900E45C86 /* write_icon.png */,
 				126B184E18EBAEAB005A8475 /* InfoPlist.strings */,
 				126B185118EBAEAB005A8475 /* main.m */,
 				126B185318EBAEAB005A8475 /* dora-Prefix.pch */,
@@ -371,9 +377,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				125285F318F8DC6900E45C86 /* write_icon.png in Resources */,
 				126B185018EBAEAB005A8475 /* InfoPlist.strings in Resources */,
 				126B185818EBAEAB005A8475 /* Images.xcassets in Resources */,
 				126B187918EBB039005A8475 /* GroupPickerViewController.xib in Resources */,
+				125285F518F8DCD500E45C86 /* write_17_icon.png in Resources */,
 				126B189718EBBDE7005A8475 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
