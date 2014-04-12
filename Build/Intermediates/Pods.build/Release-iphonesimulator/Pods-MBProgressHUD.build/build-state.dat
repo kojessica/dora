@@ -45,58 +45,63 @@ t1394520225
 s2780
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-MBProgressHUD.build/Objects-normal/i386/MBProgressHUD.o
-t1397277615
+t1397277743
 s174584
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-MBProgressHUD.build/Objects-normal/i386/Pods-MBProgressHUD-dummy.o
-t1397277615
+t1397277743
 s3452
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-MBProgressHUD.build/Objects-normal/i386/Pods-MBProgressHUD.LinkFileList
-c000000005348C3AD000000000000013F
-t1397277613
+c000000005348C42F000000000000013F
+t1397277743
 s319
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-MBProgressHUD.build/Objects-normal/i386/libPods-MBProgressHUD.a
-t1397277615
+t1397277743
 s180752
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-MBProgressHUD.build/Objects-normal/x86_64/MBProgressHUD.o
-t1397277615
+t1397277743
 s198612
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-MBProgressHUD.build/Objects-normal/x86_64/Pods-MBProgressHUD-dummy.o
-t1397277615
+t1397277743
 s3900
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-MBProgressHUD.build/Objects-normal/x86_64/Pods-MBProgressHUD.LinkFileList
-c000000005348C3AD0000000000000143
-t1397277613
+c000000005348C42F0000000000000143
+t1397277743
 s323
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-MBProgressHUD.build/Objects-normal/x86_64/libPods-MBProgressHUD.a
-t1397277615
+t1397277743
 s205232
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MBProgressHUD-prefix-azfgfdnhiecateakakoqsnxvgodq/Pods-MBProgressHUD-prefix.pch.pch
-t1397277615
+t1397277743
 s122896
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MBProgressHUD-prefix-coiigxsslhlygzahknffwfotpylb/Pods-MBProgressHUD-prefix.pch.pch
-t1397277615
+t1397277743
 s122148
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MBProgressHUD-prefix-ddzylwubuexsnbghaejonwnrahfz/Pods-MBProgressHUD-prefix.pch.pch
-t1397277615
+t1397277743
 s121260
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-MBProgressHUD-prefix-dyevaxiyjximzmernehejtddrnjj/Pods-MBProgressHUD-prefix.pch.pch
-t1397277615
+t1397277743
 s122004
 
 N/Users/benjaminchang/Development/dora/Build/Products/Release-iphonesimulator/libPods-MBProgressHUD.a
-t2
-s0
+t1397277743
+s386032
+
+N/Users/benjaminchang/Development/dora/Pods/MBProgressHUD/MBProgressHUD.h
+c00000000533C33F80000000000003FC0
+t1396454392
+s16320
 
 N/Users/benjaminchang/Development/dora/Pods/MBProgressHUD/MBProgressHUD.m
 c00000000533C33F80000000000007F4E
@@ -113,6 +118,11 @@ c00000000533C33F8000000000000004D
 t1396454392
 s77
 
+N/Users/benjaminchang/Development/dora/Pods/Pods-environment.h
+c000000005345FEBC0000000000000A89
+t1397096124
+s2697
+
 CBuild AST from /Users/benjaminchang/Development/dora/Pods/MBProgressHUD/MBProgressHUD.m
 r0
 
@@ -121,7 +131,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesb9fb902dfbf8b841^aabba62dfbf8b841^---0#1#1#--18"Check dependencies36"90FECE1E-F26B-48C8-B2EC-24642E0825ED-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies25e9ca8709f9b841^f52ade8709f9b841^---0#1#1#--18"Check dependencies36"53BFCA0A-C4CF-4986-BE8D-8B24A4A1D4D9-
 
 CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-MBProgressHUD.build/Objects-normal/i386/MBProgressHUD.o /Users/benjaminchang/Development/dora/Pods/MBProgressHUD/MBProgressHUD.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s418970415.298942

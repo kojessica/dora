@@ -11,8 +11,8 @@ cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/R
 cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
@@ -92,266 +92,351 @@ t1394520225
 s2780
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.o
-t1397277616
+t1397277743
 s41204
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperationManager.o
-t1397277616
+t1397277743
 s50368
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPSessionManager.o
-t1397277616
+t1397277743
 s59952
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkActivityIndicatorManager.o
-t1397277616
+t1397277743
 s32384
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFNetworkReachabilityManager.o
-t1397277616
+t1397277743
 s42580
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFSecurityPolicy.o
-t1397277616
+t1397277743
 s37560
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLConnectionOperation.o
-t1397277617
+t1397277743
 s190712
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLRequestSerialization.o
-t1397277617
+t1397277743
 s199316
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLResponseSerialization.o
-t1397277617
+t1397277743
 s85648
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFURLSessionManager.o
-t1397277617
+t1397277743
 s180720
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking-dummy.o
-t1397277616
+t1397277743
 s3444
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/Pods-AFNetworking.LinkFileList
-c000000005348C3AD0000000000000B98
-t1397277613
+c000000005348C42F0000000000000B98
+t1397277743
 s2968
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIActivityIndicatorView+AFNetworking.o
-t1397277616
+t1397277743
 s50172
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIAlertView+AFNetworking.o
-t1397277616
+t1397277743
 s25696
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIButton+AFNetworking.o
-t1397277617
+t1397277743
 s73624
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIImageView+AFNetworking.o
-t1397277617
+t1397277743
 s70260
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIProgressView+AFNetworking.o
-t1397277617
+t1397277743
 s66128
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIRefreshControl+AFNetworking.o
-t1397277617
+t1397277743
 s51544
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/UIWebView+AFNetworking.o
-t1397277617
+t1397277743
 s65416
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/libPods-AFNetworking.a
-t1397277617
+t1397277743
 s1343272
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperation.o
-t1397277617
+t1397277743
 s47044
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPRequestOperationManager.o
-t1397277617
+t1397277743
 s61300
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFHTTPSessionManager.o
-t1397277617
+t1397277743
 s71056
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkActivityIndicatorManager.o
-t1397277617
+t1397277743
 s37200
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFNetworkReachabilityManager.o
-t1397277617
+t1397277743
 s48608
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFSecurityPolicy.o
-t1397277617
+t1397277743
 s44008
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLConnectionOperation.o
-t1397277617
+t1397277743
 s216160
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLRequestSerialization.o
-t1397277617
+t1397277743
 s237372
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLResponseSerialization.o
-t1397277617
+t1397277743
 s103212
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/AFURLSessionManager.o
-t1397277617
+t1397277743
 s221156
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking-dummy.o
-t1397277617
+t1397277743
 s3896
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/Pods-AFNetworking.LinkFileList
-c000000005348C3AD0000000000000BBC
-t1397277613
+c000000005348C42F0000000000000BBC
+t1397277743
 s3004
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIActivityIndicatorView+AFNetworking.o
-t1397277617
+t1397277743
 s51624
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIAlertView+AFNetworking.o
-t1397277617
+t1397277743
 s29304
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIButton+AFNetworking.o
-t1397277617
+t1397277743
 s80524
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIImageView+AFNetworking.o
-t1397277617
+t1397277743
 s76404
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIProgressView+AFNetworking.o
-t1397277617
+t1397277743
 s72368
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIRefreshControl+AFNetworking.o
-t1397277617
+t1397277743
 s52984
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/UIWebView+AFNetworking.o
-t1397277617
+t1397277743
 s69476
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/x86_64/libPods-AFNetworking.a
-t1397277617
+t1397277743
 s1540248
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-aqhzizmzxuhtrufjjwbnorltacvh/Pods-AFNetworking-prefix.pch.pch
-t1397277615
+t1397277743
 s128260
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-dsytuqoinvfsuccixmaxtaimwprk/Pods-AFNetworking-prefix.pch.pch
-t1397277615
+t1397277743
 s127356
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-evkivefmnoiqozbjakfifttmxedb/Pods-AFNetworking-prefix.pch.pch
-t1397277616
+t1397277743
 s121648
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/PrecompiledHeaders/Pods-AFNetworking-prefix-ggegdmstuiumawbdwmxbtxghzukt/Pods-AFNetworking-prefix.pch.pch
-t1397277616
+t1397277743
 s122400
 
 N/Users/benjaminchang/Development/dora/Build/Products/Release-iphonesimulator/libPods-AFNetworking.a
-t2
-s0
+t1397277743
+s2883568
+
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+c00000000533C33F80000000000001192
+t1396454392
+s4498
 
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m
 c00000000533C33F80000000000001CFD
 t1396454392
 s7421
 
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.h
+c00000000533C33F800000000000048F0
+t1396454392
+s18672
+
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m
 c00000000533C33F8000000000000291C
 t1396454392
 s10524
+
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h
+c00000000533C33F800000000000038E4
+t1396454392
+s14564
 
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m
 c00000000533C33F80000000000003019
 t1396454392
 s12313
 
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+c00000000533C33F80000000000001D1F
+t1396454392
+s7455
+
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m
 c00000000533C33F80000000000002520
 t1396454392
 s9504
+
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h
+c00000000533C33F8000000000000141B
+t1396454392
+s5147
 
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m
 c00000000533C33F80000000000002A47
 t1396454392
 s10823
 
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+c00000000533C33F80000000000004621
+t1396454392
+s17953
+
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m
 c00000000533C33F800000000000068B9
 t1396454392
 s26809
+
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+c00000000533C33F80000000000005009
+t1396454392
+s20489
 
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m
 c00000000533C33F8000000000000B7BC
 t1396454392
 s47036
 
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+c00000000533C33F800000000000027A4
+t1396454392
+s10148
+
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m
 c00000000533C33F80000000000005DA7
 t1396454392
 s23975
+
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h
+c00000000533C33F80000000000006DC8
+t1396454392
+s28104
 
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m
 c00000000533C33F8000000000000A00A
 t1396454392
 s40970
 
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h
+c00000000533C33F80000000000000EC1
+t1396454392
+s3777
+
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m
 c00000000533C33F8000000000000190C
 t1396454392
 s6412
+
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h
+c00000000533C33F800000000000009C9
+t1396454392
+s2505
 
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m
 c00000000533C33F80000000000000F19
 t1396454392
 s3865
 
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.h
+c00000000533C33F8000000000000143A
+t1396454392
+s5178
+
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m
 c00000000533C33F80000000000001642
 t1396454392
 s5698
+
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h
+c00000000533C33F80000000000001F95
+t1396454392
+s8085
 
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m
 c00000000533C33F80000000000001D5B
 t1396454392
 s7515
 
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h
+c00000000533C33F80000000000001C53
+t1396454392
+s7251
+
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m
 c00000000533C33F80000000000001D77
 t1396454392
 s7543
+
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h
+c00000000533C33F80000000000000D89
+t1396454392
+s3465
 
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m
 c00000000533C33F80000000000001EDC
 t1396454392
 s7900
 
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h
+c00000000533C33F800000000000009BC
+t1396454392
+s2492
+
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m
 c00000000533C33F80000000000000EFC
 t1396454392
 s3836
+
+N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h
+c00000000533C33F80000000000001734
+t1396454392
+s5940
 
 N/Users/benjaminchang/Development/dora/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m
 c00000000533C33F80000000000001927
@@ -367,6 +452,11 @@ N/Users/benjaminchang/Development/dora/Pods/Pods-AFNetworking-prefix.pch
 c00000000533C33F80000000000000053
 t1396454392
 s83
+
+N/Users/benjaminchang/Development/dora/Pods/Pods-environment.h
+c000000005345FEBC0000000000000A89
+t1397096124
+s2697
 
 CBuild AST from /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m
 r0
@@ -424,7 +514,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesc2f9902dfbf8b841^11c6d32dfbf8b841^---0#1#1#--18"Check dependencies36"DE3D4323-9F2E-415D-9FB5-4C5D0DEFFCD0-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesccedca8709f9b841^c825f28709f9b841^---0#1#1#--18"Check dependencies36"AC25AA57-A395-4477-8040-F420C670624E-
 
 CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods-AFNetworking.build/Objects-normal/i386/AFHTTPRequestOperation.o /Users/benjaminchang/Development/dora/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s418970416.428620

@@ -34,54 +34,54 @@ t1394520225
 s2780
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods.build/Objects-normal/i386/Pods-dummy.o
-t1397277618
+t1397277743
 s3100
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods.build/Objects-normal/i386/Pods.LinkFileList
-c000000005348C3B20000000000000089
-t1397277618
+c000000005348C42F0000000000000089
+t1397277743
 s137
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods.build/Objects-normal/i386/libPods.a
-t1397277618
+t1397277743
 s1923144
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods.build/Objects-normal/x86_64/Pods-dummy.o
-t1397277618
+t1397277743
 s3532
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods.build/Objects-normal/x86_64/Pods.LinkFileList
-c000000005348C3B2000000000000008B
-t1397277618
+c000000005348C42F000000000000008B
+t1397277743
 s139
 
 N/Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods.build/Objects-normal/x86_64/libPods.a
-t1397277618
+t1397277743
 s2204688
 
 N/Users/benjaminchang/Development/dora/Build/Products/Release-iphonesimulator/libPods-AFNetworking.a
-c000000005348C3B100000000002BFFF0
-t1397277617
+c000000005348C42F00000000002BFFF0
+t1397277743
 s2883568
 
 N/Users/benjaminchang/Development/dora/Build/Products/Release-iphonesimulator/libPods-BDBOAuth1Manager.a
-c000000005348C3B20000000000055258
-t1397277618
+c000000005348C42F0000000000055258
+t1397277743
 s348760
 
 N/Users/benjaminchang/Development/dora/Build/Products/Release-iphonesimulator/libPods-MBProgressHUD.a
-c000000005348C3AF000000000005E3F0
-t1397277615
+c000000005348C42F000000000005E3F0
+t1397277743
 s386032
 
 N/Users/benjaminchang/Development/dora/Build/Products/Release-iphonesimulator/libPods-MLPAutoCompleteTextField.a
-c000000005348C3B0000000000007AE10
-t1397277616
+c000000005348C42F000000000007AE10
+t1397277743
 s503312
 
 N/Users/benjaminchang/Development/dora/Build/Products/Release-iphonesimulator/libPods.a
-t2
-s0
+t1397277743
+s4127880
 
 N/Users/benjaminchang/Development/dora/Pods/Pods-dummy.m
 c00000000533C33F80000000000000070
@@ -93,7 +93,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesb4764332fbf8b841^ae2d4432fbf8b841^---0#1#1#--18"Check dependencies36"D729F2B9-41B8-46ED-B10D-6B4716464ABB-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies6fbdf68709f9b841^9ef0f68709f9b841^---0#1#1#--18"Check dependencies36"8728CBA9-0AF5-414C-BE37-F80D3A375176-
 
 CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/Pods.build/Release-iphonesimulator/Pods.build/Objects-normal/i386/Pods-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s418970418.266769
