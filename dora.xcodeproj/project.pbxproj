@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1252856618F3A63500E45C86 /* Discussion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252856518F3A63500E45C86 /* Discussion.m */; };
 		1252858518F5088C00E45C86 /* CustomAutocompleteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252858418F5088C00E45C86 /* CustomAutocompleteObject.m */; };
 		1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252859118F508FB00E45C86 /* CustomAutocompleteCell.m */; };
 		1252859C18F5133A00E45C86 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252859618F5133A00E45C86 /* MLPAutoCompleteTextField.m */; };
@@ -60,8 +59,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1252856418F3A63500E45C86 /* Discussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Discussion.h; sourceTree = "<group>"; };
-		1252856518F3A63500E45C86 /* Discussion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Discussion.m; sourceTree = "<group>"; };
 		1252858318F5088C00E45C86 /* CustomAutocompleteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAutocompleteObject.h; sourceTree = "<group>"; };
 		1252858418F5088C00E45C86 /* CustomAutocompleteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAutocompleteObject.m; sourceTree = "<group>"; };
 		1252859018F508FB00E45C86 /* CustomAutocompleteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAutocompleteCell.h; sourceTree = "<group>"; };
@@ -287,8 +284,6 @@
 			children = (
 				126B187B18EBB153005A8475 /* User.h */,
 				126B187C18EBB153005A8475 /* User.m */,
-				1252856418F3A63500E45C86 /* Discussion.h */,
-				1252856518F3A63500E45C86 /* Discussion.m */,
 				47C1067B18F9CAC200EE78F2 /* Group.h */,
 				47C1067C18F9CAC200EE78F2 /* Group.m */,
 				47C1067E18F9CACE00EE78F2 /* Post.h */,
@@ -452,7 +447,6 @@
 				126B187D18EBB153005A8475 /* User.m in Sources */,
 				1252858518F5088C00E45C86 /* CustomAutocompleteObject.m in Sources */,
 				1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */,
-				1252856618F3A63500E45C86 /* Discussion.m in Sources */,
 				126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */,
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,
 				126B189618EBBDE7005A8475 /* HomeViewController.m in Sources */,

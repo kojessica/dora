@@ -19,7 +19,7 @@
     return self;
 }
 
-- (Group*)init {
+- (id)init {
     self = [super init];
     self.data = [[NSMutableDictionary alloc] init];
     return self;
@@ -42,6 +42,16 @@
     group.data[@"location"] = geoPoint;
     group.data[@"popularIndex"] = 0;
     group.data[@"totalPosts"] = 0;
+    return group;
+}
+
+
++ (Group*)getGroupWithName:(NSString*)name{
+    PFQuery *query = [PFQuery queryWithClassName:@"Group"];
+    [query whereKey:@"name" equalTo:name];
+    PFObject *object = [query getFirstObject];
+    Group *group = [[Group alloc] init];
+    group.data = [[object dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"name",@"objectId",@"location",@"popularIndex",@"totalPosts", nil]] mutableCopy];
     return group;
 }
 

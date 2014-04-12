@@ -13,7 +13,7 @@
 @property (nonatomic, strong) NSMutableDictionary *data;
 - (id)initWithDictionary:(NSDictionary *)data;
 + (Group*)createGroupWithName:(NSString*)name location:(CLLocation*) location;
-
++ (Group*)getGroupWithName:(NSString*)name;
 - (void)setName:(NSString*)name;
 - (void)setObjectId:(NSString*) objectId;
 - (void)setPopularityIndex:(NSNumber *)popularityIndex;
