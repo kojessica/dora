@@ -1,0 +1,238 @@
+TPods
+v6
+r1
+cCheck dependencies
+cSymLink /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods.a /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a
+cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/libPods.a normal armv7
+cLibtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a normal armv7s
+cLibtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/libPods.a normal arm64
+cCreateUniversalBinary /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a normal armv7\ armv7s\ arm64
+cSetOwnerAndGroup benjaminchang:staff /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a
+cSetMode u+w,go-w,a+rX /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk
+c0000000053119F860000000000000132
+t1393663878
+s306
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/SDKSettings.plist
+c00000000531EB074000000000000036B
+t1394520180
+s875
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531EB074000000000000019E
+t1394520180
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000531EB0760000000000A90C10
+t1394520182
+s11078672
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include/module.map
+c00000000531EB0A10000000000000ADC
+t1394520225
+s2780
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods-AFNetworking.a
+c00000000534605CB000000000041B184
+t1397097931
+s4305284
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods-BDBOAuth1Manager.a
+c00000000534605CC0000000000082E3C
+t1397097932
+s536124
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods-MBProgressHUD.a
+c00000000534605CA000000000008A18C
+t1397097930
+s565644
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods-MLPAutoCompleteTextField.a
+c00000000534605CA00000000000B5A6C
+t1397097930
+s744044
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods.a
+t2
+s0
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o
+t1397097932
+s3900
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/Pods.LinkFileList
+c00000000534605CC00000000000000B8
+t1397097932
+s184
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/libPods.a
+t1397097932
+s2258112
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o
+t1397097932
+s3428
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/Pods.LinkFileList
+c00000000534605CC00000000000000B8
+t1397097932
+s184
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/libPods.a
+t1397097932
+s1951608
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o
+t1397097932
+s3428
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/Pods.LinkFileList
+c00000000534605CC00000000000000B9
+t1397097932
+s185
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a
+t1397097932
+s1951440
+
+N/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a
+t2
+s0
+
+N/Users/benjaminchang/Development/dora/Pods/Pods-dummy.m
+c00000000533C33F80000000000000070
+t1396454392
+s112
+
+CBuild AST from /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies22fe454c3df6b841^5fd4464c3df6b841^---0#1#1#--18"Check dependencies36"3F52CE44-2DB8-402D-8AE1-70D2EC3CDAED-
+
+CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418790732.280791
+e418790732.301532
+r1
+xCompileC
+x/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o
+x/Users/benjaminchang/Development/dora/Pods/Pods-dummy.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/benjaminchang/Development/dora/Pods/Pods-dummy.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Compile /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m274"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o Pods-dummy.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compileraaf0474c3df6b841^98314d4c3df6b841^---0#0#1#-19%DVTDocumentLocation2@62"file:///Users/benjaminchang/Development/dora/Pods/Pods-dummy.m0000000000000000^4515"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o Pods-dummy.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DCOCOAPODS=1 -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/include -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/DerivedSources/arm64 -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/AFNetworking -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/BDBOAuth1Manager -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/MBProgressHUD -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/MLPAutoCompleteTextField -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.dia -c /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/Pods-dummy.o36"1662027B-6093-4870-A9FC-6D0803B41D3B-
+bA7378C5A-598A-43BF-8506-1DE3543BC9EE
+
+CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418790732.280546
+e418790732.301663
+r1
+xCompileC
+x/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o
+x/Users/benjaminchang/Development/dora/Pods/Pods-dummy.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/benjaminchang/Development/dora/Pods/Pods-dummy.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Compile /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m274"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o Pods-dummy.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compilera8e5474c3df6b841^a8394d4c3df6b841^---0#0#1#-19%DVTDocumentLocation2@62"file:///Users/benjaminchang/Development/dora/Pods/Pods-dummy.m0000000000000000^4515"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o Pods-dummy.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DCOCOAPODS=1 -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/include -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/DerivedSources/armv7 -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/AFNetworking -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/BDBOAuth1Manager -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/MBProgressHUD -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/MLPAutoCompleteTextField -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.dia -c /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/Pods-dummy.o36"F626753E-3881-4413-8DD6-293503F48B4D-
+bA7378C5A-598A-43BF-8506-1DE3543BC9EE
+
+CCompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418790732.280672
+e418790732.301669
+r1
+xCompileC
+x/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o
+x/Users/benjaminchang/Development/dora/Pods/Pods-dummy.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/benjaminchang/Development/dora/Pods/Pods-dummy.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Compile /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m276"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o Pods-dummy.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler7deb474c3df6b841^5b3f4d4c3df6b841^---0#0#1#-19%DVTDocumentLocation2@62"file:///Users/benjaminchang/Development/dora/Pods/Pods-dummy.m0000000000000000^4522"CompileC /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o Pods-dummy.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/benjaminchang/Development/dora/Pods    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-cache-path=/Users/benjaminchang/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DCOCOAPODS=1 -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-generated-files.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-own-target-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-all-target-headers.hmap -iquote /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Pods-project-headers.hmap -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/include -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/AFNetworking -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/BDBOAuth1Manager -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/MBProgressHUD -I/Users/benjaminchang/Development/dora/Pods/Pods/Headers/MLPAutoCompleteTextField -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/DerivedSources/armv7s -I/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/DerivedSources -F/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos -DNS_BLOCK_ASSERTIONS=1 -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/AFNetworking -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/BDBOAuth1Manager -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/MBProgressHUD -isystem /Users/benjaminchang/Development/dora/Pods/Pods/Headers/MLPAutoCompleteTextField -MMD -MT dependencies -MF /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.d --serialize-diagnostics /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.dia -c /Users/benjaminchang/Development/dora/Pods/Pods-dummy.m -o /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/Pods-dummy.o36"541C97D6-39B2-4AE3-B5AA-49625D17976D-
+bA7378C5A-598A-43BF-8506-1DE3543BC9EE
+
+CCreateUniversalBinary /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a normal armv7\ armv7s\ arm64
+s418790732.364567
+e418790732.468093
+r1
+xCreateUniversalBinary
+x/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a
+xnormal
+xarmv7 armv7s arm64
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection164"Create universal binary /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a190"CreateUniversalBinary /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a normal armv7\ armv7s\ arm649a5f5d4c3df6b841^30d6774c3df6b841^---0#0#1#-19%DVTDocumentLocation2@147"file:///Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a0034544cdcffdf42^1224"CreateUniversalBinary /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a normal armv7\ armv7s\ arm64    cd /Users/benjaminchang/Development/dora/Pods    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/libPods.a /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/libPods.a -o /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a36"633EE52A-5F97-40E3-B547-CF6AB3A1199B-
+bA7378C5A-598A-43BF-8506-1DE3543BC9EE
+
+CLibtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/libPods.a normal arm64
+s418790732.302643
+e418790732.364196
+r1
+xLibtool
+x/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/libPods.a
+xnormal
+xarm64
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection201"Libtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/libPods.a normal arm64201"Libtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/libPods.a normal arm6477864d4c3df6b841^bc3c5d4c3df6b841^---0#0#1#--1343"Libtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/libPods.a normal arm64    cd /Users/benjaminchang/Development/dora/Pods    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only arm64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos -filelist /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/Pods.LinkFileList -framework Foundation -lPods-AFNetworking -lPods-BDBOAuth1Manager -lPods-MBProgressHUD -lPods-MLPAutoCompleteTextField -o /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/arm64/libPods.a36"85490057-F3C4-40FA-B6B1-005DABC3190C-
+bA7378C5A-598A-43BF-8506-1DE3543BC9EE
+
+CLibtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/libPods.a normal armv7
+s418790732.302260
+e418790732.362668
+r1
+xLibtool
+x/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/libPods.a
+xnormal
+xarmv7
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection201"Libtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/libPods.a normal armv7201"Libtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/libPods.a normal armv78b6e4d4c3df6b841^77d85c4c3df6b841^---0#0#1#--1343"Libtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/libPods.a normal armv7    cd /Users/benjaminchang/Development/dora/Pods    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only armv7 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos -filelist /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/Pods.LinkFileList -framework Foundation -lPods-AFNetworking -lPods-BDBOAuth1Manager -lPods-MBProgressHUD -lPods-MLPAutoCompleteTextField -o /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7/libPods.a36"B26F0F51-FC31-445F-9717-4215EEE1D5EB-
+bA7378C5A-598A-43BF-8506-1DE3543BC9EE
+
+CLibtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a normal armv7s
+s418790732.302498
+e418790732.361831
+r1
+xLibtool
+x/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a
+xnormal
+xarmv7s
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection203"Libtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a normal armv7s203"Libtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a normal armv7sa1804d4c3df6b841^cfa15c4c3df6b841^---0#0#1#--1348"Libtool /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a normal armv7s    cd /Users/benjaminchang/Development/dora/Pods    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only armv7s -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk -L/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos -filelist /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/Pods.LinkFileList -framework Foundation -lPods-AFNetworking -lPods-BDBOAuth1Manager -lPods-MBProgressHUD -lPods-MLPAutoCompleteTextField -o /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/Pods.build/Objects-normal/armv7s/libPods.a36"43787571-686F-4A04-8001-903FA595B016-
+bA7378C5A-598A-43BF-8506-1DE3543BC9EE
+
+CSetMode u+w,go-w,a+rX /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a
+s418790732.472790
+e418790732.475617
+r1
+xSetMode
+xu+w,go-w,a+rX
+x/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection162"SetMode u+w,go-w,a+rX /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a162"SetMode u+w,go-w,a+rX /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.aa912794c3df6b841^5dc2794c3df6b841^---0#0#1#-19%DVTDocumentLocation2@147"file:///Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a0000000000000000^575"SetMode u+w,go-w,a+rX /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a    cd /Users/benjaminchang/Development/dora/Pods    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /bin/chmod -RH u+w,go-w,a+rX /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a36"57694000-456D-407B-B06C-EE15F3FDFD05-
+bA7378C5A-598A-43BF-8506-1DE3543BC9EE
+
+CSetOwnerAndGroup benjaminchang:staff /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a
+s418790732.468371
+e418790732.472611
+r1
+xSetOwnerAndGroup
+xbenjaminchang:staff
+x/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection177"SetOwnerAndGroup benjaminchang:staff /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a177"SetOwnerAndGroup benjaminchang:staff /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.aa1f2774c3df6b841^b1fd784c3df6b841^---0#0#1#-19%DVTDocumentLocation2@147"file:///Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a0000000000000000^601"SetOwnerAndGroup benjaminchang:staff /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a    cd /Users/benjaminchang/Development/dora/Pods    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/sbin/chown -RH benjaminchang:staff /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a36"DC38D2D3-F247-4837-AC71-B9B8DC87E2C1-
+bA7378C5A-598A-43BF-8506-1DE3543BC9EE
+
+CSymLink /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods.a /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a
+s418790732.277016
+e418790732.280150
+r1
+xSymLink
+x/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods.a
+x/Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"Process /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods.a277"SymLink /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods.a /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.ae8fa464c3df6b841^80b8474c3df6b841^---0#0#1#--802"SymLink /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods.a /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a    cd /Users/benjaminchang/Development/dora/Pods    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /bin/ln -sf /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/IntermediateBuildFilesPath/UninstalledProducts/libPods.a /Users/benjaminchang/Development/dora/Build/Intermediates/ArchiveIntermediates/dora/BuildProductsPath/Release-iphoneos/libPods.a36"FCC15758-6D46-4520-ACAB-2E8E1E94AF4E-
+bA7378C5A-598A-43BF-8506-1DE3543BC9EE
+
