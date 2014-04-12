@@ -45,6 +45,8 @@
 		129D762018F9DAEE003EB2E7 /* TabsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D761E18F9DAEE003EB2E7 /* TabsController.xib */; };
 		129D762418F9E338003EB2E7 /* GroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D762218F9E338003EB2E7 /* GroupCell.m */; };
 		129D762518F9E338003EB2E7 /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D762318F9E338003EB2E7 /* GroupCell.xib */; };
+		129D762918F9F140003EB2E7 /* GroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D762718F9F140003EB2E7 /* GroupDetailViewController.m */; };
+		129D762A18F9F140003EB2E7 /* GroupDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D762818F9F140003EB2E7 /* GroupDetailViewController.xib */; };
 		47435D3A18F9EF9000E1F5CE /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3718F9EF9000E1F5CE /* Group.m */; };
 		47435D3B18F9EF9000E1F5CE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3918F9EF9000E1F5CE /* Post.m */; };
 		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
@@ -120,6 +122,9 @@
 		129D762118F9E338003EB2E7 /* GroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupCell.h; sourceTree = "<group>"; };
 		129D762218F9E338003EB2E7 /* GroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupCell.m; sourceTree = "<group>"; };
 		129D762318F9E338003EB2E7 /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
+		129D762618F9F140003EB2E7 /* GroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupDetailViewController.h; sourceTree = "<group>"; };
+		129D762718F9F140003EB2E7 /* GroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDetailViewController.m; sourceTree = "<group>"; };
+		129D762818F9F140003EB2E7 /* GroupDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupDetailViewController.xib; sourceTree = "<group>"; };
 		47435D3618F9EF9000E1F5CE /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		47435D3718F9EF9000E1F5CE /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		47435D3818F9EF9000E1F5CE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
@@ -293,6 +298,9 @@
 				126B189318EBBDE7005A8475 /* HomeViewController.h */,
 				126B189418EBBDE7005A8475 /* HomeViewController.m */,
 				126B189518EBBDE7005A8475 /* HomeViewController.xib */,
+				129D762618F9F140003EB2E7 /* GroupDetailViewController.h */,
+				129D762718F9F140003EB2E7 /* GroupDetailViewController.m */,
+				129D762818F9F140003EB2E7 /* GroupDetailViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -413,6 +421,7 @@
 				47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */,
 				126B187918EBB039005A8475 /* GroupPickerViewController.xib in Resources */,
 				125285F518F8DCD500E45C86 /* write_17_icon.png in Resources */,
+				129D762A18F9F140003EB2E7 /* GroupDetailViewController.xib in Resources */,
 				126B189718EBBDE7005A8475 /* HomeViewController.xib in Resources */,
 				129D762018F9DAEE003EB2E7 /* TabsController.xib in Resources */,
 			);
@@ -472,6 +481,7 @@
 				1252858518F5088C00E45C86 /* CustomAutocompleteObject.m in Sources */,
 				129D761B18F9D8A4003EB2E7 /* ListViewController.m in Sources */,
 				1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */,
+				129D762918F9F140003EB2E7 /* GroupDetailViewController.m in Sources */,
 				126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */,
 				47435D3B18F9EF9000E1F5CE /* Post.m in Sources */,
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,

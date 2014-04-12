@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListViewController : UITableViewController
+@interface ListViewController : UITableViewController <UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate>
 @end

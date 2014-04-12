@@ -9,6 +9,14 @@
 #import "ListViewController.h"
 #import "TabsController.h"
 #import "GroupCell.h"
+#import "GroupDetailViewController.h"
+#import "Group.h"
+
+@interface ListViewController ()
+
+@property (strong, nonatomic) NSArray *listGroup;
+
+@end
 
 @implementation ListViewController
 
@@ -16,6 +24,11 @@
 {
 	[super viewDidLoad];
     //[self.tableView registerNib:[UINib nibWithNibName:@"GroupCell" bundle:nil] forCellWithReuseIdentifier:@"GroupCell"];
+    
+    self.listGroup = [Group getAllGroups];
+    NSLog(@"%@", self.listGroup);
+    
+    [self.tableView reloadData];
 }
 
 - (void)willMoveToParentViewController:(UIViewController *)parent
@@ -36,7 +49,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 50;
+	return [self.listGroup count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -45,15 +58,17 @@
     
     GroupCell *cell = (GroupCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    //TODO(jessica): remove this
 	if (cell == nil) {
 		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"GroupCell" owner:self options:nil];
 		cell = (GroupCell*)[nib objectAtIndex:0];
     }
-    //end
+    Group *group = [[Group alloc] init];
+    group.data = [[[self.listGroup objectAtIndex:indexPath.row] dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"name",@"objectId",@"location",@"popularIndex",@"totalPosts", nil]] mutableCopy];
+    
+    NSLog(@"%@", group.data);
     
 	cell.selectionStyle = UITableViewCellSelectionStyleGray;
-    cell.name.text = @"Group Name";
+    [cell setGroup:group];
     
 	return cell;
 }
@@ -65,7 +80,7 @@
 	NSLog(@"%@, parent is %@", self.title, self.parentViewController);
     
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    /*
 	ListViewController *listViewController1 = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
 	ListViewController *listViewController2 = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
 	
@@ -77,10 +92,22 @@
 	tabBarController.title = @"Modal Screen";
 	tabBarController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
                                                          initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];
+    */
+    GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
+    groupDetailView.title = @"Modal Screen";
+	groupDetailView.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
+                                                         initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];
+    groupDetailView.transitioningDelegate = self;
+    groupDetailView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
-	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:groupDetailView];
 	navController.navigationBar.tintColor = [UIColor blackColor];
-	[self presentViewController:navController animated:YES completion:nil];
+    
+    [UIView beginAnimations:nil context:nil];
+    [self presentViewController:navController animated:YES completion:nil];
+    [UIView setAnimationDuration:0.5];
+    [UIView commitAnimations];
+	
 }
 
 - (IBAction)done:(id)sender

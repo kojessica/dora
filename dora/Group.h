@@ -12,15 +12,16 @@
 @interface Group : NSObject
 @property (nonatomic, strong) NSMutableDictionary *data;
 - (id)initWithDictionary:(NSDictionary *)data;
-+ (Group*)createGroupWithName:(NSString*)name location:(CLLocation*) location;
-+ (Group*)getGroupWithName:(NSString*)name;
-- (void)setName:(NSString*)name;
-- (void)setObjectId:(NSString*) objectId;
++ (Group *)createGroupWithName:(NSString*)name location:(CLLocation *) location;
++ (Group *)getGroupWithName:(NSString*)name;
++ (NSArray *)getAllGroups;
+- (void)setName:(NSString *)name;
+- (void)setObjectId:(NSString *) objectId;
 - (void)setPopularityIndex:(NSNumber *)popularityIndex;
 - (void)setTotalPosts:(NSNumber *)totalPosts;
-- (NSString*)getName;
-- (NSString*)getObjectId;
-- (NSNumber*)getPopularityIndex;
-- (NSNumber*)getTotalPosts;
+- (NSString *)getName;
+- (NSString *)getObjectId;
+- (NSNumber *)getPopularityIndex;
+- (NSNumber *)getTotalPosts;
 
 @end

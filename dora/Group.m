@@ -29,7 +29,7 @@
     CLLocationCoordinate2D coordinate = [location coordinate];
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
                                                   longitude:coordinate.longitude];
-    PFObject *pfGroup = [PFObject objectWithClassName:@"Group"];
+    PFObject *pfGroup = [PFObject objectWithClassName:@"Groups"];
     pfGroup[@"name"] = name;
     pfGroup[@"location"] = geoPoint;
     pfGroup[@"popularIndex"] = 0;
@@ -46,13 +46,20 @@
 }
 
 
-+ (Group*)getGroupWithName:(NSString*)name{
-    PFQuery *query = [PFQuery queryWithClassName:@"Group"];
++ (Group*)getGroupWithName:(NSString*)name {
+    PFQuery *query = [PFQuery queryWithClassName:@"Groups"];
     [query whereKey:@"name" equalTo:name];
     PFObject *object = [query getFirstObject];
     Group *group = [[Group alloc] init];
     group.data = [[object dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"name",@"objectId",@"location",@"popularIndex",@"totalPosts", nil]] mutableCopy];
     return group;
+}
+
++ (NSArray *)getAllGroups {
+    PFQuery *query = [PFQuery queryWithClassName:@"Groups"];
+    [query whereKeyExists:@"name"];
+    NSArray *objects = [query findObjects];
+    return objects;
 }
 
 - (void)setName:(NSString*)name {
