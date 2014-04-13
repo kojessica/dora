@@ -10,7 +10,6 @@
 #import <Parse/Parse.h>
 #import "User.h"
 #import "GroupPickerViewController.h"
-#import "HomeViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "LocationController.h"
 #import "ListViewController.h"
@@ -30,7 +29,6 @@
     [[locationController locationManager] startUpdatingLocation];
     User *currentUser = [User currentUser];
     if ([User currentUser]) {
-        //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
         //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[GroupPickerViewController alloc] init]];
         //nav.navigationBar.hidden = YES;
         

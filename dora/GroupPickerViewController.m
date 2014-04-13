@@ -10,7 +10,8 @@
 #import "MLPAutoCompleteTextField.h"
 #import "CustomAutocompleteCell.h"
 #import "CustomAutocompleteObject.h"
-#import "HomeViewController.h"
+#import "ListViewController.h"
+#import "TabsController.h"
 #import <Parse/Parse.h>
 #import "User.h"
 
@@ -127,8 +128,20 @@
 
 - (void)loadHomeView
 {
-    HomeViewController *home = [[HomeViewController alloc] init];
-    [self.navigationController pushViewController:home animated:YES];
+    
+    ListViewController *listViewController1 = [[ListViewController alloc] init];
+    ListViewController *listViewController2 = [[ListViewController alloc] init];
+    
+    listViewController1.title = @"RELEVANT";
+    listViewController2.title = @"POPULAR";
+    
+    NSArray *viewControllers = @[listViewController1, listViewController2];
+    TabsController *tabBarController = [[TabsController alloc] init];
+    
+    //tabBarController.delegate = self;
+    tabBarController.viewControllers = viewControllers;
+    
+    [self.navigationController pushViewController:tabBarController animated:YES];
 }
 
 - (BOOL)autoCompleteTextField:(MLPAutoCompleteTextField *)textField

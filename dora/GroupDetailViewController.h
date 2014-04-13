@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Group.h"
 
 @interface GroupDetailViewController : UIViewController
 
+- (IBAction)onBackButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *writeButton;
+@property (weak, nonatomic) IBOutlet UIView *topBar;
+@property (weak, nonatomic) IBOutlet UILabel *groupLabel;
+@property (strong, nonatomic) Group *group;
+- (IBAction)onCompose:(id)sender;
 @end

@@ -15,6 +15,7 @@
 @interface ListViewController ()
 
 @property (strong, nonatomic) NSArray *listGroup;
+@property (assign, nonatomic) BOOL detailviewIsPresent;
 
 @end
 
@@ -26,20 +27,11 @@
     //[self.tableView registerNib:[UINib nibWithNibName:@"GroupCell" bundle:nil] forCellWithReuseIdentifier:@"GroupCell"];
     
     self.listGroup = [Group getAllGroups];
+    self.detailviewIsPresent = NO;
     NSLog(@"%@", self.listGroup);
-    
     [self.tableView reloadData];
 }
 
-- (void)willMoveToParentViewController:(UIViewController *)parent
-{
-	[super willMoveToParentViewController:parent];
-}
-
-- (void)didMoveToParentViewController:(UIViewController *)parent
-{
-	[super didMoveToParentViewController:parent];
-}
 
 #pragma mark - UITableViewDataSource
 
@@ -67,7 +59,7 @@
     
     NSLog(@"%@", group.data);
     
-	cell.selectionStyle = UITableViewCellSelectionStyleGray;
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell setGroup:group];
     
 	return cell;
@@ -79,40 +71,63 @@
 {
 	NSLog(@"%@, parent is %@", self.title, self.parentViewController);
     
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-    /*
-	ListViewController *listViewController1 = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
-	ListViewController *listViewController2 = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
-	
-	listViewController1.title = @"Another Tab 1";
-	listViewController2.title = @"Another Tab 2";
+    Group *groupSelected = [[Group alloc] init];
+    groupSelected.data = [[[self.listGroup objectAtIndex:indexPath.row] dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"name",@"objectId",@"location",@"popularIndex",@"totalPosts", nil]] mutableCopy];
     
-	TabsController *tabBarController = [[TabsController alloc] init];
-	tabBarController.viewControllers = @[listViewController1, listViewController2];
-	tabBarController.title = @"Modal Screen";
-	tabBarController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
-                                                         initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];
-    */
+	//[tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
-    groupDetailView.title = @"Modal Screen";
-	groupDetailView.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
-                                                         initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];
     groupDetailView.transitioningDelegate = self;
-    groupDetailView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    
-	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:groupDetailView];
-	navController.navigationBar.tintColor = [UIColor blackColor];
-    
-    [UIView beginAnimations:nil context:nil];
-    [self presentViewController:navController animated:YES completion:nil];
-    [UIView setAnimationDuration:0.5];
-    [UIView commitAnimations];
-	
+    groupDetailView.modalPresentationStyle = UIModalPresentationCustom;
+    groupDetailView.group = groupSelected;
+    [self presentViewController:groupDetailView animated:YES completion:nil];
 }
 
-- (IBAction)done:(id)sender
-{
-	[self dismissViewControllerAnimated:YES completion:nil];
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    self.detailviewIsPresent = NO;
+    return self;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    self.detailviewIsPresent = YES;
+    return self;
+}
+
+- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
+    return 0.5;
+}
+
+- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+    UIView *containerView = [transitionContext containerView];
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    CGSize sizeOfScreen = [[UIScreen mainScreen] bounds].size;
+    CGRect currentFrame = CGRectMake(0, 0, sizeOfScreen.width, sizeOfScreen.height);
+    
+    if (!self.detailviewIsPresent) {
+        toViewController.view.frame = containerView.frame;
+        [containerView addSubview:toViewController.view];
+        toViewController.view.frame = CGRectOffset(currentFrame, self.view.frame.size.width, 0);
+        fromViewController.view.frame = CGRectOffset(currentFrame, 0, 0);
+        
+        [UIView animateWithDuration:0.2 animations:^{
+            toViewController.view.frame = CGRectOffset(currentFrame, 0, 0);
+            fromViewController.view.frame = CGRectOffset(currentFrame, -self.view.frame.size.width, 0);
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+        }];
+    } else {
+        fromViewController.view.frame = CGRectOffset(currentFrame, 0, 0);
+        toViewController.view.frame = CGRectOffset(currentFrame, -self.view.frame.size.width, 0);
+        
+        [UIView animateWithDuration:0.2 animations:^{
+            fromViewController.view.frame = CGRectOffset(currentFrame, self.view.frame.size.width, 0);
+            toViewController.view.frame = CGRectOffset(currentFrame, 0, 0);
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+        }];
+    }
 }
 
 @end
