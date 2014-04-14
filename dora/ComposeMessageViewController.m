@@ -37,6 +37,8 @@
 
 - (IBAction)didClickSend:(id)sender {
     [Post postWithUser:[User currentUser] group:[self group] text:[self composedText].text location:[[LocationController sharedLocationController] locationManager].location];
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 - (IBAction)onCancelButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -42,8 +42,7 @@ static User *currentUser = nil;
 + (User *)setCurrentUser {
     NSMutableDictionary *dictionary =  [[NSMutableDictionary alloc] init];
     [dictionary setObject:[self setRandomKey] forKey: @"key"];
-    [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:dictionary] forKey:@"current_user"];
-
+ 
     /*
      [[self locationManager] startUpdatingLocation];
     CLLocation *location = _locationManager.location;
@@ -57,6 +56,10 @@ static User *currentUser = nil;
     user[@"key"] = [currentUser.data objectForKey:@"key"];
     //user[@"location"] = geoPoint;
     [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        user[@"objectId"] = [user objectId];
+        [dictionary setObject:[user objectId] forKey:@"objectId"];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:dictionary] forKey:@"current_user"];
+        
         NSLog(@"saved!");
     }];
     //(TODO): here we save lat long info of user

@@ -32,10 +32,12 @@
     post[@"groupId"] = group.getObjectId;
     post[@"text"] = content;
     post[@"userId"] = [User currentUserDictionary][@"objectId"];
-    post[@"likes"] = 0;
-    post[@"dislikes"] = 0;
-    post[@"popularity"] = 0;
-    post[@"location"] = geoPoint;
+    post[@"likes"] = [NSNumber numberWithInt:0];
+    post[@"dislikes"] = [NSNumber numberWithInt:0];
+    post[@"popularity"] = [NSNumber numberWithInt:0];
+    if(geoPoint != nil) {
+      post[@"location"] = geoPoint;
+    }
     [post saveInBackground];
     
 }

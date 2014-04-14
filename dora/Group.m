@@ -32,16 +32,18 @@
     PFObject *pfGroup = [PFObject objectWithClassName:@"Groups"];
     pfGroup[@"name"] = name;
     pfGroup[@"location"] = geoPoint;
-    pfGroup[@"popularIndex"] = 0;
-    pfGroup[@"totalPosts"] = 0;
+    pfGroup[@"popularIndex"] = [NSNumber numberWithInt:0];;
+    pfGroup[@"totalPosts"] = [NSNumber numberWithInt:0];;
 
     [pfGroup saveInBackground];
     Group *group = [[Group alloc] init];
     group.data[@"name"] = name;
     group.data[@"objectId"] = pfGroup[@"objectId"];
-    group.data[@"location"] = geoPoint;
-    group.data[@"popularIndex"] = 0;
-    group.data[@"totalPosts"] = 0;
+    if(geoPoint != nil) {
+        group.data[@"location"] = geoPoint;
+    }
+    group.data[@"popularIndex"] = [NSNumber numberWithInt:0];
+    group.data[@"totalPosts"] = [NSNumber numberWithInt:0];
     return group;
 }
 
