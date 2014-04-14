@@ -1,30 +1,25 @@
 //
-//  GroupPickerViewController.m
+//  SearchResultsViewController.m
 //  dora
 //
-//  Created by Jessica Ko on 4/1/14.
+//  Created by Jessica Ko on 4/13/14.
 //  Copyright (c) 2014 Jessica Ko. All rights reserved.
 //
 
-#import "GroupPickerViewController.h"
+#import "SearchResultsViewController.h"
 #import "MLPAutoCompleteTextField.h"
 #import "CustomAutocompleteCell.h"
 #import "CustomAutocompleteObject.h"
-#import "ListViewController.h"
-#import "TabsController.h"
 #import <Parse/Parse.h>
-#import "User.h"
 
-@interface GroupPickerViewController ()
+@interface SearchResultsViewController ()
 
 - (NSArray *)setAllGroups;
-- (void)loadHomeView;
 @property (strong,nonatomic) NSArray *groupsNames;
 
 @end
 
-
-@implementation GroupPickerViewController
+@implementation SearchResultsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,29 +33,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShowWithNotification:) name:UIKeyboardDidShowNotification object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHideWithNotification:) name:UIKeyboardDidHideNotification object:nil];
-    
-    self.autocompleteTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-    self.testWithAutoCompleteObjectsInsteadOfStrings = YES;
     [self setAllGroups];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShowWithNotificationInMainVC:) name:UIKeyboardDidShowNotification object:nil];
     
-    [self.autocompleteTextField setAutoCompleteTableAppearsAsKeyboardAccessory:NO];
-    [self.autocompleteTextField setBorderStyle:UITextBorderStyleRoundedRect];
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHideWithNotificationInMainVC:) name:UIKeyboardDidHideNotification object:nil];
+    self.searchInputBox.autocorrectionType = UITextAutocorrectionTypeNo;
+    self.testWithAutoCompleteObjectsInsteadOfStrings = YES;
+    [self.searchInputBox setAutoCompleteTableAppearsAsKeyboardAccessory:NO];
+    [self.searchInputBox setBorderStyle:UITextBorderStyleNone];
+    [self.searchInputBox becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onBackButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
+    }];
 }
 
 - (void)autoCompleteTextField:(MLPAutoCompleteTextField *)textField
@@ -126,23 +119,6 @@
     return self.groupsNames;
 }
 
-- (void)loadHomeView
-{
-    ListViewController *listViewController1 = [[ListViewController alloc] init];
-    ListViewController *listViewController2 = [[ListViewController alloc] init];
-    
-    listViewController1.title = @"RELEVANT";
-    listViewController2.title = @"POPULAR";
-    
-    NSArray *viewControllers = @[listViewController1, listViewController2];
-    TabsController *tabBarController = [[TabsController alloc] init];
-    
-    //tabBarController.delegate = self;
-    tabBarController.viewControllers = viewControllers;
-    
-    [self.navigationController pushViewController:tabBarController animated:YES];
-}
-
 - (BOOL)autoCompleteTextField:(MLPAutoCompleteTextField *)textField
           shouldConfigureCell:(UITableViewCell *)cell
        withAutoCompleteString:(NSString *)autocompleteString
@@ -151,10 +127,11 @@
             forRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     //This is your chance to customize an autocomplete tableview cell before it appears in the autocomplete tableview
-    NSString *filename = [autocompleteString stringByAppendingString:@".png"];
+    
+    /*NSString *filename = [autocompleteString stringByAppendingString:@".png"];
     filename = [filename stringByReplacingOccurrencesOfString:@" " withString:@"-"];
     filename = [filename stringByReplacingOccurrencesOfString:@"&" withString:@"and"];
-    [cell.imageView setImage:[UIImage imageNamed:filename]];
+    [cell.imageView setImage:[UIImage imageNamed:filename]];*/
     
     return YES;
 }
@@ -169,62 +146,30 @@
     } else {
         NSLog(@"selected string '%@' from autocomplete menu", selectedString);
     }
-    [User setUserGroup:[selectedObject autocompleteString]];
-    [self loadHomeView];
 }
 
-- (void)keyboardDidShowWithNotification:(NSNotification *)aNotification
+- (void)keyboardDidShowWithNotificationInMainVC:(NSNotification *)aNotification
 {
     [UIView animateWithDuration:0.3
                           delay:0
                         options:UIViewAnimationCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         CGPoint adjust;
-                         switch (self.interfaceOrientation) {
-                             case UIInterfaceOrientationLandscapeLeft:
-                                 adjust = CGPointMake(-110, 0);
-                                 break;
-                             case UIInterfaceOrientationLandscapeRight:
-                                 adjust = CGPointMake(110, 0);
-                                 break;
-                             default:
-                                 adjust = CGPointMake(0, -60);
-                                 break;
-                         }
-                         CGPoint newCenter = CGPointMake(self.view.center.x+adjust.x, self.view.center.y+adjust.y);
-                         [self.view setCenter:newCenter];
                      }
                      completion:nil];
 }
 
 
-- (void)keyboardDidHideWithNotification:(NSNotification *)aNotification
+- (void)keyboardDidHideWithNotificationInMainVC:(NSNotification *)aNotification
 {
     [UIView animateWithDuration:0.3
                           delay:0
                         options:UIViewAnimationCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         CGPoint adjust;
-                         switch (self.interfaceOrientation) {
-                             case UIInterfaceOrientationLandscapeLeft:
-                                 adjust = CGPointMake(110, 0);
-                                 break;
-                             case UIInterfaceOrientationLandscapeRight:
-                                 adjust = CGPointMake(-110, 0);
-                                 break;
-                             default:
-                                 adjust = CGPointMake(0, 60);
-                                 break;
-                         }
-                         CGPoint newCenter = CGPointMake(self.view.center.x+adjust.x, self.view.center.y+adjust.y);
-                         [self.view setCenter:newCenter];
                      }
                      completion:nil];
     
     
-    [self.autocompleteTextField setAutoCompleteTableViewHidden:NO];
+    [self.searchInputBox setAutoCompleteTableViewHidden:NO];
 }
-
-
 
 @end

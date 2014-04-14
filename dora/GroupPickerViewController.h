@@ -15,7 +15,6 @@
 
 @property (weak) IBOutlet MLPAutoCompleteTextField *autocompleteTextField;
 
-@property (strong, nonatomic) NSArray *countryObjects;
 @property (strong, nonatomic) NSArray *groupObjects;
 
 //Set this to true to prevent auto complete terms from returning instantly.

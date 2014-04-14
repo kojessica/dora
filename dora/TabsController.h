@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @protocol TabsControllerDelegate;
-
+@class MLPAutoCompleteTextField;
 /*
  * A custom tab bar container view controller. It works just like a regular
  * UITabBarController, except the tabs are at the top and look different.
  */
-@interface TabsController : UIViewController <UITextFieldDelegate, UIViewControllerTransitioningDelegate>
+@interface TabsController : UIViewController <UITextFieldDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 
 @property (nonatomic, copy) NSArray *viewControllers;
 @property (nonatomic, weak) UIViewController *selectedViewController;
@@ -22,6 +22,8 @@
 @property (nonatomic, weak) id <TabsControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIView *topBar;
 @property (weak, nonatomic) IBOutlet UITextField *searchInputBox;
+@property (assign) BOOL simulateLatency;
+@property (assign) BOOL testWithAutoCompleteObjectsInsteadOfStrings;
 
 - (IBAction)onSettingButton:(id)sender;
 - (void)setSelectedIndex:(NSUInteger)index animated:(BOOL)animated;

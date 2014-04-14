@@ -8,26 +8,30 @@
 
 #import "TabsController.h"
 #import "SettingsViewController.h"
+#import "SearchResultsViewController.h"
+#import <Parse/Parse.h>
 
 static const NSInteger TagOffset = 1000;
 static const float yOffset = 67.f;
 
+
+@interface TabsController ()
+
+@property (strong,nonatomic) UIView *contentContainerView;
+@property (strong,nonatomic) UIView *tabButtonsContainerView;
+@property (strong,nonatomic) UIView *indicatorView;
+@property (assign,nonatomic) BOOL isPresent;
+
+@end
+
 @implementation TabsController
-{
-	UIView *tabButtonsContainerView;
-	UIView *contentContainerView;
-    UIView *indicatorView;
-}
 
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
     
-	//self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    //tabButtonsContainerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    
 	CGRect rect = CGRectMake(0.0f, yOffset, self.view.bounds.size.width, self.tabBarHeight);
-	tabButtonsContainerView = [[UIView alloc] initWithFrame:rect];
+	self.tabButtonsContainerView = [[UIView alloc] initWithFrame:rect];
     
     CALayer *tblayer = self.topBar.layer;
     tblayer.shadowOffset = CGSizeMake(0, 1);
@@ -35,28 +39,28 @@ static const float yOffset = 67.f;
     tblayer.shadowRadius = 1.0f;
     tblayer.shadowOpacity = 0.50f;
     tblayer.shadowPath = [[UIBezierPath bezierPathWithRect:tblayer.bounds] CGPath];
-	[self.view addSubview:tabButtonsContainerView];
+	[self.view addSubview:self.tabButtonsContainerView];
     
 	rect.origin.y = self.tabBarHeight + yOffset;
 	rect.size.height = self.view.bounds.size.height - self.tabBarHeight - yOffset;
-	contentContainerView = [[UIView alloc] initWithFrame:rect];
-	contentContainerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	[self.view addSubview:contentContainerView];
+	self.contentContainerView = [[UIView alloc] initWithFrame:rect];
+	self.contentContainerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	[self.view addSubview:self.contentContainerView];
     
-    indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width / [self.viewControllers count], 5.f)];
-    indicatorView.layer.backgroundColor =  [[UIColor colorWithRed:82/255.0f green:97/255.0f blue:76/255.0f alpha:1.0f] CGColor];
+    self.indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width / [self.viewControllers count], 5.f)];
+    self.indicatorView.layer.backgroundColor =  [[UIColor colorWithRed:82/255.0f green:97/255.0f blue:76/255.0f alpha:1.0f] CGColor];
 
-	[self.view addSubview:indicatorView];
+	[self.view addSubview:self.indicatorView];
     
     self.searchInputBox.delegate = self;
     [self.searchInputBox resignFirstResponder];
+    self.isPresent = YES;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveNotification:)
                                                  name:@"dismissKeyboard"
                                                object:nil];
-    
-	[self reloadTabButtons];
+    [self reloadTabButtons];
 }
 
 - (void) receiveNotification:(NSNotification *)notification
@@ -67,12 +71,22 @@ static const float yOffset = 67.f;
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    
+    SearchResultsViewController *searchResultsView = [[SearchResultsViewController alloc] init];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
+    searchResultsView.transitioningDelegate = self;
+    searchResultsView.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:searchResultsView animated:YES completion:nil];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)viewWillLayoutSubviews
@@ -112,7 +126,7 @@ static const float yOffset = 67.f;
 		[button addTarget:self action:@selector(tabButtonPressed:) forControlEvents:UIControlEventTouchDown];
         
 		[self deselectTabButton:button];
-		[tabButtonsContainerView addSubview:button];
+		[self.tabButtonsContainerView addSubview:button];
         
 		++index;
 	}
@@ -120,9 +134,9 @@ static const float yOffset = 67.f;
 
 - (void)removeTabButtons
 {
-	while ([tabButtonsContainerView.subviews count] > 0)
+	while ([self.tabButtonsContainerView.subviews count] > 0)
 	{
-		[[tabButtonsContainerView.subviews lastObject] removeFromSuperview];
+		[[self.tabButtonsContainerView.subviews lastObject] removeFromSuperview];
 	}
 }
 
@@ -133,9 +147,9 @@ static const float yOffset = 67.f;
     
 	CGRect rect = CGRectMake(0.0f, 0.0f, floorf(self.view.bounds.size.width / count), self.tabBarHeight);
     
-	indicatorView.hidden = YES;
+	self.indicatorView.hidden = YES;
     
-	NSArray *buttons = [tabButtonsContainerView subviews];
+	NSArray *buttons = [self.tabButtonsContainerView subviews];
 	for (UIButton *button in buttons)
 	{
 		if (index == count - 1)
@@ -153,11 +167,11 @@ static const float yOffset = 67.f;
 
 - (void)centerIndicatorOnButton:(UIButton *)button
 {
-	CGRect rect = indicatorView.frame;
-	rect.origin.x = button.center.x - floorf(indicatorView.frame.size.width/2.0f);
-	rect.origin.y = self.tabBarHeight - indicatorView.frame.size.height + yOffset;
-	indicatorView.frame = rect;
-	indicatorView.hidden = NO;
+	CGRect rect = self.indicatorView.frame;
+	rect.origin.x = button.center.x - floorf(self.indicatorView.frame.size.width/2.0f);
+	rect.origin.y = self.tabBarHeight - self.indicatorView.frame.size.height + yOffset;
+	self.indicatorView.frame = rect;
+	self.indicatorView.hidden = NO;
 }
 
 - (void)setViewControllers:(NSArray *)newViewControllers
@@ -228,7 +242,7 @@ static const float yOffset = 67.f;
         
 		if (_selectedIndex != NSNotFound)
 		{
-			UIButton *fromButton = (UIButton *)[tabButtonsContainerView viewWithTag:TagOffset + _selectedIndex];
+			UIButton *fromButton = (UIButton *)[self.tabButtonsContainerView viewWithTag:TagOffset + _selectedIndex];
 			[self deselectTabButton:fromButton];
 			fromViewController = self.selectedViewController;
 		}
@@ -239,7 +253,7 @@ static const float yOffset = 67.f;
 		UIButton *toButton;
 		if (_selectedIndex != NSNotFound)
 		{
-			toButton = (UIButton *)[tabButtonsContainerView viewWithTag:TagOffset + _selectedIndex];
+			toButton = (UIButton *)[self.tabButtonsContainerView viewWithTag:TagOffset + _selectedIndex];
 			[self selectTabButton:toButton];
 			toViewController = self.selectedViewController;
 		}
@@ -250,8 +264,8 @@ static const float yOffset = 67.f;
 		}
 		else if (fromViewController == nil)  // don't animate
 		{
-			toViewController.view.frame = contentContainerView.bounds;
-			[contentContainerView addSubview:toViewController.view];
+			toViewController.view.frame = self.contentContainerView.bounds;
+			[self.contentContainerView addSubview:toViewController.view];
 			[self centerIndicatorOnButton:toButton];
             
 			if ([self.delegate respondsToSelector:@selector(tabsController:didSelectViewController:atIndex:)])
@@ -259,14 +273,14 @@ static const float yOffset = 67.f;
 		}
 		else if (animated)
 		{
-			CGRect rect = contentContainerView.bounds;
+			CGRect rect = self.contentContainerView.bounds;
 			if (oldSelectedIndex < newSelectedIndex)
 				rect.origin.x = rect.size.width;
 			else
 				rect.origin.x = -rect.size.width;
             
 			toViewController.view.frame = rect;
-			tabButtonsContainerView.userInteractionEnabled = NO;
+			self.tabButtonsContainerView.userInteractionEnabled = NO;
             
 			[self transitionFromViewController:fromViewController
                               toViewController:toViewController
@@ -281,12 +295,12 @@ static const float yOffset = 67.f;
                      rect.origin.x = rect.size.width;
                  
                  fromViewController.view.frame = rect;
-                 toViewController.view.frame = contentContainerView.bounds;
+                 toViewController.view.frame = self.contentContainerView.bounds;
                  [self centerIndicatorOnButton:toButton];
              }
                                     completion:^(BOOL finished)
              {
-                 tabButtonsContainerView.userInteractionEnabled = YES;
+                 self.tabButtonsContainerView.userInteractionEnabled = YES;
                  
                  if ([self.delegate respondsToSelector:@selector(tabsController:didSelectViewController:atIndex:)])
                      [self.delegate tabsController:self didSelectViewController:toViewController atIndex:newSelectedIndex];
@@ -296,8 +310,8 @@ static const float yOffset = 67.f;
 		{
 			[fromViewController.view removeFromSuperview];
             
-			toViewController.view.frame = contentContainerView.bounds;
-			[contentContainerView addSubview:toViewController.view];
+			toViewController.view.frame = self.contentContainerView.bounds;
+			[self.contentContainerView addSubview:toViewController.view];
 			[self centerIndicatorOnButton:toButton];
             
 			if ([self.delegate respondsToSelector:@selector(tabsController:didSelectViewController:atIndex:)])
@@ -346,6 +360,51 @@ static const float yOffset = 67.f;
 - (CGFloat)tabBarHeight
 {
 	return 50.0f;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    self.isPresent = YES;
+    return self;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    self.isPresent = NO;
+    return self;
+}
+
+- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
+    return 0.5;
+}
+
+- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+    UIView *containerView = [transitionContext containerView];
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    CGSize sizeOfScreen = [[UIScreen mainScreen] bounds].size;
+    CGRect currentFrame = CGRectMake(0, 0, sizeOfScreen.width, sizeOfScreen.height);
+    
+    if (self.isPresent) {
+        toViewController.view.frame = containerView.frame;
+        [containerView addSubview:toViewController.view];
+        toViewController.view.frame = CGRectOffset(currentFrame, 0, 0);
+
+        [UIView animateWithDuration:0.0 animations:^{
+            toViewController.view.frame = CGRectOffset(currentFrame, 0, 0);
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+        }];
+    } else {
+        fromViewController.view.frame = containerView.frame;
+        [containerView addSubview:fromViewController.view];
+        fromViewController.view.frame = CGRectOffset(currentFrame, 0, -self.view.frame.size.height);
+        
+        [UIView animateWithDuration:0.0 animations:^{
+            fromViewController.view.frame = CGRectOffset(currentFrame, 0, -self.view.frame.size.height);
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+        }];
+    }
 }
 
 @end
