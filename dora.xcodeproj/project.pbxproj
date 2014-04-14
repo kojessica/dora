@@ -46,6 +46,10 @@
 		129D762918F9F140003EB2E7 /* GroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D762718F9F140003EB2E7 /* GroupDetailViewController.m */; };
 		129D762A18F9F140003EB2E7 /* GroupDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D762818F9F140003EB2E7 /* GroupDetailViewController.xib */; };
 		129D762F18FA56D6003EB2E7 /* goback_23_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D762E18FA56D6003EB2E7 /* goback_23_icon.png */; };
+		129D763118FB4F83003EB2E7 /* logo_15_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D763018FB4F83003EB2E7 /* logo_15_icon.png */; };
+		129D763318FB5088003EB2E7 /* setting_19_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D763218FB5088003EB2E7 /* setting_19_icon.png */; };
+		129D763718FB6BA8003EB2E7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D763518FB6BA8003EB2E7 /* SettingsViewController.m */; };
+		129D763818FB6BA8003EB2E7 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D763618FB6BA8003EB2E7 /* SettingsViewController.xib */; };
 		47435D3A18F9EF9000E1F5CE /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3718F9EF9000E1F5CE /* Group.m */; };
 		47435D3B18F9EF9000E1F5CE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3918F9EF9000E1F5CE /* Post.m */; };
 		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
@@ -122,6 +126,11 @@
 		129D762718F9F140003EB2E7 /* GroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDetailViewController.m; sourceTree = "<group>"; };
 		129D762818F9F140003EB2E7 /* GroupDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupDetailViewController.xib; sourceTree = "<group>"; };
 		129D762E18FA56D6003EB2E7 /* goback_23_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = goback_23_icon.png; path = Images/goback_23_icon.png; sourceTree = SOURCE_ROOT; };
+		129D763018FB4F83003EB2E7 /* logo_15_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_15_icon.png; path = Images/logo_15_icon.png; sourceTree = SOURCE_ROOT; };
+		129D763218FB5088003EB2E7 /* setting_19_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting_19_icon.png; path = Images/setting_19_icon.png; sourceTree = SOURCE_ROOT; };
+		129D763418FB6BA8003EB2E7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		129D763518FB6BA8003EB2E7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		129D763618FB6BA8003EB2E7 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		47435D3618F9EF9000E1F5CE /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		47435D3718F9EF9000E1F5CE /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		47435D3818F9EF9000E1F5CE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
@@ -250,6 +259,8 @@
 		126B184C18EBAEAB005A8475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				129D763218FB5088003EB2E7 /* setting_19_icon.png */,
+				129D763018FB4F83003EB2E7 /* logo_15_icon.png */,
 				129D762E18FA56D6003EB2E7 /* goback_23_icon.png */,
 				125285F418F8DCD500E45C86 /* write_17_icon.png */,
 				126B184D18EBAEAB005A8475 /* dora-Info.plist */,
@@ -296,6 +307,9 @@
 				129D762618F9F140003EB2E7 /* GroupDetailViewController.h */,
 				129D762718F9F140003EB2E7 /* GroupDetailViewController.m */,
 				129D762818F9F140003EB2E7 /* GroupDetailViewController.xib */,
+				129D763418FB6BA8003EB2E7 /* SettingsViewController.h */,
+				129D763518FB6BA8003EB2E7 /* SettingsViewController.m */,
+				129D763618FB6BA8003EB2E7 /* SettingsViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -409,14 +423,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				129D763818FB6BA8003EB2E7 /* SettingsViewController.xib in Resources */,
 				125285F318F8DC6900E45C86 /* write_icon.png in Resources */,
 				126B185018EBAEAB005A8475 /* InfoPlist.strings in Resources */,
 				126B185818EBAEAB005A8475 /* Images.xcassets in Resources */,
 				129D762518F9E338003EB2E7 /* GroupCell.xib in Resources */,
 				47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */,
+				129D763118FB4F83003EB2E7 /* logo_15_icon.png in Resources */,
 				126B187918EBB039005A8475 /* GroupPickerViewController.xib in Resources */,
 				125285F518F8DCD500E45C86 /* write_17_icon.png in Resources */,
 				129D762A18F9F140003EB2E7 /* GroupDetailViewController.xib in Resources */,
+				129D763318FB5088003EB2E7 /* setting_19_icon.png in Resources */,
 				129D762F18FA56D6003EB2E7 /* goback_23_icon.png in Resources */,
 				129D762018F9DAEE003EB2E7 /* TabsController.xib in Resources */,
 			);
@@ -479,6 +496,7 @@
 				129D762918F9F140003EB2E7 /* GroupDetailViewController.m in Sources */,
 				126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */,
 				47435D3B18F9EF9000E1F5CE /* Post.m in Sources */,
+				129D763718FB6BA8003EB2E7 /* SettingsViewController.m in Sources */,
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,
 				129D761F18F9DAEE003EB2E7 /* TabsController.m in Sources */,
 				126B185218EBAEAB005A8475 /* main.m in Sources */,

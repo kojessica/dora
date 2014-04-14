@@ -7,8 +7,10 @@
 //
 
 #import "TabsController.h"
+#import "SettingsViewController.h"
 
 static const NSInteger TagOffset = 1000;
+static const float yOffset = 67.f;
 
 @implementation TabsController
 {
@@ -21,25 +23,56 @@ static const NSInteger TagOffset = 1000;
 {
 	[super viewDidLoad];
     
-	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	//self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    //tabButtonsContainerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     
-	CGRect rect = CGRectMake(0.0f, 20.0f, self.view.bounds.size.width, self.tabBarHeight);
+	CGRect rect = CGRectMake(0.0f, yOffset, self.view.bounds.size.width, self.tabBarHeight);
 	tabButtonsContainerView = [[UIView alloc] initWithFrame:rect];
-	tabButtonsContainerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    
+    CALayer *tblayer = self.topBar.layer;
+    tblayer.shadowOffset = CGSizeMake(0, 1);
+    tblayer.shadowColor = [[UIColor blackColor] CGColor];
+    tblayer.shadowRadius = 1.0f;
+    tblayer.shadowOpacity = 0.50f;
+    tblayer.shadowPath = [[UIBezierPath bezierPathWithRect:tblayer.bounds] CGPath];
 	[self.view addSubview:tabButtonsContainerView];
     
-	rect.origin.y = self.tabBarHeight;
-	rect.size.height = self.view.bounds.size.height - self.tabBarHeight;
+	rect.origin.y = self.tabBarHeight + yOffset;
+	rect.size.height = self.view.bounds.size.height - self.tabBarHeight - yOffset;
 	contentContainerView = [[UIView alloc] initWithFrame:rect];
 	contentContainerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	[self.view addSubview:contentContainerView];
     
-    indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width / 2, 5.f)];
+    indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width / [self.viewControllers count], 5.f)];
     indicatorView.layer.backgroundColor =  [[UIColor colorWithRed:82/255.0f green:97/255.0f blue:76/255.0f alpha:1.0f] CGColor];
 
 	[self.view addSubview:indicatorView];
     
+    self.searchInputBox.delegate = self;
+    [self.searchInputBox resignFirstResponder];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)
+                                                 name:@"dismissKeyboard"
+                                               object:nil];
+    
 	[self reloadTabButtons];
+}
+
+- (void) receiveNotification:(NSNotification *)notification
+{
+    if ([[notification name] isEqualToString:@"dismissKeyboard"])
+        [self.searchInputBox resignFirstResponder];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
 }
 
 - (void)viewWillLayoutSubviews
@@ -72,7 +105,7 @@ static const NSInteger TagOffset = 1000;
 	{
 		UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 		button.tag = TagOffset + index;
-		button.titleLabel.font = [UIFont boldSystemFontOfSize:13];
+		button.titleLabel.font = [UIFont boldSystemFontOfSize:12];
 		
         [button setTitle:viewController.tabBarItem.title forState:UIControlStateNormal];
 
@@ -122,7 +155,7 @@ static const NSInteger TagOffset = 1000;
 {
 	CGRect rect = indicatorView.frame;
 	rect.origin.x = button.center.x - floorf(indicatorView.frame.size.width/2.0f);
-	rect.origin.y = self.tabBarHeight - indicatorView.frame.size.height;
+	rect.origin.y = self.tabBarHeight - indicatorView.frame.size.height + yOffset;
 	indicatorView.frame = rect;
 	indicatorView.hidden = NO;
 }
@@ -164,6 +197,13 @@ static const NSInteger TagOffset = 1000;
 - (void)setSelectedIndex:(NSUInteger)newSelectedIndex
 {
 	[self setSelectedIndex:newSelectedIndex animated:NO];
+}
+
+- (IBAction)onSettingButton:(id)sender {
+    SettingsViewController *settingView = [[SettingsViewController alloc] init];
+    settingView.modalPresentationStyle = UIModalTransitionStyleFlipHorizontal;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
+    [self presentViewController:settingView animated:YES completion:nil];
 }
 
 - (void)setSelectedIndex:(NSUInteger)newSelectedIndex animated:(BOOL)animated
@@ -305,7 +345,7 @@ static const NSInteger TagOffset = 1000;
 
 - (CGFloat)tabBarHeight
 {
-	return 90.0f;
+	return 50.0f;
 }
 
 @end

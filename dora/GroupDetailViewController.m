@@ -53,8 +53,9 @@
 }
 
 - (IBAction)onBackButton:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+    [self dismissViewControllerAnimated:YES completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
+    }];}
 
 - (IBAction)onCompose:(id)sender {
     ComposeMessageViewController *composeView = [[ComposeMessageViewController alloc] init];

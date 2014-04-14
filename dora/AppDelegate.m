@@ -44,6 +44,7 @@
         
         tabBarController.delegate = self;
         tabBarController.viewControllers = viewControllers;
+        [tabBarController setSelectedViewController:listViewController1 animated:NO];
 
         self.window.rootViewController = tabBarController;
         NSLog(@"%@", currentUser);

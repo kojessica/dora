@@ -32,7 +32,6 @@
     [self.tableView reloadData];
 }
 
-
 #pragma mark - UITableViewDataSource
 
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -80,6 +79,7 @@
     groupDetailView.transitioningDelegate = self;
     groupDetailView.modalPresentationStyle = UIModalPresentationCustom;
     groupDetailView.group = groupSelected;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
     [self presentViewController:groupDetailView animated:YES completion:nil];
 }
 
@@ -111,7 +111,7 @@
         toViewController.view.frame = CGRectOffset(currentFrame, self.view.frame.size.width, 0);
         fromViewController.view.frame = CGRectOffset(currentFrame, 0, 0);
         
-        [UIView animateWithDuration:0.2 animations:^{
+        [UIView animateWithDuration:0.3 animations:^{
             toViewController.view.frame = CGRectOffset(currentFrame, 0, 0);
             fromViewController.view.frame = CGRectOffset(currentFrame, -self.view.frame.size.width, 0);
         } completion:^(BOOL finished) {
