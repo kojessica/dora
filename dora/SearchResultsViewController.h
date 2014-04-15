@@ -7,15 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MLPAutoCompleteTextFieldDataSource.h"
-#import "MLPAutoCompleteTextFieldDelegate.h"
 
-@interface SearchResultsViewController : UIViewController <MLPAutoCompleteTextFieldDataSource, MLPAutoCompleteTextFieldDelegate>
-@property (weak, nonatomic) IBOutlet MLPAutoCompleteTextField *searchInputBox;
+@interface SearchResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *searchInputBox;
 @property (strong, nonatomic) NSArray *groupObjects;
-@property (assign) BOOL simulateLatency;
-@property (assign) BOOL testWithAutoCompleteObjectsInsteadOfStrings;
-
+@property (weak, nonatomic) IBOutlet UITableView *resultsTable;
 - (IBAction)onBackButton:(id)sender;
 
 @end

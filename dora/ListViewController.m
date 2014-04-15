@@ -70,11 +70,16 @@
 {
 	NSLog(@"%@, parent is %@", self.title, self.parentViewController);
     
-    Group *groupSelected = [[Group alloc] init];
-    groupSelected.data = [[[self.listGroup objectAtIndex:indexPath.row] dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"name",@"objectId",@"location",@"popularIndex",@"totalPosts", nil]] mutableCopy];
+    [self performSelectorOnMainThread:@selector(presentGroupDetailViewAtIndexPath:) withObject:indexPath waitUntilDone:NO];
     
 	//[tableView deselectRowAtIndexPath:indexPath animated:YES];
 
+}
+
+- (void)presentGroupDetailViewAtIndexPath:(NSIndexPath *)indexPath {
+    Group *groupSelected = [[Group alloc] init];
+    groupSelected.data = [[[self.listGroup objectAtIndex:indexPath.row] dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"name",@"objectId",@"location",@"popularIndex",@"totalPosts", nil]] mutableCopy];
+    
     GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
     groupDetailView.transitioningDelegate = self;
     groupDetailView.modalPresentationStyle = UIModalPresentationCustom;

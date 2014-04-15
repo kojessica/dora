@@ -52,6 +52,8 @@
 		129D763818FB6BA8003EB2E7 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D763618FB6BA8003EB2E7 /* SettingsViewController.xib */; };
 		129D763C18FB8AA9003EB2E7 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D763A18FB8AA9003EB2E7 /* SearchResultsViewController.m */; };
 		129D763D18FB8AA9003EB2E7 /* SearchResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D763B18FB8AA9003EB2E7 /* SearchResultsViewController.xib */; };
+		129D764718FCBC12003EB2E7 /* CustomSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D764518FCBC12003EB2E7 /* CustomSearchCell.m */; };
+		129D764818FCBC12003EB2E7 /* CustomSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D764618FCBC12003EB2E7 /* CustomSearchCell.xib */; };
 		47435D3A18F9EF9000E1F5CE /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3718F9EF9000E1F5CE /* Group.m */; };
 		47435D3B18F9EF9000E1F5CE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3918F9EF9000E1F5CE /* Post.m */; };
 		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
@@ -136,6 +138,9 @@
 		129D763918FB8AA9003EB2E7 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
 		129D763A18FB8AA9003EB2E7 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		129D763B18FB8AA9003EB2E7 /* SearchResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultsViewController.xib; sourceTree = "<group>"; };
+		129D764418FCBC12003EB2E7 /* CustomSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSearchCell.h; sourceTree = "<group>"; };
+		129D764518FCBC12003EB2E7 /* CustomSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSearchCell.m; sourceTree = "<group>"; };
+		129D764618FCBC12003EB2E7 /* CustomSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSearchCell.xib; sourceTree = "<group>"; };
 		47435D3618F9EF9000E1F5CE /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		47435D3718F9EF9000E1F5CE /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		47435D3818F9EF9000E1F5CE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
@@ -318,6 +323,9 @@
 				129D763918FB8AA9003EB2E7 /* SearchResultsViewController.h */,
 				129D763A18FB8AA9003EB2E7 /* SearchResultsViewController.m */,
 				129D763B18FB8AA9003EB2E7 /* SearchResultsViewController.xib */,
+				129D764418FCBC12003EB2E7 /* CustomSearchCell.h */,
+				129D764518FCBC12003EB2E7 /* CustomSearchCell.m */,
+				129D764618FCBC12003EB2E7 /* CustomSearchCell.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -432,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				129D763818FB6BA8003EB2E7 /* SettingsViewController.xib in Resources */,
+				129D764818FCBC12003EB2E7 /* CustomSearchCell.xib in Resources */,
 				125285F318F8DC6900E45C86 /* write_icon.png in Resources */,
 				126B185018EBAEAB005A8475 /* InfoPlist.strings in Resources */,
 				126B185818EBAEAB005A8475 /* Images.xcassets in Resources */,
@@ -504,6 +513,7 @@
 				1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */,
 				129D762918F9F140003EB2E7 /* GroupDetailViewController.m in Sources */,
 				126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */,
+				129D764718FCBC12003EB2E7 /* CustomSearchCell.m in Sources */,
 				47435D3B18F9EF9000E1F5CE /* Post.m in Sources */,
 				129D763C18FB8AA9003EB2E7 /* SearchResultsViewController.m in Sources */,
 				129D763718FB6BA8003EB2E7 /* SettingsViewController.m in Sources */,
