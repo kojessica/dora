@@ -7,7 +7,7 @@
 //
 
 #import "Group.h"
-#import "Parse/Parse.h"
+
 
 @implementation Group
 

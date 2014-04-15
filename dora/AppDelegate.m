@@ -24,6 +24,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [Post registerSubclass];
     [Group registerSubclass];
+    [User registerSubclass];
     // Override point for customization after application launch.
     [Parse setApplicationId:@"8bV5UK3dsmvpzryGKdo1ZEPavEpVfneYmx3Qu8S0"
                   clientKey:@"MylibgnIyThCTzlI9tkU0jDZOGkciX2osY73LKY8"];

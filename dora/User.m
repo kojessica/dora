@@ -15,34 +15,29 @@
 @end
 
 @implementation User
-
+@dynamic key;
+@dynamic groupName;
+@dynamic age;
+@dynamic gender;
 //static CLLocationManager *_locationManager;
 static User *currentUser = nil;
-
-- (id)initWithDictionary:(NSMutableDictionary *)data {
-    if (self = [super init]) {
-        _data = data;
-    }
-    
-    return self;
++ (NSString *)parseClassName {
+    return @"Users";
 }
+
 
 + (User *)currentUser {
     if (currentUser == nil) {
         NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"current_user"];
-        NSMutableDictionary *dictionary = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        if (dictionary) {
-            currentUser = [[User alloc] initWithDictionary:dictionary];
+        User *user = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        if (user) {
+            currentUser = user;
         }
     }
-    NSLog(@"%@", currentUser.data);
     return currentUser;
 }
 
 + (User *)setCurrentUser {
-    NSMutableDictionary *dictionary =  [[NSMutableDictionary alloc] init];
-    [dictionary setObject:[self setRandomKey] forKey: @"key"];
- 
     /*
      [[self locationManager] startUpdatingLocation];
     CLLocation *location = _locationManager.location;
@@ -51,18 +46,15 @@ static User *currentUser = nil;
     CLLocationCoordinate2D cooridnate = [location coordinate];
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:cooridnate.latitude longitude:cooridnate.longitude];
     */
-    currentUser = [[User alloc] initWithDictionary:dictionary];
-    PFObject *user = [PFObject objectWithClassName:@"Users"];
-    user[@"key"] = [currentUser.data objectForKey:@"key"];
+    currentUser = [User object];
+    currentUser.key = [self setRandomKey];
     //user[@"location"] = geoPoint;
-    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        user[@"objectId"] = [user objectId];
-        [dictionary setObject:[user objectId] forKey:@"objectId"];
-        [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:dictionary] forKey:@"current_user"];
+    [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        currentUser.objectId = [currentUser objectId];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:currentUser] forKey:@"current_user"];
         
         NSLog(@"saved!");
     }];
-    //(TODO): here we save lat long info of user
     return currentUser;
 }
 
@@ -76,43 +68,19 @@ static User *currentUser = nil;
     return randomString;
 }
 
-+ (NSDictionary *)currentUserDictionary {
-    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"current_user"];
-    NSDictionary *dictionary = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    return dictionary;
-}
-
 + (void)setUserGroup:(NSString *)groupName {
-    NSString *userKey = currentUser.data[@"key"];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Users"];
-    [query whereKey:@"key" equalTo:userKey];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        object[@"defaultGroup"] = groupName;
-        [object saveInBackground];
-    }];
+    currentUser.groupName = groupName;
+    [currentUser saveInBackground];
 }
 
 + (void)setUserAge:(NSNumber *)age {
-    NSString *userKey = currentUser.data[@"key"];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Users"];
-    [query whereKey:@"key" equalTo:userKey];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        object[@"age"] = age;
-        [object saveInBackground];
-    }];
+    currentUser.age = age;
+    [currentUser saveInBackground];
 }
 
 + (void)setUserGender:(NSString *)gender {
-    NSString *userKey = currentUser.data[@"key"];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Users"];
-    [query whereKey:@"key" equalTo:userKey];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        object[@"gender"] = gender;
-        [object saveInBackground];
-    }];
+    currentUser.gender = gender;
+    [currentUser saveInBackground];
 }
 
 @end

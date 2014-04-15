@@ -8,17 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "CoreLocation/CoreLocation.h"
+#import "Parse/Parse.h"
+#import "Parse/PFObject+subclass.h"
+@interface User : PFObject <CLLocationManagerDelegate, PFSubclassing>
 
-@interface User : NSObject <CLLocationManagerDelegate>
-
-@property (nonatomic, strong) NSMutableDictionary *data;
 + (User *)currentUser;
 + (User *)setCurrentUser;
-+ (NSDictionary *)currentUserDictionary;
 + (NSString *)setRandomKey;
 + (void)setUserGroup:(NSString *)groupName;
 + (void)setUserAge:(NSNumber *)age;
 + (void)setUserGender:(NSString *)gender;
-- (id)initWithDictionary:(NSDictionary *)data;
-
+@property (retain) NSString *key;
+@property (retain) NSNumber *age;
+@property (retain) NSString *gender;
+@property (retain) NSString *groupName;
 @end
