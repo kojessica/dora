@@ -53,10 +53,6 @@
 		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"GroupCell" owner:self options:nil];
 		cell = (GroupCell*)[nib objectAtIndex:0];
     }
-//    Group *group = [[Group alloc] init];
-//    group.data = [[[self.listGroup objectAtIndex:indexPath.row] dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"name",@"objectId",@"location",@"popularIndex",@"totalPosts", nil]] mutableCopy];
-//    
-//    NSLog(@"%@", group.data);
     
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell setGroup:[self.listGroup objectAtIndex:indexPath.row]];
@@ -70,17 +66,11 @@
 {
 	NSLog(@"%@, parent is %@", self.title, self.parentViewController);
     
-//    Group *groupSelected = [[Group alloc] init];
-//    groupSelected.data = [[[self.listGroup objectAtIndex:indexPath.row] dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"name",@"objectId",@"location",@"popularIndex",@"totalPosts", nil]] mutableCopy];
     [self performSelectorOnMainThread:@selector(presentGroupDetailViewAtIndexPath:) withObject:indexPath waitUntilDone:NO];
     
-	//[tableView deselectRowAtIndexPath:indexPath animated:YES];
-
 }
 
 - (void)presentGroupDetailViewAtIndexPath:(NSIndexPath *)indexPath {
-//    Group *groupSelected = [[Group alloc] init];
-//    groupSelected.data = [[[self.listGroup objectAtIndex:indexPath.row] dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"name",@"objectId",@"location",@"popularIndex",@"totalPosts", nil]] mutableCopy];
     Group *groupSelected = [self.listGroup objectAtIndex:indexPath.row];
     
     GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
