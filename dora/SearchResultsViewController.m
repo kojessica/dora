@@ -15,7 +15,7 @@
 @property (strong,nonatomic) NSArray *groupsNames;
 @property (strong,nonatomic) NSArray *suggestedGroups;
 - (void)reloadResults;
-- (void)fetchAutoComplete;
+- (void)fetchAutoComplete:(NSString *)searchString;
 
 @end
 
@@ -44,7 +44,7 @@
     
     [self allGroups];
     [self reloadResults];
-    
+    self.resultsTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self.searchInputBox becomeFirstResponder];
 }
@@ -56,26 +56,25 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    NSLog(@"typing");
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    NSLog(@"ending");
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    [self fetchAutoComplete:newString];
     NSLog(@"%@", newString);
-    
-    [self fetchAutoComplete];
-    
     return YES;
 }
 
-- (void)fetchAutoComplete
+- (void)fetchAutoComplete:(NSString *)searchString
 {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", searchString];
+    self.suggestedGroups = [self.groupsNames filteredArrayUsingPredicate:predicate];
+    NSLog(@"%@", self.suggestedGroups);
     [self reloadResults];
 }
 
@@ -102,6 +101,7 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+    self.suggestedGroups = self.groupsNames;
 }
 
 - (void)didReceiveMemoryWarning
@@ -123,12 +123,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [self.suggestedGroups count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 120;
+    return 60;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -138,8 +138,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CustomSearchCell *cell = (CustomSearchCell *)[tableView dequeueReusableCellWithIdentifier:@"CustomSearchCell"];
-    cell.name.text = @"Test";
-    
+    cell.name.text = [self.suggestedGroups objectAtIndex:indexPath.row];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.name.textColor = [UIColor whiteColor];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
 }
 
