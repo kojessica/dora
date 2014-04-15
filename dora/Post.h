@@ -11,21 +11,22 @@
 #import "Group.h"
 #import "LocationController.h"
 #import "Parse/Parse.h"
+#import "Parse/PFObject+subclass.h"
 
-@interface Post : NSObject
-@property (nonatomic, strong) NSMutableDictionary *data;
-- (id)initWithDictionary:(NSDictionary *)data;
+@interface Post : PFObject <PFSubclassing>
+
++ (NSString *)parseClassName;
 +(void) postWithUser:(User*)user group:(Group*)group text:(NSString*)content location:(CLLocation*) location;
 +(NSArray*) retrievePostsFromGroup:(Group*) group;
 +(void) likePostWithId:(NSString*)postId;
 +(void) dislikePostWithId:(NSString*)postId;
 +(void) setPopularityWithNumber:(NSNumber*)popularity;
-- (NSString*) getText;
-- (NSString*) getUserId;
-- (NSString*) getLikes;
-- (NSString*) getDislikes;
-- (NSString*) getPopularity;
-- (PFGeoPoint*) getLocation;
-
+@property (retain) NSString *text;
+@property (retain) NSString *userId;
+@property (retain) NSString *groupId;
+@property (retain) NSNumber *likes;
+@property (retain) NSNumber *dislikes;
+@property (retain) PFGeoPoint *location;
+@property (retain) NSNumber *popularity;
 
 @end

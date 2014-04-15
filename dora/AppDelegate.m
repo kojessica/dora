@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "User.h"
+#import "Group.h"
+#import "Post.h"
 #import "GroupPickerViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "LocationController.h"
@@ -20,7 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
+    [Post registerSubclass];
+    [Group registerSubclass];
     // Override point for customization after application launch.
     [Parse setApplicationId:@"8bV5UK3dsmvpzryGKdo1ZEPavEpVfneYmx3Qu8S0"
                   clientKey:@"MylibgnIyThCTzlI9tkU0jDZOGkciX2osY73LKY8"];

@@ -42,7 +42,7 @@
     tblayer.shadowOpacity = 0.50f;
     tblayer.shadowPath = [[UIBezierPath bezierPathWithRect:tblayer.bounds] CGPath];
     
-    [self.groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.data[@"name"]]];
+    [self.groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.name]];
     // Do any additional setup after loading the view from its nib.
 }
 

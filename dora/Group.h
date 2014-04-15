@@ -8,20 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "LocationController.h"
+#import "Parse/Parse.h"
+#import "Parse/PFObject+subclass.h"
 
-@interface Group : NSObject
-@property (nonatomic, strong) NSMutableDictionary *data;
-- (id)initWithDictionary:(NSDictionary *)data;
+@interface Group : PFObject <PFSubclassing>
++ (NSString *)parseClassName;
+
 + (Group *)createGroupWithName:(NSString*)name location:(CLLocation *) location;
 + (Group *)getGroupWithName:(NSString*)name;
 + (NSArray *)getAllGroups;
-- (void)setName:(NSString *)name;
-- (void)setObjectId:(NSString *) objectId;
-- (void)setPopularityIndex:(NSNumber *)popularityIndex;
-- (void)setTotalPosts:(NSNumber *)totalPosts;
-- (NSString *)getName;
-- (NSString *)getObjectId;
-- (NSNumber *)getPopularityIndex;
-- (NSNumber *)getTotalPosts;
+@property (retain) NSString *name;
+@property (retain) NSNumber *popularIndex;
+@property (retain) NSNumber *totalPosts;
+@property (retain) PFGeoPoint *location;
 
 @end

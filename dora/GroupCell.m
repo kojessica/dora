@@ -25,7 +25,7 @@
 
 - (void)setGroup:(Group*)group
 {
-    self.name.text = group.data[@"name"];
+    self.name.text = group.name;
 }
 
 @end
