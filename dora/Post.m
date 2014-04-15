@@ -31,7 +31,7 @@
 
     post.groupId = group.objectId;
     post.text = content;
-    post.userId = [User currentUserDictionary][@"objectId"];
+    post.userId = [User currentUser].objectId;
     post.likes = [NSNumber numberWithInt:0];
     post.dislikes = [NSNumber numberWithInt:0];
     post.popularity = [NSNumber numberWithInt:0];

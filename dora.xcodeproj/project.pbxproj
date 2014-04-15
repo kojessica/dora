@@ -37,7 +37,6 @@
 		126B188E18EBB2D3005A8475 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B188D18EBB2D3005A8475 /* Security.framework */; };
 		126B189018EBB2DB005A8475 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B188F18EBB2DB005A8475 /* StoreKit.framework */; };
 		126B189218EBB2E5005A8475 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189118EBB2E5005A8475 /* SystemConfiguration.framework */; };
-		126B189B18EBC077005A8475 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189A18EBC077005A8475 /* Parse.framework */; };
 		129D761B18F9D8A4003EB2E7 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D761A18F9D8A4003EB2E7 /* ListViewController.m */; };
 		129D761F18F9DAEE003EB2E7 /* TabsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D761D18F9DAEE003EB2E7 /* TabsController.m */; };
 		129D762018F9DAEE003EB2E7 /* TabsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D761E18F9DAEE003EB2E7 /* TabsController.xib */; };
@@ -56,6 +55,11 @@
 		129D764818FCBC12003EB2E7 /* CustomSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D764618FCBC12003EB2E7 /* CustomSearchCell.xib */; };
 		47435D3A18F9EF9000E1F5CE /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3718F9EF9000E1F5CE /* Group.m */; };
 		47435D3B18F9EF9000E1F5CE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3918F9EF9000E1F5CE /* Post.m */; };
+		474D350F18FD04E000028F29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474D350E18FD04E000028F29 /* Parse.framework */; };
+		474D351818FD052C00028F29 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D351118FD052C00028F29 /* NSObject+Properties.m */; };
+		474D351918FD052C00028F29 /* PFACL+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D351318FD052C00028F29 /* PFACL+NSCoding.m */; };
+		474D351A18FD052C00028F29 /* PFFile+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D351518FD052C00028F29 /* PFFile+NSCoding.m */; };
+		474D351B18FD052C00028F29 /* PFObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D351718FD052C00028F29 /* PFObject+NSCoding.m */; };
 		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
 		47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */; };
 		47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */; };
@@ -117,7 +121,6 @@
 		126B188F18EBB2DB005A8475 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		126B189118EBB2E5005A8475 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		126B189818EBBF38005A8475 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		126B189A18EBC077005A8475 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
 		129D761918F9D8A4003EB2E7 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		129D761A18F9D8A4003EB2E7 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		129D761C18F9DAEE003EB2E7 /* TabsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabsController.h; sourceTree = "<group>"; };
@@ -145,6 +148,15 @@
 		47435D3718F9EF9000E1F5CE /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		47435D3818F9EF9000E1F5CE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		47435D3918F9EF9000E1F5CE /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		474D350E18FD04E000028F29 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
+		474D351018FD052C00028F29 /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
+		474D351118FD052C00028F29 /* NSObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Properties.m"; sourceTree = "<group>"; };
+		474D351218FD052C00028F29 /* PFACL+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFACL+NSCoding.h"; sourceTree = "<group>"; };
+		474D351318FD052C00028F29 /* PFACL+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFACL+NSCoding.m"; sourceTree = "<group>"; };
+		474D351418FD052C00028F29 /* PFFile+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFFile+NSCoding.h"; sourceTree = "<group>"; };
+		474D351518FD052C00028F29 /* PFFile+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFFile+NSCoding.m"; sourceTree = "<group>"; };
+		474D351618FD052C00028F29 /* PFObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFObject+NSCoding.h"; sourceTree = "<group>"; };
+		474D351718FD052C00028F29 /* PFObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFObject+NSCoding.m"; sourceTree = "<group>"; };
 		479BEA8918F636C60035A6BC /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		479BEA8A18F636C60035A6BC /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeMessageViewController.xib; sourceTree = "<group>"; };
@@ -162,7 +174,6 @@
 				126B189218EBB2E5005A8475 /* SystemConfiguration.framework in Frameworks */,
 				126B189018EBB2DB005A8475 /* StoreKit.framework in Frameworks */,
 				126B188E18EBB2D3005A8475 /* Security.framework in Frameworks */,
-				126B189B18EBC077005A8475 /* Parse.framework in Frameworks */,
 				126B188C18EBB2C6005A8475 /* QuartzCore.framework in Frameworks */,
 				126B188A18EBB2BE005A8475 /* MobileCoreServices.framework in Frameworks */,
 				126B188818EBB2B4005A8475 /* libz.dylib in Frameworks */,
@@ -170,6 +181,7 @@
 				126B184818EBAEAB005A8475 /* CoreGraphics.framework in Frameworks */,
 				126B188418EBB296005A8475 /* CFNetwork.framework in Frameworks */,
 				126B188218EBB287005A8475 /* AudioToolbox.framework in Frameworks */,
+				474D350F18FD04E000028F29 /* Parse.framework in Frameworks */,
 				126B184A18EBAEAB005A8475 /* UIKit.framework in Frameworks */,
 				126B184618EBAEAB005A8475 /* Foundation.framework in Frameworks */,
 				FA0F9C6E5EAA471E8A36CF13 /* libPods.a in Frameworks */,
@@ -230,7 +242,7 @@
 		126B184418EBAEAB005A8475 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				126B189A18EBC077005A8475 /* Parse.framework */,
+				474D350E18FD04E000028F29 /* Parse.framework */,
 				126B189818EBBF38005A8475 /* CoreData.framework */,
 				126B189118EBB2E5005A8475 /* SystemConfiguration.framework */,
 				126B188F18EBB2DB005A8475 /* StoreKit.framework */,
@@ -356,6 +368,14 @@
 		479BEA8818F636B50035A6BC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				474D351018FD052C00028F29 /* NSObject+Properties.h */,
+				474D351118FD052C00028F29 /* NSObject+Properties.m */,
+				474D351218FD052C00028F29 /* PFACL+NSCoding.h */,
+				474D351318FD052C00028F29 /* PFACL+NSCoding.m */,
+				474D351418FD052C00028F29 /* PFFile+NSCoding.h */,
+				474D351518FD052C00028F29 /* PFFile+NSCoding.m */,
+				474D351618FD052C00028F29 /* PFObject+NSCoding.h */,
+				474D351718FD052C00028F29 /* PFObject+NSCoding.m */,
 				479BEA8918F636C60035A6BC /* LocationController.h */,
 				479BEA8A18F636C60035A6BC /* LocationController.m */,
 			);
@@ -509,6 +529,7 @@
 				47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */,
 				126B187D18EBB153005A8475 /* User.m in Sources */,
 				1252858518F5088C00E45C86 /* CustomAutocompleteObject.m in Sources */,
+				474D351918FD052C00028F29 /* PFACL+NSCoding.m in Sources */,
 				129D761B18F9D8A4003EB2E7 /* ListViewController.m in Sources */,
 				1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */,
 				129D762918F9F140003EB2E7 /* GroupDetailViewController.m in Sources */,
@@ -517,10 +538,13 @@
 				47435D3B18F9EF9000E1F5CE /* Post.m in Sources */,
 				129D763C18FB8AA9003EB2E7 /* SearchResultsViewController.m in Sources */,
 				129D763718FB6BA8003EB2E7 /* SettingsViewController.m in Sources */,
+				474D351818FD052C00028F29 /* NSObject+Properties.m in Sources */,
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,
 				129D761F18F9DAEE003EB2E7 /* TabsController.m in Sources */,
 				126B185218EBAEAB005A8475 /* main.m in Sources */,
+				474D351B18FD052C00028F29 /* PFObject+NSCoding.m in Sources */,
 				479BEA8B18F636C60035A6BC /* LocationController.m in Sources */,
+				474D351A18FD052C00028F29 /* PFFile+NSCoding.m in Sources */,
 				47435D3A18F9EF9000E1F5CE /* Group.m in Sources */,
 				1252859C18F5133A00E45C86 /* MLPAutoCompleteTextField.m in Sources */,
 				1252859D18F5133A00E45C86 /* NSString+Levenshtein.m in Sources */,
