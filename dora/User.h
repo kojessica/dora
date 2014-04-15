@@ -22,4 +22,5 @@
 @property (retain) NSNumber *age;
 @property (retain) NSString *gender;
 @property (retain) NSString *groupName;
+@property (retain) PFGeoPoint *location;
 @end

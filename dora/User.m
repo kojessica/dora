@@ -9,6 +9,7 @@
 #import "User.h"
 #import <Parse/Parse.h>
 #import "CoreLocation/CoreLocation.h"
+#import "LocationController.h"
 
 @interface User()
 
@@ -19,6 +20,7 @@
 @dynamic groupName;
 @dynamic age;
 @dynamic gender;
+@dynamic location;
 //static CLLocationManager *_locationManager;
 static User *currentUser = nil;
 + (NSString *)parseClassName {
@@ -38,17 +40,17 @@ static User *currentUser = nil;
 }
 
 + (User *)setCurrentUser {
-    /*
-     [[self locationManager] startUpdatingLocation];
-    CLLocation *location = _locationManager.location;
-    location.timestamp
-    [[self locationManager] stopUpdatingLocation];
-    CLLocationCoordinate2D cooridnate = [location coordinate];
-    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:cooridnate.latitude longitude:cooridnate.longitude];
-    */
+
     currentUser = [User object];
     currentUser.key = [self setRandomKey];
-    //user[@"location"] = geoPoint;
+    CLLocation *location = [[LocationController sharedLocationController] locationManager].location;
+   
+    if(location != nil) {
+        CLLocationCoordinate2D coordinate = [location coordinate];
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                      longitude:coordinate.longitude];
+        currentUser.location = geoPoint;
+    }
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         currentUser.objectId = [currentUser objectId];
         [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:currentUser] forKey:@"current_user"];
