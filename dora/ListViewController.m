@@ -24,7 +24,7 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-    //[self.tableView registerNib:[UINib nibWithNibName:@"GroupCell" bundle:nil] forCellWithReuseIdentifier:@"GroupCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"GroupCell" bundle:nil] forCellReuseIdentifier:@"GroupCell"];
     
     self.listGroup = [Group getAllGroups];
     self.detailviewIsPresent = NO;
@@ -48,11 +48,6 @@
 	static NSString *CellIdentifier = @"GroupCell";
     
     GroupCell *cell = (GroupCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-	if (cell == nil) {
-		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"GroupCell" owner:self options:nil];
-		cell = (GroupCell*)[nib objectAtIndex:0];
-    }
     
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell setGroup:[self.listGroup objectAtIndex:indexPath.row]];
