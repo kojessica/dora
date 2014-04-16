@@ -108,7 +108,7 @@
     [query whereKeyExists:@"name"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
             for (PFObject *object in objects) {
                 [groups addObject:object[@"name"]];
             }

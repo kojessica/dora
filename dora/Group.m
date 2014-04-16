@@ -35,17 +35,17 @@
 }
 
 
-+ (Group*)getGroupWithName:(NSString*)name {
++ (void)getGroupWithName:(NSString*)name completion:(void(^) (PFObject *object, NSError *error))completion{
     PFQuery *query = [Group query];
     [query whereKey:@"name" equalTo:name];
-    PFObject *group = [query getFirstObject];
-    return (Group*)group;
+    [query getFirstObjectInBackgroundWithBlock:completion];
+    return;
 }
 
-+ (NSArray *)getAllGroups {
++ (void)getAllGroupsWithCompletion:(void(^) (NSArray *objects, NSError *error))completion {
     PFQuery *query = [Group query];
     [query whereKeyExists:@"name"];
-    NSArray *objects = [query findObjects];
-    return objects;
+    [query findObjectsInBackgroundWithBlock:completion];
+    return;
 }
 @end

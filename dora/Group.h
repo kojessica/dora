@@ -15,7 +15,8 @@
 + (NSString *)parseClassName;
 
 + (Group *)createGroupWithName:(NSString*)name location:(CLLocation *) location;
-+ (Group *)getGroupWithName:(NSString*)name;
++ (void)getGroupWithName:(NSString*)name completion:(void(^) (PFObject *object, NSError *error))completion;
++ (void)getAllGroupsWithCompletion:(void(^) (NSArray *objects, NSError *error))completion;
 + (NSArray *)getAllGroups;
 @property (retain) NSString *name;
 @property (retain) NSNumber *popularIndex;
