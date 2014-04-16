@@ -12,6 +12,7 @@
 #import "MBProgressHUD.h"
 #import "Post.h"
 #import "PostCell.h"
+#import "SearchResultsViewController.h"
 
 @interface GroupDetailViewController ()
 
@@ -53,6 +54,8 @@
     tblayer.shadowOpacity = 0.50f;
     tblayer.shadowPath = [[UIBezierPath bezierPathWithRect:tblayer.bounds] CGPath];
     
+    NSLog(@"%@", self.group);
+    
     [self.groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.name]];
     [Post retrievePostsFromGroup:self.group completion:^(NSArray *objects, NSError *error) {
         self.posts = objects;
@@ -86,9 +89,16 @@
 }
 
 - (IBAction)onBackButton:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
-    }];
+    
+    NSLog(@"%d", [self.presentingViewController isKindOfClass:[GroupDetailViewController class]]);
+    
+    if ([self.presentingViewController isKindOfClass:[SearchResultsViewController class]]) {
+        [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [self dismissViewControllerAnimated:YES completion:^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
+        }];
+    }
 }
 
 - (IBAction)onCompose:(id)sender {

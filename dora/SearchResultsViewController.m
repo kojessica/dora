@@ -198,14 +198,18 @@
 
 - (void)createNewGroup
 {
-    //TODO(jessica): create a new group in Parse
-    Group *groupToCreate = [[Group alloc] init];
-    groupToCreate.name = self.needToCreate;
-    GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
-    groupDetailView.group = groupToCreate;
+    
+    Group *group = [Group createGroupWithName:self.needToCreate location:[[LocationController sharedLocationController] locationManager].location];
+    
+    [Group getGroupWithName:self.needToCreate completion:^(PFObject *object, NSError *error) {
+        GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
+        groupDetailView.group = group;
+        [self presentViewController:groupDetailView animated:YES completion:nil];
+    }];
+    
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
-    [self presentViewController:groupDetailView animated:YES completion:nil];
+    
 }
 
 

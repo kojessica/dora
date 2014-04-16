@@ -16,10 +16,10 @@
 @dynamic popularIndex;
 @dynamic totalPosts;
 @dynamic location;
+
 + (NSString *)parseClassName {
     return @"Groups";
 }
-
 
 + (Group*)createGroupWithName:(NSString*)name location:(CLLocation*) location {
     CLLocationCoordinate2D coordinate = [location coordinate];
@@ -28,13 +28,12 @@
     Group *group = [Group object];
     group.name = name;
     group.location = geoPoint;
-    group.popularIndex = [NSNumber numberWithInt:0];;
-    group.totalPosts = [NSNumber numberWithInt:0];;
+    group.popularIndex = [NSNumber numberWithInt:0];
+    group.totalPosts = [NSNumber numberWithInt:0];
 
     [group saveInBackground];
     return group;
 }
-
 
 + (void)getGroupWithName:(NSString*)name completion:(void(^) (PFObject *object, NSError *error))completion{
     PFQuery *query = [Group query];
