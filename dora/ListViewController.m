@@ -25,11 +25,12 @@
 {
 	[super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"GroupCell" bundle:nil] forCellReuseIdentifier:@"GroupCell"];
-    
-    self.listGroup = [Group getAllGroups];
-    self.detailviewIsPresent = NO;
-    NSLog(@"%@", self.listGroup);
-    [self.tableView reloadData];
+    [Group getAllGroupsWithCompletion:^(NSArray *objects, NSError *error) {
+        self.listGroup = objects;
+        self.detailviewIsPresent = NO;
+        [self.tableView reloadData];
+    }];
+
 }
 
 #pragma mark - UITableViewDataSource

@@ -44,30 +44,19 @@
     
 }
 
-+(NSArray*) retrieveRecentPostsFromGroup:(Group*) group number:(NSNumber*)number {
-    NSNumber *numPosts = 0;
++(void) retrieveRecentPostsFromGroup:(Group*) group number:(NSNumber*)number completion:(void (^) (NSArray* objects, NSError* error))completion {
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     [query whereKey:@"groupId" equalTo:group.objectId];
-    NSArray* results = [query findObjects];
-    NSMutableArray* postResult = [[NSMutableArray alloc] init];
-    for (Post *post in results) {
-        if(numPosts < number) {
-            [postResult addObject:post];
-            numPosts = [NSNumber numberWithInt:[numPosts intValue] + 1];
-        }
-        else {
-            break;
-        }
-    }
-    return postResult;
-    
+    [query orderByDescending:@"createdAt"];
+    query.limit = [number intValue];
+    [query findObjectsInBackgroundWithBlock:completion];
+    return;
 }
 
-+(NSArray*) retrievePostsFromGroup:(Group*) group {
++(void) retrievePostsFromGroup:(Group*) group completion:(void (^) (NSArray* objects, NSError* error))completion {
     PFQuery *query = [Post query];
     [query whereKey:@"groupId" equalTo:group.objectId];
-    NSArray* results = [query findObjects];
-    return results;
+    [query findObjectsInBackgroundWithBlock:completion];
 }
 
 +(void) likePostWithId:(NSString*)postId {

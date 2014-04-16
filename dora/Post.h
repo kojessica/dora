@@ -16,8 +16,9 @@
 @interface Post : PFObject <PFSubclassing>
 
 + (NSString *)parseClassName;
++(void) retrieveRecentPostsFromGroup:(Group*) group number:(NSNumber*)number completion:(void (^) (NSArray* objects, NSError* error))completion;
 +(void) postWithUser:(User*)user group:(Group*)group text:(NSString*)content location:(CLLocation*) location;
-+(NSArray*) retrievePostsFromGroup:(Group*) group;
++(void) retrievePostsFromGroup:(Group*) group completion:(void (^) (NSArray* objects, NSError* error))completion;
 +(void) likePostWithId:(NSString*)postId;
 +(void) dislikePostWithId:(NSString*)postId;
 +(void) setPopularityWithNumber:(NSNumber*)popularity;
