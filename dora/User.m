@@ -22,6 +22,7 @@
 @dynamic gender;
 @dynamic location;
 //static CLLocationManager *_locationManager;
+
 static User *currentUser = nil;
 + (NSString *)parseClassName {
     return @"Users";

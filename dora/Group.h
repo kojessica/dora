@@ -18,6 +18,7 @@
 + (Group *)getGroupWithName:(NSString*)name;
 + (NSArray *)getAllGroups;
 @property (retain) NSString *name;
+@property (strong,nonatomic) NSString *objectId;
 @property (retain) NSNumber *popularIndex;
 @property (retain) NSNumber *totalPosts;
 @property (retain) PFGeoPoint *location;

@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Group.h"
 
-@interface GroupDetailViewController : UIViewController
+@interface GroupDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 - (IBAction)onBackButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *writeButton;
 @property (weak, nonatomic) IBOutlet UIView *topBar;
 @property (weak, nonatomic) IBOutlet UILabel *groupLabel;
 @property (strong, nonatomic) Group *group;
+@property (weak, nonatomic) IBOutlet UICollectionView *postTable;
 - (IBAction)onCompose:(id)sender;
 @end

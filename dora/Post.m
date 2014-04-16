@@ -19,19 +19,21 @@
 @dynamic popularity;
 
 
-+ (NSString *)parseClassName {
++(NSString *)parseClassName {
     return @"Post";
 }
 
 +(void) postWithUser:(User*)user group:(Group*)group text:(NSString*)content location:(CLLocation*) location {
     Post *post = [Post object];
+    
     CLLocationCoordinate2D coordinate = [location coordinate];
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
                                                   longitude:coordinate.longitude];
-
     post.groupId = group.objectId;
     post.text = content;
-    post.userId = [User currentUser].objectId;
+    
+    //TODO:fix this objectId problem
+    //post.userId = [User currentUser].objectId;
     post.likes = [NSNumber numberWithInt:0];
     post.dislikes = [NSNumber numberWithInt:0];
     post.popularity = [NSNumber numberWithInt:0];

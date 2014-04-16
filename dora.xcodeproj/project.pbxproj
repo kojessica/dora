@@ -53,6 +53,9 @@
 		129D763D18FB8AA9003EB2E7 /* SearchResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D763B18FB8AA9003EB2E7 /* SearchResultsViewController.xib */; };
 		129D764718FCBC12003EB2E7 /* CustomSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D764518FCBC12003EB2E7 /* CustomSearchCell.m */; };
 		129D764818FCBC12003EB2E7 /* CustomSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D764618FCBC12003EB2E7 /* CustomSearchCell.xib */; };
+		129D764A18FE260D003EB2E7 /* back_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D764918FE260D003EB2E7 /* back_icon@2x.png */; };
+		129D764D18FE36E0003EB2E7 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D764C18FE36E0003EB2E7 /* PostCell.m */; };
+		129D764F18FE36F2003EB2E7 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D764E18FE36F2003EB2E7 /* PostCell.xib */; };
 		47435D3A18F9EF9000E1F5CE /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3718F9EF9000E1F5CE /* Group.m */; };
 		47435D3B18F9EF9000E1F5CE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3918F9EF9000E1F5CE /* Post.m */; };
 		474D350F18FD04E000028F29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474D350E18FD04E000028F29 /* Parse.framework */; };
@@ -144,6 +147,10 @@
 		129D764418FCBC12003EB2E7 /* CustomSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSearchCell.h; sourceTree = "<group>"; };
 		129D764518FCBC12003EB2E7 /* CustomSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSearchCell.m; sourceTree = "<group>"; };
 		129D764618FCBC12003EB2E7 /* CustomSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSearchCell.xib; sourceTree = "<group>"; };
+		129D764918FE260D003EB2E7 /* back_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back_icon@2x.png"; path = "Images/back_icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		129D764B18FE36E0003EB2E7 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
+		129D764C18FE36E0003EB2E7 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		129D764E18FE36F2003EB2E7 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		47435D3618F9EF9000E1F5CE /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		47435D3718F9EF9000E1F5CE /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		47435D3818F9EF9000E1F5CE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
@@ -281,6 +288,7 @@
 		126B184C18EBAEAB005A8475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				129D764918FE260D003EB2E7 /* back_icon@2x.png */,
 				129D763218FB5088003EB2E7 /* setting_19_icon.png */,
 				129D763018FB4F83003EB2E7 /* logo_15_icon.png */,
 				129D762E18FA56D6003EB2E7 /* goback_23_icon.png */,
@@ -338,6 +346,9 @@
 				129D764418FCBC12003EB2E7 /* CustomSearchCell.h */,
 				129D764518FCBC12003EB2E7 /* CustomSearchCell.m */,
 				129D764618FCBC12003EB2E7 /* CustomSearchCell.xib */,
+				129D764B18FE36E0003EB2E7 /* PostCell.h */,
+				129D764C18FE36E0003EB2E7 /* PostCell.m */,
+				129D764E18FE36F2003EB2E7 /* PostCell.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -465,6 +476,8 @@
 				126B185018EBAEAB005A8475 /* InfoPlist.strings in Resources */,
 				126B185818EBAEAB005A8475 /* Images.xcassets in Resources */,
 				129D762518F9E338003EB2E7 /* GroupCell.xib in Resources */,
+				129D764F18FE36F2003EB2E7 /* PostCell.xib in Resources */,
+				129D764A18FE260D003EB2E7 /* back_icon@2x.png in Resources */,
 				47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */,
 				129D763118FB4F83003EB2E7 /* logo_15_icon.png in Resources */,
 				129D763D18FB8AA9003EB2E7 /* SearchResultsViewController.xib in Resources */,
@@ -536,6 +549,7 @@
 				126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */,
 				129D764718FCBC12003EB2E7 /* CustomSearchCell.m in Sources */,
 				47435D3B18F9EF9000E1F5CE /* Post.m in Sources */,
+				129D764D18FE36E0003EB2E7 /* PostCell.m in Sources */,
 				129D763C18FB8AA9003EB2E7 /* SearchResultsViewController.m in Sources */,
 				129D763718FB6BA8003EB2E7 /* SettingsViewController.m in Sources */,
 				474D351818FD052C00028F29 /* NSObject+Properties.m in Sources */,

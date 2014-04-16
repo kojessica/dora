@@ -8,6 +8,7 @@
 
 #import "ComposeMessageViewController.h"
 #import "LocationController.h"
+
 @interface ComposeMessageViewController ()
 
 @end
@@ -26,7 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.composedText.delegate = self;
+    [self.backButton setTitle:[NSString stringWithFormat:@" @%@", self.group.name] forState:UIControlStateNormal];
+    
+    [self.composedText becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,9 +39,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
+    return YES;
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    textView.backgroundColor = [UIColor colorWithRed:250 green:250 blue:250 alpha:1.f];
+}
+
 - (IBAction)didClickSend:(id)sender {
+    NSLog(@"%@", [self group]);
+    NSLog(@"%@", [self composedText].text);
+    NSLog(@"%@", [[LocationController sharedLocationController] locationManager].location);
+    
     [Post postWithUser:[User currentUser] group:[self group] text:[self composedText].text location:[[LocationController sharedLocationController] locationManager].location];
     [self dismissViewControllerAnimated:YES completion:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"newPostUploaded" object:nil];
 
 }
 - (IBAction)onCancelButton:(id)sender {

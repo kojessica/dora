@@ -12,6 +12,7 @@
 @implementation Group
 
 @dynamic name;
+@dynamic objectId;
 @dynamic popularIndex;
 @dynamic totalPosts;
 @dynamic location;

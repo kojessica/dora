@@ -9,8 +9,13 @@
 #import "GroupDetailViewController.h"
 #import "ListViewController.h"
 #import "ComposeMessageViewController.h"
+#import "MBProgressHUD.h"
+#import "Post.h"
+#import "PostCell.h"
 
 @interface GroupDetailViewController ()
+
+@property (nonatomic,strong) NSArray *posts;
 
 @end
 
@@ -28,6 +33,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.postTable.delegate = self;
+    self.postTable.dataSource = self;
+    
+    UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
+    [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
+    
     CALayer *layer = self.writeButton.layer;
     layer.shadowOffset = CGSizeMake(0, 1);
     layer.shadowColor = [[UIColor blackColor] CGColor];
@@ -43,7 +54,28 @@
     tblayer.shadowPath = [[UIBezierPath bezierPathWithRect:tblayer.bounds] CGPath];
     
     [self.groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.name]];
-    // Do any additional setup after loading the view from its nib.
+
+    self.posts = [Post retrievePostsFromGroup:self.group];
+    NSLog(@"%@", self.posts);
+    [self.postTable reloadData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)
+                                                 name:@"newPostUploaded"
+                                               object:nil];
+}
+
+- (void) receiveNotification:(NSNotification *)notification
+{
+    if ([[notification name] isEqualToString:@"newPostUploaded"]) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDModeText;
+        hud.labelText = [NSString stringWithFormat:@"Posted @%@", self.group.name];
+        hud.margin = 15.f;
+        hud.yOffset = 150.f;
+        hud.removeFromSuperViewOnHide = YES;
+        [hud hide:YES afterDelay:3];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,8 +93,46 @@
 - (IBAction)onCompose:(id)sender {
     ComposeMessageViewController *composeView = [[ComposeMessageViewController alloc] init];
     composeView.group = self.group;
-    NSLog(@"TTests");
     
     [self presentViewController:composeView animated:YES completion:nil];
 }
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [self.posts count];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+}
+
+- (CGFloat)cellHeight:(NSIndexPath *)indexPath
+{
+    Post *post = [self.posts objectAtIndex:indexPath.row];
+    NSString *name = post.text;
+    CGSize maximumLabelSize = CGSizeMake(260,9999);
+    UIFont *font=[UIFont systemFontOfSize:14];
+    CGRect textRect = [name  boundingRectWithSize:maximumLabelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+    return textRect.size.height;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(320, [self cellHeight:indexPath] + 44);
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    PostCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCell" forIndexPath:indexPath];
+    
+    [cell cellWithPost:[self.posts objectAtIndex:indexPath.row]];
+    
+    return cell;
+}
+
+
 @end
