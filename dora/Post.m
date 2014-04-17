@@ -31,9 +31,7 @@
                                                   longitude:coordinate.longitude];
     post.groupId = group.objectId;
     post.text = content;
-    
-    //TODO:fix this objectId problem
-    //post.userId = [User currentUser].objectId;
+    post.userId = [[User currentUser] objectId];
     post.likes = [NSNumber numberWithInt:0];
     post.dislikes = [NSNumber numberWithInt:0];
     post.popularity = [NSNumber numberWithInt:0];

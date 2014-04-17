@@ -32,6 +32,7 @@
     LocationController *locationController = [LocationController sharedLocationController];
     [[locationController locationManager] startUpdatingLocation];
     User *currentUser = [User currentUser];
+    [currentUser saveInBackground];
     if ([User currentUser]) {
         //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[GroupPickerViewController alloc] init]];
         //nav.navigationBar.hidden = YES;
