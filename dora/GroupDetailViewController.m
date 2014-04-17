@@ -57,11 +57,13 @@
     NSLog(@"%@", self.group);
     
     [self.groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.name]];
-    [Post retrievePostsFromGroup:self.group completion:^(NSArray *objects, NSError *error) {
-        self.posts = objects;
-        NSLog(@"%@", self.posts);
-        [self.postTable reloadData];
-    }];
+    if (self.group.objectId != nil) {
+        [Post retrievePostsFromGroup:self.group completion:^(NSArray *objects, NSError *error) {
+            self.posts = objects;
+            NSLog(@"%@", self.posts);
+            [self.postTable reloadData];
+        }];
+    }
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveNotification:)

@@ -198,18 +198,16 @@
 
 - (void)createNewGroup
 {
-    
     Group *group = [Group createGroupWithName:self.needToCreate location:[[LocationController sharedLocationController] locationManager].location];
     
     [Group getGroupWithName:self.needToCreate completion:^(PFObject *object, NSError *error) {
         GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
+        group.name = self.needToCreate;
         groupDetailView.group = group;
         [self presentViewController:groupDetailView animated:YES completion:nil];
     }];
     
-    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
-    
 }
 
 
