@@ -38,7 +38,12 @@
     if(geoPoint != nil) {
       post.location = geoPoint;
     }
-    [post saveInBackground];
+    [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        group.firstPost = 0;
+        
+        [post objectId];
+    }];
+    
     
 }
 

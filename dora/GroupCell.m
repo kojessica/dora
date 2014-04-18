@@ -8,6 +8,7 @@
 
 #import "GroupCell.h"
 #import "Group.h"
+#import "Post.h"
 
 @implementation GroupCell
 
@@ -27,5 +28,12 @@
 {
     self.name.text = group.name;
 }
+
+/*
+- (void)setGroup:(Group*)group firstPost:(NSString *)post1 secondPost:(NSString *)post2 {
+    self.name.text = group.name;
+    self.firstPost.text = post1;
+    self.secondPost.text = post2;
+}*/
 
 @end

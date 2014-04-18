@@ -30,14 +30,14 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU6-kv-nqi">
                             <rect key="frame" x="15" y="30" width="15" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="logo_15_icon.png">
+                            <state key="normal" image="logo_icon.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdC-qa-f4V">
                             <rect key="frame" x="286" y="30" width="19" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="setting_19_icon.png">
+                            <state key="normal" image="setting_icon.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -54,7 +54,7 @@
         </view>
     </objects>
     <resources>
-        <image name="logo_15_icon.png" width="15" height="15"/>
-        <image name="setting_19_icon.png" width="19" height="19"/>
+        <image name="logo_icon.png" width="14" height="14"/>
+        <image name="setting_icon.png" width="18" height="19"/>
     </resources>
 </document>

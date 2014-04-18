@@ -34,8 +34,6 @@
     User *currentUser = [User currentUser];
     [currentUser saveInBackground];
     if ([User currentUser]) {
-        //UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[GroupPickerViewController alloc] init]];
-        //nav.navigationBar.hidden = YES;
         
         //Test viewcontroller
         ListViewController *listViewController1 = [[ListViewController alloc] init];
@@ -50,8 +48,11 @@
         tabBarController.delegate = self;
         tabBarController.viewControllers = viewControllers;
         [tabBarController setSelectedViewController:listViewController1 animated:NO];
-
-        self.window.rootViewController = tabBarController;
+        
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabBarController];
+        nav.navigationBar.hidden = YES;
+        
+        self.window.rootViewController = nav;
         NSLog(@"%@", currentUser);
     } else {
         [User setCurrentUser];

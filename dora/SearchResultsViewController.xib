@@ -19,7 +19,7 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXR-Ka-iuY">
                     <rect key="frame" x="15" y="28" width="23" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="goback_23_icon.png">
+                    <state key="normal" image="goback_icon.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -45,6 +45,6 @@
         </view>
     </objects>
     <resources>
-        <image name="goback_23_icon.png" width="23" height="16"/>
+        <image name="goback_icon.png" width="23" height="14"/>
     </resources>
 </document>

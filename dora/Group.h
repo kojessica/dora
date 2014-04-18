@@ -22,5 +22,6 @@
 @property (retain) NSNumber *popularIndex;
 @property (retain) NSNumber *totalPosts;
 @property (retain) PFGeoPoint *location;
-
+@property (strong, nonatomic) NSString *firstPost;
+@property (strong, nonatomic) NSString *secondPost;
 @end

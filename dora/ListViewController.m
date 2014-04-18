@@ -11,11 +11,15 @@
 #import "GroupCell.h"
 #import "GroupDetailViewController.h"
 #import "Group.h"
+#import "AFNetworking.h"
+#import "Post.h"
 
 @interface ListViewController ()
 
 @property (strong, nonatomic) NSArray *listGroup;
 @property (assign, nonatomic) BOOL detailviewIsPresent;
+@property (strong, nonatomic) Post *post1;
+@property (strong, nonatomic) Post *post2;
 
 @end
 
@@ -35,8 +39,33 @@
 
 #pragma mark - UITableViewDataSource
 
+/*- (CGFloat)cellHeight:(NSIndexPath *)indexPath
+{
+    CGSize maximumLabelSize = CGSizeMake(280,9999);
+    UIFont *font=[UIFont systemFontOfSize:15];
+    
+    CGFloat post1Height = 0.f;
+    CGFloat post2Height = 0.f;
+    
+    if (self.post1 != nil) {
+        CGRect textRect1 = [self.post1.text  boundingRectWithSize:maximumLabelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+        post1Height = textRect1.size.height;
+    } else {
+        post1Height = 0.f;
+    }
+    
+    if (self.post2 != nil) {
+        CGRect textRect2 = [self.post2.text  boundingRectWithSize:maximumLabelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+        post2Height = textRect2.size.height;
+    } else {
+        post2Height = 0.f;
+    }
+    
+    return post1Height + post2Height;
+}*/
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50.f;
+    return 150;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -52,6 +81,25 @@
     
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell setGroup:[self.listGroup objectAtIndex:indexPath.row]];
+    
+    /*NSNumber *numberOfPosts = [NSNumber numberWithInt:2];
+     [Post retrieveRecentPostsFromGroup:[self.listGroup objectAtIndex:indexPath.row] number:numberOfPosts completion:^(NSArray *objects, NSError *error) {
+        if ([objects count] > 1) {
+            Group *group = [self.listGroup objectAtIndex:indexPath.row];
+            group.firstPost = [objects objectAtIndex:0];
+            group.secondPost = [objects objectAtIndex:1];
+            [cell setGroup: firstPost:self.post1.text secondPost:self.post2.text];
+        } else if ([objects count] > 0) {
+            self.post1 = [objects objectAtIndex:0];
+            self.post2 = nil;
+            [cell setGroup:[self.listGroup objectAtIndex:indexPath.row] firstPost:self.post1.text secondPost:nil];
+        } else {
+            self.post1 = nil;
+            self.post2 = nil;
+            [cell setGroup:[self.listGroup objectAtIndex:indexPath.row] firstPost:nil secondPost:nil];
+        }
+        
+    }];*/
     
 	return cell;
 }

@@ -16,6 +16,8 @@
 @dynamic popularIndex;
 @dynamic totalPosts;
 @dynamic location;
+@dynamic firstPost;
+@dynamic secondPost;
 
 + (NSString *)parseClassName {
     return @"Groups";

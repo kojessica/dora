@@ -217,7 +217,7 @@ static const float yOffset = 67.f;
     SettingsViewController *settingView = [[SettingsViewController alloc] init];
     settingView.modalPresentationStyle = UIModalTransitionStyleFlipHorizontal;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
-    [self presentViewController:settingView animated:YES completion:nil];
+    [self.navigationController pushViewController:settingView animated:YES];
 }
 
 - (void)setSelectedIndex:(NSUInteger)newSelectedIndex animated:(BOOL)animated

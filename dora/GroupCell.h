@@ -11,7 +11,9 @@
 
 @interface GroupCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *secondPost;
+@property (weak, nonatomic) IBOutlet UILabel *firstPost;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 - (void)setGroup:(Group*)group;
-
+//- (void)setGroup:(Group*)group firstPost:(NSString *)post1 secondPost:(NSString *)post2;
 @end

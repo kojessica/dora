@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FXForms.h"
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <FXFormControllerDelegate>
 
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) FXFormController *formController;
 - (IBAction)onBackButton:(id)sender;
 
 @end
