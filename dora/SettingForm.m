@@ -16,7 +16,7 @@
     return @[
              //we want to add another group header here, and modify the auto-capitalization
              
-             @{FXFormFieldKey: @"name", 
+             @{FXFormFieldKey: @"nickname", 
                @"textField.autocapitalizationType": @(UITextAutocapitalizationTypeWords)},
              
              //this is a multiple choice field, so we'll need to provide some options
@@ -27,7 +27,8 @@
              
              //we want to use a stepper control for this value, so let's specify that
              
-             @{FXFormFieldKey: @"age", FXFormFieldCell: [FXFormStepperCell class]},
+             @{FXFormFieldKey: @"age", FXFormFieldCell: [FXFormStepperCell class],
+               FXFormFieldAction: @"saveAge:"},
              ];
 }
 

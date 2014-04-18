@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, Gender)
 
 @interface SettingForm : NSObject <FXForm>
 
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *nickname;
 @property (nonatomic, assign) Gender gender;
 @property (nonatomic, assign) NSUInteger age;
 

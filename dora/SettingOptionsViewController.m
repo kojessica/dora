@@ -8,9 +8,9 @@
 
 #import "SettingOptionsViewController.h"
 #import "SettingForm.h"
+#import "User.h"
 
 @interface SettingOptionsViewController ()
-
 @end
 
 @implementation SettingOptionsViewController
@@ -28,7 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"%@", self.field.options);
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,4 +47,10 @@
     [self.navigationController popViewControllerAnimated:YES];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [User setUserGender:self.field.options[indexPath.row]];
+}
+
 @end

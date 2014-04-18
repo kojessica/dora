@@ -8,8 +8,11 @@
 
 #import "SettingsViewController.h"
 #import "SettingForm.h"
+#import "User.h"
 
 @interface SettingsViewController ()
+
+- (void)saveAge:(UITableViewCell<FXFormFieldCell> *)cell;
 
 @end
 
@@ -20,7 +23,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.view.backgroundColor = [UIColor colorWithRed:228/255.0f green:228/255.0f blue:228/255.0f alpha:1.0f];
-        //self.formController.form = [[SettingForm alloc] init];
     }
     return self;
 }
@@ -47,13 +49,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-	return 3;
+- (NSUInteger)numberOfSections {
+    return 1;
+}
+
+- (NSUInteger)numberOfFieldsInSection:(NSUInteger)section {
+    return 3;
 }
 
 - (IBAction)onBackButton:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
 }
+
+- (void)saveAge:(UITableViewCell<FXFormFieldCell> *)cell
+{
+    [User setUserAge:cell.field.value];
+}
+
 @end
