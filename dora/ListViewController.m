@@ -29,12 +29,27 @@
 {
 	[super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"GroupCell" bundle:nil] forCellReuseIdentifier:@"GroupCell"];
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+    
     [Group getAllGroupsWithCompletion:^(NSArray *objects, NSError *error) {
+        [refreshControl endRefreshing];
         self.listGroup = objects;
         self.detailviewIsPresent = NO;
         [self.tableView reloadData];
     }];
 
+}
+
+- (void)reload:(UIRefreshControl *)refreshControl
+{
+    [Group getAllGroupsWithCompletion:^(NSArray *objects, NSError *error) {
+        [refreshControl endRefreshing];
+        self.listGroup = objects;
+        self.detailviewIsPresent = NO;
+        [self.tableView reloadData];
+    }];
 }
 
 #pragma mark - UITableViewDataSource

@@ -55,23 +55,36 @@
     tblayer.shadowPath = [[UIBezierPath bezierPathWithRect:tblayer.bounds] CGPath];
     
     NSLog(@"%@", self.group);
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
+    [self.postTable addSubview:refreshControl];
     
     [self.groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.name]];
     if (self.group.objectId != nil) {
         [Post retrievePostsFromGroup:self.group completion:^(NSArray *objects, NSError *error) {
+            [refreshControl endRefreshing];
             self.posts = objects;
-            NSLog(@"%@", self.posts);
             [self.postTable reloadData];
         }];
     }
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveNotification:)
                                                  name:@"newPostUploaded"
                                                object:nil];
 }
 
-- (void) receiveNotification:(NSNotification *)notification
+- (void)reload:(UIRefreshControl *)refreshControl
+{
+    if (self.group.objectId != nil) {
+        [Post retrievePostsFromGroup:self.group completion:^(NSArray *objects, NSError *error) {
+            [refreshControl endRefreshing];
+            self.posts = objects;
+            [self.postTable reloadData];
+        }];
+    }
+}
+
+- (void)receiveNotification:(NSNotification *)notification
 {
     if ([[notification name] isEqualToString:@"newPostUploaded"]) {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
