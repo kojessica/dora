@@ -31,6 +31,7 @@
              
              @{FXFormFieldKey: @"age", FXFormFieldCell: [FXFormStepperCell class],
                FXFormFieldAction: @"saveAge:"},
+
              ];
 }
 

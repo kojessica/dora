@@ -34,6 +34,8 @@
     self.formController.tableView = self.tableView;
     self.formController.delegate = self;
     self.formController.form = [[SettingForm alloc] init];
+    [self.notifySwitch setOn:YES animated:YES];
+    [self.locationSwitch setOn:YES animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -49,18 +51,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (NSUInteger)numberOfSections {
-    return 1;
-}
-
-- (NSUInteger)numberOfFieldsInSection:(NSUInteger)section {
-    return 3;
-}
-
 - (IBAction)onBackButton:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
+}
+
+- (IBAction)triggerNotification:(id)sender {
+    NSLog(@"%d", self.notifySwitch.on);
+}
+
+- (IBAction)triggerLocation:(id)sender {
+    NSLog(@"%d", self.locationSwitch.on);
 }
 
 - (void)saveAge:(UITableViewCell<FXFormFieldCell> *)cell

@@ -12,7 +12,12 @@
 @interface SettingsViewController : UIViewController <FXFormControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISwitch *notifySwitch;
 @property (nonatomic, strong) FXFormController *formController;
+@property (weak, nonatomic) IBOutlet UISwitch *locationSwitch;
 - (IBAction)onBackButton:(id)sender;
+- (IBAction)triggerNotification:(id)sender;
+- (IBAction)triggerLocation:(id)sender;
+
 
 @end

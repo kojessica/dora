@@ -14,6 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *secondPost;
 @property (weak, nonatomic) IBOutlet UILabel *firstPost;
 @property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *wrapper;
 - (void)setGroup:(Group*)group;
-//- (void)setGroup:(Group*)group firstPost:(NSString *)post1 secondPost:(NSString *)post2;
 @end

@@ -54,12 +54,18 @@ static const float yOffset = 67.f;
     
     self.searchInputBox.delegate = self;
     [self.searchInputBox resignFirstResponder];
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 25)];
+    self.searchInputBox.leftView = paddingView;
+    self.searchInputBox.leftViewMode = UITextFieldViewModeAlways;
+
     self.isPresent = YES;
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg3.png"]];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(receiveNotification:)
-                                                 name:@"dismissKeyboard"
-                                               object:nil];
+                                          selector:@selector(receiveNotification:)
+                                          name:@"dismissKeyboard"
+                                          object:nil];
     [self reloadTabButtons];
 }
 

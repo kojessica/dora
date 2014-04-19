@@ -61,7 +61,8 @@
         nav.navigationBar.hidden = YES;
     }
     
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
+
     [self.window makeKeyAndVisible];
     return YES;
 }

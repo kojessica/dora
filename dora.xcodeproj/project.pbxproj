@@ -60,6 +60,9 @@
 		129D76661901B725003EB2E7 /* logo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D76651901B725003EB2E7 /* logo_icon@2x.png */; };
 		129D76681901B793003EB2E7 /* goback_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D76671901B793003EB2E7 /* goback_icon@2x.png */; };
 		129D766A1901B806003EB2E7 /* write_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D76691901B806003EB2E7 /* write_icon@2x.png */; };
+		129D766C19022426003EB2E7 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D766B19022426003EB2E7 /* bg@2x.png */; };
+		129D766F190229A9003EB2E7 /* bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D766D190229A9003EB2E7 /* bg2@2x.png */; };
+		129D7670190229A9003EB2E7 /* bg3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D766E190229A9003EB2E7 /* bg3@2x.png */; };
 		47435D3A18F9EF9000E1F5CE /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3718F9EF9000E1F5CE /* Group.m */; };
 		47435D3B18F9EF9000E1F5CE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3918F9EF9000E1F5CE /* Post.m */; };
 		474D350F18FD04E000028F29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474D350E18FD04E000028F29 /* Parse.framework */; };
@@ -162,6 +165,9 @@
 		129D76651901B725003EB2E7 /* logo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_icon@2x.png"; path = "Images/logo_icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		129D76671901B793003EB2E7 /* goback_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "goback_icon@2x.png"; path = "Images/goback_icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		129D76691901B806003EB2E7 /* write_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "write_icon@2x.png"; path = "Images/write_icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		129D766B19022426003EB2E7 /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg@2x.png"; path = "Images/bg@2x.png"; sourceTree = SOURCE_ROOT; };
+		129D766D190229A9003EB2E7 /* bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg2@2x.png"; path = "Images/bg2@2x.png"; sourceTree = SOURCE_ROOT; };
+		129D766E190229A9003EB2E7 /* bg3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg3@2x.png"; path = "Images/bg3@2x.png"; sourceTree = SOURCE_ROOT; };
 		47435D3618F9EF9000E1F5CE /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		47435D3718F9EF9000E1F5CE /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		47435D3818F9EF9000E1F5CE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
@@ -299,6 +305,9 @@
 		126B184C18EBAEAB005A8475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				129D766D190229A9003EB2E7 /* bg2@2x.png */,
+				129D766E190229A9003EB2E7 /* bg3@2x.png */,
+				129D766B19022426003EB2E7 /* bg@2x.png */,
 				129D76671901B793003EB2E7 /* goback_icon@2x.png */,
 				129D76651901B725003EB2E7 /* logo_icon@2x.png */,
 				129D765F1901AEFC003EB2E7 /* backToSetting_icon@2x.png */,
@@ -499,9 +508,12 @@
 				129D764F18FE36F2003EB2E7 /* PostCell.xib in Resources */,
 				129D76661901B725003EB2E7 /* logo_icon@2x.png in Resources */,
 				129D764A18FE260D003EB2E7 /* back_icon@2x.png in Resources */,
+				129D766C19022426003EB2E7 /* bg@2x.png in Resources */,
 				47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */,
 				129D763D18FB8AA9003EB2E7 /* SearchResultsViewController.xib in Resources */,
+				129D766F190229A9003EB2E7 /* bg2@2x.png in Resources */,
 				126B187918EBB039005A8475 /* GroupPickerViewController.xib in Resources */,
+				129D7670190229A9003EB2E7 /* bg3@2x.png in Resources */,
 				129D76621901AEFC003EB2E7 /* setting_icon@2x.png in Resources */,
 				129D762A18F9F140003EB2E7 /* GroupDetailViewController.xib in Resources */,
 				129D76611901AEFC003EB2E7 /* backToSetting_icon@2x.png in Resources */,
