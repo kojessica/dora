@@ -11,9 +11,9 @@
 
 typedef NS_ENUM(NSInteger, Gender)
 {
-    GenderOther = 0,
-    GenderFemale,
-    GenderMale
+    Unknown = 0,
+    Female = 1,
+    Male = 2
 };
 
 @interface SettingForm : NSObject <FXForm>

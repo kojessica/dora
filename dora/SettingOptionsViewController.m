@@ -50,7 +50,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [User setUserGender:self.field.options[indexPath.row]];
+    [User setUserGender:[NSNumber numberWithInteger:indexPath.row]];
 }
 
 @end

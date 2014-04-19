@@ -49,6 +49,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (NSUInteger)numberOfSections {
     return 1;
 }
@@ -65,6 +66,12 @@
 - (void)saveAge:(UITableViewCell<FXFormFieldCell> *)cell
 {
     [User setUserAge:cell.field.value];
+}
+
+- (void)saveNickname:(UITableViewCell<FXFormFieldCell> *)cell
+{
+    NSLog(@"%@", cell.field.value);
+    [User setUserNickname:cell.field.value];
 }
 
 @end

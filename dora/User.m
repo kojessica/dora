@@ -19,6 +19,7 @@
 @dynamic key;
 @dynamic groupName;
 @dynamic age;
+@dynamic nickname;
 @dynamic gender;
 @dynamic location;
 //static CLLocationManager *_locationManager;
@@ -81,8 +82,13 @@ static User *currentUser = nil;
     [currentUser saveInBackground];
 }
 
-+ (void)setUserGender:(NSString *)gender {
++ (void)setUserGender:(NSNumber *)gender {
     currentUser.gender = gender;
+    [currentUser saveInBackground];
+}
+
++ (void)setUserNickname:(NSString *)nickname {
+    currentUser.nickname = nickname;
     [currentUser saveInBackground];
 }
 

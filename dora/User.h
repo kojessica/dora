@@ -17,10 +17,12 @@
 + (NSString *)setRandomKey;
 + (void)setUserGroup:(NSString *)groupName;
 + (void)setUserAge:(NSNumber *)age;
-+ (void)setUserGender:(NSString *)gender;
++ (void)setUserGender:(NSNumber *)gender;
++ (void)setUserNickname:(NSString *)nickname;
+@property (retain) NSString *nickname;
 @property (retain) NSString *key;
 @property (retain) NSNumber *age;
-@property (retain) NSString *gender;
+@property (retain) NSNumber *gender;
 @property (retain) NSString *groupName;
 @property (retain) PFGeoPoint *location;
 @end

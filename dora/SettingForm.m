@@ -7,25 +7,27 @@
 //
 
 #import "SettingForm.h"
+#import "User.h"
 
 @implementation SettingForm
 
-
 - (NSArray *)fields
 {
+    User *currentUser = [User currentUser];
+    self.gender = [currentUser.gender intValue];
+    self.age = [currentUser.age intValue];
+    self.nickname = currentUser.nickname;
+    
     return @[
-             //we want to add another group header here, and modify the auto-capitalization
              
              @{FXFormFieldKey: @"nickname", 
-               @"textField.autocapitalizationType": @(UITextAutocapitalizationTypeWords)},
+               @"textField.autocapitalizationType": @(UITextAutocapitalizationTypeWords),
+               FXFormFieldAction: @"saveNickname:"},
              
-             //this is a multiple choice field, so we'll need to provide some options
-             //because this is an enum property, the indexes of the options should match enum values
              
              @{FXFormFieldKey: @"gender", FXFormFieldOptions: @[@"Unknown", @"Female", @"Male"],
                FXFormFieldViewController: @"SettingOptionsViewController"},
              
-             //we want to use a stepper control for this value, so let's specify that
              
              @{FXFormFieldKey: @"age", FXFormFieldCell: [FXFormStepperCell class],
                FXFormFieldAction: @"saveAge:"},
