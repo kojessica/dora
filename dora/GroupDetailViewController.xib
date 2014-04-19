@@ -30,7 +30,7 @@
                     </collectionViewFlowLayout>
                     <cells/>
                 </collectionView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9i4-1v-g4h">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9i4-1v-g4h">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -53,11 +53,19 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.20000001788139343" green="0.20000001788139343" blue="0.20000001788139343" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="Hwp-eU-Ews"/>
+                        <constraint firstAttribute="width" constant="320" id="uCK-Jf-ez8"/>
+                    </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBh-HC-5YT">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBh-HC-5YT">
                     <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.14901961389999999" green="0.66274511810000003" blue="0.73725491759999995" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="FWn-OR-UOh"/>
+                        <constraint firstAttribute="height" constant="50" id="gh0-l0-Hqd"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <state key="normal" title="  Write" image="write_icon.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,8 +75,36 @@
                         <action selector="onCompose:" destination="-1" eventType="touchUpInside" id="eWZ-EB-ub0"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxv-5P-Ca3">
+                    <rect key="frame" x="0.0" y="515" width="320" height="3"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.12" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="I6V-4m-GzA"/>
+                        <constraint firstAttribute="height" constant="3" id="QGz-Yf-3st"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-4y-geV">
+                    <rect key="frame" x="0.0" y="68" width="320" height="3"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.12" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="2u0-Bv-jwQ"/>
+                        <constraint firstAttribute="width" constant="320" id="yZj-A3-FlY"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gxv-5P-Ca3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ehz-La-Wrm"/>
+                <constraint firstItem="hs2-4y-geV" firstAttribute="top" secondItem="9i4-1v-g4h" secondAttribute="bottom" id="Pdg-pP-aeP"/>
+                <constraint firstItem="hs2-4y-geV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uvr-Y1-Xmc"/>
+                <constraint firstAttribute="bottom" secondItem="RBh-HC-5YT" secondAttribute="bottom" id="e8V-Me-zGh"/>
+                <constraint firstItem="9i4-1v-g4h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eSc-hX-Zut"/>
+                <constraint firstItem="RBh-HC-5YT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eoI-wX-yg0"/>
+                <constraint firstItem="RBh-HC-5YT" firstAttribute="top" secondItem="gxv-5P-Ca3" secondAttribute="bottom" id="gCx-58-Dva"/>
+                <constraint firstItem="9i4-1v-g4h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gpm-7K-v0s"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

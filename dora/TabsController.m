@@ -32,13 +32,6 @@ static const float yOffset = 67.f;
     
 	CGRect rect = CGRectMake(0.0f, yOffset, self.view.bounds.size.width, self.tabBarHeight);
 	self.tabButtonsContainerView = [[UIView alloc] initWithFrame:rect];
-    
-    CALayer *tblayer = self.topBar.layer;
-    tblayer.shadowOffset = CGSizeMake(0, 1);
-    tblayer.shadowColor = [[UIColor blackColor] CGColor];
-    tblayer.shadowRadius = 1.0f;
-    tblayer.shadowOpacity = 0.50f;
-    tblayer.shadowPath = [[UIBezierPath bezierPathWithRect:tblayer.bounds] CGPath];
 	[self.view addSubview:self.tabButtonsContainerView];
     
 	rect.origin.y = self.tabBarHeight + yOffset;

@@ -45,22 +45,16 @@
                             <constraint firstAttribute="width" constant="310" id="QvK-8X-N0g"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="First post" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="faz-k3-yvO">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First post" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="faz-k3-yvO">
                         <rect key="frame" x="20" y="70" width="280" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="280" id="bfP-7O-BcE"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Second post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8j4-m4-3dO">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8j4-m4-3dO">
                         <rect key="frame" x="20" y="97" width="280" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="280" id="ozQ-5d-Nca"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -68,14 +62,11 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="faz-k3-yvO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1aY-qU-UVP"/>
                     <constraint firstItem="NgA-Zq-1QS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3DM-rg-kOV"/>
-                    <constraint firstItem="8j4-m4-3dO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="5xA-6h-M0L"/>
                     <constraint firstItem="NgA-Zq-1QS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Ecm-aE-VWB"/>
                     <constraint firstAttribute="bottom" secondItem="KA1-Dg-Cuk" secondAttribute="bottom" constant="6" id="G9N-Sq-XIu"/>
                     <constraint firstItem="KA1-Dg-Cuk" firstAttribute="top" secondItem="NgA-Zq-1QS" secondAttribute="bottom" constant="1" id="V4y-o9-Uzl"/>
                     <constraint firstAttribute="trailing" secondItem="KA1-Dg-Cuk" secondAttribute="trailing" constant="5" id="aWt-Wo-OWl"/>
-                    <constraint firstItem="8j4-m4-3dO" firstAttribute="top" secondItem="faz-k3-yvO" secondAttribute="bottom" constant="11" id="iCG-bu-was"/>
                     <constraint firstAttribute="trailing" secondItem="NgA-Zq-1QS" secondAttribute="trailing" constant="5" id="jh0-eF-Cdb"/>
                     <constraint firstItem="KA1-Dg-Cuk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="zc6-Jg-ZKh"/>
                 </constraints>

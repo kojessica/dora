@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWY-WI-jvE">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWY-WI-jvE">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
@@ -47,9 +47,44 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.20000001789999999" green="0.20000001789999999" blue="0.20000001789999999" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="bsd-WT-gdv"/>
+                        <constraint firstAttribute="width" constant="320" id="iJ1-sq-pg4"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYy-kv-WP5">
+                    <rect key="frame" x="0.0" y="68" width="320" height="3"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.20000001789999999" green="0.20000001789999999" blue="0.20000001789999999" alpha="0.13" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="cUY-QX-7kA"/>
+                        <constraint firstAttribute="height" constant="3" id="kai-Wd-DmY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q34-AQ-rPA">
+                    <rect key="frame" x="0.0" y="116" width="320" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.49977183469999997" green="0.52315848210000004" blue="0.33657692459999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Izn-9d-fh1"/>
+                        <constraint firstAttribute="width" constant="320" id="ivx-Zv-r6x"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4y-Rq-ugo">
+                    <rect key="frame" x="160" y="82" width="1" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.49977183469999997" green="0.52315848210000004" blue="0.33657692459999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hYy-kv-WP5" firstAttribute="top" secondItem="AWY-WI-jvE" secondAttribute="bottom" id="8eK-Qz-5SM"/>
+                <constraint firstItem="q34-AQ-rPA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ET7-PH-rV4"/>
+                <constraint firstItem="AWY-WI-jvE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Hjd-Vh-AGj"/>
+                <constraint firstItem="AWY-WI-jvE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hGt-U9-rwa"/>
+                <constraint firstItem="q34-AQ-rPA" firstAttribute="top" secondItem="hYy-kv-WP5" secondAttribute="bottom" constant="45" id="sui-A7-Jeg"/>
+                <constraint firstItem="hYy-kv-WP5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yje-7Y-9Lh"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

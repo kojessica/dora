@@ -40,21 +40,6 @@
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
     
-    CALayer *layer = self.writeButton.layer;
-    layer.shadowOffset = CGSizeMake(0, 1);
-    layer.shadowColor = [[UIColor blackColor] CGColor];
-    layer.shadowRadius = 2.0f;
-    layer.shadowOpacity = 0.80f;
-    layer.shadowPath = [[UIBezierPath bezierPathWithRect:layer.bounds] CGPath];
-
-    CALayer *tblayer = self.topBar.layer;
-    tblayer.shadowOffset = CGSizeMake(0, 1);
-    tblayer.shadowColor = [[UIColor blackColor] CGColor];
-    tblayer.shadowRadius = 1.0f;
-    tblayer.shadowOpacity = 0.50f;
-    tblayer.shadowPath = [[UIBezierPath bezierPathWithRect:tblayer.bounds] CGPath];
-    
-    NSLog(@"%@", self.group);
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
     [self.postTable addSubview:refreshControl];
