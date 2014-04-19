@@ -51,7 +51,6 @@
 		129D764A18FE260D003EB2E7 /* back_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D764918FE260D003EB2E7 /* back_icon@2x.png */; };
 		129D764D18FE36E0003EB2E7 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D764C18FE36E0003EB2E7 /* PostCell.m */; };
 		129D764F18FE36F2003EB2E7 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D764E18FE36F2003EB2E7 /* PostCell.xib */; };
-		129D7652190197BE003EB2E7 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D7651190197BE003EB2E7 /* FXForms.m */; };
 		129D76561901987D003EB2E7 /* SettingForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D76551901987D003EB2E7 /* SettingForm.m */; };
 		129D765A1901A9B4003EB2E7 /* SettingOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D76581901A9B4003EB2E7 /* SettingOptionsViewController.m */; };
 		129D765B1901A9B4003EB2E7 /* SettingOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D76591901A9B4003EB2E7 /* SettingOptionsViewController.xib */; };
@@ -74,6 +73,7 @@
 		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
 		47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */; };
 		47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */; };
+		47EAC96319023647005AE6ED /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EAC96119023647005AE6ED /* FXForms.m */; };
 		FA0F9C6E5EAA471E8A36CF13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBED152A4FC44210BF13ECC7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -154,8 +154,6 @@
 		129D764B18FE36E0003EB2E7 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		129D764C18FE36E0003EB2E7 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 		129D764E18FE36F2003EB2E7 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
-		129D7650190197BE003EB2E7 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXForms.h; path = "../../../Downloads/FXForms-master/FXForms/FXForms.h"; sourceTree = "<group>"; };
-		129D7651190197BE003EB2E7 /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXForms.m; path = "../../../Downloads/FXForms-master/FXForms/FXForms.m"; sourceTree = "<group>"; };
 		129D76541901987D003EB2E7 /* SettingForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingForm.h; sourceTree = "<group>"; };
 		129D76551901987D003EB2E7 /* SettingForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingForm.m; sourceTree = "<group>"; };
 		129D76571901A9B4003EB2E7 /* SettingOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingOptionsViewController.h; sourceTree = "<group>"; };
@@ -188,6 +186,8 @@
 		47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeMessageViewController.xib; sourceTree = "<group>"; };
 		47C1067718F9B99100EE78F2 /* ComposeMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeMessageViewController.h; sourceTree = "<group>"; };
 		47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeMessageViewController.m; sourceTree = "<group>"; };
+		47EAC96119023647005AE6ED /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
+		47EAC96219023647005AE6ED /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
 		CBED152A4FC44210BF13ECC7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB384C70D53B426E9E9A171C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -407,8 +407,8 @@
 		479BEA8818F636B50035A6BC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				129D7650190197BE003EB2E7 /* FXForms.h */,
-				129D7651190197BE003EB2E7 /* FXForms.m */,
+				47EAC96119023647005AE6ED /* FXForms.m */,
+				47EAC96219023647005AE6ED /* FXForms.h */,
 				474D351018FD052C00028F29 /* NSObject+Properties.h */,
 				474D351118FD052C00028F29 /* NSObject+Properties.m */,
 				474D351218FD052C00028F29 /* PFACL+NSCoding.h */,
@@ -580,10 +580,10 @@
 				474D351918FD052C00028F29 /* PFACL+NSCoding.m in Sources */,
 				129D761B18F9D8A4003EB2E7 /* ListViewController.m in Sources */,
 				1252859318F508FB00E45C86 /* CustomAutocompleteCell.m in Sources */,
-				129D7652190197BE003EB2E7 /* FXForms.m in Sources */,
 				129D762918F9F140003EB2E7 /* GroupDetailViewController.m in Sources */,
 				126B187818EBB039005A8475 /* GroupPickerViewController.m in Sources */,
 				129D764718FCBC12003EB2E7 /* CustomSearchCell.m in Sources */,
+				47EAC96319023647005AE6ED /* FXForms.m in Sources */,
 				47435D3B18F9EF9000E1F5CE /* Post.m in Sources */,
 				129D764D18FE36E0003EB2E7 /* PostCell.m in Sources */,
 				129D763C18FB8AA9003EB2E7 /* SearchResultsViewController.m in Sources */,
