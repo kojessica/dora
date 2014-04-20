@@ -13,9 +13,14 @@
 #import "Post.h"
 #import "PostCell.h"
 #import "SearchResultsViewController.h"
+#import "UserActions.h"
+
+CGFloat widthOffset = 16.f;
+CGFloat heightOffset = 45.f;
 
 @interface GroupDetailViewController ()
 
+@property (nonatomic,strong) PostCell *previousHighlightedCell;
 @property (nonatomic,strong) NSArray *posts;
 
 @end
@@ -59,6 +64,18 @@
                                              selector:@selector(receiveNotification:)
                                                  name:@"newPostUploaded"
                                                object:nil];
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0, 0, 0, 0); // top, left, bottom, right
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 0.0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0.0;
 }
 
 - (void)reload:(UIRefreshControl *)refreshControl
@@ -122,6 +139,32 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self.postTable.collectionViewLayout invalidateLayout];
+    if (self.previousHighlightedCell) {
+        CGSize currentFrameSize = self.previousHighlightedCell.postView.frame.size;
+        self.previousHighlightedCell.postView.frame = CGRectMake(10.f, 5.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
+    }
+    
+    PostCell *cell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    NSLog(@"%@", cell.message.text);
+
+    self.previousHighlightedCell = cell;
+    
+    [UIView animateWithDuration:0.9f
+                          delay:0.0f
+         usingSpringWithDamping:0.9f
+          initialSpringVelocity:10.0f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         CGSize currentFrameSize = cell.postView.frame.size;
+                         cell.postView.frame = CGRectMake(2.f, 5.f, currentFrameSize.width + widthOffset, currentFrameSize.height + heightOffset);
+                         UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, currentFrameSize.height - 5, 320.f, 32.f)];
+                         [cell.postView addSubview:actionbar];
+                     }
+                     completion:^(BOOL finished) {
+                     }];
+
 }
 
 - (CGFloat)cellHeight:(NSIndexPath *)indexPath
@@ -136,7 +179,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(320, [self cellHeight:indexPath] + 44);
+    return CGSizeMake(320, [self cellHeight:indexPath] + 55);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

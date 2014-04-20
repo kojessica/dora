@@ -75,10 +75,6 @@
     GroupCell *cell = (GroupCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    //[cell.wrapper.layer setCornerRadius:8.0f];
-    //[cell.wrapper.layer setMasksToBounds:YES];
-    
     [cell setGroup:[self.listGroup objectAtIndex:indexPath.row]];
     [cell setBackgroundColor:[UIColor clearColor]];
     
