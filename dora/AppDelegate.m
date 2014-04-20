@@ -5,6 +5,13 @@
 //  Created by Jessica Ko on 4/1/14.
 //  Copyright (c) 2014 Jessica Ko. All rights reserved.
 //
+// TODO(jessica)
+// 1. Like/Dislike buttons
+// 2. Popular sort
+// 3. Instant upload
+// 4. Show more meta data on Search results
+// 5. Show recent 2 new posts in Groups table
+// 6. Animations
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
