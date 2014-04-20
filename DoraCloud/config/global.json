@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "dora"
+        }, 
+        "dora": {
+            "applicationId": "8bV5UK3dsmvpzryGKdo1ZEPavEpVfneYmx3Qu8S0", 
+            "masterKey": "W88eu5mjS7T7FfUCYuqgAnESw0LtNPiJhF4mxkah"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.18"
+    }
+}
