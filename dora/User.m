@@ -33,9 +33,16 @@ static User *currentUser = nil;
 + (User *)currentUser {
     if (currentUser == nil) {
         NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"current_user"];
-        User *user = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        if (user) {
-            currentUser = user;
+        if(data) {
+            User *user = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+            if (user) {
+                currentUser = user;
+            }
+            PFQuery *query = [User query];
+            [query whereKey:@"objectId" equalTo:currentUser.objectId];
+            [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+                currentUser = (User*)object;
+            }];
         }
     }
     return currentUser;
@@ -56,11 +63,11 @@ static User *currentUser = nil;
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         currentUser.objectId = [currentUser objectId];
         [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:currentUser] forKey:@"current_user"];
-        
-        NSLog(@"saved!");
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }];
     return currentUser;
 }
+
 
 + (NSString *)setRandomKey {
     NSString *alphabet  = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY0123456789";
@@ -79,17 +86,23 @@ static User *currentUser = nil;
 
 + (void)setUserAge:(NSNumber *)age {
     currentUser.age = age;
-    [currentUser saveInBackground];
+    [User persistUser:currentUser];
 }
 
 + (void)setUserGender:(NSNumber *)gender {
     currentUser.gender = gender;
-    [currentUser saveInBackground];
+    [User persistUser:currentUser];
 }
 
 + (void)setUserNickname:(NSString *)nickname {
     currentUser.nickname = nickname;
-    [currentUser saveInBackground];
+    [User persistUser:currentUser];
 }
 
++ (void)persistUser:(User *)user {
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:user] forKey:@"current_user"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }];
+}
 @end

@@ -18,6 +18,7 @@
 + (void)setUserGroup:(NSString *)groupName;
 + (void)setUserAge:(NSNumber *)age;
 + (void)setUserGender:(NSNumber *)gender;
++ (void)persistUser:(User *)user;
 + (void)setUserNickname:(NSString *)nickname;
 @property (retain) NSString *nickname;
 @property (retain) NSString *key;
