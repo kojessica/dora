@@ -2,8 +2,6 @@ Parse.Cloud.afterSave("Post", function(request) {
   var query = new Parse.Query("Groups");
   query.get(request.object.get("groupId"), {
     success: function(group) {
-    	console.log("Query worked!");
-    	alert("Inside the success loop!");
         group.increment("totalPosts");
         group.set("secondPost", group.get("firstPost"));
         group.set("firstPost", request.object.get("text"));
