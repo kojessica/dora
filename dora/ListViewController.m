@@ -60,13 +60,6 @@
 #pragma mark - UITableViewDataSource
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  /*
-   NSString *name = [self.currentTweets objectAtIndex:indexPath.row][@"text"];
-   CGSize maximumLabelSize = CGSizeMake(230,9999);
-   UIFont *font=[UIFont systemFontOfSize:13];
-   CGRect textRect = [name  boundingRectWithSize:maximumLabelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
-   return CGSizeMake(320, textRect.size.height + 75);
- */
     CGFloat contentHeight = 0.f;
     NSString *firstPost = [self.listGroup objectAtIndex:indexPath.row][@"firstPost"];
     NSString *secondPost = [self.listGroup objectAtIndex:indexPath.row][@"secondPost"];

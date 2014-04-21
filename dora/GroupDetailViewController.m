@@ -146,8 +146,17 @@ CGFloat heightOffset = 45.f;
     
     [self.postTable.collectionViewLayout invalidateLayout];
     if (self.previousHighlightedCell) {
-        CGSize currentFrameSize = self.previousHighlightedCell.postView.frame.size;
-        self.previousHighlightedCell.postView.frame = CGRectMake(10.f, 5.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
+        [UIView animateWithDuration:0.1f
+                              delay:0.0f
+             usingSpringWithDamping:1.f
+              initialSpringVelocity:40.0f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             CGSize currentFrameSize = self.previousHighlightedCell.postView.frame.size;
+                             [self.previousHighlightedCell.message setTranslatesAutoresizingMaskIntoConstraints:NO];
+                             self.previousHighlightedCell.postView.frame = CGRectMake(10.f, 5.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
+                         }
+                         completion:nil];
     }
     
     PostCell *cell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
@@ -163,6 +172,8 @@ CGFloat heightOffset = 45.f;
                      animations:^{
                          CGSize currentFrameSize = cell.postView.frame.size;
                          cell.postView.frame = CGRectMake(2.f, 5.f, currentFrameSize.width + widthOffset, currentFrameSize.height + heightOffset);
+                         [cell.message setTranslatesAutoresizingMaskIntoConstraints:YES];
+                         cell.message.frame = CGRectMake(18.f, -10.f, cell.message.frame.size.width + widthOffset, cell.message.frame.size.height + heightOffset);
                          UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, currentFrameSize.height - 5, 320.f, 32.f)];
                          [cell.postView addSubview:actionbar];
                      }
@@ -175,7 +186,7 @@ CGFloat heightOffset = 45.f;
 {
     Post *post = [self.posts objectAtIndex:indexPath.row];
     NSString *name = post.text;
-    CGSize maximumLabelSize = CGSizeMake(260,9999);
+    CGSize maximumLabelSize = CGSizeMake(270,9999);
     UIFont *font=[UIFont systemFontOfSize:14];
     CGRect textRect = [name  boundingRectWithSize:maximumLabelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
     return textRect.size.height;
@@ -183,7 +194,7 @@ CGFloat heightOffset = 45.f;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(320, [self cellHeight:indexPath] + 55);
+    return CGSizeMake(320, [self cellHeight:indexPath] + 62);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

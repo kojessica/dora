@@ -163,6 +163,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (self.hasResults) {
+        [self performSelectorOnMainThread:@selector(presentGroupDetailViewAtIndexPath:) withObject:indexPath waitUntilDone:NO];
+    }
+    
+}
+
+- (void)presentGroupDetailViewAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *groupSelected = [self.suggestedGroups objectAtIndex:indexPath.row];
+    
+    [Group getGroupWithName:groupSelected completion:^(PFObject *object, NSError *error) {
+        Group *group = [Group object];
+        GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
+        group.objectId = object.objectId;
+        group.name = [object objectForKey:@"name"];
+        groupDetailView.group = group;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
+        [self presentViewController:groupDetailView animated:YES completion:nil];
+    }];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
