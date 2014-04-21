@@ -60,7 +60,27 @@
 #pragma mark - UITableViewDataSource
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 150;
+  /*
+   NSString *name = [self.currentTweets objectAtIndex:indexPath.row][@"text"];
+   CGSize maximumLabelSize = CGSizeMake(230,9999);
+   UIFont *font=[UIFont systemFontOfSize:13];
+   CGRect textRect = [name  boundingRectWithSize:maximumLabelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+   return CGSizeMake(320, textRect.size.height + 75);
+ */
+    CGFloat contentHeight = 0.f;
+    NSString *firstPost = [self.listGroup objectAtIndex:indexPath.row][@"firstPost"];
+    NSString *secondPost = [self.listGroup objectAtIndex:indexPath.row][@"secondPost"];
+    CGSize maximumLabelSize = CGSizeMake(280,9999);
+    UIFont *font=[UIFont systemFontOfSize:15];
+    if (firstPost != nil) {
+        CGRect textRect1 = [firstPost boundingRectWithSize:maximumLabelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+        contentHeight += textRect1.size.height + 25;
+    }
+    if (secondPost != nil) {
+        CGRect textRect2 = [secondPost boundingRectWithSize:maximumLabelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+        contentHeight += textRect2.size.height + 25;
+    }
+    return contentHeight + 68;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

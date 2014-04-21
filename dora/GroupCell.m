@@ -28,8 +28,18 @@
 {
     self.name.text = group.name;
     self.name.text = [NSString stringWithFormat:(@"@%@"), group.name];
-    self.firstPost.text = group.firstPost;
-    self.secondPost.text = group.secondPost;
+    
+    if (group.firstPost) {
+        self.firstPost.text = [NSString stringWithFormat:(@"\"%@\""), group.firstPost];
+    } else {
+        self.firstPost.text = @"";
+    }
+    
+    if (group.secondPost) {
+        self.secondPost.text = [NSString stringWithFormat:(@"\"%@\""), group.secondPost];
+    } else {
+        self.secondPost.text = @"";
+    }
 }
 
 @end
