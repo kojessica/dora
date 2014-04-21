@@ -32,6 +32,7 @@ CGFloat heightOffset = 45.f;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
+        
     }
     return self;
 }
@@ -54,6 +55,9 @@ CGFloat heightOffset = 45.f;
         [Post retrievePostsFromGroup:self.group completion:^(NSArray *objects, NSError *error) {
             [refreshControl endRefreshing];
             self.posts = objects;
+            PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+            [currentInstallation addUniqueObject:self.group.name forKey:@"channels"];
+            [currentInstallation saveInBackground];
             [self.postTable reloadData];
         }];
     }
