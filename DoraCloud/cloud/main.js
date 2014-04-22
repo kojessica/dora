@@ -9,6 +9,9 @@ Parse.Cloud.afterSave("Post", function(request) {
 		Parse.Push.send({
 		channels: [ group.get("name") ],
 		data: {
+		 objectId: request.object.id,
+		 groupId: request.object.get("groupId"),
+		 userId: request.object.get("userId"),
 		 text: request.object.get("text")
 		}
 		}, { success: function() { 
