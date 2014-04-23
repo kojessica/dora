@@ -50,8 +50,10 @@ static const float yOffset = 67.f;
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 25)];
     self.searchInputBox.leftView = paddingView;
     self.searchInputBox.leftViewMode = UITextFieldViewModeAlways;
-
     self.isPresent = YES;
+    
+    CGRect currentframe = self.settingButton.frame;
+    [self.settingButton setFrame: CGRectMake(currentframe.origin.x, currentframe.origin.y, 38, 44)];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg3.png"]];
     

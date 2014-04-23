@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Group.h"
+#import "UserActions.h"
 
-@interface GroupDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface GroupDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UserActionsDelegate>
 
 - (IBAction)onBackButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *writeButton;

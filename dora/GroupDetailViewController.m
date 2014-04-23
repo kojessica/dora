@@ -144,6 +144,8 @@ CGFloat heightOffset = 45.f;
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    Post *postSelected = [self.posts objectAtIndex:indexPath.row];
+    
     [self.postTable.collectionViewLayout invalidateLayout];
     if (self.previousHighlightedCell) {
         [UIView animateWithDuration:0.1f
@@ -172,14 +174,22 @@ CGFloat heightOffset = 45.f;
                      animations:^{
                          CGSize currentFrameSize = cell.postView.frame.size;
                          cell.postView.frame = CGRectMake(2.f, 5.f, currentFrameSize.width + widthOffset, currentFrameSize.height + heightOffset);
+                         [cell.postView setTranslatesAutoresizingMaskIntoConstraints:YES];
                          [cell.message setTranslatesAutoresizingMaskIntoConstraints:YES];
                          cell.message.frame = CGRectMake(18.f, -10.f, cell.message.frame.size.width + widthOffset, cell.message.frame.size.height + heightOffset);
+                         
                          UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, currentFrameSize.height - 5, 320.f, 32.f)];
+                         actionbar.delegate = self;
+                         actionbar.postId = postSelected.objectId;
                          [cell.postView addSubview:actionbar];
                      }
                      completion:^(BOOL finished) {
                      }];
 
+}
+
+- (void)didLikePost:(NSString *)postId {
+    
 }
 
 - (CGFloat)cellHeight:(NSIndexPath *)indexPath

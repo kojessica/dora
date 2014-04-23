@@ -7,6 +7,7 @@
 //
 
 #import "UserActions.h"
+#import "Post.h"
 
 @implementation UserActions
 
@@ -31,4 +32,14 @@
 }
 */
 
+
+-(void)didLikePost:(NSString *)postId {
+    //[self.delegate sender:self didLikePost:self.postId];
+    NSLog(@"%@", self.postId);
+}
+
+- (IBAction)onLikeButton:(id)sender {
+    [self didLikePost:@"asdfasdfasdf"];
+    NSLog(@"%@", self.postId);
+}
 @end

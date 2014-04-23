@@ -11,11 +11,14 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVv-nI-OsE">
-                    <rect key="frame" x="22" y="0.0" width="13" height="22"/>
+                    <rect key="frame" x="20" y="0.0" width="15" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="heart_empty.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="onLikeButton:" destination="6v3-Zo-QVx" eventType="touchUpInside" id="6sE-US-OVD"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89j-fP-rjR">
                     <rect key="frame" x="83" y="-1" width="13" height="22"/>
@@ -39,10 +42,14 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="likeButton" destination="NVv-nI-OsE" id="KCr-kV-m9r"/>
+                <outlet property="shareButton" destination="89j-fP-rjR" id="F88-BT-p8B"/>
+            </connections>
         </view>
     </objects>
     <resources>
-        <image name="heart_empty.png" width="13" height="12"/>
+        <image name="heart_empty.png" width="5" height="8"/>
         <image name="share_icon.png" width="13" height="10"/>
     </resources>
 </document>

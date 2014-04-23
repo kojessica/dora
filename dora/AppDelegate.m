@@ -8,7 +8,7 @@
 // TODO(jessica)
 // 1. Like/Dislike buttons
 // 2. Popular sort
-// 3. Instant upload
+// 3. Instant upload (Ben)
 // 4. Show more meta data on Search results
 // 5. Show recent 2 new posts in Groups table
 // 6. Animations

@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabsController">
             <connections>
                 <outlet property="searchInputBox" destination="5W1-uB-9cQ" id="He2-5z-3Mt"/>
+                <outlet property="settingButton" destination="BdC-qa-f4V" id="7fr-c6-19H"/>
                 <outlet property="topBar" destination="AWY-WI-jvE" id="XWD-c5-pD5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,7 +37,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdC-qa-f4V">
-                            <rect key="frame" x="286" y="30" width="19" height="22"/>
+                            <rect key="frame" x="280" y="21" width="35" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="setting_icon.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
