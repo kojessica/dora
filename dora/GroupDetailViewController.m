@@ -14,8 +14,8 @@
 #import "PostCell.h"
 #import "SearchResultsViewController.h"
 #import "UserActions.h"
-CGFloat widthOffset = 16.f;
-CGFloat heightOffset = 45.f;
+CGFloat widthOffset =30.f;
+CGFloat heightOffset = 55.f;
 
 @interface GroupDetailViewController ()
 
@@ -48,6 +48,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     [super viewDidLoad];
     self.postTable.delegate = self;
     self.postTable.dataSource = self;
+    
     [[NSNotificationCenter defaultCenter]
      addObserver:self
      selector:@selector(didReceiveRemoteNotification:)
@@ -153,12 +154,13 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     return 1;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    Post *postSelected = [self.posts objectAtIndex:indexPath.row];
+- (void)showUserActions:(PostCell *)cell {
     
     [self.postTable.collectionViewLayout invalidateLayout];
-    if (self.previousHighlightedCell) {
+    
+    //if the same cell was reselected
+    if ([self.previousHighlightedCell isEqual:cell]) {
+        NSLog(@"unselected the same cell");
         [UIView animateWithDuration:0.1f
                               delay:0.0f
              usingSpringWithDamping:1.f
@@ -166,37 +168,60 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
                              CGSize currentFrameSize = self.previousHighlightedCell.postView.frame.size;
-                             [self.previousHighlightedCell.message setTranslatesAutoresizingMaskIntoConstraints:NO];
+                             self.previousHighlightedCell.postView.backgroundColor = [UIColor whiteColor];
+                             self.previousHighlightedCell.message.textColor = [UIColor blackColor];
                              self.previousHighlightedCell.postView.frame = CGRectMake(10.f, 5.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
+                             UserActions *tempActionBar = (UserActions *)[self.previousHighlightedCell viewWithTag:100];
+                             if(tempActionBar)
+                                 [tempActionBar removeFromSuperview];
                          }
                          completion:nil];
+        self.previousHighlightedCell = nil;
+    } else {
+        if (self.previousHighlightedCell) {
+            NSLog(@"unselected the different cell");
+            [UIView animateWithDuration:0.1f
+                                  delay:0.0f
+                 usingSpringWithDamping:1.f
+                  initialSpringVelocity:40.0f
+                                options:UIViewAnimationOptionCurveEaseInOut
+                             animations:^{
+                                 CGSize currentFrameSize = self.previousHighlightedCell.postView.frame.size;
+                                 self.previousHighlightedCell.postView.backgroundColor = [UIColor whiteColor];
+                                 self.previousHighlightedCell.message.textColor = [UIColor blackColor];
+                                 self.previousHighlightedCell.postView.frame = CGRectMake(10.f, 5.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
+                             }
+                             completion:nil];
+        }
+        if (![self.previousHighlightedCell isEqual:cell]) {
+            [UIView animateWithDuration:0.5f
+                                  delay:0.0f
+                 usingSpringWithDamping:0.9f
+                  initialSpringVelocity:10.0f
+                                options:UIViewAnimationOptionCurveEaseInOut
+                             animations:^{
+                                 CGSize currentFrameSize = cell.postView.frame.size;
+                                 cell.postView.frame = CGRectMake(0.f, 0.f, currentFrameSize.width + widthOffset, currentFrameSize.height + heightOffset);
+                                 cell.message.frame = CGRectMake(18.f, -6.f, cell.message.frame.size.width + widthOffset, cell.message.frame.size.height + heightOffset);
+                                 cell.postView.backgroundColor = [UIColor colorWithRed:58/255 green:58/255 blue:58/255 alpha:1];
+                                 cell.message.textColor = [UIColor whiteColor];
+                                 
+                                 UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, currentFrameSize.height + 2, 320.f, 32.f)];
+                                 actionbar.tag = 100;
+                                 actionbar.delegate = self;
+                                 //actionbar.postId = postSelected.objectId;
+                                 [cell.postView addSubview:actionbar];
+                             }
+                             completion:^(BOOL finished) {
+                             }];
+        }
+        self.previousHighlightedCell = cell;
     }
-    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     PostCell *cell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    NSLog(@"%@", cell.message.text);
-
-    self.previousHighlightedCell = cell;
-    
-    [UIView animateWithDuration:0.9f
-                          delay:0.0f
-         usingSpringWithDamping:0.9f
-          initialSpringVelocity:10.0f
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         CGSize currentFrameSize = cell.postView.frame.size;
-                         cell.postView.frame = CGRectMake(2.f, 5.f, currentFrameSize.width + widthOffset, currentFrameSize.height + heightOffset);
-                         [cell.postView setTranslatesAutoresizingMaskIntoConstraints:YES];
-                         [cell.message setTranslatesAutoresizingMaskIntoConstraints:YES];
-                         cell.message.frame = CGRectMake(18.f, -10.f, cell.message.frame.size.width + widthOffset, cell.message.frame.size.height + heightOffset);
-                         
-                         UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, currentFrameSize.height - 5, 320.f, 32.f)];
-                         actionbar.delegate = self;
-                         actionbar.postId = postSelected.objectId;
-                         [cell.postView addSubview:actionbar];
-                     }
-                     completion:^(BOOL finished) {
-                     }];
-
+    [self performSelectorOnMainThread:@selector(showUserActions:) withObject:cell waitUntilDone:NO];
 }
 
 - (void)didLikePost:(NSString *)postId {
