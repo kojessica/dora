@@ -9,6 +9,7 @@
 #import "GroupCell.h"
 #import "Group.h"
 #import "Post.h"
+#import "Timestamp.h"
 
 @implementation GroupCell
 
@@ -28,6 +29,8 @@
 {
     self.name.text = group.name;
     self.name.text = [NSString stringWithFormat:(@"@%@"), group.name];
+    self.totalPost.text = [group.totalPosts stringValue];
+    self.lastUpdated.text = [Timestamp relativeTimeWithTimestamp:group.updatedAt];
     
     if (group.firstPost) {
         self.firstPost.text = [NSString stringWithFormat:(@"\"%@\""), group.firstPost];

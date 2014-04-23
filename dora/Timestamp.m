@@ -31,9 +31,11 @@
 + (NSString*)formattedDateWithJSONString:(NSString*)dateStr
 {
     //Tue Aug 28 21:16:23 +0000 2012
+    //2014-04-23 17:12:09 +0000
     //NSLog(@"Date -- %@",dateStr);
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"EEE MMM d HH:mm:ss ZZZ yyyy"];
+    [dateFormat setDateFormat:@"yyyy-MM-d HH:mm:ss ZZZ"];
+    //[dateFormat setDateFormat:@"EEE MMM d HH:mm:ss ZZZ yyyy"];
     NSDate *date = [dateFormat dateFromString:dateStr];
     
     //9:16 PM 28 Aug 2012

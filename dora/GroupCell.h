@@ -15,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *firstPost;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *wrapper;
+@property (weak, nonatomic) IBOutlet UILabel *totalPost;
+@property (weak, nonatomic) IBOutlet UILabel *lastUpdated;
 - (void)setGroup:(Group*)group;
 @end

@@ -16,6 +16,7 @@
 @dynamic popularIndex;
 @dynamic totalPosts;
 @dynamic location;
+@dynamic updatedAt;
 @dynamic firstPost;
 @dynamic secondPost;
 
