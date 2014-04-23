@@ -47,7 +47,7 @@ static const float yOffset = 67.f;
     
     self.searchInputBox.delegate = self;
     [self.searchInputBox resignFirstResponder];
-    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 25)];
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 8, 10)];
     self.searchInputBox.leftView = paddingView;
     self.searchInputBox.leftViewMode = UITextFieldViewModeAlways;
     self.isPresent = YES;

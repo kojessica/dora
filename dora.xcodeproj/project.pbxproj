@@ -62,6 +62,8 @@
 		129D766C19022426003EB2E7 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D766B19022426003EB2E7 /* bg@2x.png */; };
 		129D766F190229A9003EB2E7 /* bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D766D190229A9003EB2E7 /* bg2@2x.png */; };
 		129D7670190229A9003EB2E7 /* bg3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D766E190229A9003EB2E7 /* bg3@2x.png */; };
+		129D775619077205003EB2E7 /* heart_white_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D775419077205003EB2E7 /* heart_white_empty@2x.png */; };
+		129D775719077205003EB2E7 /* share_white_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D775519077205003EB2E7 /* share_white_icon@2x.png */; };
 		47435D3A18F9EF9000E1F5CE /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3718F9EF9000E1F5CE /* Group.m */; };
 		47435D3B18F9EF9000E1F5CE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3918F9EF9000E1F5CE /* Post.m */; };
 		474D350F18FD04E000028F29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474D350E18FD04E000028F29 /* Parse.framework */; };
@@ -169,6 +171,8 @@
 		129D766B19022426003EB2E7 /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg@2x.png"; path = "Images/bg@2x.png"; sourceTree = SOURCE_ROOT; };
 		129D766D190229A9003EB2E7 /* bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg2@2x.png"; path = "Images/bg2@2x.png"; sourceTree = SOURCE_ROOT; };
 		129D766E190229A9003EB2E7 /* bg3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg3@2x.png"; path = "Images/bg3@2x.png"; sourceTree = SOURCE_ROOT; };
+		129D775419077205003EB2E7 /* heart_white_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart_white_empty@2x.png"; sourceTree = "<group>"; };
+		129D775519077205003EB2E7 /* share_white_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_white_icon@2x.png"; sourceTree = "<group>"; };
 		47435D3618F9EF9000E1F5CE /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		47435D3718F9EF9000E1F5CE /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		47435D3818F9EF9000E1F5CE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
@@ -313,6 +317,8 @@
 		126B184C18EBAEAB005A8475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				129D775419077205003EB2E7 /* heart_white_empty@2x.png */,
+				129D775519077205003EB2E7 /* share_white_icon@2x.png */,
 				129D766D190229A9003EB2E7 /* bg2@2x.png */,
 				129D766E190229A9003EB2E7 /* bg3@2x.png */,
 				129D766B19022426003EB2E7 /* bg@2x.png */,
@@ -524,9 +530,11 @@
 				129D762518F9E338003EB2E7 /* GroupCell.xib in Resources */,
 				129D764F18FE36F2003EB2E7 /* PostCell.xib in Resources */,
 				129D76661901B725003EB2E7 /* logo_icon@2x.png in Resources */,
+				129D775619077205003EB2E7 /* heart_white_empty@2x.png in Resources */,
 				129D764A18FE260D003EB2E7 /* back_icon@2x.png in Resources */,
 				129D766C19022426003EB2E7 /* bg@2x.png in Resources */,
 				47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */,
+				129D775719077205003EB2E7 /* share_white_icon@2x.png in Resources */,
 				129D763D18FB8AA9003EB2E7 /* SearchResultsViewController.xib in Resources */,
 				129D766F190229A9003EB2E7 /* bg2@2x.png in Resources */,
 				126B187918EBB039005A8475 /* GroupPickerViewController.xib in Resources */,
@@ -734,8 +742,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Benjamin Chang (3KH4G368E6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Chang (3KH4G368E6)";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.dora.com";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: com.dora.com";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dora/dora-Prefix.pch";
@@ -753,8 +761,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Benjamin Chang (3KH4G368E6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Benjamin Chang (3KH4G368E6)";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.dora.com";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: com.dora.com";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dora/dora-Prefix.pch";

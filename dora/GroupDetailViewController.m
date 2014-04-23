@@ -31,8 +31,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-        
     }
     return self;
 }
@@ -154,6 +152,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     return 1;
 }
 
+
+//TODO(timlee): some weird scrolling behavior ... try selecting the first cell and scroll down the table!
 - (void)showUserActions:(PostCell *)cell {
     
     [self.postTable.collectionViewLayout invalidateLayout];
@@ -161,10 +161,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     //if the same cell was reselected
     if ([self.previousHighlightedCell isEqual:cell]) {
         NSLog(@"unselected the same cell");
-        [UIView animateWithDuration:0.1f
+        [UIView animateWithDuration:0.2f
                               delay:0.0f
-             usingSpringWithDamping:1.f
-              initialSpringVelocity:40.0f
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
                              CGSize currentFrameSize = self.previousHighlightedCell.postView.frame.size;
@@ -180,21 +178,22 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     } else {
         if (self.previousHighlightedCell) {
             NSLog(@"unselected the different cell");
-            [UIView animateWithDuration:0.1f
+            [UIView animateWithDuration:0.2f
                                   delay:0.0f
-                 usingSpringWithDamping:1.f
-                  initialSpringVelocity:40.0f
                                 options:UIViewAnimationOptionCurveEaseInOut
                              animations:^{
                                  CGSize currentFrameSize = self.previousHighlightedCell.postView.frame.size;
                                  self.previousHighlightedCell.postView.backgroundColor = [UIColor whiteColor];
                                  self.previousHighlightedCell.message.textColor = [UIColor blackColor];
                                  self.previousHighlightedCell.postView.frame = CGRectMake(10.f, 5.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
+                                 UserActions *tempActionBar = (UserActions *)[self.previousHighlightedCell viewWithTag:100];
+                                 if(tempActionBar)
+                                     [tempActionBar removeFromSuperview];
                              }
                              completion:nil];
         }
         if (![self.previousHighlightedCell isEqual:cell]) {
-            [UIView animateWithDuration:0.5f
+            [UIView animateWithDuration:0.4f
                                   delay:0.0f
                  usingSpringWithDamping:0.9f
                   initialSpringVelocity:10.0f
@@ -210,6 +209,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                  actionbar.tag = 100;
                                  actionbar.delegate = self;
                                  //actionbar.postId = postSelected.objectId;
+                                 
                                  [cell.postView addSubview:actionbar];
                              }
                              completion:^(BOOL finished) {
@@ -219,13 +219,15 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     }
 }
 
+
+//TODO(timlee): this doens't get called :(
+- (void)didLikePost {
+    NSLog(@"Like this Post");
+}
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     PostCell *cell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
     [self performSelectorOnMainThread:@selector(showUserActions:) withObject:cell waitUntilDone:NO];
-}
-
-- (void)didLikePost:(NSString *)postId {
-    
 }
 
 - (CGFloat)cellHeight:(NSIndexPath *)indexPath

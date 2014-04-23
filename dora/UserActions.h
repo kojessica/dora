@@ -8,13 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class UserActions;
-
 @protocol UserActionsDelegate <NSObject>
 
 @optional
 
--(void)didLikePost:(NSString *)postId;
+-(void)didLikePost;
 
 @end
 
@@ -23,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (nonatomic, weak) id<UserActionsDelegate> delegate;
-@property (strong, nonatomic) NSString *postId;
 - (IBAction)onLikeButton:(id)sender;
 
 @end

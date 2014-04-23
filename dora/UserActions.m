@@ -17,29 +17,19 @@
     if (self) {
         NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"UserActions" owner:self options:nil];
         id mainView = [subviewArray objectAtIndex:0];
-        
         [self addSubview:mainView];
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
-
--(void)didLikePost:(NSString *)postId {
+/*-(void)didLikePost:(NSString *)postId {
     //[self.delegate sender:self didLikePost:self.postId];
     NSLog(@"%@", self.postId);
-}
+}*/
 
 - (IBAction)onLikeButton:(id)sender {
-    [self didLikePost:@"asdfasdfasdf"];
-    NSLog(@"%@", self.postId);
+    NSLog(@"asdfasfa");
+    [self.delegate didLikePost];
 }
+
 @end
