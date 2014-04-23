@@ -14,7 +14,6 @@
 #import "PostCell.h"
 #import "SearchResultsViewController.h"
 #import "UserActions.h"
-
 CGFloat widthOffset = 16.f;
 CGFloat heightOffset = 45.f;
 
@@ -26,6 +25,7 @@ CGFloat heightOffset = 45.f;
 @end
 
 @implementation GroupDetailViewController
+NSString * const UIApplicationDidReceiveRemoteNotification = @"PushNotification";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,12 +36,24 @@ CGFloat heightOffset = 45.f;
     }
     return self;
 }
+-(void)viewDidUnload {
+//    [[NSNotificationCenter defaultCenter]
+//     removeObserver:self
+//     name:UIApplicationDidReceiveRemoteNotification
+//     object:nil];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.postTable.delegate = self;
     self.postTable.dataSource = self;
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(didReceiveRemoteNotification:)
+     name:UIApplicationDidReceiveRemoteNotification
+     object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(traceNotifications:) name:nil object:nil];
     
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
@@ -205,6 +217,19 @@ CGFloat heightOffset = 45.f;
     
     return cell;
 }
-
+- (void)traceNotifications:(NSNotification *)notification
+{
+    NSLog(@"received notification %@", [notification name]);
+}
+-(void)didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    if (self.isViewLoaded && self.view.window) {
+        Post *post = [Post object];
+        post.text = [userInfo objectForKey:@"text"];
+        post.objectId = [userInfo objectForKey:@"objectId"];
+        post.groupId = [userInfo objectForKey:@"groupId"];
+        post.userId = [userInfo objectForKey:@"userId"];
+        // handle the notification
+    }
+}
 
 @end
