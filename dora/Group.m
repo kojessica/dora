@@ -47,6 +47,7 @@
 + (void)getAllGroupsWithCompletion:(void(^) (NSArray *objects, NSError *error))completion {
     PFQuery *query = [Group query];
     [query whereKeyExists:@"name"];
+    [query orderByDescending:@"updatedAt"];
     [query findObjectsInBackgroundWithBlock:completion];
     return;
 }

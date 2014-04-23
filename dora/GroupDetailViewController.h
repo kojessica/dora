@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Group.h"
 #import "UserActions.h"
+#import "Post.h"
 
 @interface GroupDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UserActionsDelegate>
 
@@ -19,4 +20,5 @@
 @property (strong, nonatomic) Group *group;
 @property (weak, nonatomic) IBOutlet UICollectionView *postTable;
 - (IBAction)onCompose:(id)sender;
+
 @end

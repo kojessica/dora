@@ -23,6 +23,7 @@
 #import "LocationController.h"
 #import "ListViewController.h"
 #import "TabsController.h"
+#import "GroupDetailViewcontroller.h"
 
 @implementation AppDelegate
 
@@ -32,14 +33,14 @@
     [Post registerSubclass];
     [Group registerSubclass];
     [User registerSubclass];
+    
     // Override point for customization after application launch.
     [Parse setApplicationId:@"8bV5UK3dsmvpzryGKdo1ZEPavEpVfneYmx3Qu8S0"
                   clientKey:@"MylibgnIyThCTzlI9tkU0jDZOGkciX2osY73LKY8"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     LocationController *locationController = [LocationController sharedLocationController];
     [[locationController locationManager] startUpdatingLocation];
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-    (UIRemoteNotificationTypeAlert)];
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIRemoteNotificationTypeAlert)];
     User *currentUser = [User currentUser];
     [currentUser saveInBackground];
     if ([User currentUser]) {
@@ -88,10 +89,11 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 
 
 - (void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo
-fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
-    // Create empty photo object
-    NSString *text = [userInfo objectForKey:@"text"];
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"NewPost"
+     object:self
+     userInfo:userInfo];
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {
