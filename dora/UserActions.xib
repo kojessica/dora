@@ -4,9 +4,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserActions">
+            <connections>
+                <outlet property="likeButton" destination="NVv-nI-OsE" id="GAP-ma-fsl"/>
+                <outlet property="shareButton" destination="89j-fP-rjR" id="LL6-aT-8fy"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="6v3-Zo-QVx" customClass="UserActions">
+        <view contentMode="scaleToFill" id="6v3-Zo-QVx">
             <rect key="frame" x="0.0" y="0.0" width="320" height="31"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -17,7 +22,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="onLikeButton:" destination="6v3-Zo-QVx" eventType="touchUpInside" id="6sE-US-OVD"/>
+                        <action selector="onLikeButton:" destination="-1" eventType="touchUpInside" id="qYA-M3-egf"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89j-fP-rjR">
@@ -44,10 +49,6 @@
             </subviews>
             <color key="backgroundColor" red="0.22745099663734436" green="0.22745099663734436" blue="0.22745099663734436" alpha="1" colorSpace="deviceRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="likeButton" destination="NVv-nI-OsE" id="KCr-kV-m9r"/>
-                <outlet property="shareButton" destination="89j-fP-rjR" id="F88-BT-p8B"/>
-            </connections>
         </view>
     </objects>
     <resources>
