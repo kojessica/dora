@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Post.h"
 
 @protocol UserActionsDelegate <NSObject>
 
 @optional
 
--(void)didLikePost;
+-(void)didLikePost:(int)rowNum;
+-(void)didUnlikePost:(int)rowNum;
 
 @end
 
@@ -21,6 +23,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (nonatomic, weak) id<UserActionsDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UILabel *likeCount;
+@property (weak, nonatomic) IBOutlet UILabel *shareCount;
+@property (strong, nonatomic) Post *post;
+@property (nonatomic, assign) int rowNum;
+
 - (IBAction)onLikeButton:(id)sender;
 
 @end

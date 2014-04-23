@@ -20,6 +20,7 @@
 +(void) postWithUser:(User*)user group:(Group*)group text:(NSString*)content location:(CLLocation*) location;
 +(void) retrievePostsFromGroup:(Group*) group completion:(void (^) (NSArray* objects, NSError* error))completion;
 +(void) likePostWithId:(NSString*)postId;
++(void) unlikePostWithId:(NSString*)postId;
 +(void) dislikePostWithId:(NSString*)postId;
 +(void) setPopularityWithNumber:(NSNumber*)popularity;
 @property (retain) NSString *text;
@@ -28,6 +29,7 @@
 @property (retain) NSNumber *likes;
 @property (retain) NSNumber *dislikes;
 @property (retain) PFGeoPoint *location;
+@property (strong, nonatomic) NSDate *updatedAt;
 @property (retain) NSNumber *popularity;
 
 @end

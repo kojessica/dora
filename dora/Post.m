@@ -16,6 +16,7 @@
 @dynamic likes;
 @dynamic dislikes;
 @dynamic location;
+@dynamic updatedAt;
 @dynamic popularity;
 
 
@@ -70,6 +71,16 @@
         [object saveInBackground];
     }];
 }
+
++(void) unlikePostWithId:(NSString*)postId {
+    PFQuery *query = [Post query];
+    [query whereKey:@"objectId" equalTo:postId];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        [object incrementKey:@"likes" byAmount:[NSNumber numberWithInt:-1]];
+        [object saveInBackground];
+    }];
+}
+
 +(void) dislikePostWithId:(NSString*)postId {
     PFQuery *query = [Post query];
     [query whereKey:@"objectId" equalTo:postId];

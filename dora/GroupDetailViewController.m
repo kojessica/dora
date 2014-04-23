@@ -154,7 +154,11 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 
 //TODO(timlee): some weird scrolling behavior ... try selecting the first cell and scroll down the table!
-- (void)showUserActions:(PostCell *)cell {
+- (void)showUserActions:(NSArray *)arrayOfThings {
+    
+    PostCell *cell = [arrayOfThings objectAtIndex:0];
+    Post *postSelected = [arrayOfThings objectAtIndex:1];
+    NSIndexPath *indexPath = [arrayOfThings objectAtIndex:2];
     
     [self.postTable.collectionViewLayout invalidateLayout];
     
@@ -208,7 +212,18 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                  UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, currentFrameSize.height + 2, 320.f, 32.f)];
                                  actionbar.tag = 100;
                                  actionbar.delegate = self;
-                                 //actionbar.postId = postSelected.objectId;
+                                 actionbar.likeCount.text = [postSelected.likes stringValue];
+                                 actionbar.post = postSelected;
+                                 actionbar.rowNum  = indexPath.row;
+                                 
+                                 //check if this was liked before
+                                 User *currentUser = [User currentUser];
+                                 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF = %@", postSelected.objectId];
+                                 NSArray *results = [currentUser.likedPosts filteredArrayUsingPredicate:predicate];
+                                 if ([results count] > 0) {
+                                     [actionbar.likeButton setImage:[UIImage imageNamed:@"heart_selected_icon.png"] forState:UIControlStateSelected];
+                                     [actionbar.likeButton setSelected:YES];
+                                 }
                                  
                                  [cell.postView addSubview:actionbar];
                              }
@@ -219,15 +234,25 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     }
 }
 
+- (void)didLikePost:(int)rowNum {
+    Post *post = [self.posts objectAtIndex:rowNum];
+    int incremented = [post.likes integerValue] + 1;
+    post.likes = [NSNumber numberWithInt:incremented];
+}
 
-//TODO(timlee): this doens't get called :(
-- (void)didLikePost {
-    NSLog(@"Like this Post");
+- (void)didUnlikePost:(int)rowNum {
+    Post *post = [self.posts objectAtIndex:rowNum];
+    int decremented = [post.likes integerValue] - 1;
+    post.likes = [NSNumber numberWithInt:decremented];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     PostCell *cell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    [self performSelectorOnMainThread:@selector(showUserActions:) withObject:cell waitUntilDone:NO];
+    Post *postSelected = [self.posts objectAtIndex:indexPath.row];
+    
+    NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, nil];
+    
+    [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
 }
 
 - (CGFloat)cellHeight:(NSIndexPath *)indexPath

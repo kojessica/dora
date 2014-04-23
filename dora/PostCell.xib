@@ -21,7 +21,7 @@
                                 <rect key="frame" x="17" y="13" width="270" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="Pod-ZU-duY"/>
+                                    <constraint firstAttribute="width" constant="270" id="b3Y-cN-1eU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
@@ -29,19 +29,39 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="304" id="Crt-65-UVk"/>
-                            <constraint firstItem="i0f-At-Gej" firstAttribute="top" secondItem="VL5-HA-kdS" secondAttribute="top" constant="13" id="aim-qE-Tsw"/>
-                            <constraint firstItem="i0f-At-Gej" firstAttribute="leading" secondItem="VL5-HA-kdS" secondAttribute="leading" constant="17" id="i5P-xv-PzT"/>
+                            <constraint firstAttribute="width" constant="304" id="IcR-13-YMv"/>
+                            <constraint firstItem="i0f-At-Gej" firstAttribute="top" secondItem="VL5-HA-kdS" secondAttribute="top" constant="13" id="S7Q-Vc-2fT"/>
+                            <constraint firstItem="i0f-At-Gej" firstAttribute="leading" secondItem="VL5-HA-kdS" secondAttribute="leading" constant="17" id="gUx-gh-dmS"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M 26, 2m ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-WA-Hn7">
-                        <rect key="frame" x="233" y="64" width="77" height="15"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGS-DP-bZN">
+                        <rect key="frame" x="233" y="62" width="11" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="15" id="dIU-rx-jUg"/>
+                            <constraint firstAttribute="height" constant="15" id="NOk-Wn-n8l"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-jH-CCY">
+                        <rect key="frame" x="246" y="62" width="14" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="itY-oV-Sqc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2m ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSt-Yx-X1v">
+                        <rect key="frame" x="267" y="62" width="43" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="0hj-dY-aCw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -50,16 +70,23 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="VL5-HA-kdS" firstAttribute="top" secondItem="Nr6-r4-eGU" secondAttribute="top" constant="8" id="4ip-vD-pGY"/>
-                <constraint firstAttribute="trailing" secondItem="Bqq-WA-Hn7" secondAttribute="trailing" constant="10" id="6Rd-Il-u6m"/>
-                <constraint firstAttribute="bottom" secondItem="Bqq-WA-Hn7" secondAttribute="bottom" constant="7" id="6af-Rl-iyt"/>
-                <constraint firstItem="VL5-HA-kdS" firstAttribute="leading" secondItem="Nr6-r4-eGU" secondAttribute="leading" constant="8" id="Nok-2P-yRw"/>
-                <constraint firstItem="Bqq-WA-Hn7" firstAttribute="top" secondItem="VL5-HA-kdS" secondAttribute="bottom" constant="4" id="vwG-eM-WTe"/>
+                <constraint firstItem="hSt-Yx-X1v" firstAttribute="top" secondItem="VL5-HA-kdS" secondAttribute="bottom" constant="2" id="8Rz-43-obt"/>
+                <constraint firstAttribute="bottom" secondItem="QGS-DP-bZN" secondAttribute="bottom" constant="9" id="Ivv-ZP-ndC"/>
+                <constraint firstAttribute="trailing" secondItem="hSt-Yx-X1v" secondAttribute="trailing" constant="10" id="OXf-Qh-E7k"/>
+                <constraint firstItem="VL5-HA-kdS" firstAttribute="top" secondItem="Nr6-r4-eGU" secondAttribute="top" constant="8" id="WKJ-wu-Hci"/>
+                <constraint firstItem="hSt-Yx-X1v" firstAttribute="leading" secondItem="h6i-jH-CCY" secondAttribute="trailing" constant="7" id="Yvq-5c-q5u"/>
+                <constraint firstItem="VL5-HA-kdS" firstAttribute="leading" secondItem="Nr6-r4-eGU" secondAttribute="leading" constant="8" id="arN-Z4-yie"/>
+                <constraint firstAttribute="bottom" secondItem="hSt-Yx-X1v" secondAttribute="bottom" constant="9" id="bL0-It-wxg"/>
+                <constraint firstItem="h6i-jH-CCY" firstAttribute="leading" secondItem="QGS-DP-bZN" secondAttribute="trailing" constant="2" id="wll-Zl-PND"/>
+                <constraint firstAttribute="bottom" secondItem="h6i-jH-CCY" secondAttribute="bottom" constant="9" id="zbj-K2-7Gg"/>
             </constraints>
             <size key="customSize" width="320" height="86"/>
             <connections>
+                <outlet property="age" destination="h6i-jH-CCY" id="hsd-oU-huI"/>
+                <outlet property="gender" destination="QGS-DP-bZN" id="jEO-Jj-Cho"/>
                 <outlet property="message" destination="i0f-At-Gej" id="hrf-Or-KKh"/>
                 <outlet property="postView" destination="VL5-HA-kdS" id="a7X-2a-jPM"/>
+                <outlet property="posted" destination="hSt-Yx-X1v" id="bIy-qJ-bzG"/>
             </connections>
         </collectionViewCell>
     </objects>

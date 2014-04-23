@@ -13,6 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UIView *postView;
 @property (weak, nonatomic) IBOutlet UILabel *message;
+@property (weak, nonatomic) IBOutlet UILabel *gender;
+@property (weak, nonatomic) IBOutlet UILabel *age;
+@property (weak, nonatomic) IBOutlet UILabel *posted;
 - (id)cellWithPost:(Post *)post;
 
 @end

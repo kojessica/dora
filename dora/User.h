@@ -20,10 +20,12 @@
 + (void)setUserGender:(NSNumber *)gender;
 + (void)persistUser:(User *)user;
 + (void)setUserNickname:(NSString *)nickname;
++ (void)updateLikedPosts:(NSString *)postId ByIncrement:(BOOL)increment;
 @property (retain) NSString *nickname;
 @property (retain) NSString *key;
 @property (retain) NSNumber *age;
 @property (retain) NSNumber *gender;
 @property (retain) NSString *groupName;
+@property (strong,nonatomic) NSArray *likedPosts;
 @property (retain) PFGeoPoint *location;
 @end

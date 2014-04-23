@@ -22,6 +22,7 @@
 @dynamic nickname;
 @dynamic gender;
 @dynamic location;
+@dynamic likedPosts;
 //static CLLocationManager *_locationManager;
 
 static User *currentUser = nil;
@@ -96,6 +97,19 @@ static User *currentUser = nil;
 
 + (void)setUserNickname:(NSString *)nickname {
     currentUser.nickname = nickname;
+    [User persistUser:currentUser];
+}
+
++ (void)updateLikedPosts:(NSString *)postId ByIncrement:(BOOL)increment {
+    NSMutableArray *tempArray = [currentUser.likedPosts mutableCopy];
+    if (increment) {
+        [tempArray addObject:postId];
+    } else {
+        [tempArray removeObject:postId];
+    }
+    currentUser.likedPosts = [NSArray arrayWithArray:tempArray];
+    
+    NSLog(@"%@", currentUser.likedPosts);
     [User persistUser:currentUser];
 }
 

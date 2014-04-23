@@ -7,6 +7,8 @@
 //
 
 #import "PostCell.h"
+#import "User.h"
+#import "Timestamp.h"
 
 @implementation PostCell
 
@@ -21,19 +23,25 @@
 
 - (id)cellWithPost:(Post *)post
 {
+    //TODO(jessicako): replace currentUser with getUserInfoById
+    User *currentUser = [User currentUser];
+    NSLog(@"%@", currentUser);
     self.message.text = post.text;
+    self.age.text = [[currentUser objectForKey:@"age"] stringValue];
+    self.posted.text = [NSString stringWithFormat:(@"%@"), [Timestamp relativeTimeWithTimestamp:post.updatedAt]];
+    
+    NSNumber *gender = [currentUser objectForKey:@"gender"];
+    if (gender) {
+        if ([gender intValue] == 1) {
+            self.gender.text = @"M";
+        } else if ([gender intValue] == 2) {
+            self.gender.text = @"F";
+        }
+    }
+    
     self.postView.layer.cornerRadius = 1;
     self.postView.layer.masksToBounds = YES;
     return self;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

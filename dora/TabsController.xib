@@ -86,7 +86,7 @@
                 <constraint firstItem="q34-AQ-rPA" firstAttribute="top" secondItem="hYy-kv-WP5" secondAttribute="bottom" constant="45" id="sui-A7-Jeg"/>
                 <constraint firstItem="hYy-kv-WP5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yje-7Y-9Lh"/>
             </constraints>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
