@@ -246,6 +246,18 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     post.likes = [NSNumber numberWithInt:decremented];
 }
 
+- (void)shareThisPost:(Post *)post {
+    NSString *shareString = [NSString stringWithFormat:(@"@%@ (From Dora)\n\"%@\""), self.group.name ,post.text];
+    //UIImage *shareImage = [UIImage imageNamed:@""];
+    
+    NSArray *activityItems = [NSArray arrayWithObjects:shareString, nil];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    
+    [self presentViewController:activityViewController animated:YES completion:nil];
+}
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     PostCell *cell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
     Post *postSelected = [self.posts objectAtIndex:indexPath.row];

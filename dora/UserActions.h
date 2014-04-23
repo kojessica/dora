@@ -15,6 +15,7 @@
 
 -(void)didLikePost:(int)rowNum;
 -(void)didUnlikePost:(int)rowNum;
+-(void)shareThisPost:(Post *)post;
 
 @end
 
@@ -29,5 +30,6 @@
 @property (nonatomic, assign) int rowNum;
 
 - (IBAction)onLikeButton:(id)sender;
+- (IBAction)onShareButton:(id)sender;
 
 @end

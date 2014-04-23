@@ -25,11 +25,6 @@
     return self;
 }
 
-/*-(void)didLikePost:(NSString *)postId {
-    //[self.delegate sender:self didLikePost:self.postId];
-    NSLog(@"%@", self.postId);
-}*/
-
 - (IBAction)onLikeButton:(id)sender {
     if ([sender isSelected]) {
         [Post unlikePostWithId:self.post.objectId];
@@ -73,6 +68,10 @@
         [sender setSelected:YES];
         [self.delegate didLikePost:self.rowNum];
     }
+}
+
+- (IBAction)onShareButton:(id)sender {
+    [self.delegate shareThisPost:self.post];
 }
 
 @end

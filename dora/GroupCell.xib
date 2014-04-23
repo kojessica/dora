@@ -24,17 +24,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To5-TI-Euo">
-                                <rect key="frame" x="204" y="15" width="13" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="EEf-Nl-jH8"/>
-                                    <constraint firstAttribute="width" constant="13" id="dy7-jK-v16"/>
-                                </constraints>
-                                <state key="normal" image="post_icon.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="213" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lm4-Fw-paM">
                                 <rect key="frame" x="221" y="18" width="19" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -62,19 +51,30 @@
                                     <constraint firstAttribute="height" constant="13" id="yH4-fP-uVo"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piE-4d-zbN">
+                                <rect key="frame" x="198" y="15" width="17" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="17" id="09g-c7-GFb"/>
+                                    <constraint firstAttribute="height" constant="22" id="AaG-ro-pvy"/>
+                                </constraints>
+                                <state key="normal" image="post_icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Lm4-Fw-paM" firstAttribute="top" secondItem="NgA-Zq-1QS" secondAttribute="top" constant="18" id="0yg-9X-tKQ"/>
                             <constraint firstItem="3Z1-9e-LKm" firstAttribute="top" secondItem="NgA-Zq-1QS" secondAttribute="top" constant="19" id="Fug-eq-qab"/>
+                            <constraint firstItem="piE-4d-zbN" firstAttribute="top" secondItem="NgA-Zq-1QS" secondAttribute="top" constant="15" id="NSz-Lz-emg"/>
                             <constraint firstAttribute="height" constant="49" id="RhR-my-Qld"/>
                             <constraint firstAttribute="width" constant="310" id="V0M-WZ-Skk"/>
                             <constraint firstItem="LRi-PD-sfw" firstAttribute="top" secondItem="NgA-Zq-1QS" secondAttribute="top" constant="18" id="Vcj-cQ-fqL"/>
                             <constraint firstItem="LRi-PD-sfw" firstAttribute="leading" secondItem="3Z1-9e-LKm" secondAttribute="trailing" constant="10" id="YgL-nW-HHg"/>
                             <constraint firstItem="3Z1-9e-LKm" firstAttribute="leading" secondItem="Lm4-Fw-paM" secondAttribute="trailing" constant="8" id="ZjU-8B-n0o"/>
-                            <constraint firstItem="To5-TI-Euo" firstAttribute="top" secondItem="NgA-Zq-1QS" secondAttribute="top" constant="15" id="dbJ-1r-Dkg"/>
+                            <constraint firstItem="Lm4-Fw-paM" firstAttribute="leading" secondItem="piE-4d-zbN" secondAttribute="trailing" constant="6" id="crs-0F-Yog"/>
                             <constraint firstAttribute="trailing" secondItem="LRi-PD-sfw" secondAttribute="trailing" constant="14" id="eYc-Hf-xqe"/>
-                            <constraint firstItem="Lm4-Fw-paM" firstAttribute="leading" secondItem="To5-TI-Euo" secondAttribute="trailing" constant="4" id="nEK-de-sfz"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KA1-Dg-Cuk">
@@ -133,6 +133,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="post_icon.png" width="13" height="12"/>
+        <image name="post_icon.png" width="17" height="15"/>
     </resources>
 </document>

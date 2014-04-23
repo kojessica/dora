@@ -18,10 +18,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="APu-Bs-m6k">
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="APu-Bs-m6k">
                     <rect key="frame" x="0.0" y="68" width="320" height="449"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="bUj-IP-9r1"/>
+                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SPN-lf-RrV">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -96,6 +99,8 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="APu-Bs-m6k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6RA-VH-6zu"/>
+                <constraint firstItem="APu-Bs-m6k" firstAttribute="top" secondItem="9i4-1v-g4h" secondAttribute="bottom" id="CaD-k7-vjp"/>
                 <constraint firstItem="gxv-5P-Ca3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ehz-La-Wrm"/>
                 <constraint firstItem="hs2-4y-geV" firstAttribute="top" secondItem="9i4-1v-g4h" secondAttribute="bottom" id="Pdg-pP-aeP"/>
                 <constraint firstItem="hs2-4y-geV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uvr-Y1-Xmc"/>
@@ -104,6 +109,7 @@
                 <constraint firstItem="RBh-HC-5YT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eoI-wX-yg0"/>
                 <constraint firstItem="RBh-HC-5YT" firstAttribute="top" secondItem="gxv-5P-Ca3" secondAttribute="bottom" id="gCx-58-Dva"/>
                 <constraint firstItem="9i4-1v-g4h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gpm-7K-v0s"/>
+                <constraint firstItem="RBh-HC-5YT" firstAttribute="top" secondItem="APu-Bs-m6k" secondAttribute="bottom" constant="1" id="h6n-ud-P3a"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
