@@ -10,8 +10,6 @@
 #import "TabsController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, TabsControllerDelegate>{
-    NSString * const UIApplicationDidReceiveRemoteNotification;
-    
 }
 
 @property (strong, nonatomic) UIWindow *window;

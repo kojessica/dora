@@ -26,7 +26,6 @@
 #import "GroupDetailViewcontroller.h"
 
 @implementation AppDelegate
-NSString * const UIApplicationDidReceiveRemoteNotification = @"PushNotification";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -34,7 +33,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"PushNotification"
     [Post registerSubclass];
     [Group registerSubclass];
     [User registerSubclass];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(traceNotifications:) name:nil object:nil];
     
     // Override point for customization after application launch.
     [Parse setApplicationId:@"8bV5UK3dsmvpzryGKdo1ZEPavEpVfneYmx3Qu8S0"
@@ -92,12 +90,10 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    
     [[NSNotificationCenter defaultCenter]
-     postNotificationName:UIApplicationDidReceiveRemoteNotification
+     postNotificationName:@"NewPost"
      object:self
      userInfo:userInfo];
-    
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -129,8 +125,4 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)traceNotifications:(NSNotification *)notification
-{
-    NSLog(@"received notification %@", [notification name]);
-}
 @end

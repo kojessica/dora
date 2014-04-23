@@ -25,7 +25,7 @@ CGFloat heightOffset = 45.f;
 @end
 
 @implementation GroupDetailViewController
-NSString * const UIApplicationDidReceiveRemoteNotification = @"PushNotification";
+NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,10 +37,10 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"PushNotification"
     return self;
 }
 -(void)viewDidUnload {
-//    [[NSNotificationCenter defaultCenter]
-//     removeObserver:self
-//     name:UIApplicationDidReceiveRemoteNotification
-//     object:nil];
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:UIApplicationDidReceiveRemoteNotification
+     object:nil];
 }
 
 - (void)viewDidLoad
@@ -53,7 +53,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"PushNotification"
      selector:@selector(didReceiveRemoteNotification:)
      name:UIApplicationDidReceiveRemoteNotification
      object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(traceNotifications:) name:nil object:nil];
     
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
@@ -217,18 +216,15 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"PushNotification"
     
     return cell;
 }
-- (void)traceNotifications:(NSNotification *)notification
-{
-    NSLog(@"received notification %@", [notification name]);
-}
--(void)didReceiveRemoteNotification:(NSDictionary *)userInfo {
+-(void)didReceiveRemoteNotification:(NSNotification *)notification {
+    NSDictionary *userInfo = [notification userInfo];
     if (self.isViewLoaded && self.view.window) {
         Post *post = [Post object];
         post.text = [userInfo objectForKey:@"text"];
         post.objectId = [userInfo objectForKey:@"objectId"];
         post.groupId = [userInfo objectForKey:@"groupId"];
         post.userId = [userInfo objectForKey:@"userId"];
-        // handle the notification
+        
     }
 }
 
