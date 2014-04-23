@@ -14,7 +14,7 @@
 
 @interface SearchResultsViewController ()
 
-@property (strong,nonatomic) NSArray *groupsNames;
+@property (strong,nonatomic) NSArray *groupObjs;
 @property (strong,nonatomic) NSArray *suggestedGroups;
 @property (nonatomic,assign) BOOL hasResults;
 @property (nonatomic,strong) NSString *needToCreate;
@@ -38,7 +38,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.resultsTable.delegate = self;
     self.resultsTable.dataSource = self;
     self.searchInputBox.delegate = self;
@@ -82,8 +81,8 @@
 
 - (void)fetchAutoComplete:(NSString *)searchString
 {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", searchString];
-    self.suggestedGroups = [self.groupsNames filteredArrayUsingPredicate:predicate];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name BEGINSWITH[cd] %@", searchString];
+    self.suggestedGroups = [self.groupObjs filteredArrayUsingPredicate:predicate];
     
     if ([self.suggestedGroups count] == 0) {
         if ([searchString length] > 0) {
@@ -106,7 +105,7 @@
 
 - (void)allGroups
 {
-    NSMutableArray *groups = [[NSMutableArray alloc] init];
+    NSMutableArray *groupObjects = [[NSMutableArray alloc] init];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Groups"];
     [query whereKeyExists:@"name"];
@@ -114,15 +113,15 @@
         if (!error) {
             NSLog(@"Successfully retrieved %d scores.", objects.count);
             for (PFObject *object in objects) {
-                [groups addObject:object[@"name"]];
+                [groupObjects addObject:object];
             }
-            NSLog(@"%@", groups);
-            self.groupsNames = [NSArray arrayWithArray:groups];
+            self.groupObjs = [NSArray arrayWithArray:groupObjects];
+
         } else {
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-    self.suggestedGroups = self.groupsNames;
+    self.suggestedGroups = self.groupObjects;
 }
 
 - (void)didReceiveMemoryWarning
@@ -170,24 +169,24 @@
 }
 
 - (void)presentGroupDetailViewAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *groupSelected = [self.suggestedGroups objectAtIndex:indexPath.row];
+    PFObject *groupSelected = [self.suggestedGroups objectAtIndex:indexPath.row];
     
-    [Group getGroupWithName:groupSelected completion:^(PFObject *object, NSError *error) {
-        Group *group = [Group object];
-        GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
-        group.objectId = object.objectId;
-        group.name = [object objectForKey:@"name"];
-        groupDetailView.group = group;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
-        [self presentViewController:groupDetailView animated:YES completion:nil];
-    }];
+    Group *group = [Group object];
+    GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
+    group.objectId = groupSelected.objectId;
+    group.name = [groupSelected objectForKey:@"name"];
+    groupDetailView.group = group;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
+    [self presentViewController:groupDetailView animated:YES completion:nil];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.hasResults) {
         CustomSearchCell *cell = (CustomSearchCell *)[tableView dequeueReusableCellWithIdentifier:@"CustomSearchCell"];
-        cell.name.text = [self.suggestedGroups objectAtIndex:indexPath.row];
+        cell.name.text = [[self.suggestedGroups objectAtIndex:indexPath.row] objectForKey:@"name"];
+        cell.totalPost.text = [[[self.suggestedGroups objectAtIndex:indexPath.row] objectForKey:@"totalPosts"] stringValue];
+        NSLog(@"%@", [self.suggestedGroups objectAtIndex:indexPath.row]);
         cell.backgroundColor = [UIColor clearColor];
         cell.name.textColor = [UIColor whiteColor];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];

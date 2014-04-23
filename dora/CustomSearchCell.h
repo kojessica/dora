@@ -11,5 +11,6 @@
 @interface CustomSearchCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *totalPost;
 
 @end

@@ -14,18 +14,49 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhs-DB-fII">
-                        <rect key="frame" x="14" y="5" width="292" height="38"/>
+                        <rect key="frame" x="14" y="5" width="226" height="38"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TotalPost" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bP3-ME-moy">
+                        <rect key="frame" x="247" y="17" width="52" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="ILQ-U8-57s"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwL-Ov-ljl">
+                        <rect key="frame" x="218" y="15" width="21" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="blJ-wz-Tdk"/>
+                            <constraint firstAttribute="width" constant="21" id="pCs-Uv-QrN"/>
+                        </constraints>
+                        <state key="normal" image="post_larger_icon.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="rwL-Ov-ljl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Rw3-h2-ED8"/>
+                    <constraint firstAttribute="trailing" secondItem="bP3-ME-moy" secondAttribute="trailing" constant="21" id="Vxg-c2-fZX"/>
+                    <constraint firstItem="bP3-ME-moy" firstAttribute="leading" secondItem="rwL-Ov-ljl" secondAttribute="trailing" constant="8" id="dwu-d7-iTi"/>
+                    <constraint firstItem="bP3-ME-moy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="nKI-2x-BdO"/>
+                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="name" destination="fhs-DB-fII" id="Xak-qm-jCh"/>
+                <outlet property="totalPost" destination="bP3-ME-moy" id="em0-pn-VES"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="post_larger_icon.png" width="21" height="18"/>
+    </resources>
 </document>
