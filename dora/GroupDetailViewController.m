@@ -20,7 +20,7 @@ CGFloat heightOffset = 55.f;
 @interface GroupDetailViewController ()
 
 @property (nonatomic,strong) PostCell *previousHighlightedCell;
-@property (nonatomic,strong) NSArray *posts;
+@property (nonatomic,strong) NSMutableArray *posts;
 
 @end
 
@@ -47,11 +47,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.postTable.delegate = self;
     self.postTable.dataSource = self;
     
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(didReceiveRemoteNotification:)
-     name:UIApplicationDidReceiveRemoteNotification
-     object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveRemoteNotification:) name:UIApplicationDidReceiveRemoteNotification object:nil];
     
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
@@ -64,7 +60,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     if (self.group.objectId != nil) {
         [Post retrievePostsFromGroup:self.group completion:^(NSArray *objects, NSError *error) {
             [refreshControl endRefreshing];
-            self.posts = objects;
+            self.posts = [NSMutableArray arrayWithArray:objects];
             PFInstallation *currentInstallation = [PFInstallation currentInstallation];
             [currentInstallation addUniqueObject:self.group.name forKey:@"channels"];
             [currentInstallation saveInBackground];
@@ -97,7 +93,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     if (self.group.objectId != nil) {
         [Post retrievePostsFromGroup:self.group completion:^(NSArray *objects, NSError *error) {
             [refreshControl endRefreshing];
-            self.posts = objects;
+            self.posts = [NSMutableArray arrayWithArray:objects];
             [self.postTable reloadData];
         }];
     }
@@ -112,8 +108,22 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         hud.margin = 15.f;
         hud.yOffset = 150.f;
         hud.removeFromSuperViewOnHide = YES;
-        [hud hide:YES afterDelay:3];
+        [hud hide:YES afterDelay:2];
+        
+        NSDictionary *userInfo = [notification userInfo];
+        Post *post = [userInfo objectForKey:@"post"];
+        NSDate* currentDate = [NSDate date];
+        post.updatedAt = currentDate;
+        [self insertGhostPost:post];
     }
+}
+
+- (void)insertGhostPost:(Post *)post
+{
+    [self.posts insertObject:post atIndex:0];
+    NSMutableArray *arrayWithIndexPaths = [NSMutableArray array];
+    [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
 }
 
 - (void)didReceiveMemoryWarning
@@ -173,9 +183,10 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                              self.previousHighlightedCell.postView.backgroundColor = [UIColor whiteColor];
                              self.previousHighlightedCell.message.textColor = [UIColor blackColor];
                              self.previousHighlightedCell.postView.frame = CGRectMake(10.f, 5.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
+                             
                              UserActions *tempActionBar = (UserActions *)[self.previousHighlightedCell viewWithTag:100];
                              if(tempActionBar)
-                                 [tempActionBar removeFromSuperview];
+                                [tempActionBar removeFromSuperview];
                          }
                          completion:nil];
         self.previousHighlightedCell = nil;
@@ -262,9 +273,19 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     PostCell *cell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
     Post *postSelected = [self.posts objectAtIndex:indexPath.row];
     
-    NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, nil];
+    NSLog(@"%@", postSelected.objectId);
     
-    [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
+    //Check to see if this is a ghost post
+    if (postSelected.objectId == nil) {
+        [Post getPostWithNewKey:postSelected.newKey completion:^(PFObject *object, NSError *error) {
+            postSelected.objectId = object.objectId;
+            NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, nil];
+            [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
+        }];
+    } else {
+        NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, nil];
+        [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
+    }
 }
 
 - (CGFloat)cellHeight:(NSIndexPath *)indexPath
@@ -282,15 +303,15 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     return CGSizeMake(320, [self cellHeight:indexPath] + 62);
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
     
     PostCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCell" forIndexPath:indexPath];
-    
     [cell cellWithPost:[self.posts objectAtIndex:indexPath.row]];
-    
     return cell;
 }
--(void)didReceiveRemoteNotification:(NSNotification *)notification {
+
+/*- (void)didReceiveRemoteNotification:(NSNotification *)notification {
     NSDictionary *userInfo = [notification userInfo];
     if (self.isViewLoaded && self.view.window) {
         Post *post = [Post object];
@@ -301,7 +322,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         [self insertPostIntoTable:post];
     }
 }
--(void)insertPostIntoTable:(Post*)post {
+
+- (void)insertPostIntoTable:(Post*)post {
     NSMutableArray* posts = [self.posts mutableCopy];
     [posts addObject:post];
     self.posts = posts;
@@ -313,5 +335,5 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         [self.postTable reloadData];
     } completion:^(BOOL finished) {}];
 
-}
+}*/
 @end

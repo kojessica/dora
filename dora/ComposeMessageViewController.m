@@ -52,9 +52,22 @@
     NSLog(@"%@", [self composedText].text);
     NSLog(@"%@", [[LocationController sharedLocationController] locationManager].location);
     
-    [Post postWithUser:[User currentUser] group:[self group] text:[self composedText].text location:[[LocationController sharedLocationController] locationManager].location];
+    NSString *newkey = [Post setRandomKey];
+    
+    [Post postWithUser:[User currentUser] group:[self group] text:[self composedText].text location:[[LocationController sharedLocationController] locationManager].location newKey:newkey];
     [self dismissViewControllerAnimated:YES completion:nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"newPostUploaded" object:nil];
+    
+    
+    Post *post = [Post object];
+    post.text = [self composedText].text;
+    post.newKey = newkey;
+    NSMutableDictionary* userInfo = [NSMutableDictionary dictionary];
+    [userInfo setObject:post forKey:@"post"];
+    
+    //NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
+    //[nc postNotificationName:@"eRXReceived" object:self userInfo:userInfo];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"newPostUploaded" object:nil userInfo:userInfo];
 
 }
 - (IBAction)onCancelButton:(id)sender {

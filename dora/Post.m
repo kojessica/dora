@@ -18,13 +18,24 @@
 @dynamic location;
 @dynamic updatedAt;
 @dynamic popularity;
+@dynamic newKey;
 
 
 +(NSString *)parseClassName {
     return @"Post";
 }
 
-+(void) postWithUser:(User*)user group:(Group*)group text:(NSString*)content location:(CLLocation*) location {
++ (NSString *)setRandomKey {
+    NSString *alphabet  = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY0123456789";
+    NSMutableString *randomString = [NSMutableString stringWithCapacity:20];
+    for (NSUInteger i = 0U; i < 20; i++) {
+        u_int32_t r = arc4random() % [alphabet length];
+        [randomString appendFormat:@"%C", [alphabet characterAtIndex:r]];
+    }
+    return randomString;
+}
+
++(void) postWithUser:(User*)user group:(Group*)group text:(NSString*)content location:(CLLocation*) location newKey:(NSString *)newkey {
     Post *post = [Post object];
     
     CLLocationCoordinate2D coordinate = [location coordinate];
@@ -36,6 +47,8 @@
     post.likes = [NSNumber numberWithInt:0];
     post.dislikes = [NSNumber numberWithInt:0];
     post.popularity = [NSNumber numberWithInt:0];
+    post.newKey = newkey;
+    
     if(geoPoint != nil) {
       post.location = geoPoint;
     }
@@ -44,8 +57,13 @@
         
         [post objectId];
     }];
-    
-    
+}
+
++(void)getPostWithNewKey:(NSString*)key completion:(void(^) (PFObject *object, NSError *error))completion {
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query whereKey:@"newKey" equalTo:key];
+    [query getFirstObjectInBackgroundWithBlock:completion];
+    return;
 }
 
 +(void) retrieveRecentPostsFromGroup:(Group*) group number:(NSNumber*)number completion:(void (^) (NSArray* objects, NSError* error))completion {
@@ -60,6 +78,7 @@
 +(void) retrievePostsFromGroup:(Group*) group completion:(void (^) (NSArray* objects, NSError* error))completion {
     PFQuery *query = [Post query];
     [query whereKey:@"groupId" equalTo:group.objectId];
+    [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:completion];
 }
 

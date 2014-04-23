@@ -16,8 +16,10 @@
 @interface Post : PFObject <PFSubclassing>
 
 + (NSString *)parseClassName;
++ (NSString *)setRandomKey;
 +(void) retrieveRecentPostsFromGroup:(Group*) group number:(NSNumber*)number completion:(void (^) (NSArray* objects, NSError* error))completion;
-+(void) postWithUser:(User*)user group:(Group*)group text:(NSString*)content location:(CLLocation*) location;
++(void)getPostWithNewKey:(NSString*)key completion:(void(^) (PFObject *object, NSError *error))completion;
++(void) postWithUser:(User*)user group:(Group*)group text:(NSString*)content location:(CLLocation*) location newKey:(NSString *)newkey;
 +(void) retrievePostsFromGroup:(Group*) group completion:(void (^) (NSArray* objects, NSError* error))completion;
 +(void) likePostWithId:(NSString*)postId;
 +(void) unlikePostWithId:(NSString*)postId;
@@ -31,5 +33,6 @@
 @property (retain) PFGeoPoint *location;
 @property (strong, nonatomic) NSDate *updatedAt;
 @property (retain) NSNumber *popularity;
+@property (retain) NSString *newKey;
 
 @end
