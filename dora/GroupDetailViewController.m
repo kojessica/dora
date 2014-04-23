@@ -261,7 +261,17 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         post.objectId = [userInfo objectForKey:@"objectId"];
         post.groupId = [userInfo objectForKey:@"groupId"];
         post.userId = [userInfo objectForKey:@"userId"];
+        NSMutableArray* posts = [[NSMutableArray alloc] init];
+        [posts addObjectsFromArray: self.posts];
+        [posts addObject:post];
+        self.posts = posts;
+        NSIndexPath *path1 = [NSIndexPath indexPathForRow:0 inSection:0];
+        NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
         
+        [self.postTable insertItemsAtIndexPaths:indexArray];
+        [self.postTable performBatchUpdates:^{
+            [self.postTable reloadData];
+        } completion:^(BOOL finished) {}];
     }
 }
 
