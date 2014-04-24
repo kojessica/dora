@@ -36,20 +36,23 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.tableView.backgroundColor = [UIColor clearColor];
-
-    [Group getAllGroupsWithCompletion:^(NSArray *objects, NSError *error) {
+    
+    User *currentUser = [User currentUser];
+    [Group getAllGroupsByNames:currentUser.relevantGroups WithCompletion:^(NSArray *objects, NSError *error) {
         [refreshControl endRefreshing];
         self.listGroup = objects;
         self.detailviewIsPresent = NO;
         [self.tableView reloadData];
     }];
+    
     self.view.backgroundColor = [UIColor clearColor];
 
 }
 
 - (void)reload:(UIRefreshControl *)refreshControl
 {
-    [Group getAllGroupsWithCompletion:^(NSArray *objects, NSError *error) {
+    User *currentUser = [User currentUser];
+    [Group getAllGroupsByNames:currentUser.relevantGroups WithCompletion:^(NSArray *objects, NSError *error) {
         [refreshControl endRefreshing];
         self.listGroup = objects;
         self.detailviewIsPresent = NO;

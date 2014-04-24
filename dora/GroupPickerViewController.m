@@ -11,6 +11,7 @@
 #import "CustomAutocompleteCell.h"
 #import "CustomAutocompleteObject.h"
 #import "ListViewController.h"
+#import "PopularListViewController.h"
 #import "TabsController.h"
 #import <Parse/Parse.h>
 #import "User.h"
@@ -49,6 +50,11 @@
     
     [self.autocompleteTextField setAutoCompleteTableAppearsAsKeyboardAccessory:NO];
     [self.autocompleteTextField setBorderStyle:UITextBorderStyleRoundedRect];
+    [self.autocompleteTextField setAutoCompleteTableBackgroundColor:[UIColor whiteColor]];
+    [self.autocompleteTextField setAutoCompleteTableCellTextColor:[UIColor colorWithRed:50/255 green:50/255 blue:50/255 alpha:1]];
+    
+    //set location of the textfield
+    self.autocompleteTextField.frame = CGRectMake(self.autocompleteTextField.frame.origin.x, self.view.frame.size.height, self.autocompleteTextField.frame.size.width, self.autocompleteTextField.frame.size.height);
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -129,7 +135,7 @@
 - (void)loadHomeView
 {
     ListViewController *listViewController1 = [[ListViewController alloc] init];
-    ListViewController *listViewController2 = [[ListViewController alloc] init];
+    PopularListViewController *listViewController2 = [[PopularListViewController alloc] init];
     
     listViewController1.title = @"RELEVANT";
     listViewController2.title = @"POPULAR";
@@ -170,6 +176,7 @@
         NSLog(@"selected string '%@' from autocomplete menu", selectedString);
     }
     [User setUserGroup:[selectedObject autocompleteString]];
+    [User updateRelevantGroupsByName:selectedString WithSubscription:YES];
     [self loadHomeView];
 }
 

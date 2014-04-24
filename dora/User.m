@@ -23,6 +23,7 @@
 @dynamic gender;
 @dynamic location;
 @dynamic likedPosts;
+@dynamic relevantGroups;
 //static CLLocationManager *_locationManager;
 
 static User *currentUser = nil;
@@ -61,6 +62,10 @@ static User *currentUser = nil;
                                                       longitude:coordinate.longitude];
         currentUser.location = geoPoint;
     }
+    
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+    currentUser.relevantGroups = [NSArray arrayWithArray:tempArray];
+    
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         currentUser.objectId = [currentUser objectId];
         [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:currentUser] forKey:@"current_user"];
@@ -68,7 +73,6 @@ static User *currentUser = nil;
     }];
     return currentUser;
 }
-
 
 + (NSString *)setRandomKey {
     NSString *alphabet  = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY0123456789";
@@ -108,6 +112,18 @@ static User *currentUser = nil;
         [tempArray removeObject:postId];
     }
     currentUser.likedPosts = [NSArray arrayWithArray:tempArray];
+    [User persistUser:currentUser];
+}
+
++ (void)updateRelevantGroupsByName:(NSString *)groupName WithSubscription:(BOOL)subscription {
+    NSMutableArray *tempArray = [currentUser.relevantGroups mutableCopy];
+    if (subscription) {
+        [tempArray addObject:groupName];
+    } else {
+        [tempArray removeObject:groupName];
+    }
+    currentUser.relevantGroups = [NSArray arrayWithArray:tempArray];
+    NSLog(@"%@",currentUser.relevantGroups);
     [User persistUser:currentUser];
 }
 

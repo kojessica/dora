@@ -66,6 +66,13 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
             [currentInstallation saveInBackground];
             [self.postTable reloadData];
         }];
+        
+        User *currentUser = [User currentUser];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF = %@", self.group.name];
+        NSArray *results = [currentUser.relevantGroups filteredArrayUsingPredicate:predicate];
+        if ([results count] == 0) {
+            [User updateRelevantGroupsByName:self.group.name WithSubscription:YES];
+        }
     }
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];

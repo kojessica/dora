@@ -53,6 +53,14 @@
     return;
 }
 
++ (void)getAllGroupsByNames:(NSArray *)names WithCompletion:(void(^) (NSArray *objects, NSError *error))completion {
+    PFQuery *query = [Group query];
+    [query whereKey:@"name" containedIn:names];
+    [query orderByDescending:@"updatedAt"];
+    [query findObjectsInBackgroundWithBlock:completion];
+    return;
+}
+
 + (void)getPopularGroupsWithCompletion:(void(^) (NSArray *objects, NSError *error))completion {
     PFQuery *query = [Group query];
     [query whereKeyExists:@"name"];

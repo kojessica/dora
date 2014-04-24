@@ -10,6 +10,7 @@
 #import "CoreLocation/CoreLocation.h"
 #import "Parse/Parse.h"
 #import "Parse/PFObject+subclass.h"
+#import "Group.h"
 @interface User : PFObject <CLLocationManagerDelegate, PFSubclassing>
 
 + (User *)currentUser;
@@ -21,11 +22,13 @@
 + (void)persistUser:(User *)user;
 + (void)setUserNickname:(NSString *)nickname;
 + (void)updateLikedPosts:(NSString *)postId ByIncrement:(BOOL)increment;
++ (void)updateRelevantGroupsByName:(NSString *)groupName WithSubscription:(BOOL)subscription;
 @property (retain) NSString *nickname;
 @property (retain) NSString *key;
 @property (retain) NSNumber *age;
 @property (retain) NSNumber *gender;
 @property (retain) NSString *groupName;
 @property (strong,nonatomic) NSArray *likedPosts;
+@property (strong,nonatomic) NSArray *relevantGroups;
 @property (retain) PFGeoPoint *location;
 @end

@@ -17,6 +17,7 @@
 + (Group *)createGroupWithName:(NSString*)name location:(CLLocation *) location;
 + (void)getGroupWithName:(NSString*)name completion:(void(^) (PFObject *object, NSError *error))completion;
 + (void)getAllGroupsWithCompletion:(void(^) (NSArray *objects, NSError *error))completion;
++ (void)getAllGroupsByNames:(NSArray *)names WithCompletion:(void(^) (NSArray *objects, NSError *error))completion;
 + (void)getPopularGroupsWithCompletion:(void(^) (NSArray *objects, NSError *error))completion;
 @property (retain) NSString *name;
 @property (strong,nonatomic) NSString *objectId;
