@@ -47,8 +47,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.postTable.delegate = self;
     self.postTable.dataSource = self;
     
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveRemoteNotification:) name:UIApplicationDidReceiveRemoteNotification object:nil];
-    
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
     
@@ -67,11 +65,19 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
             [self.postTable reloadData];
         }];
         
+        //show appropriate subscribe button according to user status
         User *currentUser = [User currentUser];
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF = %@", self.group.name];
-        NSArray *results = [currentUser.relevantGroups filteredArrayUsingPredicate:predicate];
-        if ([results count] == 0) {
-            [User updateRelevantGroupsByName:self.group.name WithSubscription:YES];
+        NSArray *checkIfUnsubscribed = [currentUser.unsubscribedGroups filteredArrayUsingPredicate:predicate];
+        if ([checkIfUnsubscribed count] == 0) {
+            NSArray *checkIfSubscribed = [currentUser.subscribedGroups filteredArrayUsingPredicate:predicate];
+            if ([checkIfSubscribed count] == 0) {
+                [User updateRelevantGroupsByName:self.group.name WithSubscription:YES];
+            }
+            [self.subscribeButton setImage:[UIImage imageNamed:@"pin_icon.png"] forState:UIControlStateSelected];
+            [self.subscribeButton setSelected:YES];
+        } else {
+            [self.subscribeButton setSelected:NO];
         }
     }
     
@@ -157,6 +163,18 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     composeView.group = self.group;
     
     [self presentViewController:composeView animated:YES completion:nil];
+}
+
+- (IBAction)onSubscribeButton:(id)sender {
+    if ([sender isSelected]) {
+        [User updateRelevantGroupsByName:self.group.name WithSubscription:NO];
+        [sender setImage:[UIImage imageNamed:@"pin_empty_icon.png"] forState:UIControlStateNormal];
+        [sender setSelected:NO];
+    } else {
+        [User updateRelevantGroupsByName:self.group.name WithSubscription:YES];
+        [sender setImage:[UIImage imageNamed:@"pin_icon.png"] forState:UIControlStateNormal];
+        [sender setSelected:YES];
+    }
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -318,29 +336,4 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     return cell;
 }
 
-/*- (void)didReceiveRemoteNotification:(NSNotification *)notification {
-    NSDictionary *userInfo = [notification userInfo];
-    if (self.isViewLoaded && self.view.window) {
-        Post *post = [Post object];
-        post.text = [userInfo objectForKey:@"text"];
-        post.objectId = [userInfo objectForKey:@"objectId"];
-        post.groupId = [userInfo objectForKey:@"groupId"];
-        post.userId = [userInfo objectForKey:@"userId"];
-        [self insertPostIntoTable:post];
-    }
-}
-
-- (void)insertPostIntoTable:(Post*)post {
-    NSMutableArray* posts = [self.posts mutableCopy];
-    [posts addObject:post];
-    self.posts = posts;
-    NSIndexPath *path1 = [NSIndexPath indexPathForRow:[posts count]-1 inSection:0];
-    NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
-    
-    [self.postTable insertItemsAtIndexPaths:indexArray];
-    [self.postTable performBatchUpdates:^{
-        [self.postTable reloadData];
-    } completion:^(BOOL finished) {}];
-
-}*/
 @end

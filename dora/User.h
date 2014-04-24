@@ -29,6 +29,7 @@
 @property (retain) NSNumber *gender;
 @property (retain) NSString *groupName;
 @property (strong,nonatomic) NSArray *likedPosts;
-@property (strong,nonatomic) NSArray *relevantGroups;
+@property (strong,nonatomic) NSArray *subscribedGroups;
+@property (strong,nonatomic) NSArray *unsubscribedGroups;
 @property (retain) PFGeoPoint *location;
 @end

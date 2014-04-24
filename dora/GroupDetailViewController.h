@@ -16,9 +16,11 @@
 - (IBAction)onBackButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *writeButton;
 @property (weak, nonatomic) IBOutlet UIView *topBar;
+@property (weak, nonatomic) IBOutlet UIButton *subscribeButton;
 @property (weak, nonatomic) IBOutlet UILabel *groupLabel;
 @property (strong, nonatomic) Group *group;
 @property (weak, nonatomic) IBOutlet UICollectionView *postTable;
 - (IBAction)onCompose:(id)sender;
+- (IBAction)onSubscribeButton:(id)sender;
 
 @end

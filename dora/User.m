@@ -23,7 +23,8 @@
 @dynamic gender;
 @dynamic location;
 @dynamic likedPosts;
-@dynamic relevantGroups;
+@dynamic subscribedGroups;
+@dynamic unsubscribedGroups;
 //static CLLocationManager *_locationManager;
 
 static User *currentUser = nil;
@@ -64,7 +65,8 @@ static User *currentUser = nil;
     }
     
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-    currentUser.relevantGroups = [NSArray arrayWithArray:tempArray];
+    currentUser.subscribedGroups = [NSArray arrayWithArray:tempArray];
+    currentUser.unsubscribedGroups = [NSArray arrayWithArray:tempArray];
     
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         currentUser.objectId = [currentUser objectId];
@@ -116,14 +118,21 @@ static User *currentUser = nil;
 }
 
 + (void)updateRelevantGroupsByName:(NSString *)groupName WithSubscription:(BOOL)subscription {
-    NSMutableArray *tempArray = [currentUser.relevantGroups mutableCopy];
+    NSMutableArray *tempArray = [currentUser.subscribedGroups mutableCopy];
+    NSMutableArray *tempUnsubscribedArray = [currentUser.unsubscribedGroups mutableCopy];
+    
     if (subscription) {
         [tempArray addObject:groupName];
+        [tempUnsubscribedArray removeObject:groupName];
     } else {
         [tempArray removeObject:groupName];
+        [tempUnsubscribedArray addObject:groupName];
     }
-    currentUser.relevantGroups = [NSArray arrayWithArray:tempArray];
-    NSLog(@"%@",currentUser.relevantGroups);
+    currentUser.subscribedGroups = [NSArray arrayWithArray:tempArray];
+    currentUser.unsubscribedGroups = [NSArray arrayWithArray:tempUnsubscribedArray];
+    
+    NSLog(@"Subscribed groups:%@",currentUser.subscribedGroups);
+    NSLog(@"Unsubscribed groups:%@",currentUser.unsubscribedGroups);
     [User persistUser:currentUser];
 }
 

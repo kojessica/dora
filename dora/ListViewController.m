@@ -38,7 +38,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     
     User *currentUser = [User currentUser];
-    [Group getAllGroupsByNames:currentUser.relevantGroups WithCompletion:^(NSArray *objects, NSError *error) {
+    [Group getAllGroupsByNames:currentUser.subscribedGroups WithCompletion:^(NSArray *objects, NSError *error) {
         [refreshControl endRefreshing];
         self.listGroup = objects;
         self.detailviewIsPresent = NO;
@@ -52,7 +52,7 @@
 - (void)reload:(UIRefreshControl *)refreshControl
 {
     User *currentUser = [User currentUser];
-    [Group getAllGroupsByNames:currentUser.relevantGroups WithCompletion:^(NSArray *objects, NSError *error) {
+    [Group getAllGroupsByNames:currentUser.subscribedGroups WithCompletion:^(NSArray *objects, NSError *error) {
         [refreshControl endRefreshing];
         self.listGroup = objects;
         self.detailviewIsPresent = NO;

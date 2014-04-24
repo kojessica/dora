@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="groupLabel" destination="y7u-KG-3yR" id="vDA-Ut-KUK"/>
                 <outlet property="postTable" destination="APu-Bs-m6k" id="vqN-hf-3y9"/>
+                <outlet property="subscribeButton" destination="YIH-VZ-LXO" id="5h9-oz-jrc"/>
                 <outlet property="topBar" destination="9i4-1v-g4h" id="L3b-sR-0g5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="writeButton" destination="RBh-HC-5YT" id="e21-OZ-F9I"/>
@@ -54,6 +55,16 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIH-VZ-LXO">
+                            <rect key="frame" x="270" y="21" width="50" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="pin_empty_icon.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onSubscribeButton:" destination="-1" eventType="touchUpInside" id="L2F-zn-0mj"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.20000001788139343" green="0.20000001788139343" blue="0.20000001788139343" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
@@ -117,6 +128,7 @@
     </objects>
     <resources>
         <image name="goback_icon.png" width="23" height="14"/>
+        <image name="pin_empty_icon.png" width="17" height="16"/>
         <image name="write_icon.png" width="17" height="15"/>
     </resources>
 </document>

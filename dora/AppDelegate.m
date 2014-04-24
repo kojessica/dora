@@ -50,7 +50,7 @@
         ListViewController *listViewController1 = [[ListViewController alloc] init];
         PopularListViewController *listViewController2 = [[PopularListViewController alloc] init];
         
-        listViewController1.title = @"RELEVANT";
+        listViewController1.title = @"FOLLOWING";
         listViewController2.title = @"POPULAR";
         
         NSArray *viewControllers = @[listViewController1, listViewController2];
