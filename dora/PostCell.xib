@@ -24,6 +24,7 @@
                                     <constraint firstAttribute="width" constant="270" id="b3Y-cN-1eU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.32156863810000003" green="0.3803921938" blue="0.29803922770000002" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

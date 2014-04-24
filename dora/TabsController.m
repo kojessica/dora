@@ -10,6 +10,8 @@
 #import "SettingsViewController.h"
 #import "SearchResultsViewController.h"
 #import <Parse/Parse.h>
+#import "PopularListViewController.h"
+#import "ListViewController.h"
 
 static const NSInteger TagOffset = 1000;
 static const float yOffset = 67.f;
@@ -289,6 +291,12 @@ static const float yOffset = 67.f;
                                        options:UIViewAnimationOptionLayoutSubviews | UIViewAnimationOptionCurveEaseOut
                                     animations:^
              {
+                 
+                 if ([toViewController isKindOfClass:[PopularListViewController class]])
+                     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
+                 else
+                     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg3.png"]];
+                 
                  CGRect rect = fromViewController.view.frame;
                  if (oldSelectedIndex < newSelectedIndex)
                      rect.origin.x = -rect.size.width;

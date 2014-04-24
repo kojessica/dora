@@ -217,7 +217,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                  CGSize currentFrameSize = cell.postView.frame.size;
                                  cell.postView.frame = CGRectMake(0.f, 0.f, currentFrameSize.width + widthOffset, currentFrameSize.height + heightOffset);
                                  cell.message.frame = CGRectMake(18.f, -6.f, cell.message.frame.size.width + widthOffset, cell.message.frame.size.height + heightOffset);
-                                 cell.postView.backgroundColor = [UIColor colorWithRed:58/255 green:58/255 blue:58/255 alpha:1];
+                                 cell.postView.backgroundColor = [UIColor colorWithRed:38/255 green:38/255 blue:38/255 alpha:0.8];
                                  cell.message.textColor = [UIColor whiteColor];
                                  
                                  UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, currentFrameSize.height + 2, 320.f, 32.f)];
