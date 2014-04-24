@@ -21,6 +21,8 @@ CGFloat heightOffset = 55.f;
 
 @property (nonatomic,strong) PostCell *previousHighlightedCell;
 @property (nonatomic,strong) NSMutableArray *posts;
+@property (nonatomic,strong) CMPopTipView *popTipView;
+- (void)showSubscribeHelper:(NSString *)content;
 
 @end
 
@@ -53,6 +55,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
     [self.postTable addSubview:refreshControl];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     
     [self.groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.name]];
     if (self.group.objectId != nil) {
@@ -63,6 +67,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
             [currentInstallation addUniqueObject:self.group.name forKey:@"channels"];
             [currentInstallation saveInBackground];
             [self.postTable reloadData];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
         }];
         
         //show appropriate subscribe button according to user status
@@ -73,6 +78,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
             NSArray *checkIfSubscribed = [currentUser.subscribedGroups filteredArrayUsingPredicate:predicate];
             if ([checkIfSubscribed count] == 0) {
                 [User updateRelevantGroupsByName:self.group.name WithSubscription:YES];
+                [self showSubscribeHelper:@"Auto-followed"];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
             }
             [self.subscribeButton setImage:[UIImage imageNamed:@"pin_icon.png"] forState:UIControlStateSelected];
             [self.subscribeButton setSelected:YES];
@@ -87,6 +94,28 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                              selector:@selector(receiveNotification:)
                                                  name:@"newPostUploaded"
                                                object:nil];
+}
+
+- (void)showSubscribeHelper:(NSString *)content {
+    self.popTipView = [[CMPopTipView alloc] initWithMessage:content];
+    self.popTipView.delegate = self;
+    self.popTipView.backgroundColor = [UIColor colorWithRed:40.0/255.0 green:169.0/255.0 blue:188.0/255.0 alpha:1];
+    self.popTipView.borderWidth = 0;
+    self.popTipView.textColor = [UIColor whiteColor];
+    self.popTipView.animation = 0.5;
+    self.popTipView.has3DStyle = NO;
+    self.popTipView.hasShadow = NO;
+    self.popTipView.hasGradientBackground = NO;
+    self.popTipView.pointerSize = 8.f;
+    self.popTipView.topMargin = -5.f;
+    self.popTipView.textFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:12];
+    self.popTipView.dismissTapAnywhere = NO;
+    [self.popTipView autoDismissAnimated:YES atTimeInterval:2.0];
+    [self.popTipView presentPointingAtView:self.subscribeButton inView:self.view animated:YES];
+}
+
+- (void)popTipViewWasDismissedByUser:(CMPopTipView *)popTipView {
+    self.popTipView = nil;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
@@ -108,6 +137,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
             [refreshControl endRefreshing];
             self.posts = [NSMutableArray arrayWithArray:objects];
             [self.postTable reloadData];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
         }];
     }
 }
@@ -167,14 +197,17 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 }
 
 - (IBAction)onSubscribeButton:(id)sender {
+    [self.popTipView dismissAnimated:YES];
     if ([sender isSelected]) {
         [User updateRelevantGroupsByName:self.group.name WithSubscription:NO];
         [sender setImage:[UIImage imageNamed:@"pin_empty_icon.png"] forState:UIControlStateNormal];
         [sender setSelected:NO];
+        [self showSubscribeHelper:@"Unfollowing"];
     } else {
         [User updateRelevantGroupsByName:self.group.name WithSubscription:YES];
         [sender setImage:[UIImage imageNamed:@"pin_icon.png"] forState:UIControlStateNormal];
         [sender setSelected:YES];
+        [self showSubscribeHelper:@"Following"];
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
 }
@@ -286,9 +319,9 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 - (void)shareThisPost:(Post *)post {
     NSString *shareString = [NSString stringWithFormat:(@"@%@ (From Dora)\n\"%@\""), self.group.name ,post.text];
-    //UIImage *shareImage = [UIImage imageNamed:@""];
+    UIImage *shareImage = [UIImage imageNamed:@"logo_icon.png"];
     
-    NSArray *activityItems = [NSArray arrayWithObjects:shareString, nil];
+    NSArray *activityItems = [NSArray arrayWithObjects:shareString, shareImage, nil];
     
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
@@ -299,8 +332,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     PostCell *cell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
     Post *postSelected = [self.posts objectAtIndex:indexPath.row];
-    
-    NSLog(@"%@", postSelected.objectId);
     
     //Check to see if this is a ghost post
     if (postSelected.objectId == nil) {

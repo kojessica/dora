@@ -10,8 +10,9 @@
 #import "Group.h"
 #import "UserActions.h"
 #import "Post.h"
+#import "CMPopTipView.h"
 
-@interface GroupDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UserActionsDelegate>
+@interface GroupDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UserActionsDelegate, CMPopTipViewDelegate>
 
 - (IBAction)onBackButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *writeButton;

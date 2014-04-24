@@ -12,6 +12,7 @@
 #import "GroupDetailViewController.h"
 #import "Group.h"
 #import "AFNetworking.h"
+#import "MBProgressHUD.h"
 #import "Post.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -37,6 +38,7 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.tableView.backgroundColor = [UIColor clearColor];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     User *currentUser = [User currentUser];
     [Group getAllGroupsByNames:currentUser.subscribedGroups WithCompletion:^(NSArray *objects, NSError *error) {
@@ -44,6 +46,7 @@
         self.listGroup = objects;
         self.detailviewIsPresent = NO;
         [self.tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
     
     self.view.backgroundColor = [UIColor clearColor];
@@ -68,6 +71,7 @@
         self.listGroup = objects;
         self.detailviewIsPresent = NO;
         [self.tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
 
@@ -101,10 +105,9 @@
     
     GroupCell *cell = (GroupCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-	cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell setGroup:[self.listGroup objectAtIndex:indexPath.row]];
     [cell setBackgroundColor:[UIColor clearColor]];
-    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 	return cell;
 }
 
@@ -112,10 +115,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	NSLog(@"%@, parent is %@", self.title, self.parentViewController);
-    
     [self performSelectorOnMainThread:@selector(presentGroupDetailViewAtIndexPath:) withObject:indexPath waitUntilDone:NO];
-    
 }
 
 - (void)presentGroupDetailViewAtIndexPath:(NSIndexPath *)indexPath {

@@ -11,6 +11,7 @@
 #import "GroupCell.h"
 #import "GroupDetailViewController.h"
 #import "Group.h"
+#import "MBProgressHUD.h"
 #import "AFNetworking.h"
 #import "Post.h"
 #import <QuartzCore/QuartzCore.h>
@@ -36,12 +37,14 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.tableView.backgroundColor = [UIColor clearColor];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [Group getPopularGroupsWithCompletion:^(NSArray *objects, NSError *error) {
         [refreshControl endRefreshing];
         self.listGroup = objects;
         self.detailviewIsPresent = NO;
         [self.tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
     self.view.backgroundColor = [UIColor clearColor];
 }
@@ -54,11 +57,12 @@
 
 - (void)reload:(UIRefreshControl *)refreshControl
 {
-    [Group getAllGroupsWithCompletion:^(NSArray *objects, NSError *error) {
+    [Group getPopularGroupsWithCompletion:^(NSArray *objects, NSError *error) {
         [refreshControl endRefreshing];
         self.listGroup = objects;
         self.detailviewIsPresent = NO;
         [self.tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
 

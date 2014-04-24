@@ -70,6 +70,7 @@
 		129D777519086689003EB2E7 /* post_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D777419086689003EB2E7 /* post_icon@2x.png */; };
 		12C1D34819099EB8008AE258 /* pin_empty_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C1D34619099EB8008AE258 /* pin_empty_icon@2x.png */; };
 		12C1D34919099EB8008AE258 /* pin_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C1D34719099EB8008AE258 /* pin_icon@2x.png */; };
+		12C1D34C1909B319008AE258 /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1D34B1909B319008AE258 /* CMPopTipView.m */; };
 		47435D3A18F9EF9000E1F5CE /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3718F9EF9000E1F5CE /* Group.m */; };
 		47435D3B18F9EF9000E1F5CE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 47435D3918F9EF9000E1F5CE /* Post.m */; };
 		474D350F18FD04E000028F29 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474D350E18FD04E000028F29 /* Parse.framework */; };
@@ -186,6 +187,8 @@
 		129D777419086689003EB2E7 /* post_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "post_icon@2x.png"; sourceTree = "<group>"; };
 		12C1D34619099EB8008AE258 /* pin_empty_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_empty_icon@2x.png"; sourceTree = "<group>"; };
 		12C1D34719099EB8008AE258 /* pin_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_icon@2x.png"; sourceTree = "<group>"; };
+		12C1D34A1909B319008AE258 /* CMPopTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPopTipView.h; sourceTree = "<group>"; };
+		12C1D34B1909B319008AE258 /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPopTipView.m; sourceTree = "<group>"; };
 		47435D3618F9EF9000E1F5CE /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		47435D3718F9EF9000E1F5CE /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		47435D3818F9EF9000E1F5CE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
@@ -443,6 +446,8 @@
 			children = (
 				47D812901904889700268220 /* Timestamp.h */,
 				47D812911904889700268220 /* Timestamp.m */,
+				12C1D34A1909B319008AE258 /* CMPopTipView.h */,
+				12C1D34B1909B319008AE258 /* CMPopTipView.m */,
 				47EAC96119023647005AE6ED /* FXForms.m */,
 				47EAC96219023647005AE6ED /* FXForms.h */,
 				474D351018FD052C00028F29 /* NSObject+Properties.h */,
@@ -646,6 +651,7 @@
 				479BEA8B18F636C60035A6BC /* LocationController.m in Sources */,
 				474D351A18FD052C00028F29 /* PFFile+NSCoding.m in Sources */,
 				47435D3A18F9EF9000E1F5CE /* Group.m in Sources */,
+				12C1D34C1909B319008AE258 /* CMPopTipView.m in Sources */,
 				1252859C18F5133A00E45C86 /* MLPAutoCompleteTextField.m in Sources */,
 				129D76561901987D003EB2E7 /* SettingForm.m in Sources */,
 				1252859D18F5133A00E45C86 /* NSString+Levenshtein.m in Sources */,

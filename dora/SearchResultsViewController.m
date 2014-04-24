@@ -237,6 +237,7 @@ static int maximumNumCharacters = 20;
         [cell addSubview:noResultsText];
         [cell addSubview:createButton];
         cell.backgroundColor = [UIColor clearColor];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         return cell;
     }
 }
