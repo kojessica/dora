@@ -137,6 +137,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     NSMutableArray *arrayWithIndexPaths = [NSMutableArray array];
     [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
     [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -175,6 +176,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         [sender setImage:[UIImage imageNamed:@"pin_icon.png"] forState:UIControlStateNormal];
         [sender setSelected:YES];
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -330,7 +332,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     PostCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCell" forIndexPath:indexPath];
     [cell cellWithPost:[self.posts objectAtIndex:indexPath.row]];
     return cell;

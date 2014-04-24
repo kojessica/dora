@@ -64,11 +64,7 @@
     NSMutableDictionary* userInfo = [NSMutableDictionary dictionary];
     [userInfo setObject:post forKey:@"post"];
     
-    //NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
-    //[nc postNotificationName:@"eRXReceived" object:self userInfo:userInfo];
-    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"newPostUploaded" object:nil userInfo:userInfo];
-
 }
 - (IBAction)onCancelButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

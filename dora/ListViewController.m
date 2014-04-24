@@ -21,6 +21,7 @@
 @property (assign, nonatomic) BOOL detailviewIsPresent;
 @property (strong, nonatomic) Post *post1;
 @property (strong, nonatomic) Post *post2;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @end
 
@@ -30,30 +31,40 @@
 {
 	[super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"GroupCell" bundle:nil] forCellReuseIdentifier:@"GroupCell"];
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:refreshControl];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.tableView.backgroundColor = [UIColor clearColor];
     
     User *currentUser = [User currentUser];
     [Group getAllGroupsByNames:currentUser.subscribedGroups WithCompletion:^(NSArray *objects, NSError *error) {
-        [refreshControl endRefreshing];
+        [self.refreshControl endRefreshing];
         self.listGroup = objects;
         self.detailviewIsPresent = NO;
         [self.tableView reloadData];
     }];
     
     self.view.backgroundColor = [UIColor clearColor];
-
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)
+                                                 name:@"shouldUpdateFollowingGroups"
+                                               object:nil];
+    
 }
 
-- (void)reload:(UIRefreshControl *)refreshControl
+- (void) receiveNotification:(NSNotification *)notification
+{
+    if ([[notification name] isEqualToString:@"shouldUpdateFollowingGroups"])
+        [self reload];
+}
+
+- (void)reload
 {
     User *currentUser = [User currentUser];
     [Group getAllGroupsByNames:currentUser.subscribedGroups WithCompletion:^(NSArray *objects, NSError *error) {
-        [refreshControl endRefreshing];
+        [self.refreshControl endRefreshing];
         self.listGroup = objects;
         self.detailviewIsPresent = NO;
         [self.tableView reloadData];
