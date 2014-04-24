@@ -108,7 +108,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         hud.margin = 15.f;
         hud.yOffset = 150.f;
         hud.removeFromSuperViewOnHide = YES;
-        [hud hide:YES afterDelay:2];
+        [hud hide:YES afterDelay:1];
         
         NSDictionary *userInfo = [notification userInfo];
         Post *post = [userInfo objectForKey:@"post"];

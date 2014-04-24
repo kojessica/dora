@@ -108,8 +108,6 @@ static User *currentUser = nil;
         [tempArray removeObject:postId];
     }
     currentUser.likedPosts = [NSArray arrayWithArray:tempArray];
-    
-    NSLog(@"%@", currentUser.likedPosts);
     [User persistUser:currentUser];
 }
 

@@ -22,6 +22,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "LocationController.h"
 #import "ListViewController.h"
+#import "PopularListViewController.h"
 #import "TabsController.h"
 #import "GroupDetailViewcontroller.h"
 
@@ -47,7 +48,7 @@
         
         //Test viewcontroller
         ListViewController *listViewController1 = [[ListViewController alloc] init];
-        ListViewController *listViewController2 = [[ListViewController alloc] init];
+        PopularListViewController *listViewController2 = [[PopularListViewController alloc] init];
         
         listViewController1.title = @"RELEVANT";
         listViewController2.title = @"POPULAR";

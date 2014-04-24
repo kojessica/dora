@@ -52,4 +52,12 @@
     [query findObjectsInBackgroundWithBlock:completion];
     return;
 }
+
++ (void)getPopularGroupsWithCompletion:(void(^) (NSArray *objects, NSError *error))completion {
+    PFQuery *query = [Group query];
+    [query whereKeyExists:@"name"];
+    [query orderByDescending:@"totalPosts"];
+    [query findObjectsInBackgroundWithBlock:completion];
+    return;
+}
 @end
