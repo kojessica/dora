@@ -26,6 +26,8 @@
 
 @implementation SearchResultsViewController
 
+static int maximumNumCharacters = 20;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -55,6 +57,7 @@
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
     self.searchInputBox.leftView = paddingView;
     self.searchInputBox.leftViewMode = UITextFieldViewModeAlways;
+    self.searchInputBox.delegate = self;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -74,20 +77,38 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    NSCharacterSet *doneButtonCharacterSet = [NSCharacterSet newlineCharacterSet];
+    NSRange replacementTextRange = [string rangeOfCharacterFromSet:doneButtonCharacterSet];
+    NSUInteger location = replacementTextRange.location;
+    
     [self fetchAutoComplete:newString];
     NSLog(@"%@", newString);
+    
+    if (newString.length + string.length > maximumNumCharacters){
+        if (location != NSNotFound){
+            [textField resignFirstResponder];
+        }
+        return NO;
+    }
+    else if (location != NSNotFound){
+        [textField resignFirstResponder];
+        return NO;
+    }
     return YES;
 }
 
 - (void)fetchAutoComplete:(NSString *)searchString
 {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name BEGINSWITH[cd] %@", searchString];
+    NSArray* words = [searchString componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceCharacterSet]];
+    NSString* searchStringWithNoSpace = [words componentsJoinedByString:@""];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name BEGINSWITH[cd] %@", searchStringWithNoSpace];
     self.suggestedGroups = [self.groupObjs filteredArrayUsingPredicate:predicate];
     
     if ([self.suggestedGroups count] == 0) {
         if ([searchString length] > 0) {
             self.hasResults = NO;
-            self.needToCreate = searchString;
+            self.needToCreate = searchStringWithNoSpace;
         } else {
             self.hasResults = YES;
         }
@@ -200,11 +221,18 @@
         noResultsText.textAlignment = NSTextAlignmentCenter;
         
         UIButton *createButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        createButton.frame = CGRectMake(70.f, 50.f, 180.f, 40.f);
         [createButton setTitle:[NSString stringWithFormat:@"Create @%@", self.needToCreate] forState:UIControlStateNormal];
         createButton.backgroundColor = [UIColor colorWithRed:40/255.f green:169/255.f blue:188/255.f alpha:1];
         [createButton addTarget:self action:@selector(createNewGroup) forControlEvents:UIControlEventTouchUpInside];
         createButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+        
+        [createButton sizeToFit];
+        CGRect frame = createButton.frame;
+        frame.size.width += 30;
+        frame.size.height += 10;
+        frame.origin.x = (self.view.frame.size.width - frame.size.width) / 2;
+        frame.origin.y = 50;
+        createButton.frame = frame;
         
         [cell addSubview:noResultsText];
         [cell addSubview:createButton];
