@@ -27,10 +27,10 @@
     User *currentUser = [User currentUser];
     NSLog(@"%@", currentUser);
     self.message.text = post.text;
-    self.age.text = [[currentUser objectForKey:@"age"] stringValue];
+    self.age.text = [[post age] stringValue];
     self.posted.text = [NSString stringWithFormat:(@"%@"), [Timestamp relativeTimeWithTimestamp:post.updatedAt]];
     
-    NSNumber *gender = [currentUser objectForKey:@"gender"];
+    NSNumber *gender = [post gender];
     if (gender) {
         if ([gender intValue] == 1) {
             self.gender.text = @"M";

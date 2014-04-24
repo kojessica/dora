@@ -1,4 +1,4 @@
-Parse.Cloud.beforeSave("Post", function(request) {
+Parse.Cloud.afterSave("Post", function(request) {
   var query = new Parse.Query("Groups");
   query.get(request.object.get("groupId"), {
     success: function(group) {
@@ -14,7 +14,9 @@ Parse.Cloud.beforeSave("Post", function(request) {
 		 objectId: request.object.id,
 		 groupId: request.object.get("groupId"),
 		 userId: request.object.get("userId"),
-		 text: request.object.get("text")
+		 text: request.object.get("text"),
+		 age: request.object.get("age"),
+		 gender: request.object.get("gender")
 		}
 		}, { success: function() { 
 			console.log("Pushed successfully!");
