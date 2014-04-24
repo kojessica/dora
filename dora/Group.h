@@ -25,5 +25,4 @@
 @property (strong, nonatomic) NSDate *updatedAt;
 @property (retain) PFGeoPoint *location;
 @property (strong, nonatomic) NSString *firstPost;
-@property (strong, nonatomic) NSString *secondPost;
-@end
+@property (strong, nonatomic) NSString *secondPost;@end

@@ -19,7 +19,8 @@
 @dynamic updatedAt;
 @dynamic popularity;
 @dynamic newKey;
-
+@dynamic age;
+@dynamic gender;
 
 +(NSString *)parseClassName {
     return @"Post";
@@ -48,6 +49,8 @@
     post.dislikes = [NSNumber numberWithInt:0];
     post.popularity = [NSNumber numberWithInt:0];
     post.newKey = newkey;
+    post.age = [[User currentUser] age];
+    post.gender = [[User currentUser] gender];
     
     if(geoPoint != nil) {
       post.location = geoPoint;

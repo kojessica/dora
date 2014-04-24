@@ -369,8 +369,6 @@
 		126B187418EBAFF3005A8475 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				470A5A5B19089935008179E5 /* PopularListViewController.h */,
-				470A5A5C19089935008179E5 /* PopularListViewController.m */,
 				47D812921904889700268220 /* UserActions.h */,
 				47D812931904889700268220 /* UserActions.m */,
 				47D812941904889700268220 /* UserActions.xib */,
@@ -555,7 +553,6 @@
 				129D766F190229A9003EB2E7 /* bg2@2x.png in Resources */,
 				126B187918EBB039005A8475 /* GroupPickerViewController.xib in Resources */,
 				129D7670190229A9003EB2E7 /* bg3@2x.png in Resources */,
-				470A5A5F19089945008179E5 /* heart_selected_icon@2x.png in Resources */,
 				129D76621901AEFC003EB2E7 /* setting_icon@2x.png in Resources */,
 				129D77731908512B003EB2E7 /* heart_selected_icon@2x.png in Resources */,
 				129D762A18F9F140003EB2E7 /* GroupDetailViewController.xib in Resources */,

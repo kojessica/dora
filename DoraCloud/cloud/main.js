@@ -2,17 +2,21 @@ Parse.Cloud.afterSave("Post", function(request) {
   var query = new Parse.Query("Groups");
   query.get(request.object.get("groupId"), {
     success: function(group) {
-        group.increment("totalPosts");
-        group.set("secondPost", group.get("firstPost"));
-        group.set("firstPost", request.object.get("text"));
-        group.save();
-		Parse.Push.send({
+    	if(!request.object.existed()) {
+ 	        group.increment("totalPosts");
+	        group.set("secondPost", group.get("firstPost"));
+	        group.set("firstPost", request.object.get("text"));
+	    	group.save();
+    	}
+    	Parse.Push.send({
 		channels: [ group.get("name") ],
 		data: {
 		 objectId: request.object.id,
 		 groupId: request.object.get("groupId"),
 		 userId: request.object.get("userId"),
-		 text: request.object.get("text")
+		 text: request.object.get("text"),
+		 age: request.object.get("age"),
+		 gender: request.object.get("gender")
 		}
 		}, { success: function() { 
 			console.log("Pushed successfully!");

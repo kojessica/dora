@@ -34,5 +34,7 @@
 @property (strong, nonatomic) NSDate *updatedAt;
 @property (retain) NSNumber *popularity;
 @property (retain) NSString *newKey;
+@property (strong, nonatomic) NSNumber *age;
+@property (strong, nonatomic) NSNumber *gender;
 
 @end
