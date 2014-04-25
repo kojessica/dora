@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *postTable;
 - (IBAction)onCompose:(id)sender;
 - (IBAction)onSubscribeButton:(id)sender;
+- (IBAction)onSwap:(UISwipeGestureRecognizer *)sender;
 
 @end

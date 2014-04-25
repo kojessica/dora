@@ -109,6 +109,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="9i4-1v-g4h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="05A-Nb-9UG"/>
                 <constraint firstItem="9i4-1v-g4h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0N3-Gn-3X5"/>
@@ -124,7 +125,15 @@
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="kmp-PX-3fZ" appends="YES" id="yKv-9q-dSj"/>
+            </connections>
         </view>
+        <swipeGestureRecognizer direction="right" id="kmp-PX-3fZ">
+            <connections>
+                <action selector="onSwap:" destination="-1" id="JC7-kj-mhd"/>
+            </connections>
+        </swipeGestureRecognizer>
     </objects>
     <resources>
         <image name="goback_icon.png" width="23" height="14"/>

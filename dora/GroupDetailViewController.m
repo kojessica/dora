@@ -179,9 +179,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 }
 
 - (IBAction)onBackButton:(id)sender {
-    
-    NSLog(@"%d", [self.presentingViewController isKindOfClass:[GroupDetailViewController class]]);
-    
     if ([self.presentingViewController isKindOfClass:[SearchResultsViewController class]]) {
         [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     } else {
@@ -212,6 +209,19 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         [self showSubscribeHelper:@"Following"];
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
+}
+
+- (IBAction)onSwap:(UISwipeGestureRecognizer *)sender {
+    if (sender.direction == UISwipeGestureRecognizerDirectionRight) {
+        NSLog(@"SwappeD right!");
+        if ([self.presentingViewController isKindOfClass:[SearchResultsViewController class]]) {
+            [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            [self dismissViewControllerAnimated:YES completion:^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
+            }];
+        }
+    }
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
