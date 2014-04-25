@@ -86,6 +86,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         } else {
             [self.subscribeButton setSelected:NO];
         }
+    } else {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
