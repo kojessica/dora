@@ -52,19 +52,21 @@
     NSLog(@"%@", [self composedText].text);
     NSLog(@"%@", [[LocationController sharedLocationController] locationManager].location);
     
-    NSString *newkey = [Post setRandomKey];
-    
-    [Post postWithUser:[User currentUser] group:[self group] text:[self composedText].text location:[[LocationController sharedLocationController] locationManager].location newKey:newkey];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-    
-    Post *post = [Post object];
-    post.text = [self composedText].text;
-    post.newKey = newkey;
-    NSMutableDictionary* userInfo = [NSMutableDictionary dictionary];
-    [userInfo setObject:post forKey:@"post"];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"newPostUploaded" object:nil userInfo:userInfo];
+    if ([[self composedText].text length] > 0) {
+        NSString *newkey = [Post setRandomKey];
+        
+        [Post postWithUser:[User currentUser] group:[self group] text:[self composedText].text location:[[LocationController sharedLocationController] locationManager].location newKey:newkey];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        
+        Post *post = [Post object];
+        post.text = [self composedText].text;
+        post.newKey = newkey;
+        NSMutableDictionary* userInfo = [NSMutableDictionary dictionary];
+        [userInfo setObject:post forKey:@"post"];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"newPostUploaded" object:nil userInfo:userInfo];
+    }
 }
 - (IBAction)onCancelButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -66,7 +66,6 @@
 
 - (void) receiveNotification:(NSNotification *)notification
 {
-    NSLog(@"Went home!!!");
     if ([[notification name] isEqualToString:@"goHome"])
         [self loadHomeView];
 }
