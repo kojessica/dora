@@ -7,6 +7,7 @@
 //
 
 #import "GroupPickerViewController.h"
+#import "GroupDetailViewController.h"
 #import "MLPAutoCompleteTextField.h"
 #import "CustomAutocompleteCell.h"
 #import "CustomAutocompleteObject.h"
@@ -20,6 +21,7 @@
 
 - (NSArray *)setAllGroups;
 - (void)loadHomeView;
+- (void)createNewGroup:(NSString *)needToCreate;
 @property (strong,nonatomic) NSArray *groupsNames;
 
 @end
@@ -44,6 +46,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHideWithNotification:) name:UIKeyboardDidHideNotification object:nil];
     
+    self.autocompleteTextField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
     self.autocompleteTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     self.testWithAutoCompleteObjectsInsteadOfStrings = YES;
     [self setAllGroups];
@@ -55,12 +58,44 @@
     
     //set location of the textfield
     self.autocompleteTextField.frame = CGRectMake(self.autocompleteTextField.frame.origin.x, self.view.frame.size.height, self.autocompleteTextField.frame.size.width, self.autocompleteTextField.frame.size.height);
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)
+                                                 name:@"goHome"
+                                               object:nil];
+}
+
+- (void) receiveNotification:(NSNotification *)notification
+{
+    NSLog(@"Went home!!!");
+    if ([[notification name] isEqualToString:@"goHome"])
+        [self loadHomeView];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
+    NSLog(@"%@", textField.text);
+    if ([textField.text length] > 0) {
+        NSArray* words = [textField.text componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceCharacterSet]];
+        NSString* searchStringWithNoSpace = [words componentsJoinedByString:@""];
+        [self createNewGroup:searchStringWithNoSpace];
+    }
     return YES;
+}
+
+- (void)createNewGroup:(NSString *)needToCreate
+{
+    Group *group = [Group createGroupWithName:needToCreate location:[[LocationController sharedLocationController] locationManager].location];
+    
+    [Group getGroupWithName:needToCreate completion:^(PFObject *object, NSError *error) {
+        GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
+        group.name = needToCreate;
+        groupDetailView.group = group;
+        groupDetailView.parentController = @"GroupPicker";
+        [self presentViewController:groupDetailView animated:YES completion:nil];
+    }];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -118,7 +153,6 @@
             for (PFObject *object in objects) {
                 [groups addObject:object[@"name"]];
             }
-            NSLog(@"%@", groups);
             self.groupsNames = [NSArray arrayWithArray:groups];
         } else {
             NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -137,7 +171,7 @@
     ListViewController *listViewController1 = [[ListViewController alloc] init];
     PopularListViewController *listViewController2 = [[PopularListViewController alloc] init];
     
-    listViewController1.title = @"RELEVANT";
+    listViewController1.title = @"FOLLOWING";
     listViewController2.title = @"POPULAR";
     
     NSArray *viewControllers = @[listViewController1, listViewController2];
@@ -175,6 +209,8 @@
     } else {
         NSLog(@"selected string '%@' from autocomplete menu", selectedString);
     }
+    
+    NSLog(@"%@", [selectedObject autocompleteString]);
     [User setUserGroup:[selectedObject autocompleteString]];
     [User updateRelevantGroupsByName:selectedString WithSubscription:YES];
     [self loadHomeView];

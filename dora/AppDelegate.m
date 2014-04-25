@@ -39,14 +39,14 @@
     [Parse setApplicationId:@"8bV5UK3dsmvpzryGKdo1ZEPavEpVfneYmx3Qu8S0"
                   clientKey:@"MylibgnIyThCTzlI9tkU0jDZOGkciX2osY73LKY8"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     LocationController *locationController = [LocationController sharedLocationController];
     [[locationController locationManager] startUpdatingLocation];
+    
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIRemoteNotificationTypeAlert)];
     User *currentUser = [User currentUser];
     [currentUser saveInBackground];
     if ([User currentUser]) {
-        
-        //Test viewcontroller
         ListViewController *listViewController1 = [[ListViewController alloc] init];
         PopularListViewController *listViewController2 = [[PopularListViewController alloc] init];
         
@@ -67,7 +67,9 @@
         NSLog(@"%@", currentUser);
     } else {
         [User setCurrentUser];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[GroupPickerViewController alloc] init]];
+        
+        GroupPickerViewController *pickerViewController = [[GroupPickerViewController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:pickerViewController];
         self.window.rootViewController = nav;
         nav.navigationBar.hidden = YES;
     }

@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *groupLabel;
 @property (strong, nonatomic) Group *group;
 @property (weak, nonatomic) IBOutlet UICollectionView *postTable;
+@property (strong, nonatomic) NSString *parentController;
 - (IBAction)onCompose:(id)sender;
 - (IBAction)onSubscribeButton:(id)sender;
 - (IBAction)onSwap:(UISwipeGestureRecognizer *)sender;

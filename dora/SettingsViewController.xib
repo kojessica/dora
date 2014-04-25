@@ -6,6 +6,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
             <connections>
+                <outlet property="hide1" destination="iIa-XB-UpH" id="jr0-uB-Qqh"/>
+                <outlet property="hide2" destination="kaW-Lm-Cte" id="jRW-P3-kCV"/>
+                <outlet property="hide3" destination="DWg-OI-JXJ" id="jMA-kG-3Uz"/>
+                <outlet property="hide4" destination="isw-X8-Bau" id="Xmx-4E-1Ce"/>
+                <outlet property="hide5" destination="8nk-Wx-iXE" id="3ci-tw-MZW"/>
+                <outlet property="hide6" destination="lBe-be-Cry" id="wOP-li-RSy"/>
+                <outlet property="hide7" destination="B8U-fM-bI9" id="jqZ-2y-Dcd"/>
+                <outlet property="hide8" destination="p4c-cs-RgO" id="fmB-Vv-B7S"/>
                 <outlet property="locationSwitch" destination="isw-X8-Bau" id="KRA-o0-Hl8"/>
                 <outlet property="notifySwitch" destination="p4c-cs-RgO" id="Q3k-Vh-zer"/>
                 <outlet property="tableView" destination="5Lo-Zl-Igd" id="fgH-bZ-95t"/>

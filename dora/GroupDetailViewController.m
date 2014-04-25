@@ -8,12 +8,15 @@
 
 #import "GroupDetailViewController.h"
 #import "ListViewController.h"
+#import "TabsController.h"
 #import "ComposeMessageViewController.h"
 #import "MBProgressHUD.h"
 #import "Post.h"
 #import "PostCell.h"
 #import "SearchResultsViewController.h"
 #import "UserActions.h"
+#import "GroupPickerViewController.h"
+#import "PopularListViewController.h"
 CGFloat widthOffset =30.f;
 CGFloat heightOffset = 55.f;
 
@@ -179,8 +182,12 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 }
 
 - (IBAction)onBackButton:(id)sender {
+          
     if ([self.presentingViewController isKindOfClass:[SearchResultsViewController class]]) {
         [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    } else if ([self.parentController isEqualToString:@"GroupPicker"]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"goHome" object:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
     } else {
         [self dismissViewControllerAnimated:YES completion:^{
             [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];

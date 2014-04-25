@@ -15,6 +15,17 @@
 @property (weak, nonatomic) IBOutlet UISwitch *notifySwitch;
 @property (nonatomic, strong) FXFormController *formController;
 @property (weak, nonatomic) IBOutlet UISwitch *locationSwitch;
+
+@property (weak, nonatomic) IBOutlet UILabel *hide1;
+@property (weak, nonatomic) IBOutlet UIView *hide2;
+@property (weak, nonatomic) IBOutlet UILabel *hide3;
+@property (weak, nonatomic) IBOutlet UISwitch *hide4;
+@property (weak, nonatomic) IBOutlet UILabel *hide5;
+@property (weak, nonatomic) IBOutlet UIView *hide6;
+@property (weak, nonatomic) IBOutlet UILabel *hide7;
+@property (weak, nonatomic) IBOutlet UISwitch *hide8;
+
+
 - (IBAction)onBackButton:(id)sender;
 - (IBAction)triggerNotification:(id)sender;
 - (IBAction)triggerLocation:(id)sender;

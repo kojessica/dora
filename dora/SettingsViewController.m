@@ -23,6 +23,14 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.view.backgroundColor = [UIColor colorWithRed:228/255.0f green:228/255.0f blue:228/255.0f alpha:1.0f];
+        [self.hide1 removeFromSuperview];
+        [self.hide2 removeFromSuperview];
+        [self.hide3 removeFromSuperview];
+        [self.hide4 removeFromSuperview];
+        [self.hide5 removeFromSuperview];
+        [self.hide6 removeFromSuperview];
+        [self.hide7 removeFromSuperview];
+        [self.hide8 removeFromSuperview];
     }
     return self;
 }
