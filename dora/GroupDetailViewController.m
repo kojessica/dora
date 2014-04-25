@@ -60,7 +60,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     [self.postTable addSubview:refreshControl];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    
+    self.writeButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
+    self.groupLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
     [self.groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.name]];
     if (self.group.objectId != nil) {
         [Post retrievePostsFromGroup:self.group completion:^(NSArray *objects, NSError *error) {

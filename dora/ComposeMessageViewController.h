@@ -16,6 +16,7 @@
 @property (strong, nonatomic) User *user;
 - (IBAction)didClickSend:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 @property (weak, nonatomic) IBOutlet UITextView *composedText;
 - (IBAction)onCancelButton:(id)sender;
 

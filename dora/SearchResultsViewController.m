@@ -210,6 +210,8 @@ static int maximumNumCharacters = 20;
         NSLog(@"%@", [self.suggestedGroups objectAtIndex:indexPath.row]);
         cell.backgroundColor = [UIColor clearColor];
         cell.name.textColor = [UIColor whiteColor];
+        cell.name.font = [UIFont fontWithName:@"ProximaNovaRegular" size:16];
+        cell.totalPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         return cell;
     } else {
@@ -219,12 +221,14 @@ static int maximumNumCharacters = 20;
         [noResultsText setText:[NSString stringWithFormat:@"We can't find %@", self.needToCreate]];
         noResultsText.textColor = [UIColor colorWithRed:146/255.f green:146/255.f blue:146/255.f alpha:1];
         noResultsText.textAlignment = NSTextAlignmentCenter;
+        noResultsText.font = [UIFont fontWithName:@"ProximaNovaRegular" size:13];
         
         UIButton *createButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [createButton setTitle:[NSString stringWithFormat:@"Create @%@", self.needToCreate] forState:UIControlStateNormal];
         createButton.backgroundColor = [UIColor colorWithRed:40/255.f green:169/255.f blue:188/255.f alpha:1];
         [createButton addTarget:self action:@selector(createNewGroup) forControlEvents:UIControlEventTouchUpInside];
-        createButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+        createButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
+        
         
         [createButton sizeToFit];
         CGRect frame = createButton.frame;

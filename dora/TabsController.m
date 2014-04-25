@@ -14,7 +14,7 @@
 #import "ListViewController.h"
 
 static const NSInteger TagOffset = 1000;
-static const float yOffset = 67.f;
+static const float yOffset = 68.f;
 
 
 @interface TabsController ()
@@ -52,6 +52,7 @@ static const float yOffset = 67.f;
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 8, 10)];
     self.searchInputBox.leftView = paddingView;
     self.searchInputBox.leftViewMode = UITextFieldViewModeAlways;
+    self.searchInputBox.font = [UIFont fontWithName:@"ProximaNovaBold" size:11];
     self.isPresent = YES;
     
     CGRect currentframe = self.settingButton.frame;
@@ -122,7 +123,7 @@ static const float yOffset = 67.f;
 	{
 		UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 		button.tag = TagOffset + index;
-		button.titleLabel.font = [UIFont boldSystemFontOfSize:12];
+		button.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:11];
 		
         [button setTitle:viewController.tabBarItem.title forState:UIControlStateNormal];
 

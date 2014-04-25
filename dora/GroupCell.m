@@ -27,6 +27,13 @@
 
 - (void)setGroup:(Group*)group
 {
+    
+    self.name.font = [UIFont fontWithName:@"ProximaNovaBold" size:15];
+    self.firstPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:15];
+    self.secondPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:15];
+    self.totalPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
+    self.lastUpdated.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
+    
     self.name.text = group.name;
     self.name.text = [NSString stringWithFormat:(@"@%@"), group.name];
     self.totalPost.text = [group.totalPosts stringValue];

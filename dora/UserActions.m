@@ -20,6 +20,7 @@
         id mainView = [subviewArray objectAtIndex:0];
         [self addSubview:mainView];
         self.likeCount.text = @"";
+        self.likeCount.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
         self.shareCount.text = @"";
     }
     return self;

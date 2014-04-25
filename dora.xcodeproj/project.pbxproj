@@ -38,6 +38,9 @@
 		126B189218EBB2E5005A8475 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B189118EBB2E5005A8475 /* SystemConfiguration.framework */; };
 		127525351909EFCB00D2B6BB /* share_white_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 127525331909EFCB00D2B6BB /* share_white_icon@2x.png */; };
 		127525361909EFCB00D2B6BB /* heart_white_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 127525341909EFCB00D2B6BB /* heart_white_empty@2x.png */; };
+		1275253A190A1C6D00D2B6BB /* ProximaNovaBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12752537190A1C6D00D2B6BB /* ProximaNovaBold.otf */; };
+		1275253B190A1C6D00D2B6BB /* ProximaNovaRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12752538190A1C6D00D2B6BB /* ProximaNovaRegular.otf */; };
+		1275253C190A1C6D00D2B6BB /* ProximaNovaSemibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12752539190A1C6D00D2B6BB /* ProximaNovaSemibold.otf */; };
 		129D761B18F9D8A4003EB2E7 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D761A18F9D8A4003EB2E7 /* ListViewController.m */; };
 		129D761F18F9DAEE003EB2E7 /* TabsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D761D18F9DAEE003EB2E7 /* TabsController.m */; };
 		129D762018F9DAEE003EB2E7 /* TabsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129D761E18F9DAEE003EB2E7 /* TabsController.xib */; };
@@ -145,6 +148,9 @@
 		126B189818EBBF38005A8475 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		127525331909EFCB00D2B6BB /* share_white_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_white_icon@2x.png"; sourceTree = "<group>"; };
 		127525341909EFCB00D2B6BB /* heart_white_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart_white_empty@2x.png"; sourceTree = "<group>"; };
+		12752537190A1C6D00D2B6BB /* ProximaNovaBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProximaNovaBold.otf; sourceTree = "<group>"; };
+		12752538190A1C6D00D2B6BB /* ProximaNovaRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProximaNovaRegular.otf; sourceTree = "<group>"; };
+		12752539190A1C6D00D2B6BB /* ProximaNovaSemibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProximaNovaSemibold.otf; sourceTree = "<group>"; };
 		129D761918F9D8A4003EB2E7 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		129D761A18F9D8A4003EB2E7 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		129D761C18F9DAEE003EB2E7 /* TabsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabsController.h; sourceTree = "<group>"; };
@@ -333,6 +339,9 @@
 		126B184C18EBAEAB005A8475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				12752537190A1C6D00D2B6BB /* ProximaNovaBold.otf */,
+				12752538190A1C6D00D2B6BB /* ProximaNovaRegular.otf */,
+				12752539190A1C6D00D2B6BB /* ProximaNovaSemibold.otf */,
 				127525331909EFCB00D2B6BB /* share_white_icon@2x.png */,
 				127525341909EFCB00D2B6BB /* heart_white_empty@2x.png */,
 				12C1D34619099EB8008AE258 /* pin_empty_icon@2x.png */,
@@ -553,12 +562,15 @@
 				129D764818FCBC12003EB2E7 /* CustomSearchCell.xib in Resources */,
 				12C1D34919099EB8008AE258 /* pin_icon@2x.png in Resources */,
 				126B185018EBAEAB005A8475 /* InfoPlist.strings in Resources */,
+				1275253A190A1C6D00D2B6BB /* ProximaNovaBold.otf in Resources */,
 				126B185818EBAEAB005A8475 /* Images.xcassets in Resources */,
 				129D762518F9E338003EB2E7 /* GroupCell.xib in Resources */,
 				129D764F18FE36F2003EB2E7 /* PostCell.xib in Resources */,
 				129D76661901B725003EB2E7 /* logo_icon@2x.png in Resources */,
 				129D764A18FE260D003EB2E7 /* back_icon@2x.png in Resources */,
+				1275253B190A1C6D00D2B6BB /* ProximaNovaRegular.otf in Resources */,
 				129D766C19022426003EB2E7 /* bg@2x.png in Resources */,
+				1275253C190A1C6D00D2B6BB /* ProximaNovaSemibold.otf in Resources */,
 				47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */,
 				129D763D18FB8AA9003EB2E7 /* SearchResultsViewController.xib in Resources */,
 				129D766F190229A9003EB2E7 /* bg2@2x.png in Resources */,

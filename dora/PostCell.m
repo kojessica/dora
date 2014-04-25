@@ -26,6 +26,11 @@
     //TODO(jessicako): replace currentUser with getUserInfoById
     User *currentUser = [User currentUser];
     NSLog(@"%@", currentUser);
+    self.message.font = [UIFont fontWithName:@"ProximaNovaRegular" size:14];
+    self.age.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
+    self.gender.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
+    self.posted.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
+    
     self.message.text = post.text;
     self.age.text = [[post age] stringValue];
     self.posted.text = [NSString stringWithFormat:(@"%@"), [Timestamp relativeTimeWithTimestamp:post.updatedAt]];
