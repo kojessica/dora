@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *gender;
 @property (weak, nonatomic) IBOutlet UILabel *age;
 @property (weak, nonatomic) IBOutlet UILabel *posted;
+@property (assign, nonatomic) BOOL isSelected;
 - (id)cellWithPost:(Post *)post;
 
 @end

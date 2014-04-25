@@ -64,7 +64,6 @@
         nav.navigationBar.hidden = YES;
         
         self.window.rootViewController = nav;
-        NSLog(@"%@", currentUser);
     } else {
         [User setCurrentUser];
         

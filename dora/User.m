@@ -130,9 +130,6 @@ static User *currentUser = nil;
     }
     currentUser.subscribedGroups = [NSArray arrayWithArray:tempArray];
     currentUser.unsubscribedGroups = [NSArray arrayWithArray:tempUnsubscribedArray];
-    
-    NSLog(@"Subscribed groups:%@",currentUser.subscribedGroups);
-    NSLog(@"Unsubscribed groups:%@",currentUser.unsubscribedGroups);
     [User persistUser:currentUser];
 }
 
