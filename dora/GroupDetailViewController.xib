@@ -19,10 +19,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="APu-Bs-m6k">
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="APu-Bs-m6k">
                     <rect key="frame" x="0.0" y="68" width="320" height="449"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="WlC-to-UeP"/>
+                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SPN-lf-RrV">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,7 +34,7 @@
                     </collectionViewFlowLayout>
                     <cells/>
                 </collectionView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9i4-1v-g4h">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9i4-1v-g4h">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -64,11 +67,19 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.20000001788139343" green="0.20000001788139343" blue="0.20000001788139343" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="lzf-fc-ERL"/>
+                        <constraint firstAttribute="width" constant="320" id="nnj-AQ-QFq"/>
+                    </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBh-HC-5YT">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBh-HC-5YT">
                     <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.14901961389999999" green="0.66274511810000003" blue="0.73725491759999995" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="H9V-az-MNQ"/>
+                        <constraint firstAttribute="width" constant="320" id="ed7-fk-ZsM"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <state key="normal" title="  Write" image="write_icon.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,18 +89,39 @@
                         <action selector="onCompose:" destination="-1" eventType="touchUpInside" id="eWZ-EB-ub0"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxv-5P-Ca3">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxv-5P-Ca3">
                     <rect key="frame" x="0.0" y="515" width="320" height="3"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.12" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="ELO-Hp-mKD"/>
+                        <constraint firstAttribute="height" constant="3" id="Y1C-Vj-rhu"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-4y-geV">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-4y-geV">
                     <rect key="frame" x="0.0" y="68" width="320" height="3"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.12" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="Ag2-ga-d0w"/>
+                        <constraint firstAttribute="width" constant="320" id="eml-pN-ahv"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9i4-1v-g4h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="05A-Nb-9UG"/>
+                <constraint firstItem="9i4-1v-g4h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0N3-Gn-3X5"/>
+                <constraint firstItem="hs2-4y-geV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1gH-7m-3oB"/>
+                <constraint firstItem="hs2-4y-geV" firstAttribute="top" secondItem="9i4-1v-g4h" secondAttribute="bottom" id="3ln-m6-qAH"/>
+                <constraint firstItem="APu-Bs-m6k" firstAttribute="top" secondItem="9i4-1v-g4h" secondAttribute="bottom" id="GVp-Wd-bPX"/>
+                <constraint firstItem="gxv-5P-Ca3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VWe-b0-MPd"/>
+                <constraint firstItem="APu-Bs-m6k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wqx-sc-GpJ"/>
+                <constraint firstAttribute="bottom" secondItem="RBh-HC-5YT" secondAttribute="bottom" id="WwW-an-Jak"/>
+                <constraint firstItem="RBh-HC-5YT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lLk-D3-4Zw"/>
+                <constraint firstItem="RBh-HC-5YT" firstAttribute="top" secondItem="APu-Bs-m6k" secondAttribute="bottom" constant="1" id="vTl-oA-CHT"/>
+                <constraint firstItem="RBh-HC-5YT" firstAttribute="top" secondItem="gxv-5P-Ca3" secondAttribute="bottom" id="zLJ-uh-1Jb"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

@@ -25,7 +25,6 @@
 @property (assign) BOOL simulateLatency;
 @property (assign) BOOL testWithAutoCompleteObjectsInsteadOfStrings;
 @property (weak, nonatomic) IBOutlet UIButton *settingButton;
-
 - (IBAction)onSettingButton:(id)sender;
 - (void)setSelectedIndex:(NSUInteger)index animated:(BOOL)animated;
 - (void)setSelectedViewController:(UIViewController *)viewController animated:(BOOL)animated;
