@@ -29,7 +29,10 @@ CGFloat newHeight = 107.f;
 @property (nonatomic,strong) NSMutableArray *posts;
 @property (nonatomic,strong) CMPopTipView *popTipView;
 @property (assign, nonatomic) int selectedRow;
+@property (nonatomic, strong) NSNumber* currentlyDisplayedPosts;
+@property (nonatomic, strong) NSNumber* numberOfResultsToFetch;
 @property (assign, nonatomic) NSIndexPath *previousHighlightedIndexPath;
+@property (nonatomic, assign) CGFloat totalViewHeight;
 - (void)showSubscribeHelper:(NSString *)content;
 
 @end
@@ -58,9 +61,12 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.postTable.dataSource = self;
     self.previousHighlightedIndexPath = nil;
     self.selectedRow = -1;
+    self.totalViewHeight = 0;
     
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
+    self.numberOfResultsToFetch = [NSNumber numberWithInt:20];
+    self.currentlyDisplayedPosts = [NSNumber numberWithInt:0];
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
@@ -71,8 +77,13 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.groupLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
     [self.groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.name]];
     if (self.group.objectId != nil) {
-        [Post retrievePostsFromGroup:self.group completion:^(NSArray *objects, NSError *error) {
+        [Post retrieveRecentPostsFromGroup:self.group number:[self numberOfResultsToFetch] skipNumber:[self currentlyDisplayedPosts] completion:^(NSArray *objects, NSError *error) {
             [refreshControl endRefreshing];
+            self.currentlyDisplayedPosts = [NSNumber numberWithInt:[self currentlyDisplayedPosts].intValue + (int)[objects count]];
+            for(Post* post in objects) {
+                CGFloat postHeight = [self cellHeightWithPost:post] + [self cellLayoutHeight];
+                self.totalViewHeight += postHeight;
+            }
             self.posts = [NSMutableArray arrayWithArray:objects];
             PFInstallation *currentInstallation = [PFInstallation currentInstallation];
             [currentInstallation addUniqueObject:self.group.name forKey:@"channels"];
@@ -184,6 +195,10 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
     [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
+    [Post getPostWithNewKey:post.newKey completion:^(PFObject *object, NSError *error) {
+        [self.posts setObject:object atIndexedSubscript:0];
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -313,7 +328,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                  
                                  PostCell *currentCell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
                                  
-                                 self.selectedRow = indexPath.row;
+                                 self.selectedRow = (int)indexPath.row;
                                  CGSize currentFrameSize = currentCell.postView.frame.size;
                                  currentCell.postView.frame = CGRectMake(0.f, 0.f, currentFrameSize.width + widthOffset, currentFrameSize.height + heightOffset);
                                  currentCell.message.frame = CGRectMake(18.f, -6.f, currentCell.message.frame.size.width + widthOffset, currentCell.message.frame.size.height + heightOffset);
@@ -325,7 +340,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                  actionbar.delegate = self;
                                  actionbar.likeCount.text = [postSelected.likes stringValue];
                                  actionbar.post = postSelected;
-                                 actionbar.rowNum  = indexPath.row;
+                                 actionbar.rowNum  = (int)indexPath.row;
                                  
                                  //check if this was liked before
                                  User *currentUser = [User currentUser];
@@ -369,6 +384,22 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     [self presentViewController:activityViewController animated:YES completion:nil];
 }
 
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    CGFloat contentOffsetWhenFullyScrolledDown = (self.totalViewHeight - scrollView.bounds.size.height) * .90f;
+    if (scrollView.contentOffset.y >= contentOffsetWhenFullyScrolledDown) {
+        
+        [Post retrieveRecentPostsFromGroup:self.group number:[self numberOfResultsToFetch] skipNumber:[self currentlyDisplayedPosts] completion:^(NSArray *objects, NSError *error) {
+            self.currentlyDisplayedPosts = [NSNumber numberWithInt:[self currentlyDisplayedPosts].intValue + (int)[objects count]];
+            NSMutableArray *newArray = [self.posts mutableCopy];
+            [newArray addObjectsFromArray:objects];
+            self.posts = newArray;
+            [self.postTable reloadData];
+        }];
+    }
+}
+
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%d", self.selectedRow);
     PostCell *cell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
@@ -390,6 +421,14 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 - (CGFloat)cellHeight:(NSIndexPath *)indexPath
 {
     Post *post = [self.posts objectAtIndex:indexPath.row];
+    return [self cellHeightWithPost:post];
+}
+
+- (CGFloat)cellLayoutHeight {
+    return 62;
+}
+
+- (CGFloat)cellHeightWithPost:(Post*)post {
     NSString *name = post.text;
     CGSize maximumLabelSize = CGSizeMake(270,9999);
     UIFont *font=[UIFont systemFontOfSize:14];
@@ -399,8 +438,9 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(320, [self cellHeight:indexPath] + 62);
+    return CGSizeMake(320, [self cellHeight:indexPath] + [self cellLayoutHeight]);
 }
+
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {

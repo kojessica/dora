@@ -56,8 +56,6 @@
       post.location = geoPoint;
     }
     [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        group.firstPost = 0;
-        
         [post objectId];
     }];
 }
@@ -74,6 +72,16 @@
     [query whereKey:@"groupId" equalTo:group.objectId];
     [query orderByDescending:@"createdAt"];
     query.limit = [number intValue];
+    [query findObjectsInBackgroundWithBlock:completion];
+    return;
+}
+
++(void) retrieveRecentPostsFromGroup:(Group*) group number:(NSNumber*)number skipNumber:(NSNumber*)skipNumber completion:(void (^) (NSArray* objects, NSError* error))completion {
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query whereKey:@"groupId" equalTo:group.objectId];
+    [query orderByDescending:@"createdAt"];
+    query.limit = [number intValue];
+    query.skip = [skipNumber intValue];
     [query findObjectsInBackgroundWithBlock:completion];
     return;
 }
