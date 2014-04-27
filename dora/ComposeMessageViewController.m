@@ -56,7 +56,7 @@
     if ([[self composedText].text length] > 0) {
         NSString *newkey = [Post setRandomKey];
         
-        [Post postWithUser:[User currentUser] group:[self group] text:[self composedText].text location:[[LocationController sharedLocationController] locationManager].location newKey:newkey];
+//        [Post postWithUser:[User currentUser] group:[self group] text:[self composedText].text location:[[LocationController sharedLocationController] locationManager].location newKey:newkey];
         [self dismissViewControllerAnimated:YES completion:nil];
         
         

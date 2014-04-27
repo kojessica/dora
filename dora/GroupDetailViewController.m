@@ -16,6 +16,7 @@
 #import "SearchResultsViewController.h"
 #import "UserActions.h"
 #import "GroupPickerViewController.h"
+#import "Parse/PFObject.h"
 #import "PopularListViewController.h"
 CGFloat widthOffset =30.f;
 CGFloat heightOffset = 55.f;
@@ -188,7 +189,13 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         [hud hide:YES afterDelay:1];
         
         NSDictionary *userInfo = [notification userInfo];
-        Post *post = [userInfo objectForKey:@"post"];
+        __block Post *post = [userInfo objectForKey:@"post"];
+        NSString *newkey = [Post setRandomKey];
+
+        [Post postWithUser:[User currentUser] group:[self group] text:post.text location:[[LocationController sharedLocationController] locationManager].location newKey:newkey completion:^(PFObject *result, NSError *error){
+            [self.posts setObject:result atIndexedSubscript:0];
+        }];
+        
         NSDate* currentDate = [NSDate date];
         post.updatedAt = currentDate;
         [self insertGhostPost:post];
@@ -202,10 +209,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
     [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
-//    [Post getPostWithNewKey:post.newKey completion:^(PFObject *object, NSError *error) {
-//        [self.posts setObject:object atIndexedSubscript:0];
-//    }];
-    
 }
 
 - (void)didReceiveMemoryWarning

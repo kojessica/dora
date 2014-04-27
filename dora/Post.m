@@ -60,6 +60,32 @@
     }];
 }
 
+
+
++(void) postWithUser:(User*)user group:(Group*)group text:(NSString*)content location:(CLLocation*) location newKey:(NSString *)newkey completion:(void(^) (PFObject *object, NSError *error))completion {
+    Post *post = [Post object];
+    
+    CLLocationCoordinate2D coordinate = [location coordinate];
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                  longitude:coordinate.longitude];
+    post.groupId = group.objectId;
+    post.text = content;
+    post.userId = [[User currentUser] objectId];
+    post.likes = [NSNumber numberWithInt:0];
+    post.dislikes = [NSNumber numberWithInt:0];
+    post.newKey = newkey;
+    post.popularity = [NSNumber numberWithInt:0];
+    post.age = [[User currentUser] age];
+    post.gender = [[User currentUser] gender];
+    
+    if(geoPoint != nil) {
+        post.location = geoPoint;
+    }
+    [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        completion(post, error);
+    }];
+}
+
 +(void)getPostWithNewKey:(NSString*)key completion:(void(^) (PFObject *object, NSError *error))completion {
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     [query whereKey:@"newKey" equalTo:key];

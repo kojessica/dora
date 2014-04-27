@@ -21,6 +21,8 @@
 +(void) retrieveRecentPostsFromGroup:(Group*) group number:(NSNumber*)number skipNumber:(NSNumber*)skipNumber completion:(void (^) (NSArray* objects, NSError* error))completion;
 +(void)getPostWithNewKey:(NSString*)key completion:(void(^) (PFObject *object, NSError *error))completion;
 +(void) postWithUser:(User*)user group:(Group*)group text:(NSString*)content location:(CLLocation*) location newKey:(NSString *)newkey;
++(void) postWithUser:(User*)user group:(Group*)group text:(NSString*)content location:(CLLocation*) location newKey:(NSString *)newkey completion:(void (^) (PFObject* object, NSError* error))completion;
+
 +(void) retrievePostsFromGroup:(Group*) group completion:(void (^) (NSArray* objects, NSError* error))completion;
 +(void) likePostWithId:(NSString*)postId;
 +(void) unlikePostWithId:(NSString*)postId;
