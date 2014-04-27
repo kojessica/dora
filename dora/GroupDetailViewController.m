@@ -190,15 +190,24 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         
         NSDictionary *userInfo = [notification userInfo];
         __block Post *post = [userInfo objectForKey:@"post"];
-        NSString *newkey = [Post setRandomKey];
+        __block NSString *newkey = [Post setRandomKey];
 
-        [Post postWithUser:[User currentUser] group:[self group] text:post.text location:[[LocationController sharedLocationController] locationManager].location newKey:newkey completion:^(PFObject *result, NSError *error){
-            [self.posts setObject:result atIndexedSubscript:0];
-        }];
+
         
         NSDate* currentDate = [NSDate date];
         post.updatedAt = currentDate;
+        post.newKey = newkey;
         [self insertGhostPost:post];
+        [Post postWithUser:[User currentUser] group:[self group] text:post.text location:[[LocationController sharedLocationController] locationManager].location newKey:newkey completion:^(PFObject *result, NSError *error){
+            NSUInteger count = 0;
+            for (Post *existingPost in self.posts) {
+                if([existingPost.newKey isEqualToString:newkey]) {
+                    break;
+                }
+                count++;
+            }
+            [self.posts setObject:result atIndexedSubscript:count];
+        }];
     }
 }
 
