@@ -26,7 +26,7 @@ CGFloat newHeight = 107.f;
 
 @interface GroupDetailViewController ()
 
-@property (nonatomic,strong) NSMutableArray *posts;
+@property (atomic,strong) NSMutableArray *posts;
 @property (nonatomic,strong) CMPopTipView *popTipView;
 @property (assign, nonatomic) int selectedRow;
 @property (nonatomic, strong) NSNumber* currentlyDisplayedPosts;
@@ -72,7 +72,11 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     [refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
     [self.postTable addSubview:refreshControl];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    
+    [[NSNotificationCenter defaultCenter]
+               addObserver:self
+               selector:@selector(didReceivePushNotification:)
+               name:UIApplicationDidReceiveRemoteNotification
+               object:nil];
     self.writeButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
     self.groupLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
     [self.groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.name]];
@@ -195,9 +199,9 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
     [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
-    [Post getPostWithNewKey:post.newKey completion:^(PFObject *object, NSError *error) {
-        [self.posts setObject:object atIndexedSubscript:0];
-    }];
+//    [Post getPostWithNewKey:post.newKey completion:^(PFObject *object, NSError *error) {
+//        [self.posts setObject:object atIndexedSubscript:0];
+//    }];
     
 }
 
@@ -219,6 +223,35 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
             [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
         }];
     }
+}
+
+- (void)didReceivePushNotification:(NSNotification *)notification {
+      NSDictionary *userInfo = [notification userInfo];
+      if (self.isViewLoaded && self.view.window) {
+          Post *post = [Post object];
+          post.text = [userInfo objectForKey:@"text"];
+          post.objectId = [userInfo objectForKey:@"objectId"];
+          post.groupId = [userInfo objectForKey:@"groupId"];
+          post.userId = [userInfo objectForKey:@"userId"];
+          [self insertPostIntoTable:post];
+      }
+  }
+
+- (void)insertPostIntoTable:(Post*)post {
+      CGPoint offset = self.postTable.contentOffset;
+      NSMutableArray* posts = [self.posts mutableCopy];
+      offset.y += [self cellHeightWithPost:post] + [self cellLayoutHeight];
+      [posts insertObject:post atIndex:0];
+      self.posts = posts;
+      NSIndexPath *path1 = [NSIndexPath indexPathForRow:0 inSection:0];
+      NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
+  
+      [self.postTable insertItemsAtIndexPaths:indexArray];
+      [self.postTable performBatchUpdates:^{
+          [self.postTable reloadData];
+          [self.postTable setContentOffset:offset animated:true];
+      } completion:^(BOOL finished) {}];
+  
 }
 
 - (IBAction)onCompose:(id)sender {
