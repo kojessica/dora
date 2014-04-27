@@ -7,7 +7,6 @@ Parse.Cloud.afterSave("Post", function(request) {
 	        group.set("secondPost", group.get("firstPost"));
 	        group.set("firstPost", request.object.get("text"));
 	    	group.save();
-    	}
     	Parse.Push.send({
 		channels: [ group.get("name") ],
 		data: {
@@ -25,6 +24,8 @@ Parse.Cloud.afterSave("Post", function(request) {
 		console.log(err);
 		}
 		});
+
+    	}
 
     },
     error: function(error) {
