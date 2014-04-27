@@ -230,7 +230,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 - (void)didReceivePushNotification:(NSNotification *)notification {
     NSDictionary *userInfo = [notification userInfo];
-    if (self.isViewLoaded && self.view.window && [userInfo objectForKey:@"userId"]!= [[User currentUser] objectId]) {
+    if (self.isViewLoaded && self.view.window && ![[userInfo objectForKey:@"userId"] isEqualToString:[[User currentUser] objectId]]) {
         Post *post = [Post object];
         post.text = [userInfo objectForKey:@"text"];
         post.objectId = [userInfo objectForKey:@"objectId"];
