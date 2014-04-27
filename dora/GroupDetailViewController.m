@@ -226,31 +226,29 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 }
 
 - (void)didReceivePushNotification:(NSNotification *)notification {
-      NSDictionary *userInfo = [notification userInfo];
-      if (self.isViewLoaded && self.view.window) {
-          Post *post = [Post object];
-          post.text = [userInfo objectForKey:@"text"];
-          post.objectId = [userInfo objectForKey:@"objectId"];
-          post.groupId = [userInfo objectForKey:@"groupId"];
-          post.userId = [userInfo objectForKey:@"userId"];
-          [self insertPostIntoTable:post];
-      }
+    NSDictionary *userInfo = [notification userInfo];
+    if (self.isViewLoaded && self.view.window) {
+        Post *post = [Post object];
+        post.text = [userInfo objectForKey:@"text"];
+        post.objectId = [userInfo objectForKey:@"objectId"];
+        post.groupId = [userInfo objectForKey:@"groupId"];
+        post.userId = [userInfo objectForKey:@"userId"];
+        [self insertPostIntoTable:post];
+    }
   }
 
 - (void)insertPostIntoTable:(Post*)post {
-      CGPoint offset = self.postTable.contentOffset;
-      NSMutableArray* posts = [self.posts mutableCopy];
-      offset.y += [self cellHeightWithPost:post] + [self cellLayoutHeight];
-      [posts insertObject:post atIndex:0];
-      self.posts = posts;
-      NSIndexPath *path1 = [NSIndexPath indexPathForRow:0 inSection:0];
-      NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
+    CGPoint offset = self.postTable.contentOffset;
+    NSMutableArray* posts = [self.posts mutableCopy];
+    offset.y += [self cellHeightWithPost:post] + [self cellLayoutHeight];
+    [posts insertObject:post atIndex:0];
+    self.posts = posts;
+    NSIndexPath *path1 = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
   
-      [self.postTable insertItemsAtIndexPaths:indexArray];
-      [self.postTable performBatchUpdates:^{
-          [self.postTable reloadData];
-          [self.postTable setContentOffset:offset animated:true];
-      } completion:^(BOOL finished) {}];
+    [self.postTable insertItemsAtIndexPaths:indexArray];
+    [self.postTable reloadData];
+    [self.postTable setContentOffset:offset animated:true];
   
 }
 
