@@ -772,4 +772,11 @@
 	return self;
 }
 
+- (void) setNewMessage:(NSString*) message {
+    if (self) {
+      self.message = message;
+    [self setNeedsDisplay];
+    }
+}
+
 @end

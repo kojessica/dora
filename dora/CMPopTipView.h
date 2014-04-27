@@ -142,6 +142,7 @@ typedef enum {
 - (void)dismissAnimated:(BOOL)animated;
 - (void)autoDismissAnimated:(BOOL)animated atTimeInterval:(NSTimeInterval)timeInvertal;
 - (PointDirection) getPointDirection;
+- (void)setNewMessage:(NSString*)message;
 
 @end
 

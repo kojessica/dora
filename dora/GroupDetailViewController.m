@@ -28,7 +28,9 @@ CGFloat newHeight = 107.f;
 
 @property (atomic,strong) NSMutableArray *posts;
 @property (nonatomic,strong) CMPopTipView *popTipView;
+@property (nonatomic,strong) CMPopTipView *receivedPostCounterView;
 @property (assign, nonatomic) int selectedRow;
+@property (assign, nonatomic) int numberOfNewPosts;
 @property (nonatomic, strong) NSNumber* currentlyDisplayedPosts;
 @property (nonatomic, strong) NSNumber* numberOfResultsToFetch;
 @property (assign, nonatomic) NSIndexPath *previousHighlightedIndexPath;
@@ -62,6 +64,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.previousHighlightedIndexPath = nil;
     self.selectedRow = -1;
     self.totalViewHeight = 0;
+    self.numberOfNewPosts = 0;
     
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
@@ -248,8 +251,57 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
   
     [self.postTable insertItemsAtIndexPaths:indexArray];
     [self.postTable reloadData];
-    [self.postTable setContentOffset:offset animated:true];
-  
+    [UIView animateWithDuration:0.05 animations:^{
+        [self.postTable setContentOffset:offset];
+    }completion:^(BOOL finished) {
+        self.numberOfNewPosts = self.numberOfNewPosts+1;
+        if(self.numberOfNewPosts > 1) {
+            [self updateNewPostLabel];
+        }
+        else {
+            [self showNewPostLabel];
+        }
+    }];
+    
+}
+
+- (void)updateNewPostLabel {
+    [self.receivedPostCounterView setNewMessage:[NSString stringWithFormat:@"%i new posts", self.numberOfNewPosts]];
+}
+
+- (void)showNewPostLabel {
+    self.receivedPostCounterView = [[CMPopTipView alloc] initWithMessage:[NSString stringWithFormat:@"%i new posts", self.numberOfNewPosts]];
+    self.receivedPostCounterView.delegate = self;
+    self.receivedPostCounterView.backgroundColor = [UIColor colorWithRed:40.0/255.0 green:169.0/255.0 blue:188.0/255.0 alpha:1];
+    self.receivedPostCounterView.borderWidth = 0;
+    self.receivedPostCounterView.textColor = [UIColor whiteColor];
+    self.receivedPostCounterView.animation = 0.5;
+    self.receivedPostCounterView.has3DStyle = NO;
+    self.receivedPostCounterView.hasShadow = NO;
+    self.receivedPostCounterView.hasGradientBackground = NO;
+    self.receivedPostCounterView.pointerSize = 8.f;
+    self.receivedPostCounterView.topMargin = -5.f;
+    self.receivedPostCounterView.textFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:12];
+    self.receivedPostCounterView.dismissTapAnywhere = NO;
+    self.receivedPostCounterView.pointerSize = 0;
+    [self.receivedPostCounterView presentPointingAtView:self.receivedPostView inView:self.receivedPostView animated:YES];
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if(self.numberOfNewPosts > 0) {
+        CGFloat currentPosition = [scrollView contentOffset].y;
+        CGFloat newPostOffset = 0;
+        for (int i = 0; i < self.numberOfNewPosts; i++) {
+            CGFloat rowHeight = [self cellHeightWithPost:self.posts[i]] + [self cellLayoutHeight];
+            newPostOffset += rowHeight;
+            if(newPostOffset-50 >= currentPosition) {
+                self.numberOfNewPosts = i;
+                [self updateNewPostLabel];
+            }
+            if(self.numberOfNewPosts == 0) {
+                [self.receivedPostCounterView setHidden:YES];
+            }
+        }
+    }
 }
 
 - (IBAction)onCompose:(id)sender {

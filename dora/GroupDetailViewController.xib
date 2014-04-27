@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -7,7 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupDetailViewController">
             <connections>
                 <outlet property="groupLabel" destination="y7u-KG-3yR" id="vDA-Ut-KUK"/>
+                <outlet property="mainContentView" destination="gxv-5P-Ca3" id="5la-hT-ic9"/>
                 <outlet property="postTable" destination="APu-Bs-m6k" id="vqN-hf-3y9"/>
+                <outlet property="receivedPostView" destination="Og2-aA-CvL" id="fzN-ne-q3r"/>
                 <outlet property="subscribeButton" destination="YIH-VZ-LXO" id="5h9-oz-jrc"/>
                 <outlet property="topBar" destination="9i4-1v-g4h" id="L3b-sR-0g5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -65,6 +67,10 @@
                                 <action selector="onSubscribeButton:" destination="-1" eventType="touchUpInside" id="L2F-zn-0mj"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Og2-aA-CvL">
+                            <rect key="frame" x="216" y="45" width="110" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.20000001788139343" green="0.20000001788139343" blue="0.20000001788139343" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
