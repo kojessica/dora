@@ -106,6 +106,18 @@ static User *currentUser = nil;
     [User persistUser:currentUser];
 }
 
++ (PFGeoPoint*)getLocation{
+    CLLocation *location = [LocationController sharedLocationController].location;
+    if(location != nil) {
+        CLLocationCoordinate2D coordinate = [location coordinate];
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                      longitude:coordinate.longitude];
+        currentUser.location = geoPoint;
+        return geoPoint;
+    }
+    return nil;
+}
+
 + (void)updateLikedPosts:(NSString *)postId ByIncrement:(BOOL)increment {
     NSMutableArray *tempArray = [currentUser.likedPosts mutableCopy];
     if (increment) {

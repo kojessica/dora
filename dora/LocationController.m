@@ -16,9 +16,10 @@ static LocationController* sharedCLDelegate = nil;
 {
     self = [super init];
     if (self != nil) {
-//        self.locationManager = [[CLLocationManager alloc] init];
-//        self.locationManager.delegate = self;
-//        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        [locationManager startMonitoringSignificantLocationChanges];
     }
     return self;
 }
@@ -31,6 +32,11 @@ static LocationController* sharedCLDelegate = nil;
 {
     /* ... */
 }
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    self.location = locations[0];
+}
+
 + (LocationController *)sharedLocationController
 {
     static LocationController *sharedLocationControllerInstance = nil;
