@@ -502,11 +502,11 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     
     //Check to see if this is a ghost post
     if (postSelected.objectId == nil) {
-        [Post getPostWithNewKey:postSelected.newKey completion:^(PFObject *object, NSError *error) {
+        /*[Post getPostWithNewKey:postSelected.newKey completion:^(PFObject *object, NSError *error) {
             postSelected.objectId = object.objectId;
             NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, nil];
             [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
-        }];
+        }];*/
     } else {
         NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, collectionView, nil];
         [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
