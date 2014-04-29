@@ -16,10 +16,10 @@ static LocationController* sharedCLDelegate = nil;
 {
     self = [super init];
     if (self != nil) {
-        self.locationManager = [[CLLocationManager alloc] init];
-        self.locationManager.delegate = self;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        [locationManager startMonitoringSignificantLocationChanges];
+//        self.locationManager = [[CLLocationManager alloc] init];
+//        self.locationManager.delegate = self;
+//        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+//        [locationManager startMonitoringSignificantLocationChanges];
     }
     return self;
 }
@@ -40,6 +40,7 @@ static LocationController* sharedCLDelegate = nil;
 + (LocationController *)sharedLocationController
 {
     static LocationController *sharedLocationControllerInstance = nil;
+    if(sharedLocationControllerInstance) return sharedLocationControllerInstance;
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
         sharedLocationControllerInstance = [[self alloc] init];
