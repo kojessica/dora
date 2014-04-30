@@ -31,7 +31,8 @@
         [Post unlikePostWithId:self.post.objectId];
         [User updateLikedPosts:self.post.objectId ByIncrement:NO];
         float decremented = [self.post.likes integerValue] - 1;
-        self.likeCount.text = [NSString stringWithFormat:(@"%f"), decremented];
+        int decreInt = (int) decremented;
+        self.likeCount.text = [NSString stringWithFormat:(@"%d"), decreInt];
         
         [sender setImage:[UIImage imageNamed:@"heart_white_empty.png"] forState:UIControlStateNormal];
         [sender setSelected:NO];
@@ -40,7 +41,9 @@
         [Post likePostWithId:self.post.objectId];
         [User updateLikedPosts:self.post.objectId ByIncrement:YES];
         float incremented = [self.post.likes integerValue] + 1;
-        self.likeCount.text = [NSString stringWithFormat:(@"%f"), incremented];
+        int increInt = (int) incremented;
+        
+        self.likeCount.text = [NSString stringWithFormat:(@"%d"), increInt];
         
         [sender setImage:[UIImage imageNamed:@"heart_selected_icon.png"] forState:UIControlStateSelected];
         
