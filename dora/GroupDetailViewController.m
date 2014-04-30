@@ -27,7 +27,7 @@ CGFloat newHeight = 107.f;
 
 @interface GroupDetailViewController ()
 
-@property (atomic,strong) NSMutableArray *posts;
+@property (atomic,strong) __block NSMutableArray *posts;
 @property (nonatomic,strong) CMPopTipView *popTipView;
 @property (nonatomic,strong) CMPopTipView *receivedPostCounterView;
 @property (assign, nonatomic) int selectedRow;
@@ -199,14 +199,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         post.newKey = newkey;
         [self insertGhostPost:post];
         [Post postWithUser:[User currentUser] group:[self group] text:post.text location:nil newKey:newkey completion:^(PFObject *result, NSError *error){
-            NSUInteger count = 0;
-            for (Post *existingPost in self.posts) {
-                if([existingPost.newKey isEqualToString:newkey]) {
-                    break;
-                }
-                count++;
-            }
-            [self.posts setObject:result atIndexedSubscript:count];
+            [self.posts setObject:result atIndexedSubscript:0];
         }];
     }
 }
@@ -502,11 +495,11 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     
     //Check to see if this is a ghost post
     if (postSelected.objectId == nil) {
-        /*[Post getPostWithNewKey:postSelected.newKey completion:^(PFObject *object, NSError *error) {
+        [Post getPostWithNewKey:postSelected.newKey completion:^(PFObject *object, NSError *error) {
             postSelected.objectId = object.objectId;
-            NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, nil];
+            NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, collectionView, nil];
             [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
-        }];*/
+        }];
     } else {
         NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, collectionView, nil];
         [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
