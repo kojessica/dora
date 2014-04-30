@@ -73,11 +73,23 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
-    NSLog(@"%@", textField.text);
-    if ([textField.text length] > 0) {
+    //NSLog(@"%@", textField.text);
+    
+    NSArray* words = [textField.text componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceCharacterSet]];
+    NSString* searchStringWithNoSpace = [words componentsJoinedByString:@""];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self matches[cd] %@", searchStringWithNoSpace];
+    NSArray *matching = [self.groupsNames filteredArrayUsingPredicate:predicate];
+    
+    if ([textField.text length] > 0 && [matching count] == 0) {
         NSArray* words = [textField.text componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceCharacterSet]];
         NSString* searchStringWithNoSpace = [words componentsJoinedByString:@""];
         [self createNewGroup:searchStringWithNoSpace];
+    } else {
+        NSLog(@"matching: %@", [matching objectAtIndex:0]);
+        [User setUserGroup:[matching objectAtIndex:0]];
+        [User updateRelevantGroupsByName:[matching objectAtIndex:0] WithSubscription:YES];
+        [self loadHomeView];
     }
     return YES;
 }
