@@ -831,7 +831,7 @@
 			baseConfigurationReference = 72389DFA6F9A400CA5442D87 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.dora.com";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jessica Ko (TC99698G6R)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1011,7 +1011,7 @@
 			baseConfigurationReference = 72389DFA6F9A400CA5442D87 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.dora.com";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jessica Ko (TC99698G6R)";
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

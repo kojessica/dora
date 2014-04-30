@@ -60,7 +60,7 @@
 }
 
 - (IBAction)onBackButton:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
 }
 
