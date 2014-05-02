@@ -199,7 +199,15 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         post.newKey = newkey;
         [self insertGhostPost:post];
         [Post postWithUser:[User currentUser] group:[self group] text:post.text location:nil newKey:newkey completion:^(PFObject *result, NSError *error){
-            [self.posts setObject:result atIndexedSubscript:0];
+            NSUInteger count = 0;
+                        for (Post *existingPost in self.posts) {
+                                if([existingPost.newKey isEqualToString:newkey]) {
+                                        break;
+                                    }
+                                count++;
+                            }
+                        [self.posts setObject:result atIndexedSubscript:count];
+           // [self.posts setObject:result atIndexedSubscript:0];
         }];
     }
 }
