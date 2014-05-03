@@ -16,6 +16,7 @@
 -(void)didLikePost:(int)rowNum;
 -(void)didUnlikePost:(int)rowNum;
 -(void)shareThisPost:(Post *)post;
+-(void)flagThisPost:(int)rowNum;
 
 @end
 
@@ -31,5 +32,6 @@
 
 - (IBAction)onLikeButton:(id)sender;
 - (IBAction)onShareButton:(id)sender;
+- (IBAction)onFlagButton:(id)sender;
 
 @end

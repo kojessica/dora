@@ -25,6 +25,7 @@
 
 +(void) retrievePostsFromGroup:(Group*) group completion:(void (^) (NSArray* objects, NSError* error))completion;
 +(void) likePostWithId:(NSString*)postId;
++(void) flagPostWithId:(NSString*)postId;
 +(void) unlikePostWithId:(NSString*)postId;
 +(void) dislikePostWithId:(NSString*)postId;
 +(void) setPopularityWithNumber:(NSNumber*)popularity;
@@ -32,6 +33,7 @@
 @property (retain) NSString *userId;
 @property (retain) NSString *groupId;
 @property (retain) NSNumber *likes;
+@property (retain) NSNumber *flags;
 @property (retain) NSNumber *dislikes;
 @property (retain) PFGeoPoint *location;
 @property (strong, nonatomic) NSDate *updatedAt;
