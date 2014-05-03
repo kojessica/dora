@@ -10,6 +10,7 @@
 #import "Group.h"
 #import "UserActions.h"
 #import "Post.h"
+#import "ADLivelyCollectionView.h"
 #import "CMPopTipView.h"
 
 @interface GroupDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UserActionsDelegate, CMPopTipViewDelegate, UIScrollViewDelegate>
@@ -22,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *subscribeButton;
 @property (weak, nonatomic) IBOutlet UILabel *groupLabel;
 @property (strong, nonatomic) Group *group;
-@property (weak, nonatomic) IBOutlet UICollectionView *postTable;
+@property (strong, nonatomic) IBOutlet ADLivelyCollectionView *postTable;
 @property (strong, nonatomic) NSString *parentController;
 - (IBAction)onCompose:(id)sender;
 - (IBAction)onSubscribeButton:(id)sender;

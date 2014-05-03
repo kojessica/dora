@@ -66,9 +66,14 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.selectedRow = -1;
     self.totalViewHeight = 0;
     self.numberOfNewPosts = 0;
-    
+
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
+    [self.postTable setInitialCellTransformBlock:ADLivelyTransformFade];
+    
+    
+    
+//    [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
     self.numberOfResultsToFetch = [NSNumber numberWithInt:20];
     self.currentlyDisplayedPosts = [NSNumber numberWithInt:0];
     
@@ -126,6 +131,10 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                              selector:@selector(receiveNotification:)
                                                  name:@"newPostUploaded"
                                                object:nil];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return NO;
 }
 
 - (void)showSubscribeHelper:(NSString *)content {
@@ -200,14 +209,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         [self insertGhostPost:post];
         [Post postWithUser:[User currentUser] group:[self group] text:post.text location:nil newKey:newkey completion:^(PFObject *result, NSError *error){
             NSUInteger count = 0;
-                        for (Post *existingPost in self.posts) {
-                                if([existingPost.newKey isEqualToString:newkey]) {
-                                        break;
-                                    }
-                                count++;
-                            }
-                        [self.posts setObject:result atIndexedSubscript:count];
-           // [self.posts setObject:result atIndexedSubscript:0];
+
+            [self.posts setObject:result atIndexedSubscript:0];
         }];
     }
 }
