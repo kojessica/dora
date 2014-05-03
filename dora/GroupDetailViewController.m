@@ -68,7 +68,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.selectedRow = -1;
     self.totalViewHeight = 0;
     self.numberOfNewPosts = 0;
-    
+
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
     self.numberOfResultsToFetch = [NSNumber numberWithInt:20];
@@ -132,6 +132,10 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                              selector:@selector(receiveNotification:)
                                                  name:@"flagThisPost"
                                                object:nil];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return NO;
 }
 
 - (void)showSubscribeHelper:(NSString *)content {
