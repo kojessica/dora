@@ -44,6 +44,8 @@
     self.formController.form = [[SettingForm alloc] init];
     [self.notifySwitch setOn:YES animated:YES];
     [self.locationSwitch setOn:YES animated:YES];
+    self.header.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
+    self.showLabel.font = [UIFont fontWithName:@"ProximaNovaRegular" size:13];
 }
 
 - (void)viewWillAppear:(BOOL)animated

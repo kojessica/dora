@@ -21,6 +21,7 @@
 + (void)setUserGender:(NSNumber *)gender;
 + (void)persistUser:(User *)user;
 + (void)setUserNickname:(NSString *)nickname;
++ (void)updateFlaggedPosts:(NSString *)postId;
 + (void)updateLikedPosts:(NSString *)postId ByIncrement:(BOOL)increment;
 + (void)updateRelevantGroupsByName:(NSString *)groupName WithSubscription:(BOOL)subscription;
 @property (retain) NSString *nickname;
@@ -31,5 +32,6 @@
 @property (strong,nonatomic) NSArray *likedPosts;
 @property (strong,nonatomic) NSArray *subscribedGroups;
 @property (strong,nonatomic) NSArray *unsubscribedGroups;
+@property (strong,nonatomic) NSArray *flaggedPosts;
 @property (retain) PFGeoPoint *location;
 @end

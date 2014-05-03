@@ -50,6 +50,8 @@
 
 - (IBAction)onDone:(id)sender {
     if (self.isSelected) {
+        [Post flagPostWithId:self.post.objectId];
+        
         NSMutableDictionary* userInfo = [NSMutableDictionary dictionary];
         [userInfo setObject:self.post.objectId forKey:@"postId"];
         

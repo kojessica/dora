@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UISwitch *notifySwitch;
 @property (nonatomic, strong) FXFormController *formController;
 @property (weak, nonatomic) IBOutlet UISwitch *locationSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *header;
+@property (weak, nonatomic) IBOutlet UILabel *showLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *hide1;
 @property (weak, nonatomic) IBOutlet UIView *hide2;

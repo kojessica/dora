@@ -25,13 +25,13 @@
 @dynamic likedPosts;
 @dynamic subscribedGroups;
 @dynamic unsubscribedGroups;
+@dynamic flaggedPosts;
 //static CLLocationManager *_locationManager;
 
 static User *currentUser = nil;
 + (NSString *)parseClassName {
     return @"Users";
 }
-
 
 + (User *)currentUser {
     if (currentUser == nil) {
@@ -67,6 +67,7 @@ static User *currentUser = nil;
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     currentUser.subscribedGroups = [NSArray arrayWithArray:tempArray];
     currentUser.unsubscribedGroups = [NSArray arrayWithArray:tempArray];
+    currentUser.flaggedPosts = [NSArray arrayWithArray:tempArray];
     
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         currentUser.objectId = [currentUser objectId];
@@ -126,6 +127,16 @@ static User *currentUser = nil;
         [tempArray removeObject:postId];
     }
     currentUser.likedPosts = [NSArray arrayWithArray:tempArray];
+    [User persistUser:currentUser];
+}
+
++ (void)updateFlaggedPosts:(NSString *)postId {
+    NSMutableArray *tempArray = [currentUser.flaggedPosts mutableCopy];
+    [tempArray addObject:postId];
+    currentUser.flaggedPosts = [NSArray arrayWithArray:tempArray];
+    
+    NSLog(@"%@", currentUser.flaggedPosts);
+    
     [User persistUser:currentUser];
 }
 

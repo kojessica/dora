@@ -28,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.header.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
+    self.selectLabel.font = [UIFont fontWithName:@"ProximaNovaRegular" size:13];
 }
 
 - (void)didReceiveMemoryWarning

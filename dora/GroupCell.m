@@ -50,6 +50,12 @@
     } else {
         self.secondPost.text = @"";
     }
+    
+    self.topView.layer.cornerRadius = 2;
+    self.topView.layer.masksToBounds = YES;
+    
+    self.bottomView.layer.cornerRadius = 2;
+    self.bottomView.layer.masksToBounds = YES;
 }
 
 @end

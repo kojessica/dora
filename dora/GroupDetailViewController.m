@@ -214,20 +214,28 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         post.newKey = newkey;
         [self insertGhostPost:post];
         [Post postWithUser:[User currentUser] group:[self group] text:post.text location:nil newKey:newkey completion:^(PFObject *result, NSError *error){
-            NSUInteger count = 0;
-                        for (Post *existingPost in self.posts) {
-                                if([existingPost.newKey isEqualToString:newkey]) {
-                                        break;
-                                    }
-                                count++;
-                            }
-                        [self.posts setObject:result atIndexedSubscript:count];
-           // [self.posts setObject:result atIndexedSubscript:0];
+//            NSUInteger count = 0;
+//                        for (Post *existingPost in self.posts) {
+//                                if([existingPost.newKey isEqualToString:newkey]) {
+//                                        break;
+//                                    }
+//                                count++;
+//                            }
+//                        [self.posts setObject:result atIndexedSubscript:count];
+            [self.posts setObject:result atIndexedSubscript:0];
         }];
     } else if ([[notification name] isEqualToString:@"flagThisPost"]) {
-        [self remove:self.selectedRow];
-        self.selectedRow = -1;
-        self.previousHighlightedIndexPath = nil;
+        
+        Post *flaggedPost = [self.posts objectAtIndex:self.selectedRow];
+        [User updateFlaggedPosts:flaggedPost.objectId];
+        
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDModeText;
+        hud.labelText = [NSString stringWithFormat:@"%@\n%@", @"Thanks for the report!", @"We're on it."];
+        hud.margin = 15.f;
+        hud.yOffset = 150.f;
+        hud.removeFromSuperViewOnHide = YES;
+        [hud hide:YES afterDelay:2];
     }
 }
 
@@ -313,7 +321,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.receivedPostCounterView.hasGradientBackground = NO;
     self.receivedPostCounterView.pointerSize = 8.f;
     self.receivedPostCounterView.topMargin = -5.f;
-    self.receivedPostCounterView.textFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:12];
+    self.receivedPostCounterView.textFont = [UIFont fontWithName:@"ProximaNovaBold" size:12];
     self.receivedPostCounterView.dismissTapAnywhere = NO;
     self.receivedPostCounterView.pointerSize = 0;
     [self.receivedPostCounterView presentPointingAtView:self.receivedPostView inView:self.receivedPostView animated:YES];
@@ -387,6 +395,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     UICollectionView *collectionView = [arrayOfThings objectAtIndex:3];
     
     [self.postTable.collectionViewLayout invalidateLayout];
+    NSLog(@"%@", self.previousHighlightedIndexPath);
+    
     
     //if the same cell was reselected
     if ((self.selectedRow == indexPath.row) && (self.previousHighlightedIndexPath != nil)) {

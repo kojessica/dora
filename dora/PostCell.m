@@ -9,6 +9,7 @@
 #import "PostCell.h"
 #import "User.h"
 #import "Timestamp.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation PostCell
 
@@ -44,7 +45,7 @@
         }
     }
     
-    self.postView.layer.cornerRadius = 1;
+    self.postView.layer.cornerRadius = 2;
     self.postView.layer.masksToBounds = YES;
     return self;
 }

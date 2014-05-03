@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -82,7 +82,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KA1-Dg-Cuk">
                         <rect key="frame" x="5" y="50" width="310" height="143"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="0.92000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="0.83999999999999997" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="310" id="QvK-8X-N0g"/>
                         </constraints>
@@ -125,10 +125,12 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="bottomView" destination="KA1-Dg-Cuk" id="pQS-FH-3sy"/>
                 <outlet property="firstPost" destination="faz-k3-yvO" id="0zd-mp-eUu"/>
                 <outlet property="lastUpdated" destination="LRi-PD-sfw" id="fnp-tv-Zz6"/>
                 <outlet property="name" destination="Z3b-24-wFD" id="apL-Ty-hkk"/>
                 <outlet property="secondPost" destination="8j4-m4-3dO" id="xeM-qq-jmD"/>
+                <outlet property="topView" destination="NgA-Zq-1QS" id="sLf-gs-CTV"/>
                 <outlet property="totalPost" destination="Lm4-Fw-paM" id="GDs-OU-yxs"/>
                 <outlet property="wrapper" destination="Z3b-24-wFD" id="baC-jQ-mwJ"/>
             </connections>
