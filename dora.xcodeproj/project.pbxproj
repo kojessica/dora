@@ -88,6 +88,7 @@
 		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
 		47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */; };
 		47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */; };
+		47D5FA2019158C2500D7C492 /* GroupDetailCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D5FA1F19158C2500D7C492 /* GroupDetailCollectionViewLayout.m */; };
 		47D812951904889700268220 /* Timestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D812911904889700268220 /* Timestamp.m */; };
 		47D812961904889700268220 /* UserActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D812931904889700268220 /* UserActions.m */; };
 		47D812971904889700268220 /* UserActions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D812941904889700268220 /* UserActions.xib */; };
@@ -222,6 +223,8 @@
 		47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeMessageViewController.xib; sourceTree = "<group>"; };
 		47C1067718F9B99100EE78F2 /* ComposeMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeMessageViewController.h; sourceTree = "<group>"; };
 		47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeMessageViewController.m; sourceTree = "<group>"; };
+		47D5FA1E19158C2500D7C492 /* GroupDetailCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupDetailCollectionViewLayout.h; sourceTree = "<group>"; };
+		47D5FA1F19158C2500D7C492 /* GroupDetailCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDetailCollectionViewLayout.m; sourceTree = "<group>"; };
 		47D812901904889700268220 /* Timestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timestamp.h; sourceTree = "<group>"; };
 		47D812911904889700268220 /* Timestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timestamp.m; sourceTree = "<group>"; };
 		47D812921904889700268220 /* UserActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserActions.h; sourceTree = "<group>"; };
@@ -428,6 +431,8 @@
 				123D2BA919149D17005AFD8B /* FlagViewController.h */,
 				123D2BAA19149D17005AFD8B /* FlagViewController.m */,
 				123D2BAB19149D17005AFD8B /* FlagViewController.xib */,
+				47D5FA1E19158C2500D7C492 /* GroupDetailCollectionViewLayout.h */,
+				47D5FA1F19158C2500D7C492 /* GroupDetailCollectionViewLayout.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -678,6 +683,7 @@
 				129D763718FB6BA8003EB2E7 /* SettingsViewController.m in Sources */,
 				129D765A1901A9B4003EB2E7 /* SettingOptionsViewController.m in Sources */,
 				474D351818FD052C00028F29 /* NSObject+Properties.m in Sources */,
+				47D5FA2019158C2500D7C492 /* GroupDetailCollectionViewLayout.m in Sources */,
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,
 				129D761F18F9DAEE003EB2E7 /* TabsController.m in Sources */,
 				126B185218EBAEAB005A8475 /* main.m in Sources */,
