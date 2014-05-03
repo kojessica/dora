@@ -71,11 +71,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
-    [self.postTable setInitialCellTransformBlock:ADLivelyTransformFade];
-    
-    
-    
-//    [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
     self.numberOfResultsToFetch = [NSNumber numberWithInt:20];
     self.currentlyDisplayedPosts = [NSNumber numberWithInt:0];
     
