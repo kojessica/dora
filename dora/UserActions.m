@@ -78,4 +78,8 @@
     [self.delegate shareThisPost:self.post];
 }
 
+- (IBAction)onFlagButton:(id)sender {
+    [self.delegate flagThisPost:self.rowNum];
+}
+
 @end

@@ -14,6 +14,7 @@
 @dynamic userId;
 @dynamic groupId;
 @dynamic likes;
+@dynamic flags;
 @dynamic dislikes;
 @dynamic location;
 @dynamic updatedAt;
@@ -46,6 +47,7 @@
     post.text = content;
     post.userId = [[User currentUser] objectId];
     post.likes = [NSNumber numberWithInt:0];
+    post.flags = [NSNumber numberWithInt:0];
     post.dislikes = [NSNumber numberWithInt:0];
     post.popularity = [NSNumber numberWithInt:0];
     post.newKey = newkey;
@@ -72,6 +74,7 @@
     post.text = content;
     post.userId = [[User currentUser] objectId];
     post.likes = [NSNumber numberWithInt:0];
+    post.flags = [NSNumber numberWithInt:0];
     post.dislikes = [NSNumber numberWithInt:0];
     post.newKey = newkey;
     post.popularity = [NSNumber numberWithInt:0];
@@ -133,6 +136,15 @@
     [query whereKey:@"objectId" equalTo:postId];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         [object incrementKey:@"likes" byAmount:[NSNumber numberWithInt:-1]];
+        [object saveInBackground];
+    }];
+}
+
++(void) flagPostWithId:(NSString*)postId {
+    PFQuery *query = [Post query];
+    [query whereKey:@"objectId" equalTo:postId];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        [object incrementKey:@"flags"];
         [object saveInBackground];
     }];
 }

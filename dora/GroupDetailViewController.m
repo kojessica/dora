@@ -18,6 +18,8 @@
 #import "GroupPickerViewController.h"
 #import "Parse/PFObject.h"
 #import "PopularListViewController.h"
+#import "FlagViewController.h"
+
 CGFloat widthOffset =30.f;
 CGFloat heightOffset = 55.f;
 CGFloat defaultWidth = 304.f;
@@ -126,6 +128,10 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                              selector:@selector(receiveNotification:)
                                                  name:@"newPostUploaded"
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)
+                                                 name:@"flagThisPost"
+                                               object:nil];
 }
 
 - (void)showSubscribeHelper:(NSString *)content {
@@ -140,7 +146,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.popTipView.hasGradientBackground = NO;
     self.popTipView.pointerSize = 8.f;
     self.popTipView.topMargin = -5.f;
-    self.popTipView.textFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:12];
+    self.popTipView.textFont = [UIFont fontWithName:@"ProximaNovaBold" size:12];
     self.popTipView.dismissTapAnywhere = NO;
     [self.popTipView autoDismissAnimated:YES atTimeInterval:2.0];
     [self.popTipView presentPointingAtView:self.subscribeButton inView:self.view animated:YES];
@@ -177,6 +183,15 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     }
 }
 
+-(void)remove:(int)i {
+    [self.postTable performBatchUpdates:^{
+        [self.posts removeObjectAtIndex:i];
+        NSIndexPath *indexPath =[NSIndexPath indexPathForRow:i inSection:0];
+        [self.postTable deleteItemsAtIndexPaths:[NSArray arrayWithObject:indexPath]];
+    } completion:^(BOOL finished) {
+    }];
+}
+
 - (void)receiveNotification:(NSNotification *)notification
 {
     if ([[notification name] isEqualToString:@"newPostUploaded"]) {
@@ -209,6 +224,10 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                         [self.posts setObject:result atIndexedSubscript:count];
            // [self.posts setObject:result atIndexedSubscript:0];
         }];
+    } else if ([[notification name] isEqualToString:@"flagThisPost"]) {
+        [self remove:self.selectedRow];
+        self.selectedRow = -1;
+        self.previousHighlightedIndexPath = nil;
     }
 }
 
@@ -362,8 +381,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     return 1;
 }
 
-
-//TODO(timlee): some weird scrolling behavior ... try selecting the first cell and scroll down the table!
 - (void)showUserActions:(NSArray *)arrayOfThings {
     Post *postSelected = [arrayOfThings objectAtIndex:1];
     NSIndexPath *indexPath = [arrayOfThings objectAtIndex:2];
@@ -466,6 +483,17 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     Post *post = [self.posts objectAtIndex:rowNum];
     float decremented = [post.likes integerValue] - 1;
     post.likes = [NSNumber numberWithInt:decremented];
+}
+
+-(void)flagThisPost:(int)rowNum {
+    Post *post = [self.posts objectAtIndex:rowNum];
+    float flagged = [post.flags integerValue] + 1;
+    post.flags = [NSNumber numberWithInt:flagged];
+    
+    FlagViewController *flagView = [[FlagViewController alloc] init];
+    flagView.group = self.group;
+    flagView.post = post;
+    [self presentViewController:flagView animated:YES completion:nil];
 }
 
 - (void)shareThisPost:(Post *)post {
