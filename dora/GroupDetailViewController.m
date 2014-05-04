@@ -68,7 +68,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.selectedRow = -1;
     self.totalViewHeight = 0;
     self.numberOfNewPosts = 0;
-
+    self.postTable.allowsMultipleSelection = NO;
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
     self.numberOfResultsToFetch = [NSNumber numberWithInt:20];
@@ -493,7 +493,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PostCell *prevCell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    self.selectedRow = INT_MAX;
+    self.selectedRow = -1;
     [UIView animateWithDuration:0.2f
                           delay:0.0f
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -542,20 +542,39 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
     }
     else {
-    self.selectedRow = indexPath.row;
-    Post *postSelected = [self.posts objectAtIndex:indexPath.row];
+        PostCell *prevCell = (PostCell *)[collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:self.selectedRow inSection:0]];
+        [UIView animateWithDuration:0.2f
+                              delay:0.0f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             CGSize currentFrameSize = prevCell.postView.frame.size;
+                             prevCell.postView.backgroundColor = [UIColor whiteColor];
+                             prevCell.message.textColor = [UIColor blackColor];
+                             
+                             if (prevCell.postView.frame.size.width > defaultWidth) {
+                                 prevCell.postView.frame = CGRectMake(10.f, 5.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
+                             }
+                             
+                             UserActions *tempActionBar = (UserActions *)[prevCell viewWithTag:100];
+                             if(tempActionBar)
+                                 [tempActionBar removeFromSuperview];
+                         }
+                         completion:nil];
+
+        self.selectedRow = indexPath.row;
+        Post *postSelected = [self.posts objectAtIndex:indexPath.row];
     
-    //Check to see if this is a ghost post
-    if (postSelected.objectId == nil) {
+        //Check to see if this is a ghost post
+        if (postSelected.objectId == nil) {
         [Post getPostWithNewKey:postSelected.newKey completion:^(PFObject *object, NSError *error) {
             postSelected.objectId = object.objectId;
             NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, collectionView, nil];
             [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
-        }];
-    } else {
-        NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, collectionView, nil];
-        [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
-    }
+            }];
+        } else {
+            NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, postSelected, indexPath, collectionView, nil];
+            [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
+        }
     }
 }
 
