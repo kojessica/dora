@@ -24,9 +24,6 @@
 
 - (id)cellWithPost:(Post *)post
 {
-    //TODO(jessicako): replace currentUser with getUserInfoById
-    User *currentUser = [User currentUser];
-    NSLog(@"%@", currentUser);
     self.message.font = [UIFont fontWithName:@"ProximaNovaRegular" size:14];
     self.age.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
     self.gender.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];

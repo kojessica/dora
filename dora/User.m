@@ -136,8 +136,6 @@ static User *currentUser = nil;
     [tempArray addObject:postId];
     currentUser.flaggedPosts = [NSArray arrayWithArray:tempArray];
     
-    NSLog(@"%@", currentUser.flaggedPosts);
-    
     [User persistUser:currentUser];
 }
 

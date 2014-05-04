@@ -36,7 +36,7 @@ CGFloat newHeight = 107.f;
 @property (assign, nonatomic) int numberOfNewPosts;
 @property (nonatomic, strong) NSNumber* currentlyDisplayedPosts;
 @property (nonatomic, strong) NSNumber* numberOfResultsToFetch;
-@property (assign, nonatomic) NSIndexPath *previousHighlightedIndexPath;
+@property (strong, nonatomic) NSIndexPath *previousHighlightedIndexPath;
 @property (nonatomic, assign) CGFloat totalViewHeight;
 - (void)showSubscribeHelper:(NSString *)content;
 
@@ -409,17 +409,28 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                               options:UIViewAnimationOptionCurveEaseInOut
                                            animations:^{
                                                    self.selectedRow = -1;
-                                                   CGSize currentFrameSize = prevCell.postView.frame.size;
+                                               
+                                               [prevCell cellWithPost:[self.posts objectAtIndex:self.previousHighlightedIndexPath.row]];
+                                               
+                                                   /*CGSize currentFrameSize = prevCell.postView.frame.size;
                                                    prevCell.postView.backgroundColor = [UIColor whiteColor];
                                                    prevCell.message.textColor = [UIColor blackColor];
                       
                                                    if (prevCell.postView.frame.size.width > defaultWidth) {
-                                                           prevCell.postView.frame = CGRectMake(10.f, 5.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
-                                                       }
+                                                           prevCell.postView.frame = CGRectMake(8.f, 8.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
+                                                       }*/
                       
                                                    UserActions *tempActionBar = (UserActions *)[prevCell viewWithTag:100];
                                                    if(tempActionBar)
-                                                           [tempActionBar removeFromSuperview];
+                                                       [tempActionBar removeFromSuperview];
+                                                   
+                                                   UIView *viewToBeRemoved = (UIView *)[prevCell viewWithTag:27];
+                                                   if(viewToBeRemoved)
+                                                       [viewToBeRemoved removeFromSuperview];
+                                                   
+                                                   UIView *labelToBeRemoved = (UIView *)[prevCell viewWithTag:82];
+                                                   if(labelToBeRemoved)
+                                                       [labelToBeRemoved removeFromSuperview];
                                                }
                                            completion:nil];
                 self.previousHighlightedIndexPath = nil;
@@ -432,29 +443,39 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                                               options:UIViewAnimationOptionCurveEaseInOut
                                                            animations:^{
                                                                    self.selectedRow = -1;
-                                                                   CGSize currentFrameSize = prevCell.postView.frame.size;
+                                                                   /*CGSize currentFrameSize = prevCell.postView.frame.size;
                                                                    prevCell.postView.backgroundColor = [UIColor whiteColor];
                                                                    prevCell.message.textColor = [UIColor blackColor];
                                   
                                                                    if (prevCell.postView.frame.size.width > defaultWidth) {
-                                                                           prevCell.postView.frame = CGRectMake(10.f, 5.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
-                                                                       }
+                                                                           prevCell.postView.frame = CGRectMake(8.f, 8.f, currentFrameSize.width - widthOffset, currentFrameSize.height - heightOffset);
+                                                                       }*/
+                                                                   [prevCell cellWithPost:[self.posts objectAtIndex:self.previousHighlightedIndexPath.row]];
+                                                               
                                                                    UserActions *tempActionBar = (UserActions *)[prevCell viewWithTag:100];
                                                                    if(tempActionBar)
-                                                                           [tempActionBar removeFromSuperview];
+                                                                       [tempActionBar removeFromSuperview];
+                                                                   
+                                                                   UIView *viewToBeRemoved = (UIView *)[prevCell viewWithTag:27];
+                                                                   if(viewToBeRemoved)
+                                                                       [viewToBeRemoved removeFromSuperview];
+                                                                   
+                                                                   UIView *labelToBeRemoved = (UIView *)[prevCell viewWithTag:82];
+                                                                   if(labelToBeRemoved)
+                                                                       [labelToBeRemoved removeFromSuperview];
                                                                }
                                                            completion:nil];
                         }
                    if (![self.previousHighlightedIndexPath isEqual:indexPath]) {
-            [UIView animateWithDuration:0.2f
+            /*[UIView animateWithDuration:0.2f
                                   delay:0.0f
                                 options:UIViewAnimationOptionCurveEaseInOut
-                             animations:^{
+                             animations:^{*/
                                  
                                  PostCell *currentCell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
-                                 
                                  self.selectedRow = (int)indexPath.row;
-                                 CGSize currentFrameSize = currentCell.postView.frame.size;
+                                 
+                                 /*CGSize currentFrameSize = currentCell.postView.frame.size;
                                  currentCell.postView.frame = CGRectMake(0.f, 0.f, currentFrameSize.width + widthOffset, currentFrameSize.height + heightOffset);
                                  currentCell.message.frame = CGRectMake(18.f, -6.f, currentCell.message.frame.size.width + widthOffset, currentCell.message.frame.size.height + heightOffset);
                                  currentCell.postView.backgroundColor = [UIColor colorWithRed:38/255 green:38/255 blue:38/255 alpha:0.8];
@@ -476,10 +497,47 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                      [actionbar.likeButton setSelected:YES];
                                  }
                                  
-                                 [currentCell.postView addSubview:actionbar];
-                             }
-                             completion:^(BOOL finished) {
-                             }];
+                                  [currentCell.postView addSubview:actionbar];*/
+                                 CGSize maximumLabelSize = CGSizeMake(270,9999);
+                                 UIFont *font = [UIFont fontWithName:@"ProximaNovaRegular" size:14];
+                                 CGRect textRect = [[[self.posts objectAtIndex:indexPath.row] objectForKey:@"text"]  boundingRectWithSize:maximumLabelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+                                 CGFloat predictedHeight = textRect.size.height + 30;
+                                 
+                                 UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, predictedHeight, currentCell.postView.frame.size.width + widthOffset, 32.f)];
+                                 
+                                 currentCell.postView.frame = CGRectMake(0.f, 0.f, currentCell.postView.frame.size.width + widthOffset, predictedHeight + heightOffset);
+                                 
+                                 UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, currentCell.postView.frame.size.width + widthOffset, predictedHeight + heightOffset)];
+                                 tempView.backgroundColor = [UIColor colorWithRed:38/255 green:38/255 blue:38/255 alpha:1];
+                                 tempView.tag = 27;
+                                 UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(18.f, -30.f, 270, predictedHeight + heightOffset)];
+                                 tempLabel.tag = 82;
+                                 tempLabel.textColor = [UIColor whiteColor];
+                                 tempLabel.font = font;
+                                 tempLabel.text = [[self.posts objectAtIndex:indexPath.row] objectForKey:@"text"];
+                                 tempLabel.numberOfLines = 0;
+                                 [tempView addSubview:tempLabel];
+                                 
+                                 actionbar.tag = 100;
+                                 actionbar.delegate = self;
+                                 actionbar.likeCount.text = [postSelected.likes stringValue];
+                                 actionbar.post = postSelected;
+                                 actionbar.rowNum  = (int)indexPath.row;
+                                 
+                                 //check if this was liked before
+                                 User *currentUser = [User currentUser];
+                                 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF = %@", postSelected.objectId];
+                                 NSArray *results = [currentUser.likedPosts filteredArrayUsingPredicate:predicate];
+                                 if ([results count] > 0) {
+                                     [actionbar.likeButton setImage:[UIImage imageNamed:@"heart_selected_icon.png"] forState:UIControlStateSelected];
+                                     [actionbar.likeButton setSelected:YES];
+                                 }
+                                 [tempView addSubview:actionbar];
+                                 [currentCell.contentView addSubview:tempView];
+                                 [currentCell.contentView addSubview:tempLabel];
+                             //}
+                             //completion:^(BOOL finished) {
+                             //}];
                    }
         self.previousHighlightedIndexPath = indexPath;
         }
@@ -583,11 +641,27 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     PostCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCell" forIndexPath:indexPath];
     if (self.selectedRow == indexPath.row) {
     
-        UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, cell.postView.frame.size.height + 2, 320.f, 32.f)];
+        CGSize maximumLabelSize = CGSizeMake(270,9999);
+        UIFont *font = [UIFont fontWithName:@"ProximaNovaRegular" size:14];
+        CGRect textRect = [[[self.posts objectAtIndex:indexPath.row] objectForKey:@"text"]  boundingRectWithSize:maximumLabelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+        CGFloat predictedHeight = textRect.size.height + 30;
+        
+        UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, predictedHeight, cell.postView.frame.size.width + widthOffset, 32.f)];
         Post *postSelected = [self.posts objectAtIndex:indexPath.row];
-        cell.postView.frame = CGRectMake(0.f, 0.f, cell.postView.frame.size.width + widthOffset, cell.postView.frame.size.height + heightOffset);
-        cell.postView.backgroundColor = [UIColor colorWithRed:38/255 green:38/255 blue:38/255 alpha:0.8];
-        cell.message.textColor = [UIColor whiteColor];
+        
+        cell.postView.frame = CGRectMake(0.f, 0.f, cell.postView.frame.size.width + widthOffset, predictedHeight + heightOffset);
+        
+        UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, cell.postView.frame.size.width + widthOffset, predictedHeight + heightOffset)];
+        tempView.backgroundColor = [UIColor colorWithRed:38/255 green:38/255 blue:38/255 alpha:1];
+        tempView.tag = 27;
+        UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(18.f, -30.f, 270, predictedHeight + heightOffset)];
+        tempLabel.tag = 82;
+        tempLabel.textColor = [UIColor whiteColor];
+        tempLabel.font = font;
+        tempLabel.text = [[self.posts objectAtIndex:indexPath.row] objectForKey:@"text"];
+        tempLabel.numberOfLines = 0;
+        [tempView addSubview:tempLabel];
+        
         actionbar.tag = 100;
         actionbar.delegate = self;
         actionbar.likeCount.text = [postSelected.likes stringValue];
@@ -602,18 +676,30 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
             [actionbar.likeButton setImage:[UIImage imageNamed:@"heart_selected_icon.png"] forState:UIControlStateSelected];
             [actionbar.likeButton setSelected:YES];
         }
-        [cell.postView addSubview:actionbar];
-        cell.message.text = [[self.posts objectAtIndex:indexPath.row] objectForKey:@"text"];
+        [tempView addSubview:actionbar];
+        [cell.contentView addSubview:tempView];
+        [cell.contentView addSubview:tempLabel];
+        
     } else {
-        cell.postView.backgroundColor = [UIColor whiteColor];
+        /*cell.postView.backgroundColor = [UIColor whiteColor];
         if (cell.postView.frame.size.width > defaultWidth) {
-            cell.postView.frame = CGRectMake(10.f, 5.f, cell.postView.frame.size.width - widthOffset, cell.postView.frame.size.height - heightOffset);
+            cell.postView.frame = CGRectMake(8.f, 8.f, cell.postView.frame.size.width - widthOffset, cell.postView.frame.size.height - heightOffset);
         }
-        cell.message.textColor = [UIColor blackColor];
+        cell.message.textColor = [UIColor blackColor];*/
         [cell cellWithPost:[self.posts objectAtIndex:indexPath.row]];
+        
         UserActions *tempActionBar = (UserActions *)[cell viewWithTag:100];
         if(tempActionBar)
             [tempActionBar removeFromSuperview];
+        
+        UIView *viewToBeRemoved = (UIView *)[cell viewWithTag:27];
+        if(viewToBeRemoved)
+            [viewToBeRemoved removeFromSuperview];
+        
+        UIView *labelToBeRemoved = (UIView *)[cell viewWithTag:82];
+        if(labelToBeRemoved)
+            [labelToBeRemoved removeFromSuperview];
+        
     }
 
     return cell;
