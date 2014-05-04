@@ -395,6 +395,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PostCell *prevCell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    self.selectedRow = INT_MAX;
     [UIView animateWithDuration:0.2f
                           delay:0.0f
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -517,6 +518,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     if (cell == nil) {
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCell" forIndexPath:indexPath];
     }
+    self.selectedRow = indexPath.row;
     Post *postSelected = [self.posts objectAtIndex:indexPath.row];
     
     //Check to see if this is a ghost post
@@ -559,8 +561,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PostCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCell" forIndexPath:indexPath];
-//    if (self.selectedRow == indexPath.row) {
-    
+//    if(cell.selected) {
 //        UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, cell.postView.frame.size.height + 2, 320.f, 32.f)];
 //        Post *postSelected = [self.posts objectAtIndex:indexPath.row];
 //        cell.postView.frame = CGRectMake(0.f, 0.f, cell.postView.frame.size.width + widthOffset, cell.postView.frame.size.height + heightOffset);
@@ -593,11 +594,12 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         if(tempActionBar)
             [tempActionBar removeFromSuperview];
 //    }
-    if ([collectionView.indexPathsForSelectedItems containsObject:indexPath]) {
-        [self collectionView:collectionView didSelectItemAtIndexPath:indexPath];
-        [collectionView selectItemAtIndexPath:indexPath animated:FALSE scrollPosition:UICollectionViewScrollPositionNone];
+    if (self.selectedRow == indexPath.row) {
+        NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, self.posts[indexPath.row], indexPath, collectionView, nil];
+        [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
+        
     }
-
+    
     return cell;
 }
 
