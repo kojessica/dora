@@ -31,6 +31,8 @@
         // Configure attributes ...
         attributes.alpha = 0.0;
         attributes.center = CGPointMake(_center.x, _center.y);
+        attributes.transform3D = CATransform3DMakeScale(0.1, 0.1, 1.0);
+
     }
     
     return attributes;

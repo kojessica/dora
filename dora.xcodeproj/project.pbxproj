@@ -89,6 +89,8 @@
 		47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */; };
 		47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */; };
 		47D5FA2019158C2500D7C492 /* GroupDetailCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D5FA1F19158C2500D7C492 /* GroupDetailCollectionViewLayout.m */; };
+		47D5FA241915C34F00D7C492 /* BackgroundImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D5FA221915C34F00D7C492 /* BackgroundImageViewController.m */; };
+		47D5FA251915C34F00D7C492 /* BackgroundImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D5FA231915C34F00D7C492 /* BackgroundImageViewController.xib */; };
 		47D812951904889700268220 /* Timestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D812911904889700268220 /* Timestamp.m */; };
 		47D812961904889700268220 /* UserActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D812931904889700268220 /* UserActions.m */; };
 		47D812971904889700268220 /* UserActions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D812941904889700268220 /* UserActions.xib */; };
@@ -225,6 +227,9 @@
 		47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeMessageViewController.m; sourceTree = "<group>"; };
 		47D5FA1E19158C2500D7C492 /* GroupDetailCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupDetailCollectionViewLayout.h; sourceTree = "<group>"; };
 		47D5FA1F19158C2500D7C492 /* GroupDetailCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDetailCollectionViewLayout.m; sourceTree = "<group>"; };
+		47D5FA211915C34F00D7C492 /* BackgroundImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundImageViewController.h; sourceTree = "<group>"; };
+		47D5FA221915C34F00D7C492 /* BackgroundImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundImageViewController.m; sourceTree = "<group>"; };
+		47D5FA231915C34F00D7C492 /* BackgroundImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundImageViewController.xib; sourceTree = "<group>"; };
 		47D812901904889700268220 /* Timestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timestamp.h; sourceTree = "<group>"; };
 		47D812911904889700268220 /* Timestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timestamp.m; sourceTree = "<group>"; };
 		47D812921904889700268220 /* UserActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserActions.h; sourceTree = "<group>"; };
@@ -433,6 +438,9 @@
 				123D2BAB19149D17005AFD8B /* FlagViewController.xib */,
 				47D5FA1E19158C2500D7C492 /* GroupDetailCollectionViewLayout.h */,
 				47D5FA1F19158C2500D7C492 /* GroupDetailCollectionViewLayout.m */,
+				47D5FA211915C34F00D7C492 /* BackgroundImageViewController.h */,
+				47D5FA221915C34F00D7C492 /* BackgroundImageViewController.m */,
+				47D5FA231915C34F00D7C492 /* BackgroundImageViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -603,6 +611,7 @@
 				129D7670190229A9003EB2E7 /* bg3@2x.png in Resources */,
 				129D76621901AEFC003EB2E7 /* setting_icon@2x.png in Resources */,
 				129D77731908512B003EB2E7 /* heart_selected_icon@2x.png in Resources */,
+				47D5FA251915C34F00D7C492 /* BackgroundImageViewController.xib in Resources */,
 				129D762A18F9F140003EB2E7 /* GroupDetailViewController.xib in Resources */,
 				127525351909EFCB00D2B6BB /* share_white_icon@2x.png in Resources */,
 				129D77631908288C003EB2E7 /* post_larger_icon@2x.png in Resources */,
@@ -667,6 +676,7 @@
 				47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */,
 				125E820519088E31008A7214 /* PopularListViewController.m in Sources */,
 				126B187D18EBB153005A8475 /* User.m in Sources */,
+				47D5FA241915C34F00D7C492 /* BackgroundImageViewController.m in Sources */,
 				1252858518F5088C00E45C86 /* CustomAutocompleteObject.m in Sources */,
 				474D351918FD052C00028F29 /* PFACL+NSCoding.m in Sources */,
 				129D761B18F9D8A4003EB2E7 /* ListViewController.m in Sources */,

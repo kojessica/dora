@@ -26,6 +26,7 @@
 @dynamic subscribedGroups;
 @dynamic unsubscribedGroups;
 @dynamic flaggedPosts;
+@dynamic backgroundImage;
 //static CLLocationManager *_locationManager;
 
 static User *currentUser = nil;

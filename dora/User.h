@@ -34,4 +34,5 @@
 @property (strong,nonatomic) NSArray *unsubscribedGroups;
 @property (strong,nonatomic) NSArray *flaggedPosts;
 @property (retain) PFGeoPoint *location;
+@property (strong, nonatomic) UIImage *backgroundImage;
 @end

@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIView *hide6;
 @property (weak, nonatomic) IBOutlet UILabel *hide7;
 @property (weak, nonatomic) IBOutlet UISwitch *hide8;
+@property (weak, nonatomic) IBOutlet UIView *backgroundImageView;
 
 
 - (IBAction)onBackButton:(id)sender;

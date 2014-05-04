@@ -17,6 +17,7 @@
     self.gender = [currentUser.gender intValue];
     self.age = [currentUser.age intValue];
     self.nickname = currentUser.nickname;
+    self.backgroundImage = currentUser.backgroundImage;
     
     return @[
              
@@ -27,11 +28,9 @@
              
              @{FXFormFieldKey: @"gender", FXFormFieldOptions: @[@"Unknown", @"Female", @"Male"],
                FXFormFieldViewController: @"SettingOptionsViewController"},
-             
-             
+                          
              @{FXFormFieldKey: @"age", FXFormFieldCell: [FXFormStepperCell class],
-               FXFormFieldAction: @"saveAge:"},
-
+               FXFormFieldAction: @"saveAge:"}
              ];
 }
 

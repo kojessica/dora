@@ -21,5 +21,6 @@ typedef NS_ENUM(NSInteger, Gender)
 @property (nonatomic, copy) NSString *nickname;
 @property (nonatomic, assign) Gender gender;
 @property (nonatomic, assign) NSUInteger age;
+@property (nonatomic, weak) UIImage *backgroundImage;
 
 @end

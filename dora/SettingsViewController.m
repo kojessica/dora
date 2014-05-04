@@ -8,12 +8,13 @@
 
 #import "SettingsViewController.h"
 #import "SettingForm.h"
+#import "BackgroundImageViewController.h"
 #import "User.h"
 
 @interface SettingsViewController ()
 
 - (void)saveAge:(UITableViewCell<FXFormFieldCell> *)cell;
-
+- (void)saveBackgroundImage:(UITableViewCell<FXFormFieldCell> *)cell;
 @end
 
 @implementation SettingsViewController
@@ -46,6 +47,10 @@
     [self.locationSwitch setOn:YES animated:YES];
     self.header.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
     self.showLabel.font = [UIFont fontWithName:@"ProximaNovaRegular" size:13];
+    UITapGestureRecognizer* gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTappedOnLink:)];
+    // if labelView is not set userInteractionEnabled, you must do so
+    [self.backgroundImageView setUserInteractionEnabled:YES];
+    [self.backgroundImageView addGestureRecognizer:gesture];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -83,6 +88,15 @@
 {
     NSLog(@"%@", cell.field.value);
     [User setUserNickname:cell.field.value];
+}
+- (void)saveBackgroundImage:(UITableViewCell<FXFormFieldCell> *)cell
+{
+    NSLog(@"%@", cell.field.value);
+}
+- (void)userTappedOnLink:(UIGestureRecognizer*)gestureRecognizer
+{
+    BackgroundImageViewController *backgroundView = [[BackgroundImageViewController alloc] init];
+    [self presentViewController:backgroundView animated:YES completion:nil];
 }
 
 @end
