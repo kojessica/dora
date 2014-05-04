@@ -49,7 +49,5 @@
     self.postView.layer.masksToBounds = YES;
     return self;
 }
--(void)prepareForReuse {
-    self.selected = FALSE;
-}
+
 @end
