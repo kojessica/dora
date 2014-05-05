@@ -18,5 +18,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *posted;
 @property (assign, nonatomic) BOOL isSelected;
 - (id)cellWithPost:(Post *)post;
-
 @end

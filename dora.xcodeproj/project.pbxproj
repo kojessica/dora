@@ -86,6 +86,7 @@
 		474D351A18FD052C00028F29 /* PFFile+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D351518FD052C00028F29 /* PFFile+NSCoding.m */; };
 		474D351B18FD052C00028F29 /* PFObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D351718FD052C00028F29 /* PFObject+NSCoding.m */; };
 		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
+		47BA95981916909F00520645 /* DoraCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BA95971916909F00520645 /* DoraCollectionView.m */; };
 		47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */; };
 		47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */; };
 		47D5FA2019158C2500D7C492 /* GroupDetailCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D5FA1F19158C2500D7C492 /* GroupDetailCollectionViewLayout.m */; };
@@ -222,6 +223,8 @@
 		474D351718FD052C00028F29 /* PFObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFObject+NSCoding.m"; sourceTree = "<group>"; };
 		479BEA8918F636C60035A6BC /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		479BEA8A18F636C60035A6BC /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		47BA95961916909F00520645 /* DoraCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoraCollectionView.h; sourceTree = "<group>"; };
+		47BA95971916909F00520645 /* DoraCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoraCollectionView.m; sourceTree = "<group>"; };
 		47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeMessageViewController.xib; sourceTree = "<group>"; };
 		47C1067718F9B99100EE78F2 /* ComposeMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeMessageViewController.h; sourceTree = "<group>"; };
 		47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeMessageViewController.m; sourceTree = "<group>"; };
@@ -472,6 +475,8 @@
 				129D762118F9E338003EB2E7 /* GroupCell.h */,
 				129D762218F9E338003EB2E7 /* GroupCell.m */,
 				129D762318F9E338003EB2E7 /* GroupCell.xib */,
+				47BA95961916909F00520645 /* DoraCollectionView.h */,
+				47BA95971916909F00520645 /* DoraCollectionView.m */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -687,6 +692,7 @@
 				129D764718FCBC12003EB2E7 /* CustomSearchCell.m in Sources */,
 				47D812951904889700268220 /* Timestamp.m in Sources */,
 				47EAC96319023647005AE6ED /* FXForms.m in Sources */,
+				47BA95981916909F00520645 /* DoraCollectionView.m in Sources */,
 				47435D3B18F9EF9000E1F5CE /* Post.m in Sources */,
 				129D764D18FE36E0003EB2E7 /* PostCell.m in Sources */,
 				129D763C18FB8AA9003EB2E7 /* SearchResultsViewController.m in Sources */,
