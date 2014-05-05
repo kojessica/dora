@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "TabsController.h"
+#import "TDBWalkthrough.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, TabsControllerDelegate>{
+@interface AppDelegate : UIResponder <UIApplicationDelegate, TabsControllerDelegate, TDBWalkthroughDelegate>{
 }
 
 @property (strong, nonatomic) UIWindow *window;

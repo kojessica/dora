@@ -66,3 +66,9 @@
 #define COCOAPODS_VERSION_MINOR_MLPAutoCompleteTextField 5
 #define COCOAPODS_VERSION_PATCH_MLPAutoCompleteTextField 0
 
+// TDBWalkthrough
+#define COCOAPODS_POD_AVAILABLE_TDBWalkthrough
+#define COCOAPODS_VERSION_MAJOR_TDBWalkthrough 1
+#define COCOAPODS_VERSION_MINOR_TDBWalkthrough 0
+#define COCOAPODS_VERSION_PATCH_TDBWalkthrough 1
+
