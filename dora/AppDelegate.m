@@ -5,15 +5,9 @@
 //  Created by Jessica Ko on 4/1/14.
 //  Copyright (c) 2014 Jessica Ko. All rights reserved.
 //
-// TODO(jessica)
-// 1. (DONE) Like/Dislike buttons
-// 2. (DONE) Popular sort
-// 3. (DONE) Instant upload
-// 4. (DONE) Show more meta data on Search results
-// 5. (DONE) Show recent 2 new posts in Groups table
-// 6. Animations
 
 #import "AppDelegate.h"
+#import "TDBWalkthrough.h"
 #import <Parse/Parse.h>
 #import "User.h"
 #import "Group.h"
@@ -25,6 +19,10 @@
 #import "PopularListViewController.h"
 #import "TabsController.h"
 #import "GroupDetailViewcontroller.h"
+
+typedef NS_ENUM(NSInteger, TDBButtonTag) {
+    TDBButtonTagGetStarted
+};
 
 @implementation AppDelegate
 
@@ -76,6 +74,8 @@
     self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
 
     [self.window makeKeyAndVisible];
+    [self showTDBSimpleWhite];
+    
     return YES;
 }
 
@@ -88,8 +88,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     [currentInstallation saveInBackground];
 }
 
-
-
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [[NSNotificationCenter defaultCenter]
@@ -97,6 +95,52 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
      object:self
      userInfo:userInfo];
 }
+
+#pragma mark - TDBWalkthroughDelegate Methods
+
+- (void)didPressButtonWithTag:(NSInteger)tag
+{
+    switch (tag) {
+        case TDBButtonTagGetStarted:
+            NSLog(@"Get Started");
+            [[TDBWalkthrough sharedInstance] dismiss];
+            break;
+        default:
+            break;
+    }
+}
+
+
+#pragma mark - Examples Initialization Methods
+
+- (void)showTDBSimpleWhite
+{
+    TDBWalkthrough *walkthrough = [TDBWalkthrough sharedInstance];
+    
+    NSArray *bgImages = [NSArray arrayWithObjects:
+                       [UIImage imageNamed:@"walkthrough1.png"],
+                       [UIImage imageNamed:@"walkthrough2.png"],
+                       [UIImage imageNamed:@"walkthrough3.png"], nil];
+    
+    walkthrough.images = bgImages;
+    walkthrough.className = @"TDBSimpleWhite";
+    walkthrough.nibName = @"TDBSimpleWhite";
+    walkthrough.delegate = self;
+    
+    //page control
+    UIPageControl *pc = [[UIPageControl alloc] initWithFrame:CGRectMake(100, 518, 120, 30)];
+    pc.numberOfPages = 2;
+    pc.currentPage = 0;
+    pc.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pc.currentPageIndicatorTintColor = [UIColor darkGrayColor];
+    
+    walkthrough.walkthroughViewController.pageControl = pc;
+    [walkthrough.walkthroughViewController.view addSubview:walkthrough.walkthroughViewController.pageControl];
+    [walkthrough show];
+    
+}
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
