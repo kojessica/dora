@@ -62,6 +62,7 @@ typedef NS_ENUM(NSInteger, TDBButtonTag) {
         nav.navigationBar.hidden = YES;
         
         self.window.rootViewController = nav;
+        [self.window makeKeyAndVisible];
     } else {
         [User setCurrentUser];
         
@@ -69,13 +70,12 @@ typedef NS_ENUM(NSInteger, TDBButtonTag) {
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:pickerViewController];
         self.window.rootViewController = nav;
         nav.navigationBar.hidden = YES;
+        
+        [self.window makeKeyAndVisible];
+        
+        [self showTDBSimpleWhite];
     }
-    
-    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
 
-    [self.window makeKeyAndVisible];
-    [self showTDBSimpleWhite];
-    
     return YES;
 }
 

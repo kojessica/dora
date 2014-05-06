@@ -55,6 +55,9 @@
     [self.autocompleteTextField setBorderStyle:UITextBorderStyleRoundedRect];
     [self.autocompleteTextField setAutoCompleteTableBackgroundColor:[UIColor whiteColor]];
     [self.autocompleteTextField setAutoCompleteTableCellTextColor:[UIColor colorWithRed:50/255 green:50/255 blue:50/255 alpha:1]];
+    self.totally.font = [UIFont fontWithName:@"ProximaNovaBold" size:20.f];
+    self.anonymous.font = [UIFont fontWithName:@"ProximaNovaRegular" size:20.f];
+    [self setBackgroundImage];
     
     //set location of the textfield
     self.autocompleteTextField.frame = CGRectMake(self.autocompleteTextField.frame.origin.x, self.view.frame.size.height, self.autocompleteTextField.frame.size.width, self.autocompleteTextField.frame.size.height);
@@ -62,6 +65,10 @@
                                              selector:@selector(receiveNotification:)
                                                  name:@"goHome"
                                                object:nil];
+}
+
+-(void)setBackgroundImage {
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg3.png"]];
 }
 
 - (void) receiveNotification:(NSNotification *)notification

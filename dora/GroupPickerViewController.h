@@ -14,6 +14,8 @@
 @interface GroupPickerViewController : UIViewController <UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource, MLPAutoCompleteTextFieldDelegate>
 
 @property (weak) IBOutlet MLPAutoCompleteTextField *autocompleteTextField;
+@property (weak, nonatomic) IBOutlet UILabel *totally;
+@property (weak, nonatomic) IBOutlet UILabel *anonymous;
 
 @property (strong, nonatomic) NSArray *groupObjects;
 

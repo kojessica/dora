@@ -69,7 +69,7 @@ static User *currentUser = nil;
     currentUser.subscribedGroups = [NSArray arrayWithArray:tempArray];
     currentUser.unsubscribedGroups = [NSArray arrayWithArray:tempArray];
     currentUser.flaggedPosts = [NSArray arrayWithArray:tempArray];
-    currentUser.backgroundImage = @"C";
+    currentUser.backgroundImage = @"A";
     
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         currentUser.objectId = [currentUser objectId];
