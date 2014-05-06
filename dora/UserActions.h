@@ -16,7 +16,7 @@
 -(void)didLikePost:(int)rowNum;
 -(void)didUnlikePost:(int)rowNum;
 -(void)shareThisPost:(Post *)post;
--(void)flagThisPost:(int)rowNum;
+-(void)flagThisPost:(int)rowNum WithSender:(id)sender;
 
 @end
 
@@ -24,6 +24,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UIButton *flagButton;
 @property (nonatomic, weak) id<UserActionsDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *likeCount;
 @property (weak, nonatomic) IBOutlet UILabel *shareCount;

@@ -40,6 +40,7 @@ CGFloat newHeight = 107.f;
 @property (nonatomic, assign) CGFloat totalViewHeight;
 @property (nonatomic, assign) BOOL reachedEnd;
 @property (nonatomic, assign) BOOL waitingForReload;
+@property (strong, nonatomic) PostCell *currentCell;
 
 - (void)showSubscribeHelper:(NSString *)content;
 
@@ -218,6 +219,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         hud.labelText = [NSString stringWithFormat:@"Posted @%@", self.group.name];
         hud.margin = 15.f;
         hud.yOffset = 150.f;
+        hud.labelFont = [UIFont fontWithName:@"ProximaNovaBold" size:13.f];
         hud.removeFromSuperViewOnHide = YES;
         [hud hide:YES afterDelay:1];
         
@@ -248,9 +250,16 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         Post *flaggedPost = [self.posts objectAtIndex:self.selectedRow];
         [User updateFlaggedPosts:flaggedPost.objectId];
         
+        UserActions *tempActionBar = (UserActions *)[self.currentCell viewWithTag:100];
+        if(tempActionBar) {
+            [tempActionBar.flagButton setImage:[UIImage imageNamed:@"flag_on_icon.png"] forState:UIControlStateSelected];
+            [tempActionBar.flagButton setSelected:YES];
+        }
+        
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         hud.mode = MBProgressHUDModeText;
-        hud.labelText = [NSString stringWithFormat:@"%@\n%@", @"Thanks for the report!", @"We're on it."];
+        hud.labelText = [NSString stringWithFormat:@"%@", @"Thanks for the report!"];
+        hud.labelFont = [UIFont fontWithName:@"ProximaNovaBold" size:13.f];
         hud.margin = 15.f;
         hud.yOffset = 150.f;
         hud.removeFromSuperViewOnHide = YES;
@@ -505,14 +514,14 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                 options:UIViewAnimationOptionCurveEaseInOut
                              animations:^{
                                  
-                                 PostCell *currentCell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
+                                 self.currentCell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
                                  
                                  self.selectedRow = (int)indexPath.row;
-                                 CGSize currentFrameSize = currentCell.postView.frame.size;
-                                 currentCell.postView.frame = CGRectMake(0.f, 0.f, currentFrameSize.width + widthOffset, currentFrameSize.height + heightOffset);
-                                 currentCell.message.frame = CGRectMake(18.f, -6.f, currentCell.message.frame.size.width + widthOffset, currentCell.message.frame.size.height + heightOffset);
-                                 currentCell.postView.backgroundColor = [UIColor colorWithRed:38/255 green:38/255 blue:38/255 alpha:0.8];
-                                 currentCell.message.textColor = [UIColor whiteColor];
+                                 CGSize currentFrameSize = self.currentCell.postView.frame.size;
+                                 self.currentCell.postView.frame = CGRectMake(0.f, 0.f, currentFrameSize.width + widthOffset, currentFrameSize.height + heightOffset);
+                                 self.currentCell.message.frame = CGRectMake(18.f, -6.f, self.currentCell.message.frame.size.width + widthOffset, self.currentCell.message.frame.size.height + heightOffset);
+                                 self.currentCell.postView.backgroundColor = [UIColor colorWithRed:38/255 green:38/255 blue:38/255 alpha:0.8];
+                                 self.currentCell.message.textColor = [UIColor whiteColor];
                                  
                                  UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, currentFrameSize.height + 2, 320.f, 32.f)];
                                  actionbar.tag = 100;
@@ -530,7 +539,13 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                      [actionbar.likeButton setSelected:YES];
                                  }
                                  
-                                 [currentCell.postView addSubview:actionbar];
+                                 NSArray *results_flag = [currentUser.flaggedPosts filteredArrayUsingPredicate:predicate];
+                                 if ([results_flag count] > 0) {
+                                     [actionbar.flagButton setImage:[UIImage imageNamed:@"flag_on_icon.png"] forState:UIControlStateSelected];
+                                     [actionbar.flagButton setSelected:YES];
+                                 }
+                                 
+                                 [self.currentCell.postView addSubview:actionbar];
                              }
                              completion:^(BOOL finished) {
                              }];
@@ -551,15 +566,26 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     post.likes = [NSNumber numberWithInt:decremented];
 }
 
--(void)flagThisPost:(int)rowNum {
-    Post *post = [self.posts objectAtIndex:rowNum];
-    float flagged = [post.flags integerValue] + 1;
-    post.flags = [NSNumber numberWithInt:flagged];
-    
-    FlagViewController *flagView = [[FlagViewController alloc] init];
-    flagView.group = self.group;
-    flagView.post = post;
-    [self presentViewController:flagView animated:YES completion:nil];
+-(void)flagThisPost:(int)rowNum WithSender:(id)sender {
+    if (![sender isSelected]) {
+        Post *post = [self.posts objectAtIndex:rowNum];
+        float flagged = [post.flags integerValue] + 1;
+        post.flags = [NSNumber numberWithInt:flagged];
+        
+        FlagViewController *flagView = [[FlagViewController alloc] init];
+        flagView.group = self.group;
+        flagView.post = post;
+        [self presentViewController:flagView animated:YES completion:nil];
+    } else {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDModeText;
+        hud.labelText = [NSString stringWithFormat:@"%@", @"Already flagged this post"];
+        hud.labelFont = [UIFont fontWithName:@"ProximaNovaBold" size:13.f];
+        hud.margin = 15.f;
+        hud.yOffset = 150.f;
+        hud.removeFromSuperViewOnHide = YES;
+        [hud hide:YES afterDelay:1];
+    }
 }
 
 - (void)shareThisPost:(Post *)post {

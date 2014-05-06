@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserActions">
             <connections>
+                <outlet property="flagButton" destination="q50-Jp-ZA8" id="fbj-ue-VFB"/>
                 <outlet property="likeButton" destination="NVv-nI-OsE" id="GAP-ma-fsl"/>
                 <outlet property="likeCount" destination="41t-Of-gcw" id="vgt-XQ-Fvm"/>
                 <outlet property="shareButton" destination="89j-fP-rjR" id="LL6-aT-8fy"/>

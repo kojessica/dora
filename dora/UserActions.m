@@ -79,7 +79,7 @@
 }
 
 - (IBAction)onFlagButton:(id)sender {
-    [self.delegate flagThisPost:self.rowNum];
+    [self.delegate flagThisPost:self.rowNum WithSender:sender];
 }
 
 @end
