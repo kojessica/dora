@@ -425,10 +425,12 @@ static const float yOffset = 68.f;
     if (self.isPresent) {
         toViewController.view.frame = containerView.frame;
         [containerView addSubview:toViewController.view];
-        toViewController.view.frame = CGRectOffset(currentFrame, 0, 0);
-
-        [UIView animateWithDuration:0.0 animations:^{
+        toViewController.view.alpha = 1;
+        toViewController.view.frame = CGRectMake(0, 0, sizeOfScreen.width, 50);
+        
+        [UIView animateWithDuration:0.4 animations:^{
             toViewController.view.frame = CGRectOffset(currentFrame, 0, 0);
+            toViewController.view.alpha = 0.95;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:YES];
         }];
@@ -437,7 +439,7 @@ static const float yOffset = 68.f;
         [containerView addSubview:fromViewController.view];
         fromViewController.view.frame = CGRectOffset(currentFrame, 0, -self.view.frame.size.height);
         
-        [UIView animateWithDuration:0.0 animations:^{
+        [UIView animateWithDuration:0.3 animations:^{
             fromViewController.view.frame = CGRectOffset(currentFrame, 0, -self.view.frame.size.height);
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:YES];

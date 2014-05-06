@@ -99,7 +99,7 @@
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell setGroup:[self.listGroup objectAtIndex:indexPath.row]];
     
-    cell.name.text = [NSString stringWithFormat:(@"#%d %@"), indexPath.row+1, cell.name.text];
+    cell.name.text = [NSString stringWithFormat:(@"#%d  %@"), indexPath.row+1, cell.name.text];
     [cell setBackgroundColor:[UIColor clearColor]];
     
 	return cell;

@@ -60,6 +60,10 @@ static int maximumNumCharacters = 20;
     self.searchInputBox.delegate = self;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self.searchInputBox becomeFirstResponder];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     return YES;

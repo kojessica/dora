@@ -82,6 +82,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     [refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
     [self.postTable addSubview:refreshControl];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     [[NSNotificationCenter defaultCenter]
                addObserver:self
                selector:@selector(didReceivePushNotification:)
