@@ -46,6 +46,7 @@
         self.listGroup = objects;
         self.detailviewIsPresent = NO;
         [self.tableView reloadData];
+        [self showEmptyState:objects];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
     
@@ -63,6 +64,26 @@
         [self reload];
 }
 
+- (void)showEmptyState:(NSArray *)objects
+{
+    UIButton *emptyButtonExists = (UIButton *)[self.view viewWithTag:82];
+    
+    if ([objects count] > 0) {
+        if(emptyButtonExists)
+            [emptyButtonExists removeFromSuperview];
+    } else {
+        if(!emptyButtonExists) {
+            UIButton *emptyState = [[UIButton alloc] initWithFrame:CGRectMake(-20, 20, 361.f, 350.f)];
+            UIImage *btnImage = [UIImage imageNamed:@"empty_state.png"];
+            [emptyState setAlpha:0.7];
+            [emptyState setImage:btnImage forState:UIControlStateNormal];
+            emptyState.tag = 82;
+            [self.view addSubview:emptyState];
+            
+        }
+    }
+}
+
 - (void)reload
 {
     User *currentUser = [User currentUser];
@@ -71,6 +92,7 @@
         self.listGroup = objects;
         self.detailviewIsPresent = NO;
         [self.tableView reloadData];
+        [self showEmptyState:objects];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }

@@ -677,46 +677,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 {
     PostCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCell" forIndexPath:indexPath];
 
-//
-//    if (self.selectedRow == indexPath.row) {
-//
-//        [cell cellWithPost:[self.posts objectAtIndex:indexPath.row]];
-//        NSLog(@"postViewframe  pre mod = %@\n", NSStringFromCGRect(cell.postView.frame));
-//        
-//        UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, cell.postView.frame.size.height + 2, 320.f, 32.f)];
-//        Post *postSelected = [self.posts objectAtIndex:indexPath.row];
-//        cell.postView.frame = CGRectMake(0.f, 0.f, cell.postView.frame.size.width + widthOffset, cell.postView.frame.size.height + heightOffset);
-//        cell.postView.backgroundColor = [UIColor colorWithRed:38/255 green:38/255 blue:38/255 alpha:0.8];
-//        cell.message.frame = CGRectMake(18.f, -6.f, cell.message.frame.size.width + widthOffset, cell.message.frame.size.height + heightOffset);
-//
-//        cell.message.textColor = [UIColor whiteColor];
-//        actionbar.tag = 100;
-//        actionbar.delegate = self;
-//        actionbar.likeCount.text = [postSelected.likes stringValue];
-//        actionbar.post = postSelected;
-//        actionbar.rowNum  = (int)indexPath.row;
-//        
-//        
-//   
-//        
-//        //check if this was liked before
-//        User *currentUser = [User currentUser];
-//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF = %@", postSelected.objectId];
-//        NSArray *results = [currentUser.likedPosts filteredArrayUsingPredicate:predicate];
-//        if ([results count] > 0) {
-//            [actionbar.likeButton setImage:[UIImage imageNamed:@"heart_selected_icon.png"] forState:UIControlStateSelected];
-//            [actionbar.likeButton setSelected:YES];
-//        }
-//        cell.message.text = [[self.posts objectAtIndex:indexPath.row] objectForKey:@"text"];
-//        [cell.postView addSubview:actionbar];
-//        [cell setFrame:CGRectMake(cell.frame.origin.x, cell.frame.origin.y, 334, 162)];
-//        
-//        [cell refreshFrame];
-//        NSLog(@"postViewframe = %@\n", NSStringFromCGRect(cell.postView.frame));
-//        NSLog(@"messageViewframe = %@\n", NSStringFromCGRect(cell.message.frame));
-//        NSLog(@"cellViewframe = %@\n", NSStringFromCGRect(cell.frame));
-//        
-//    } else {
         cell.postView.backgroundColor = [UIColor whiteColor];
         if (cell.postView.frame.size.width > defaultWidth) {
             cell.postView.frame = CGRectMake(8.f, 8.f, cell.postView.frame.size.width - widthOffset, cell.postView.frame.size.height - heightOffset);
@@ -733,7 +693,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
 
     }
-//    }
 
     return cell;
 }
