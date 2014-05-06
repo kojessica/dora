@@ -103,8 +103,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
             PFInstallation *currentInstallation = [PFInstallation currentInstallation];
             [currentInstallation addUniqueObject:self.group.name forKey:@"channels"];
             [currentInstallation saveInBackground];
-            [self reloadTable];
-            //            [self.postTable reloadData];
+            //[self reloadTable];
+            [self.postTable reloadData];
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         }];
         
@@ -285,7 +285,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                 currentPosition++;
                 NSLog(@"Current position :%d", currentPosition);
             } completion:^(BOOL finished) {
-                animateTable();
+                //animateTable();
             }];
         }
         
@@ -296,17 +296,26 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 - (void)insertGhostPost:(Post *)post
 {
-    [self.posts insertObject:post atIndex:0];
-    NSMutableArray *arrayWithIndexPaths = [NSMutableArray array];
-    if(self.selectedRow >= 0) {
-        self.selectedRow++;
-        NSIndexPath *previousIndexPath =  [NSIndexPath indexPathForRow:self.previousHighlightedIndexPath.row+1 inSection:0];
-        self.previousHighlightedIndexPath = previousIndexPath;
-    }
-    [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
+    if ([self.posts count] > 0) {
+        [self.posts insertObject:post atIndex:0];
+        NSMutableArray *arrayWithIndexPaths = [NSMutableArray array];
+        if(self.selectedRow >= 0) {
+            self.selectedRow++;
+            NSIndexPath *previousIndexPath =  [NSIndexPath indexPathForRow:self.previousHighlightedIndexPath.row+1 inSection:0];
+            self.previousHighlightedIndexPath = previousIndexPath;
+        }
+        [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
 
-    [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
+        [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
+   
+    } else {
+        [self.posts insertObject:post atIndex:0];
+        NSMutableArray *arrayWithIndexPaths = [NSMutableArray array];
+        [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
+        [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
+    }
     [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -446,8 +455,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-//    return [self.posts count];
-    return self.numberOfPosts;
+    return [self.posts count];
+//    return self.numberOfPosts;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

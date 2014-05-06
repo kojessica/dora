@@ -24,7 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *subscribeButton;
 @property (weak, nonatomic) IBOutlet UILabel *groupLabel;
 @property (strong, nonatomic) Group *group;
-@property (weak, nonatomic) IBOutlet DoraCollectionView *postTable;
+@property (strong, nonatomic) IBOutlet DoraCollectionView *postTable;
 @property (strong, nonatomic) NSString *parentController;
 - (IBAction)onCompose:(id)sender;
 - (IBAction)onSubscribeButton:(id)sender;
