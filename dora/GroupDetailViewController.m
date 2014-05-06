@@ -264,6 +264,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     NSMutableArray *arrayWithIndexPaths = [NSMutableArray array];
     [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
     [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
+    self.selectedRow++;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
 }
 
@@ -307,7 +308,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.posts = posts;
     NSIndexPath *path1 = [NSIndexPath indexPathForRow:0 inSection:0];
     NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
-  
+    self.selectedRow++;
+
     [self.postTable insertItemsAtIndexPaths:indexArray];
     [self.postTable reloadData];
     [UIView animateWithDuration:0.05 animations:^{
