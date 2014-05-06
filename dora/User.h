@@ -23,6 +23,7 @@
 + (void)setUserNickname:(NSString *)nickname;
 + (void)updateFlaggedPosts:(NSString *)postId;
 + (void)updateLikedPosts:(NSString *)postId ByIncrement:(BOOL)increment;
++ (void)setUserBackground:(NSString *)background;
 + (void)updateRelevantGroupsByName:(NSString *)groupName WithSubscription:(BOOL)subscription;
 @property (retain) NSString *nickname;
 @property (retain) NSString *key;
@@ -34,5 +35,5 @@
 @property (strong,nonatomic) NSArray *unsubscribedGroups;
 @property (strong,nonatomic) NSArray *flaggedPosts;
 @property (retain) PFGeoPoint *location;
-@property (strong, nonatomic) UIImage *backgroundImage;
+@property (strong, nonatomic) NSString *backgroundImage;
 @end

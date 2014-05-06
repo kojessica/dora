@@ -8,13 +8,11 @@
 
 #import "SettingsViewController.h"
 #import "SettingForm.h"
-#import "BackgroundImageViewController.h"
 #import "User.h"
 
 @interface SettingsViewController ()
 
 - (void)saveAge:(UITableViewCell<FXFormFieldCell> *)cell;
-- (void)saveBackgroundImage:(UITableViewCell<FXFormFieldCell> *)cell;
 @end
 
 @implementation SettingsViewController
@@ -47,10 +45,22 @@
     [self.locationSwitch setOn:YES animated:YES];
     self.header.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
     self.showLabel.font = [UIFont fontWithName:@"ProximaNovaRegular" size:13];
-    UITapGestureRecognizer* gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTappedOnLink:)];
-    // if labelView is not set userInteractionEnabled, you must do so
-    [self.backgroundImageView setUserInteractionEnabled:YES];
-    [self.backgroundImageView addGestureRecognizer:gesture];
+    self.showLabel2.font = [UIFont fontWithName:@"ProximaNovaRegular" size:13];
+    self.bgA.layer.cornerRadius = 13;
+    self.bgA.clipsToBounds = YES;
+    self.bgB.layer.cornerRadius = 13;
+    self.bgB.clipsToBounds = YES;
+    self.bgC.layer.cornerRadius = 13;
+    self.bgC.clipsToBounds = YES;
+    
+    User *currentUser = [User currentUser];
+    if ([currentUser.backgroundImage isEqualToString:@"C"])
+        [self onSelectBgC:self.bgC];
+    else if ([currentUser.backgroundImage isEqualToString:@"B"])
+        [self onSelectBgB:self.bgB];
+    else
+        [self onSelectBgA:self.bgA];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -64,6 +74,42 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onSelectBgA:(id)sender {
+    [sender setSelected:YES];
+    [self.bgB setSelected:NO];
+    [self.bgC setSelected:NO];
+    self.bgA.layer.borderWidth = 5.f;
+    self.bgA.layer.borderColor = [[UIColor colorWithRed:255.f/255.f green:255.f/255.f blue:255.f/255.f alpha:0.5] CGColor];
+    self.bgB.layer.borderWidth = 0.f;
+    self.bgC.layer.borderWidth = 0.f;
+    [User setUserBackground:@"A"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"setBackground" object:nil];
+}
+
+- (IBAction)onSelectBgB:(id)sender {
+    [sender setSelected:YES];
+    [self.bgA setSelected:NO];
+    [self.bgC setSelected:NO];
+    self.bgB.layer.borderWidth = 5.f;
+    self.bgB.layer.borderColor = [[UIColor colorWithRed:255.f/255.f green:255.f/255.f blue:255.f/255.f alpha:0.5] CGColor];
+    self.bgA.layer.borderWidth = 0.f;
+    self.bgC.layer.borderWidth = 0.f;
+    [User setUserBackground:@"B"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"setBackground" object:nil];
+}
+
+- (IBAction)onSelectBgC:(id)sender {
+    [sender setSelected:YES];
+    [self.bgA setSelected:NO];
+    [self.bgB setSelected:NO];
+    self.bgC.layer.borderWidth = 5.f;
+    self.bgC.layer.borderColor = [[UIColor colorWithRed:255.f/255.f green:255.f/255.f blue:255.f/255.f alpha:0.5] CGColor];
+    self.bgA.layer.borderWidth = 0.f;
+    self.bgB.layer.borderWidth = 0.f;
+    [User setUserBackground:@"C"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"setBackground" object:nil];
 }
 
 - (IBAction)onBackButton:(id)sender {
@@ -88,15 +134,6 @@
 {
     NSLog(@"%@", cell.field.value);
     [User setUserNickname:cell.field.value];
-}
-- (void)saveBackgroundImage:(UITableViewCell<FXFormFieldCell> *)cell
-{
-    NSLog(@"%@", cell.field.value);
-}
-- (void)userTappedOnLink:(UIGestureRecognizer*)gestureRecognizer
-{
-    BackgroundImageViewController *backgroundView = [[BackgroundImageViewController alloc] init];
-    [self presentViewController:backgroundView animated:YES completion:nil];
 }
 
 @end

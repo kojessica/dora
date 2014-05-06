@@ -12,6 +12,7 @@
 #import <Parse/Parse.h>
 #import "PopularListViewController.h"
 #import "ListViewController.h"
+#import "User.h"
 
 static const NSInteger TagOffset = 1000;
 static const float yOffset = 68.f;
@@ -58,19 +59,46 @@ static const float yOffset = 68.f;
     CGRect currentframe = self.settingButton.frame;
     [self.settingButton setFrame: CGRectMake(currentframe.origin.x, currentframe.origin.y, 38, 44)];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg3.png"]];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                           selector:@selector(receiveNotification:)
                                           name:@"dismissKeyboard"
                                           object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)
+                                                 name:@"setBackground"
+                                               object:nil];
+    [self setBackgroundImage];
     [self reloadTabButtons];
 }
 
-- (void) receiveNotification:(NSNotification *)notification
+-(void)setBackgroundImage {
+    User *currentUser = [User currentUser];
+    if ([currentUser.backgroundImage isEqualToString:@"A"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg3.png"]];
+    } else if ([currentUser.backgroundImage isEqualToString:@"B"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bgB.png"]];
+    } else if ([currentUser.backgroundImage isEqualToString:@"C"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bgC.png"]];
+    }
+}
+
+-(void)setBackgroundImageForPopular {
+    User *currentUser = [User currentUser];
+    if ([currentUser.backgroundImage isEqualToString:@"A"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
+    } else if ([currentUser.backgroundImage isEqualToString:@"B"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bgB2.png"]];
+    } else if ([currentUser.backgroundImage isEqualToString:@"C"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bgC2.png"]];
+    }
+}
+
+- (void)receiveNotification:(NSNotification *)notification
 {
     if ([[notification name] isEqualToString:@"dismissKeyboard"])
         [self.searchInputBox resignFirstResponder];
+    else if ([[notification name] isEqualToString:@"setBackground"])
+        [self setBackgroundImage];
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -294,9 +322,9 @@ static const float yOffset = 68.f;
              {
                  
                  if ([toViewController isKindOfClass:[PopularListViewController class]])
-                     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
+                     [self setBackgroundImageForPopular];
                  else
-                     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg3.png"]];
+                     [self setBackgroundImage];
                  
                  CGRect rect = fromViewController.view.frame;
                  if (oldSelectedIndex < newSelectedIndex)

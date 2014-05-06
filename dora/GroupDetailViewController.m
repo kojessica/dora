@@ -125,7 +125,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
+    [self setBackgroundImage];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveNotification:)
@@ -135,6 +135,17 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                                              selector:@selector(receiveNotification:)
                                                  name:@"flagThisPost"
                                                object:nil];
+}
+
+-(void)setBackgroundImage {
+    User *currentUser = [User currentUser];
+    if ([currentUser.backgroundImage isEqualToString:@"A"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
+    } else if ([currentUser.backgroundImage isEqualToString:@"B"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bgB.png"]];
+    } else if ([currentUser.backgroundImage isEqualToString:@"C"]) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bgC.png"]];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -220,6 +231,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         post.updatedAt = currentDate;
         post.newKey = newkey;
         [self insertGhostPost:post];
+        
         [Post postWithUser:[User currentUser] group:[self group] text:post.text location:nil newKey:newkey completion:^(PFObject *result, NSError *error){
 //            NSUInteger count = 0;
 //                        for (Post *existingPost in self.posts) {

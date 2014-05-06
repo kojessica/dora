@@ -69,6 +69,7 @@ static User *currentUser = nil;
     currentUser.subscribedGroups = [NSArray arrayWithArray:tempArray];
     currentUser.unsubscribedGroups = [NSArray arrayWithArray:tempArray];
     currentUser.flaggedPosts = [NSArray arrayWithArray:tempArray];
+    currentUser.backgroundImage = @"C";
     
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         currentUser.objectId = [currentUser objectId];
@@ -107,6 +108,12 @@ static User *currentUser = nil;
     currentUser.nickname = nickname;
     [User persistUser:currentUser];
 }
+
++ (void)setUserBackground:(NSString *)background {
+    currentUser.backgroundImage = background;
+    [User persistUser:currentUser];
+}
+
 
 + (PFGeoPoint*)getLocation{
     CLLocation *location = [LocationController sharedLocationController].location;

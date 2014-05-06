@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
             <connections>
-                <outlet property="backgroundImageView" destination="Sdv-38-0oK" id="3Uz-dJ-osd"/>
+                <outlet property="bgA" destination="zQX-Ri-nDm" id="nfq-mr-x0b"/>
+                <outlet property="bgB" destination="yAZ-0w-dL2" id="gdg-qA-lJa"/>
+                <outlet property="bgC" destination="zDr-1h-SMI" id="cAm-pw-mt6"/>
                 <outlet property="header" destination="aGW-uq-FRf" id="bFm-ux-xw2"/>
                 <outlet property="hide1" destination="iIa-XB-UpH" id="jr0-uB-Qqh"/>
                 <outlet property="hide2" destination="kaW-Lm-Cte" id="jRW-P3-kCV"/>
@@ -15,6 +17,7 @@
                 <outlet property="hide5" destination="8nk-Wx-iXE" id="3ci-tw-MZW"/>
                 <outlet property="locationSwitch" destination="isw-X8-Bau" id="KRA-o0-Hl8"/>
                 <outlet property="showLabel" destination="FJG-mL-hCS" id="mf1-M8-Ftg"/>
+                <outlet property="showLabel2" destination="ayi-FM-8HD" id="Rph-4U-vvK"/>
                 <outlet property="tableView" destination="5Lo-Zl-Igd" id="fgH-bZ-95t"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -87,8 +90,8 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VISUALS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayi-FM-8HD">
-                    <rect key="frame" x="10" y="263" width="228" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BACKGROUND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayi-FM-8HD">
+                    <rect key="frame" x="15" y="283" width="228" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,35 +125,56 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sdv-38-0oK">
-                    <rect key="frame" x="0.0" y="292" width="320" height="81"/>
+                    <rect key="frame" x="0.0" y="302" width="320" height="111"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select background image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaF-Ne-xGu">
-                            <rect key="frame" x="13" y="28" width="221" height="21"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAZ-0w-dL2">
+                            <rect key="frame" x="125" y="20" width="70" height="70"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Wl-03-Sgn">
-                            <rect key="frame" x="236" y="0.0" width="84" height="81"/>
+                            <color key="backgroundColor" red="0.43704161349999998" green="0.43704161349999998" blue="0.43704161349999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="bgB_icon.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onSelectBgB:" destination="-1" eventType="touchUpInside" id="DpL-vq-TZ1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDr-1h-SMI">
+                            <rect key="frame" x="230" y="21" width="70" height="70"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
+                            <color key="backgroundColor" red="0.43704161349999998" green="0.43704161349999998" blue="0.43704161349999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="bgC_icon.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onSelectBgC:" destination="-1" eventType="touchUpInside" id="eUH-K9-vgW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQX-Ri-nDm">
+                            <rect key="frame" x="20" y="20" width="70" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.43704161349999998" green="0.43704161349999998" blue="0.43704161349999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="bg_icon.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onSelectBgA:" destination="-1" eventType="touchUpInside" id="O9t-mi-2Bm"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <gestureRecognizers/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="bRl-1u-LCZ" appends="YES" id="rcr-Kt-pzI"/>
-                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
-        <tapGestureRecognizer id="bRl-1u-LCZ"/>
     </objects>
     <resources>
+        <image name="bgB_icon.png" width="70" height="70"/>
+        <image name="bgC_icon.png" width="70" height="70"/>
+        <image name="bg_icon.png" width="70" height="70"/>
         <image name="goback_icon.png" width="23" height="14"/>
     </resources>
 </document>
