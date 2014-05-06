@@ -242,6 +242,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 //                                    }
 //                                count++;
 //                            }
+//            [self.posts setObject:nil atIndexedSubscript:count];
 //                        [self.posts setObject:result atIndexedSubscript:count];
             [self.posts setObject:result atIndexedSubscript:0];
         }];
@@ -271,11 +272,13 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 {
     [self.posts insertObject:post atIndex:0];
     NSMutableArray *arrayWithIndexPaths = [NSMutableArray array];
-    [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
-    [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
     self.selectedRow++;
     NSIndexPath *previousIndexPath =  [NSIndexPath indexPathForRow:self.previousHighlightedIndexPath.row+1 inSection:0];
     self.previousHighlightedIndexPath = previousIndexPath;
+
+    [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
+
+    [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
 }
 
