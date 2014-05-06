@@ -41,7 +41,7 @@ CGFloat newHeight = 107.f;
 @property (nonatomic, assign) BOOL reachedEnd;
 @property (nonatomic, assign) BOOL waitingForReload;
 @property (strong, nonatomic) PostCell *currentCell;
-
+@property (assign, nonatomic) int numberOfPosts;
 - (void)showSubscribeHelper:(NSString *)content;
 
 @end
@@ -103,7 +103,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
             PFInstallation *currentInstallation = [PFInstallation currentInstallation];
             [currentInstallation addUniqueObject:self.group.name forKey:@"channels"];
             [currentInstallation saveInBackground];
-            [self.postTable reloadData];
+            [self reloadTable];
+            //            [self.postTable reloadData];
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         }];
         
@@ -269,6 +270,30 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     }
 }
 
+- (void)reloadTable
+{
+    __block int currentPosition = 0;
+    __block int maximumCount = (int)[self.posts count]-1;
+    __block void (^animateTable)();
+    animateTable = ^void() {
+        if(currentPosition < maximumCount) {
+            [UIView animateWithDuration:0.1 animations:^(){
+                NSMutableArray *arrayWithIndexPaths = [NSMutableArray array];
+                [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:currentPosition inSection:0]];
+                self.numberOfPosts++;
+                [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
+                currentPosition++;
+                NSLog(@"Current position :%d", currentPosition);
+            } completion:^(BOOL finished) {
+                animateTable();
+            }];
+        }
+        
+    };
+    animateTable();
+
+}
+
 - (void)insertGhostPost:(Post *)post
 {
     [self.posts insertObject:post atIndex:0];
@@ -421,7 +446,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.posts count];
+//    return [self.posts count];
+    return self.numberOfPosts;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
