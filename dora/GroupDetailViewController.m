@@ -273,10 +273,11 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 {
     [self.posts insertObject:post atIndex:0];
     NSMutableArray *arrayWithIndexPaths = [NSMutableArray array];
-    self.selectedRow++;
-    NSIndexPath *previousIndexPath =  [NSIndexPath indexPathForRow:self.previousHighlightedIndexPath.row+1 inSection:0];
-    self.previousHighlightedIndexPath = previousIndexPath;
-
+    if(self.selectedRow >= 0) {
+        self.selectedRow++;
+        NSIndexPath *previousIndexPath =  [NSIndexPath indexPathForRow:self.previousHighlightedIndexPath.row+1 inSection:0];
+        self.previousHighlightedIndexPath = previousIndexPath;
+    }
     [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
 
     [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
@@ -323,10 +324,11 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     self.posts = posts;
     NSIndexPath *path1 = [NSIndexPath indexPathForRow:0 inSection:0];
     NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
-    self.selectedRow++;
-    NSIndexPath *previousIndexPath =  [NSIndexPath indexPathForRow:self.previousHighlightedIndexPath.row+1 inSection:0];
-    self.previousHighlightedIndexPath = previousIndexPath;
-
+    if(self.selectedRow >= 0) {
+        self.selectedRow++;
+        NSIndexPath *previousIndexPath =  [NSIndexPath indexPathForRow:self.previousHighlightedIndexPath.row+1 inSection:0];
+        self.previousHighlightedIndexPath = previousIndexPath;
+    }
     [self.postTable insertItemsAtIndexPaths:indexArray];
     [self.postTable reloadData];
     [UIView animateWithDuration:0.05 animations:^{
