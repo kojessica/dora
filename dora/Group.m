@@ -38,6 +38,22 @@
     return group;
 }
 
++ (Group*)createGroupWithName:(NSString*)name location:(CLLocation*) location completion:(void(^)(PFObject *object, NSError *error))completion{
+    CLLocationCoordinate2D coordinate = [location coordinate];
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                  longitude:coordinate.longitude];
+    Group *group = [Group object];
+    group.name = name;
+    group.location = geoPoint;
+    group.popularIndex = [NSNumber numberWithInt:0];
+    group.totalPosts = [NSNumber numberWithInt:0];
+    
+    [group saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        completion(group, error);
+	}];
+    return group;
+}
+
 + (void)getGroupWithName:(NSString*)name completion:(void(^) (PFObject *object, NSError *error))completion{
     PFQuery *query = [Group query];
     [query whereKey:@"name" equalTo:name];

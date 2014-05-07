@@ -249,18 +249,14 @@ static int maximumNumCharacters = 20;
         return cell;
     }
 }
-
 - (void)createNewGroup
 {
-    Group *group = [Group createGroupWithName:self.needToCreate location:[[LocationController sharedLocationController] locationManager].location];
-    
-    [Group getGroupWithName:self.needToCreate completion:^(PFObject *object, NSError *error) {
+    [Group createGroupWithName:self.needToCreate location:[[LocationController sharedLocationController] locationManager].location completion:^(PFObject *object, NSError *error){
+        
         GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
-        group.name = self.needToCreate;
-        groupDetailView.group = group;
+        groupDetailView.group = (Group*)object;
         [self presentViewController:groupDetailView animated:YES completion:nil];
     }];
-    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissKeyboard" object:nil];
 }
 
