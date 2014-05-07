@@ -19,7 +19,7 @@
 #import "Parse/PFObject.h"
 #import "PopularListViewController.h"
 #import "FlagViewController.h"
-
+#import "GroupDetailCollectionViewLayout.h"
 CGFloat widthOffset =30.f;
 CGFloat heightOffset = 55.f;
 CGFloat defaultWidth = 304.f;
@@ -77,7 +77,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
     self.numberOfResultsToFetch = [NSNumber numberWithInt:20];
     self.currentlyDisplayedPosts = [NSNumber numberWithInt:0];
-    
+    self.postTable.collectionViewLayout = [[GroupDetailCollectionViewLayout alloc] init];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
     [self.postTable addSubview:refreshControl];
@@ -275,15 +275,17 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     __block int currentPosition = 0;
     __block int maximumCount = (int)[self.posts count]-1;
     __block void (^animateTable)();
+    __block NSTimeInterval duration = .3;
+    
     animateTable = ^void() {
         if(currentPosition < maximumCount) {
-            [UIView animateWithDuration:0.1 animations:^(){
+            [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^(){
                 NSMutableArray *arrayWithIndexPaths = [NSMutableArray array];
                 [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:currentPosition inSection:0]];
                 self.numberOfPosts++;
                 [self.postTable insertItemsAtIndexPaths:arrayWithIndexPaths];
                 currentPosition++;
-                NSLog(@"Current position :%d", currentPosition);
+                duration = duration * .9;
             } completion:^(BOOL finished) {
                 //animateTable();
             }];
