@@ -107,28 +107,27 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
             [self.postTable reloadData];
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         }];
-        
-        //show appropriate subscribe button according to user status
-        User *currentUser = [User currentUser];
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF = %@", self.group.name];
-        NSArray *checkIfUnsubscribed = [currentUser.unsubscribedGroups filteredArrayUsingPredicate:predicate];
-        if ([checkIfUnsubscribed count] == 0) {
-            NSArray *checkIfSubscribed = [currentUser.subscribedGroups filteredArrayUsingPredicate:predicate];
-            if ([checkIfSubscribed count] == 0) {
-                [User updateRelevantGroupsByName:self.group.name WithSubscription:YES];
-                [self showSubscribeHelper:@"Auto-followed"];
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
-            }
-            [self.subscribeButton setImage:[UIImage imageNamed:@"pin_icon.png"] forState:UIControlStateSelected];
-            [self.subscribeButton setSelected:YES];
-        } else {
-            [self.subscribeButton setSelected:NO];
-        }
     } else {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }
     
     [self setBackgroundImage];
+    //show appropriate subscribe button according to user status
+    User *currentUser = [User currentUser];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF = %@", self.group.name];
+    NSArray *checkIfUnsubscribed = [currentUser.unsubscribedGroups filteredArrayUsingPredicate:predicate];
+    if ([checkIfUnsubscribed count] == 0) {
+        NSArray *checkIfSubscribed = [currentUser.subscribedGroups filteredArrayUsingPredicate:predicate];
+        if ([checkIfSubscribed count] == 0) {
+            [User updateRelevantGroupsByName:self.group.name WithSubscription:YES];
+            [self showSubscribeHelper:@"Auto-followed"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
+        }
+        [self.subscribeButton setImage:[UIImage imageNamed:@"pin_icon.png"] forState:UIControlStateSelected];
+        [self.subscribeButton setSelected:YES];
+    } else {
+        [self.subscribeButton setSelected:NO];
+    }
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveNotification:)
