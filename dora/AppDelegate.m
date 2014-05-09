@@ -72,7 +72,6 @@ typedef NS_ENUM(NSInteger, TDBButtonTag) {
         nav.navigationBar.hidden = YES;
         
         [self.window makeKeyAndVisible];
-        
         [self showTDBSimpleWhite];
     }
 
@@ -129,7 +128,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
     
     //page control
     UIPageControl *pc = [[UIPageControl alloc] initWithFrame:CGRectMake(100, 518, 120, 30)];
-    pc.numberOfPages = 2;
+    pc.numberOfPages = 3;
     pc.currentPage = 0;
     pc.pageIndicatorTintColor = [UIColor lightGrayColor];
     pc.currentPageIndicatorTintColor = [UIColor darkGrayColor];

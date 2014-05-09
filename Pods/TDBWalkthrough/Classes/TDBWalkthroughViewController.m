@@ -95,7 +95,7 @@
     CGFloat pageWidth = self.scrollView.frame.size.width;
     NSInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     
-    if (page == self.pageControl.numberOfPages) {
+    if (page == (self.pageControl.numberOfPages - 1)) {
         [(TDBInterface *)self.viewControllers[page] showButtons];
     }
 }
