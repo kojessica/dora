@@ -100,7 +100,6 @@
 		474D351B18FD052C00028F29 /* PFObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D351718FD052C00028F29 /* PFObject+NSCoding.m */; };
 		479BEA8B18F636C60035A6BC /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479BEA8A18F636C60035A6BC /* LocationController.m */; };
 		47BA95981916909F00520645 /* DoraCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BA95971916909F00520645 /* DoraCollectionView.m */; };
-		47BA959E1923393E00520645 /* ParallaxLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BA959D1923393E00520645 /* ParallaxLayoutAttributes.m */; };
 		47C1067918F9B99100EE78F2 /* ComposeMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */; };
 		47C1067A18F9B99100EE78F2 /* ComposeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */; };
 		47D5FA2019158C2500D7C492 /* GroupDetailCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D5FA1F19158C2500D7C492 /* GroupDetailCollectionViewLayout.m */; };
@@ -250,8 +249,6 @@
 		479BEA8A18F636C60035A6BC /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		47BA95961916909F00520645 /* DoraCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoraCollectionView.h; sourceTree = "<group>"; };
 		47BA95971916909F00520645 /* DoraCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoraCollectionView.m; sourceTree = "<group>"; };
-		47BA959C1923393E00520645 /* ParallaxLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxLayoutAttributes.h; sourceTree = "<group>"; };
-		47BA959D1923393E00520645 /* ParallaxLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxLayoutAttributes.m; sourceTree = "<group>"; };
 		47C1067618F9B99100EE78F2 /* ComposeMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeMessageViewController.xib; sourceTree = "<group>"; };
 		47C1067718F9B99100EE78F2 /* ComposeMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeMessageViewController.h; sourceTree = "<group>"; };
 		47C1067818F9B99100EE78F2 /* ComposeMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeMessageViewController.m; sourceTree = "<group>"; };
@@ -534,8 +531,6 @@
 				474D351718FD052C00028F29 /* PFObject+NSCoding.m */,
 				479BEA8918F636C60035A6BC /* LocationController.h */,
 				479BEA8A18F636C60035A6BC /* LocationController.m */,
-				47BA959C1923393E00520645 /* ParallaxLayoutAttributes.h */,
-				47BA959D1923393E00520645 /* ParallaxLayoutAttributes.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -746,7 +741,6 @@
 				129D763718FB6BA8003EB2E7 /* SettingsViewController.m in Sources */,
 				129D765A1901A9B4003EB2E7 /* SettingOptionsViewController.m in Sources */,
 				474D351818FD052C00028F29 /* NSObject+Properties.m in Sources */,
-				47BA959E1923393E00520645 /* ParallaxLayoutAttributes.m in Sources */,
 				47D5FA2019158C2500D7C492 /* GroupDetailCollectionViewLayout.m in Sources */,
 				126B185618EBAEAB005A8475 /* AppDelegate.m in Sources */,
 				129D761F18F9DAEE003EB2E7 /* TabsController.m in Sources */,
