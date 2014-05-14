@@ -9,7 +9,6 @@
 #import "PostCell.h"
 #import "User.h"
 #import "Timestamp.h"
-#import "ParallaxLayoutAttributes.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation PostCell
@@ -47,26 +46,7 @@
     
     self.postView.layer.cornerRadius = 2;
     self.postView.layer.masksToBounds = YES;
-    self.imageViewCenterYConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
-                                                                   attribute:NSLayoutAttributeCenterY
-                                                                   relatedBy:NSLayoutRelationEqual
-                                                                      toItem:self.contentView
-                                                                   attribute:NSLayoutAttributeCenterY
-                                                                  multiplier:1
-                                                                    constant:0];
-    [self.contentView addConstraint:self.imageViewCenterYConstraint];
-    return self;
+        return self;
 }
-- (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
-{
-    [super applyLayoutAttributes:layoutAttributes];
-    
-    NSParameterAssert(layoutAttributes != nil);
-    NSParameterAssert([layoutAttributes isKindOfClass:[ParallaxLayoutAttributes class]]);
-    
-    ParallaxLayoutAttributes *parallaxLayoutAttributes =
-    (ParallaxLayoutAttributes *)layoutAttributes;
-    self.imageViewCenterYConstraint.constant =
-    parallaxLayoutAttributes.parallaxOffset.y;
-}
+
 @end

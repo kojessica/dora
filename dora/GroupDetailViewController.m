@@ -269,6 +269,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     }
 }
 
+
 - (void)reloadTable
 {
     __block int currentPosition = 0;
@@ -645,7 +646,13 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     
     [self presentViewController:activityViewController animated:YES completion:nil];
 }
-
+-(void)doAnim:(PostCell*)cell {
+    cell.postView.alpha = 0;
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.2];
+    cell.postView.alpha = 1;
+    [UIView commitAnimations];
+}
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     CGFloat contentOffsetWhenFullyScrolledDown = (self.totalViewHeight - scrollView.bounds.size.height) * .90f;
@@ -712,7 +719,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PostCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCell" forIndexPath:indexPath];
-
+    [self doAnim:cell];
         cell.postView.backgroundColor = [UIColor whiteColor];
         if (cell.postView.frame.size.width > defaultWidth) {
             cell.postView.frame = CGRectMake(8.f, 8.f, cell.postView.frame.size.width - widthOffset, cell.postView.frame.size.height - heightOffset);

@@ -10,7 +10,6 @@
 #import "Post.h"
 
 @interface PostCell : UICollectionViewCell
-@property (nonatomic, strong) NSLayoutConstraint *imageViewCenterYConstraint;
 
 @property (weak, nonatomic) IBOutlet UIView *postView;
 @property (weak, nonatomic) IBOutlet UILabel *message;
