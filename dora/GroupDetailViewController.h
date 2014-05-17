@@ -12,9 +12,10 @@
 #import "Post.h"
 #import "CMPopTipView.h"
 #import "DoraCollectionView.h"
+#import "PostCell.h"
 
 
-@interface GroupDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UserActionsDelegate, CMPopTipViewDelegate, UIScrollViewDelegate>
+@interface GroupDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate,  CMPopTipViewDelegate, UIScrollViewDelegate, DoraCollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *receivedPostView;
 
 - (IBAction)onBackButton:(id)sender;
@@ -29,5 +30,7 @@
 - (IBAction)onCompose:(id)sender;
 - (IBAction)onSubscribeButton:(id)sender;
 - (IBAction)onSwap:(UISwipeGestureRecognizer *)sender;
+-(void)showShareController:(Post *)post;
+-(void)showFlagController:(Post*)post WithSender:(id)sender;
 
 @end

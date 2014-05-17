@@ -13,10 +13,10 @@
 
 @optional
 
--(void)didLikePost:(int)rowNum;
--(void)didUnlikePost:(int)rowNum;
+-(void)didLikePost:(Post*)post;
+-(void)didUnlikePost:(Post*)post;
 -(void)shareThisPost:(Post *)post;
--(void)flagThisPost:(int)rowNum WithSender:(id)sender;
+-(void)flagThisPost:(Post*)post WithSender:(id)sender;
 
 @end
 

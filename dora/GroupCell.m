@@ -27,7 +27,7 @@
 
 - (void)setGroup:(Group*)group
 {
-    
+   
     self.name.font = [UIFont fontWithName:@"ProximaNovaBold" size:15];
     self.firstPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:15];
     self.secondPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:15];

@@ -36,7 +36,7 @@
         
         [sender setImage:[UIImage imageNamed:@"heart_white_empty.png"] forState:UIControlStateNormal];
         [sender setSelected:NO];
-        [self.delegate didUnlikePost:self.rowNum];
+        [self.delegate didUnlikePost:self.post];
     } else {
         [Post likePostWithId:self.post.objectId];
         [User updateLikedPosts:self.post.objectId ByIncrement:YES];
@@ -70,7 +70,7 @@
                          }];
         
         [sender setSelected:YES];
-        [self.delegate didLikePost:self.rowNum];
+        [self.delegate didLikePost:self.post];
     }
 }
 
@@ -79,7 +79,7 @@
 }
 
 - (IBAction)onFlagButton:(id)sender {
-    [self.delegate flagThisPost:self.rowNum WithSender:sender];
+    [self.delegate flagThisPost:self.post WithSender:sender];
 }
 
 @end
