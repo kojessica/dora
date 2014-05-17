@@ -574,6 +574,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 {
     return CGSizeMake(320, [self cellHeight:indexPath] + [self cellLayoutHeight]);
 }
+
 -(void)showShareController:(Post *)post {
     NSString *shareString = [NSString stringWithFormat:(@"@%@ (From Dora)\n\"%@\""), self.group.name ,post.text];
     UIImage *shareImage = [UIImage imageNamed:@"logo_icon.png"];
@@ -585,6 +586,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     
     [self presentViewController:activityViewController animated:YES completion:nil];
 }
+
 -(void)showFlagController:(Post*)post WithSender:(id)sender {
     if (![sender isSelected]) {
         float flagged = [post.flags integerValue] + 1;
