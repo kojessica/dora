@@ -48,14 +48,14 @@
         [sender setImage:[UIImage imageNamed:@"heart_selected_icon.png"] forState:UIControlStateSelected];
         
         UIButton *button = (UIButton*)sender;
-        CGRect newFrame = CGRectMake(button.frame.origin.x, button.frame.origin.y - 3, button.frame.size.width, button.frame.size.height);
+        __block CGRect newFrame = CGRectMake(button.frame.origin.x, button.frame.origin.y - 3, button.frame.size.width, button.frame.size.height);
         [button setFrame:newFrame];
         
         [UIView animateWithDuration:0.2f
                               delay:0.0f
                             options: UIViewAnimationOptionCurveLinear
                          animations:^{
-                             CGRect newFrame = CGRectMake(button.frame.origin.x, button.frame.origin.y + 5, button.frame.size.width, button.frame.size.height);
+                             newFrame = CGRectMake(button.frame.origin.x, button.frame.origin.y + 5, button.frame.size.width, button.frame.size.height);
                              [button setFrame:newFrame];
                          }
                          completion:^(BOOL finished) {
@@ -63,7 +63,7 @@
                                                    delay:0.0f
                                                  options: UIViewAnimationOptionCurveLinear
                                               animations:^{
-                                                  CGRect newFrame = CGRectMake(button.frame.origin.x, button.frame.origin.y - 2, button.frame.size.width, button.frame.size.height);
+                                                  newFrame = CGRectMake(button.frame.origin.x, button.frame.origin.y - 2, button.frame.size.width, button.frame.size.height);
                                                   [button setFrame:newFrame];
                                               }
                                               completion:nil];

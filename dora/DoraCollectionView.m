@@ -7,7 +7,6 @@
 //
 
 #import "DoraCollectionView.h"
-static float const fadePercentage = 0.05;
 @implementation DoraCollectionView
 
 - (id)initWithFrame:(CGRect)frame

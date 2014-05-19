@@ -75,7 +75,7 @@
         if(!emptyButtonExists) {
             UIButton *emptyState = [[UIButton alloc] initWithFrame:CGRectMake(-20, 20, 361.f, 350.f)];
             UIImage *btnImage = [UIImage imageNamed:@"empty_state.png"];
-            [emptyState setAlpha:0.7];
+            [emptyState setAlpha:0.7f];
             [emptyState setImage:btnImage forState:UIControlStateNormal];
             emptyState.tag = 82;
             [self.view addSubview:emptyState];
@@ -101,8 +101,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat contentHeight = 0.f;
-    NSString *firstPost = [self.listGroup objectAtIndex:indexPath.row][@"firstPost"];
-    NSString *secondPost = [self.listGroup objectAtIndex:indexPath.row][@"secondPost"];
+    NSString *firstPost = [self.listGroup objectAtIndex:(NSUInteger)indexPath.row][@"firstPost"];
+    NSString *secondPost = [self.listGroup objectAtIndex:(NSUInteger)indexPath.row][@"secondPost"];
     CGSize maximumLabelSize = CGSizeMake(280,9999);
     UIFont *font=[UIFont systemFontOfSize:15];
     if (firstPost != nil) {
@@ -118,7 +118,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return [self.listGroup count];
+	return (NSInteger)[self.listGroup count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -127,7 +127,7 @@
     
     GroupCell *cell = (GroupCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    [cell setGroup:[self.listGroup objectAtIndex:indexPath.row]];
+    [cell setGroup:[self.listGroup objectAtIndex:(NSUInteger)indexPath.row]];
     [cell setBackgroundColor:[UIColor clearColor]];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 	return cell;
@@ -141,7 +141,7 @@
 }
 
 - (void)presentGroupDetailViewAtIndexPath:(NSIndexPath *)indexPath {
-    Group *groupSelected = [self.listGroup objectAtIndex:indexPath.row];
+    Group *groupSelected = [self.listGroup objectAtIndex:(NSUInteger)indexPath.row];
     
     GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
     groupDetailView.transitioningDelegate = self;

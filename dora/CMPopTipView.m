@@ -146,7 +146,7 @@
         CGGradientRef myGradient;
         CGColorSpaceRef myColorSpace;
         size_t locationCount = 5;
-        CGFloat locationList[] = {0.0, bubbleMiddle-0.03, bubbleMiddle, bubbleMiddle+0.03, 1.0};
+        CGFloat locationList[] = {0.0f, bubbleMiddle-0.03f, bubbleMiddle, bubbleMiddle+0.03f, 1.0f};
         
         CGFloat colourHL = 0.0;
         if (_highlight) {
@@ -173,9 +173,9 @@
         }
         CGFloat colorList[] = {
             //red, green, blue, alpha 
-            red*1.16+colourHL, green*1.16+colourHL, blue*1.16+colourHL, alpha,
-            red*1.16+colourHL, green*1.16+colourHL, blue*1.16+colourHL, alpha,
-            red*1.08+colourHL, green*1.08+colourHL, blue*1.08+colourHL, alpha,
+            red*1.16f+colourHL, green*1.16f+colourHL, blue*1.16f+colourHL, alpha,
+            red*1.16f+colourHL, green*1.16f+colourHL, blue*1.16f+colourHL, alpha,
+            red*1.08f+colourHL, green*1.08f+colourHL, blue*1.08f+colourHL, alpha,
             red     +colourHL, green     +colourHL, blue     +colourHL, alpha,
             red     +colourHL, green     +colourHL, blue     +colourHL, alpha
         };
@@ -212,7 +212,7 @@
         CGContextEOFillPath(c);
         
         // draw bottom shadow
-        UIColor *shadowColor = [UIColor colorWithWhite:0.0 alpha:0.4];
+        UIColor *shadowColor = [UIColor colorWithWhite:0.0 alpha:0.4f];
         CGContextSetFillColorWithColor(c, shadowColor.CGColor);
         CGContextSetShadowWithColor(c, CGSizeMake(0.0, -4.0), 4.0, shadowColor.CGColor);
         CGContextAddPath(c, innerShadowPath);
@@ -507,7 +507,7 @@
 	
 	CGPoint p = [targetView.superview convertPoint:targetView.center toView:containerView];
 	CGFloat x_p = p.x;
-	CGFloat x_b = x_p - roundf(_bubbleSize.width/2);
+	CGFloat x_b = x_p - roundf((float)_bubbleSize.width/2.0f);
 	if (x_b < _sidePadding) {
 		x_b = _sidePadding;
 	}
@@ -521,7 +521,7 @@
 		x_p = x_b + _bubbleSize.width - _cornerRadius - _pointerSize;
 	}
 	
-	CGFloat fullHeight = _bubbleSize.height + _pointerSize + 10.0;
+	CGFloat fullHeight = _bubbleSize.height + _pointerSize + 10.0f;
 	CGFloat y_b;
 	if (_pointDirection == PointDirectionUp) {
 		y_b = _topMargin + pointerY;
@@ -529,7 +529,7 @@
 	}
 	else {
 		y_b = pointerY - fullHeight;
-		_targetPoint = CGPointMake(x_p-x_b, fullHeight-2.0);
+		_targetPoint = CGPointMake(x_p-x_b, fullHeight-2.0f);
 	}
 	
 	CGRect finalFrame = CGRectMake(x_b-_sidePadding,
@@ -700,7 +700,7 @@
 		self.textFont = [UIFont boldSystemFontOfSize:14.0];
 		self.textColor = [UIColor whiteColor];
 		self.textAlignment = NSTextAlignmentCenter;
-		self.backgroundColor = [UIColor colorWithRed:62.0/255.0 green:60.0/255.0 blue:154.0/255.0 alpha:1.0];
+		self.backgroundColor = [UIColor colorWithRed:62.0f/255.0f green:60.0f/255.0f blue:154.0f/255.0f alpha:1.0f];
         self.has3DStyle = YES;
         self.borderColor = [UIColor blackColor];
         self.hasShadow = YES;
@@ -722,7 +722,7 @@
             self.layer.shadowOffset = CGSizeMake(0, 3);
             self.layer.shadowRadius = 2.0;
             self.layer.shadowColor = [[UIColor blackColor] CGColor];
-            self.layer.shadowOpacity = 0.3;
+            self.layer.shadowOpacity = 0.3f;
         } else {
             self.layer.shadowOpacity = 0.0;
         }

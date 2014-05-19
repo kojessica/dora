@@ -45,7 +45,7 @@
     unsigned int outCount;
 	
     Ivar* ivars = class_copyIvarList([self class], &outCount);
-    for (int i = 0; i < outCount; i++){
+    for (unsigned int i = 0; i < outCount; i++){
         Ivar ivar = ivars[i];
         NSString* ivarNameString = [NSString stringWithUTF8String:ivar_getName(ivar)];
         NSValue* value = [self valueForKey:ivarNameString];

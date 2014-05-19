@@ -186,7 +186,7 @@ static NSString *kDefaultAutoCompleteCellIdentifier = @"_DefaultAutoCompleteCell
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger numberOfRows = [self.autoCompleteSuggestions count];
+    NSInteger numberOfRows = (NSInteger)[self.autoCompleteSuggestions count];
     [self expandAutoCompleteTableViewForNumberOfRows:numberOfRows];
     return numberOfRows;
 }
@@ -207,7 +207,7 @@ static NSString *kDefaultAutoCompleteCellIdentifier = @"_DefaultAutoCompleteCell
     NSAssert(cell, @"Unable to create cell for autocomplete table");
     
     
-    id autoCompleteObject = self.autoCompleteSuggestions[indexPath.row];
+    id autoCompleteObject = self.autoCompleteSuggestions[(NSUInteger)indexPath.row];
     NSString *suggestedString;
     if([autoCompleteObject isKindOfClass:[NSString class]]){
         suggestedString = (NSString *)autoCompleteObject;
@@ -241,14 +241,14 @@ withAutoCompleteString:(NSString *)string
     
     NSAttributedString *boldedString = nil;
     if(self.applyBoldEffectToAutoCompleteSuggestions){
-        BOOL attributedTextSupport = [cell.textLabel respondsToSelector:@selector(setAttributedText:)];
+//        BOOL attributedTextSupport = [cell.textLabel respondsToSelector:@selector(setAttributedText:)];
         NSAssert(attributedTextSupport, @"Attributed strings on UILabels are  not supported before iOS 6.0");
         NSRange boldedRange = [[string lowercaseString]
                                rangeOfString:[self.text lowercaseString]];
         boldedString = [self boldedString:string withRange:boldedRange];
     }
     
-    id autoCompleteObject = self.autoCompleteSuggestions[indexPath.row];
+    id autoCompleteObject = self.autoCompleteSuggestions[(NSUInteger)indexPath.row];
     if(![autoCompleteObject conformsToProtocol:@protocol(MLPAutoCompletionObject)]){
         autoCompleteObject = nil;
     }
@@ -303,7 +303,7 @@ withAutoCompleteString:(NSString *)string
     NSString *autoCompleteString = selectedCell.textLabel.text;
     self.text = autoCompleteString;
     
-    id<MLPAutoCompletionObject> autoCompleteObject = self.autoCompleteSuggestions[indexPath.row];
+    id<MLPAutoCompletionObject> autoCompleteObject = self.autoCompleteSuggestions[(NSUInteger)indexPath.row];
     if(![autoCompleteObject conformsToProtocol:@protocol(MLPAutoCompletionObject)]){
         autoCompleteObject = nil;
     }
@@ -443,7 +443,7 @@ withAutoCompleteString:(NSString *)string
         if(self.showTextFieldDropShadowWhenAutoCompleteTableIsOpen){
             [self.layer setShadowColor:[[UIColor blackColor] CGColor]];
             [self.layer setShadowOffset:CGSizeMake(0, 1)];
-            [self.layer setShadowOpacity:0.35];
+            [self.layer setShadowOpacity:0.35f];
         }
     } else {
         [self closeAutoCompleteTableView];
@@ -590,7 +590,7 @@ withAutoCompleteString:(NSString *)string
     if(self.reuseIdentifier){
         [self unregisterAutoCompleteCellForReuseIdentifier:self.reuseIdentifier];
     }
-    BOOL classSettingSupported = [self.autoCompleteTableView respondsToSelector:@selector(registerClass:forCellReuseIdentifier:)];
+//    BOOL classSettingSupported = [self.autoCompleteTableView respondsToSelector:@selector(registerClass:forCellReuseIdentifier:)];
     NSAssert(classSettingSupported, @"Unable to set class for cell for autocomplete table, in iOS 5.0 you can set a custom NIB for a reuse identifier to get similar functionality.");
     [self.autoCompleteTableView registerClass:cellClass forCellReuseIdentifier:reuseIdentifier];
     [self setReuseIdentifier:reuseIdentifier];
@@ -670,17 +670,17 @@ withAutoCompleteString:(NSString *)string
     [self setAutoCompleteTableBorderWidth:1.0];
     
     
-    UIColor *lightBlueColor = [UIColor colorWithRed:181/255.0
-                                              green:204/255.0
-                                               blue:255/255.0
-                                              alpha:1.0];
+    UIColor *lightBlueColor = [UIColor colorWithRed:181.0f/255.0f
+                                              green:204.0f/255.0f
+                                               blue:255.0f/255.0f
+                                              alpha:1.0f];
     [self setAutoCompleteTableBorderColor:lightBlueColor];
     
     
-    UIColor *blueTextColor = [UIColor colorWithRed:23/255.0
-                                             green:119/255.0
-                                              blue:206/255.0
-                                             alpha:1.0];
+    UIColor *blueTextColor = [UIColor colorWithRed:23.0f/255.0f
+                                             green:119.0f/255.0f
+                                              blue:206.0f/255.0f
+                                             alpha:1.0f];
     [self setAutoCompleteTableCellTextColor:blueTextColor];
     
     if(self.backgroundColor == [UIColor clearColor]){
@@ -701,7 +701,7 @@ withAutoCompleteString:(NSString *)string
 {
     [self.layer setShadowColor:self.originalShadowColor];
     [self.layer setShadowOffset:self.originalShadowOffset];
-    [self.layer setShadowOpacity:self.originalShadowOpacity];
+    [self.layer setShadowOpacity:(float)self.originalShadowOpacity];
 }
 
 
@@ -767,7 +767,7 @@ withAutoCompleteString:(NSString *)string
 + (CGFloat)autoCompleteTableHeightForTextField:(MLPAutoCompleteTextField *)textField
                               withNumberOfRows:(NSInteger)numberOfRows
 {
-    CGFloat maximumHeightMultiplier = (textField.maximumNumberOfAutoCompleteRows - 0.5);
+    CGFloat maximumHeightMultiplier = (textField.maximumNumberOfAutoCompleteRows - 0.5f);
     CGFloat heightMultiplier;
     if(numberOfRows >= textField.maximumNumberOfAutoCompleteRows){
         heightMultiplier = maximumHeightMultiplier;
@@ -878,12 +878,12 @@ withAutoCompleteString:(NSString *)string
 {
     if(!self.isCancelled){
         
-        if(suggestions.count){
-            NSObject *firstObject = suggestions[0];
-            NSAssert([firstObject isKindOfClass:[NSString class]] ||
-                     [firstObject conformsToProtocol:@protocol(MLPAutoCompletionObject)],
-                     @"MLPAutoCompleteTextField expects an array with objects that are either strings or conform to the MLPAutoCompletionObject protocol for possible completions.");
-        }
+//        if(suggestions.count){
+//            NSObject *firstObject = suggestions[0];
+//            NSAssert([firstObject isKindOfClass:[NSString class]] ||
+//                     [firstObject conformsToProtocol:@protocol(MLPAutoCompletionObject)],
+//                     @"MLPAutoCompleteTextField expects an array with objects that are either strings or conform to the MLPAutoCompletionObject protocol for possible completions.");
+//        }
         
         NSDictionary *resultsInfo = @{kFetchedTermsKey: suggestions,
                                       kFetchedStringKey : self.incompleteString};

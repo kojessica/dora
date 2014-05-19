@@ -56,7 +56,8 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     }
     return self;
 }
--(void)viewDidUnload {
+
+-(void)dealloc {
     [[NSNotificationCenter defaultCenter]
      removeObserver:self
      name:UIApplicationDidReceiveRemoteNotification
@@ -150,14 +151,14 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     }
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return NO;
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 - (void)showSubscribeHelper:(NSString *)content {
     self.popTipView = [[CMPopTipView alloc] initWithMessage:content];
     self.popTipView.delegate = self;
-    self.popTipView.backgroundColor = [UIColor colorWithRed:40.0/255.0 green:169.0/255.0 blue:188.0/255.0 alpha:1];
+    self.popTipView.backgroundColor = [UIColor colorWithRed:40.0f/255.0f green:169.0f/255.0f blue:188.0f/255.0f alpha:1.0f];
     self.popTipView.borderWidth = 0;
     self.popTipView.textColor = [UIColor whiteColor];
     self.popTipView.animation = 0.5;
@@ -205,7 +206,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 -(void)remove:(int)i {
     [self.postTable performBatchUpdates:^{
-        [self.posts removeObjectAtIndex:i];
+        [self.posts removeObjectAtIndex:(NSUInteger)i];
         NSIndexPath *indexPath =[NSIndexPath indexPathForRow:i inSection:0];
         [self.postTable deleteItemsAtIndexPaths:[NSArray arrayWithObject:indexPath]];
     } completion:^(BOOL finished) {
@@ -249,7 +250,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         }];
     } else if ([[notification name] isEqualToString:@"flagThisPost"]) {
         
-        Post *flaggedPost = [self.posts objectAtIndex:self.selectedRow];
+        Post *flaggedPost = [self.posts objectAtIndex:(NSUInteger)self.selectedRow];
         [User updateFlaggedPosts:flaggedPost.objectId];
         
         UserActions *tempActionBar = (UserActions *)[self.currentCell viewWithTag:100];
@@ -388,7 +389,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 - (void)showNewPostLabel {
     self.receivedPostCounterView = [[CMPopTipView alloc] initWithMessage:[NSString stringWithFormat:@"%i new posts", self.numberOfNewPosts]];
     self.receivedPostCounterView.delegate = self;
-    self.receivedPostCounterView.backgroundColor = [UIColor colorWithRed:40.0/255.0 green:169.0/255.0 blue:188.0/255.0 alpha:1];
+    self.receivedPostCounterView.backgroundColor = [UIColor colorWithRed:40.0f/255.0f green:169.0f/255.0f blue:188.0f/255.0f alpha:1.0f];
     self.receivedPostCounterView.borderWidth = 0;
     self.receivedPostCounterView.textColor = [UIColor whiteColor];
     self.receivedPostCounterView.animation = 0.5;
@@ -407,7 +408,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         CGFloat currentPosition = [scrollView contentOffset].y;
         CGFloat newPostOffset = 0;
         for (int i = 0; i < self.numberOfNewPosts; i++) {
-            CGFloat rowHeight = [self cellHeightWithPost:self.posts[i]] + [self cellLayoutHeight];
+            CGFloat rowHeight = [self cellHeightWithPost:self.posts[(NSUInteger)i]] + [self cellLayoutHeight];
             newPostOffset += rowHeight;
             if(newPostOffset-50 >= currentPosition) {
                 self.numberOfNewPosts = i;
@@ -457,7 +458,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.posts count];
+    return (NSInteger)[self.posts count];
 //    return self.numberOfPosts;
 }
 
@@ -467,7 +468,6 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 }
 
 - (void)showUserActions:(NSArray *)arrayOfThings {
-    Post *postSelected = [arrayOfThings objectAtIndex:1];
     NSIndexPath *indexPath = [arrayOfThings objectAtIndex:2];
     UICollectionView *collectionView = [arrayOfThings objectAtIndex:3];
     NSNumber *displayNumber = [arrayOfThings objectAtIndex:4];
@@ -476,14 +476,14 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     NSLog(@"%@", self.previousHighlightedIndexPath);
     //if the same cell was reselected
     if(redisplay == 1) {
-        PostCell *currentCell = (PostCell *)[arrayOfThings objectAtIndex:0];
+        PostCell *currentCell = [arrayOfThings objectAtIndex:0];
         [currentCell selectCell:indexPath.row];
         self.selectedRow = (int)indexPath.row;
 
     }
     else if ((self.selectedRow == indexPath.row) && (self.previousHighlightedIndexPath != nil)) {
         NSLog(@"unselected the same cell");
-        PostCell *prevCell = (PostCell *)[collectionView cellForItemAtIndexPath:self.previousHighlightedIndexPath];
+        PostCell *prevCell = (PostCell*)[collectionView cellForItemAtIndexPath:self.previousHighlightedIndexPath];
         [prevCell unselectCell];
         self.selectedRow = -1;
         self.previousHighlightedIndexPath = nil;
@@ -520,7 +520,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         self.waitingForReload = YES;
         
         [Post retrieveRecentPostsFromGroup:self.group number:[self numberOfResultsToFetch] skipNumber:[self currentlyDisplayedPosts] completion:^(NSArray *objects, NSError *error) {
-            if([objects count] < [[self numberOfResultsToFetch] intValue]) {
+            if([objects count] < [[self numberOfResultsToFetch] unsignedIntValue]) {
                 self.reachedEnd = YES;
             }
             self.currentlyDisplayedPosts = [NSNumber numberWithInt:[self currentlyDisplayedPosts].intValue + (int)[objects count]];
@@ -537,7 +537,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%d", self.selectedRow);
     PostCell *cell = (PostCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    Post *postSelected = [self.posts objectAtIndex:indexPath.row];
+    Post *postSelected = [self.posts objectAtIndex:(NSUInteger)indexPath.row];
     
     //Check to see if this is a ghost post
     if (postSelected.objectId == nil) {
@@ -554,7 +554,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 
 - (CGFloat)cellHeight:(NSIndexPath *)indexPath
 {
-    Post *post = [self.posts objectAtIndex:indexPath.row];
+    Post *post = [self.posts objectAtIndex:(NSUInteger)indexPath.row];
     return [self cellHeightWithPost:post];
 }
 
@@ -590,7 +590,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 -(void)showFlagController:(Post*)post WithSender:(id)sender {
     if (![sender isSelected]) {
         float flagged = [post.flags integerValue] + 1;
-        post.flags = [NSNumber numberWithInt:flagged];
+        post.flags = [NSNumber numberWithFloat:flagged];
         
         FlagViewController *flagView = [[FlagViewController alloc] init];
         flagView.group = self.group;
@@ -613,10 +613,10 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 {
     PostCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCell" forIndexPath:indexPath];
     [self doAnim:cell];
-    [cell cellWithPost:[self.posts objectAtIndex:indexPath.row]];
+    [cell cellWithPost:[self.posts objectAtIndex:(NSUInteger)indexPath.row]];
     cell.delegate = self;
     if(self.selectedRow == indexPath.row) {
-        NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, [self.posts objectAtIndex:indexPath.row], indexPath, collectionView, [NSNumber numberWithInt:1], nil];
+        NSArray * arrayOfThingsToPass = [NSArray arrayWithObjects: cell, [self.posts objectAtIndex:(NSUInteger)indexPath.row], indexPath, collectionView, [NSNumber numberWithInt:1], nil];
         [self performSelectorOnMainThread:@selector(showUserActions:) withObject:arrayOfThingsToPass waitUntilDone:NO];
     }
 

@@ -22,7 +22,7 @@
     
     // Test data object if desired output format is achieved
     [dateFormat setDateFormat:@"EEE, MMM d YYYY"];
-    dateStr = [dateFormat stringFromDate:date];
+//    dateStr = [dateFormat stringFromDate:date];
     //NSLog(@"Date -- %@",dateStr);
     
     return date;
@@ -54,7 +54,7 @@
     NSString* timestamp;
     int timeIntervalInHours = (int)[[NSDate date] timeIntervalSinceDate:date] /3600;
     
-    int timeIntervalInMinutes = [[NSDate date] timeIntervalSinceDate:date] /60;
+    int timeIntervalInMinutes = (int)[[NSDate date] timeIntervalSinceDate:date] /60;
     
     if (timeIntervalInMinutes < 60){//less than 15 minutes old
         

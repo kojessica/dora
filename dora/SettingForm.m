@@ -15,7 +15,7 @@
 {
     User *currentUser = [User currentUser];
     self.gender = [currentUser.gender intValue];
-    self.age = [currentUser.age intValue];
+    self.age = [currentUser.age unsignedIntegerValue];
     self.nickname = currentUser.nickname;
     
     return @[

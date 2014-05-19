@@ -26,12 +26,7 @@ static LocationController* sharedCLDelegate = nil;
 
 #pragma mark -
 #pragma mark CLLocationManagerDelegate Methods
-- (void)locationManager:(CLLocationManager*)manager
-    didUpdateToLocation:(CLLocation*)newLocation
-           fromLocation:(CLLocation*)oldLocation
-{
-    /* ... */
-}
+
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     self.location = locations[0];

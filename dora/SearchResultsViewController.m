@@ -26,7 +26,7 @@
 
 @implementation SearchResultsViewController
 
-static int maximumNumCharacters = 20;
+static unsigned int maximumNumCharacters = 20;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -136,7 +136,7 @@ static int maximumNumCharacters = 20;
     [query whereKeyExists:@"name"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
             for (PFObject *object in objects) {
                 [groupObjects addObject:object];
             }
@@ -169,7 +169,7 @@ static int maximumNumCharacters = 20;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (self.hasResults) {
-        return [self.suggestedGroups count];
+        return (NSInteger)[self.suggestedGroups count];
     } else {
         return 1;
     }
@@ -194,7 +194,7 @@ static int maximumNumCharacters = 20;
 }
 
 - (void)presentGroupDetailViewAtIndexPath:(NSIndexPath *)indexPath {
-    PFObject *groupSelected = [self.suggestedGroups objectAtIndex:indexPath.row];
+    PFObject *groupSelected = [self.suggestedGroups objectAtIndex:(NSUInteger)indexPath.row];
     
     Group *group = [Group object];
     GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
@@ -209,9 +209,9 @@ static int maximumNumCharacters = 20;
 {
     if (self.hasResults) {
         CustomSearchCell *cell = (CustomSearchCell *)[tableView dequeueReusableCellWithIdentifier:@"CustomSearchCell"];
-        cell.name.text = [[self.suggestedGroups objectAtIndex:indexPath.row] objectForKey:@"name"];
-        cell.totalPost.text = [[[self.suggestedGroups objectAtIndex:indexPath.row] objectForKey:@"totalPosts"] stringValue];
-        NSLog(@"%@", [self.suggestedGroups objectAtIndex:indexPath.row]);
+        cell.name.text = [[self.suggestedGroups objectAtIndex:(NSUInteger)indexPath.row] objectForKey:@"name"];
+        cell.totalPost.text = [[[self.suggestedGroups objectAtIndex:(NSUInteger)indexPath.row] objectForKey:@"totalPosts"] stringValue];
+        NSLog(@"%@", [self.suggestedGroups objectAtIndex:(NSUInteger)indexPath.row]);
         cell.backgroundColor = [UIColor clearColor];
         cell.name.textColor = [UIColor whiteColor];
         cell.name.font = [UIFont fontWithName:@"ProximaNovaRegular" size:16];

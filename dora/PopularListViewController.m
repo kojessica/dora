@@ -70,8 +70,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat contentHeight = 0.f;
-    NSString *firstPost = [self.listGroup objectAtIndex:indexPath.row][@"firstPost"];
-    NSString *secondPost = [self.listGroup objectAtIndex:indexPath.row][@"secondPost"];
+    NSString *firstPost = [self.listGroup objectAtIndex:(NSUInteger)indexPath.row][@"firstPost"];
+    NSString *secondPost = [self.listGroup objectAtIndex:(NSUInteger)indexPath.row][@"secondPost"];
     CGSize maximumLabelSize = CGSizeMake(280,9999);
     UIFont *font=[UIFont systemFontOfSize:15];
     if (firstPost != nil) {
@@ -87,7 +87,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return [self.listGroup count];
+	return (NSInteger)[self.listGroup count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,9 +97,9 @@
     GroupCell *cell = (GroupCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [cell setGroup:[self.listGroup objectAtIndex:indexPath.row]];
+    [cell setGroup:[self.listGroup objectAtIndex:(NSUInteger)indexPath.row]];
     
-    cell.name.text = [NSString stringWithFormat:(@"#%d  %@"), indexPath.row+1, cell.name.text];
+    cell.name.text = [NSString stringWithFormat:(@"#%zd  %@"), (NSInteger)(indexPath.row+1), cell.name.text];
     [cell setBackgroundColor:[UIColor clearColor]];
     
 	return cell;
@@ -116,7 +116,7 @@
 }
 
 - (void)presentGroupDetailViewAtIndexPath:(NSIndexPath *)indexPath {
-    Group *groupSelected = [self.listGroup objectAtIndex:indexPath.row];
+    Group *groupSelected = [self.listGroup objectAtIndex:(NSUInteger)indexPath.row];
     
     GroupDetailViewController *groupDetailView = [[GroupDetailViewController alloc] init];
     groupDetailView.transitioningDelegate = self;

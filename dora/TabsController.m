@@ -146,7 +146,7 @@ static const float yOffset = 68.f;
 
 - (void)addTabButtons
 {
-	NSUInteger index = 0;
+	NSInteger index = 0;
 	for (UIViewController *viewController in self.viewControllers)
 	{
 		UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -177,7 +177,7 @@ static const float yOffset = 68.f;
 	NSUInteger index = 0;
 	NSUInteger count = [self.viewControllers count];
     
-	CGRect rect = CGRectMake(0.0f, 0.0f, floorf(self.view.bounds.size.width / count), self.tabBarHeight);
+	CGRect rect = CGRectMake(0.0f, 0.0f, floorf((float)self.view.bounds.size.width / count), self.tabBarHeight);
     
 	self.indicatorView.hidden = YES;
     
@@ -200,7 +200,7 @@ static const float yOffset = 68.f;
 - (void)centerIndicatorOnButton:(UIButton *)button
 {
 	CGRect rect = self.indicatorView.frame;
-	rect.origin.x = button.center.x - floorf(self.indicatorView.frame.size.width/2.0f);
+	rect.origin.x = button.center.x - floorf((float)self.indicatorView.frame.size.width/2.0f);
 	rect.origin.y = self.tabBarHeight - self.indicatorView.frame.size.height + yOffset;
 	self.indicatorView.frame = rect;
 	self.indicatorView.hidden = NO;
@@ -274,7 +274,7 @@ static const float yOffset = 68.f;
         
 		if (_selectedIndex != NSNotFound)
 		{
-			UIButton *fromButton = (UIButton *)[self.tabButtonsContainerView viewWithTag:TagOffset + _selectedIndex];
+			UIButton *fromButton = (UIButton *)[self.tabButtonsContainerView viewWithTag:TagOffset + (NSInteger)_selectedIndex];
 			[self deselectTabButton:fromButton];
 			fromViewController = self.selectedViewController;
 		}
@@ -285,7 +285,7 @@ static const float yOffset = 68.f;
 		UIButton *toButton;
 		if (_selectedIndex != NSNotFound)
 		{
-			toButton = (UIButton *)[self.tabButtonsContainerView viewWithTag:TagOffset + _selectedIndex];
+			toButton = (UIButton *)[self.tabButtonsContainerView viewWithTag:TagOffset + (NSInteger)_selectedIndex];
 			[self selectTabButton:toButton];
 			toViewController = self.selectedViewController;
 		}
@@ -305,7 +305,7 @@ static const float yOffset = 68.f;
 		}
 		else if (animated)
 		{
-			CGRect rect = self.contentContainerView.bounds;
+			__block CGRect rect = self.contentContainerView.bounds;
 			if (oldSelectedIndex < newSelectedIndex)
 				rect.origin.x = rect.size.width;
 			else
@@ -326,7 +326,7 @@ static const float yOffset = 68.f;
                  else
                      [self setBackgroundImage];
                  
-                 CGRect rect = fromViewController.view.frame;
+                 rect = fromViewController.view.frame;
                  if (oldSelectedIndex < newSelectedIndex)
                      rect.origin.x = -rect.size.width;
                  else
@@ -380,7 +380,7 @@ static const float yOffset = 68.f;
 
 - (void)tabButtonPressed:(UIButton *)sender
 {
-	[self setSelectedIndex:sender.tag - TagOffset animated:YES];
+	[self setSelectedIndex:(NSUInteger)sender.tag - TagOffset animated:YES];
 }
 
 #pragma mark - Change these methods to customize the look of the buttons
@@ -430,7 +430,7 @@ static const float yOffset = 68.f;
         
         [UIView animateWithDuration:0.4 animations:^{
             toViewController.view.frame = CGRectOffset(currentFrame, 0, 0);
-            toViewController.view.alpha = 0.95;
+            toViewController.view.alpha = 0.95f;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:YES];
         }];

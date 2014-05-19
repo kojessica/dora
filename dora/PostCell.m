@@ -32,14 +32,14 @@ CGFloat cellNewHeight = 107.f;
 - (id)cellWithPost:(Post *)post
 {
     //TODO(jessicako): replace currentUser with getUserInfoById
-    self.post = post;
-    self.postView.backgroundColor = [UIColor whiteColor];
+    _post = post;
+    _postView.backgroundColor = [UIColor whiteColor];
     if (self.postView.frame.size.width > cellDefaultWidth) {
         self.postView.frame = CGRectMake(8.f, 8.f, self.postView.frame.size.width - cellWidthOffset, self.postView.frame.size.height - cellHeightOffset);
     }
     NSLog(@"postViewframe in a normal cell = %@\n", NSStringFromCGRect(self.postView.frame));
     
-    self.message.textColor = [UIColor blackColor];
+    _message.textColor = [UIColor blackColor];
 
     User *currentUser = [User currentUser];
     NSLog(@"%@", currentUser);
@@ -99,7 +99,7 @@ CGFloat cellNewHeight = 107.f;
                          CGSize currentFrameSize = self.postView.frame.size;
                          self.postView.frame = CGRectMake(0.f, 0.f, currentFrameSize.width + cellWidthOffset, currentFrameSize.height + cellHeightOffset);
                          self.message.frame = CGRectMake(18.f, -6.f, self.message.frame.size.width + cellWidthOffset, self.message.frame.size.height + cellHeightOffset);
-                         self.postView.backgroundColor = [UIColor colorWithRed:38/255 green:38/255 blue:38/255 alpha:0.8];
+                         self.postView.backgroundColor = [UIColor colorWithRed:38/255 green:38/255 blue:38/255 alpha:0.8f];
                          self.message.textColor = [UIColor whiteColor];
                          
                          UserActions *actionbar = [[UserActions alloc] initWithFrame:CGRectMake(0.f, currentFrameSize.height + 2, 320.f, 32.f)];
@@ -107,7 +107,7 @@ CGFloat cellNewHeight = 107.f;
                          actionbar.delegate = self;
                          actionbar.likeCount.text = [self.post.likes stringValue];
                          actionbar.post = self.post;
-                         actionbar.rowNum  = row;
+                         actionbar.rowNum  = (int)row;
                          
                          //check if this was liked before
                          User *currentUser = [User currentUser];
@@ -132,12 +132,12 @@ CGFloat cellNewHeight = 107.f;
 }
 - (void)didLikePost:(Post*)post {
     float incremented = [post.likes integerValue] + 1;
-    post.likes = [NSNumber numberWithInt:incremented];
+    post.likes = [NSNumber numberWithFloat:incremented];
 }
 
 - (void)didUnlikePost:(Post*)post {
     float decremented = [post.likes integerValue] - 1;
-    post.likes = [NSNumber numberWithInt:decremented];
+    post.likes = [NSNumber numberWithFloat:decremented];
 }
 
 -(void)flagThisPost:(Post*)post WithSender:(id)sender {

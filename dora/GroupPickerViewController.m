@@ -89,8 +89,8 @@
     NSArray *matching = [self.groupsNames filteredArrayUsingPredicate:predicate];
     
     if ([textField.text length] > 0 && [matching count] == 0) {
-        NSArray* words = [textField.text componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceCharacterSet]];
-        NSString* searchStringWithNoSpace = [words componentsJoinedByString:@""];
+        words = [textField.text componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceCharacterSet]];
+        searchStringWithNoSpace = [words componentsJoinedByString:@""];
         [self createNewGroup:searchStringWithNoSpace];
     } else {
         NSLog(@"matching: %@", [matching objectAtIndex:0]);
@@ -131,7 +131,7 @@
         if(self.simulateLatency){
             CGFloat seconds = arc4random_uniform(4)+arc4random_uniform(4); //normal distribution
             NSLog(@"sleeping fetch of completions for %f", seconds);
-            sleep(seconds);
+            sleep((unsigned int)seconds);
         }
         
         NSArray *completions;
@@ -206,7 +206,7 @@
        withAutoCompleteString:(NSString *)autocompleteString
          withAttributedString:(NSAttributedString *)boldedString
         forAutoCompleteObject:(id<MLPAutoCompletionObject>)autocompleteObject
-            forRowAtIndexPath:(NSIndexPath *)indexPath;
+            forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //This is your chance to customize an autocomplete tableview cell before it appears in the autocomplete tableview
     NSString *filename = [autocompleteString stringByAppendingString:@".png"];

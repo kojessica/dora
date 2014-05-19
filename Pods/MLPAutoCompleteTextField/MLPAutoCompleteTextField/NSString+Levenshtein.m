@@ -84,12 +84,12 @@ int smallestOf(int a, int b, int c);
     // Step 1
     int k, i, j, cost, * d, distance;
     
-    int n = [dataA length];
-    int m = [dataB length];
+    int n = (int)[dataA length];
+    int m = (int)[dataB length];
     
     if( n++ != 0 && m++ != 0 ) {
         
-        d = malloc( sizeof(int) * m * n );
+        d = malloc((unsigned long) ((int)sizeof(int) * m * n) );
         
         // Step 2
         for( k = 0; k < n; k++)
