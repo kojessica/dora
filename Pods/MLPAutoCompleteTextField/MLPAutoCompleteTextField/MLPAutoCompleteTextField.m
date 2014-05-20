@@ -981,7 +981,7 @@ withAutoCompleteString:(NSString *)string
     
     for(NSObject *originalObject in possibleTerms) {
         
-        NSString *currentString;
+        NSString *currentString = @"";
         if([originalObject isKindOfClass:[NSString class]]){
             currentString = (NSString *)originalObject;
         } else if ([originalObject conformsToProtocol:@protocol(MLPAutoCompletionObject)]){
