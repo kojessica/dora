@@ -15,17 +15,16 @@
 
 
 @interface GroupDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate,  CMPopTipViewDelegate, UIScrollViewDelegate, DoraCollectionViewDelegate>
-@property (weak, nonatomic) IBOutlet UIView *receivedPostView;
-
+@property (nonatomic, weak) IBOutlet UIView *receivedPostView;
+@property (nonatomic, weak) IBOutlet UIButton *writeButton;
+@property (nonatomic, weak) IBOutlet UIView *topBar;
+@property (nonatomic, weak) IBOutlet UIView *mainContentView;
+@property (nonatomic, weak) IBOutlet UIButton *subscribeButton;
+@property (nonatomic, weak) IBOutlet UILabel *groupLabel;
+@property (nonatomic) Group *group;
+@property (nonatomic) IBOutlet DoraCollectionView *postTable;
+@property (nonatomic) NSString *parentController;
 - (IBAction)onBackButton:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *writeButton;
-@property (weak, nonatomic) IBOutlet UIView *topBar;
-@property (weak, nonatomic) IBOutlet UIView *mainContentView;
-@property (weak, nonatomic) IBOutlet UIButton *subscribeButton;
-@property (weak, nonatomic) IBOutlet UILabel *groupLabel;
-@property (strong, nonatomic) Group *group;
-@property (strong, nonatomic) IBOutlet DoraCollectionView *postTable;
-@property (strong, nonatomic) NSString *parentController;
 - (IBAction)onCompose:(id)sender;
 - (IBAction)onSubscribeButton:(id)sender;
 - (IBAction)onSwap:(UISwipeGestureRecognizer *)sender;

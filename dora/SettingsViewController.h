@@ -11,25 +11,25 @@
 
 @interface SettingsViewController : UIViewController <FXFormControllerDelegate>
 
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UISwitch *notifySwitch;
-@property (nonatomic, strong) FXFormController *formController;
-@property (weak, nonatomic) IBOutlet UISwitch *locationSwitch;
-@property (weak, nonatomic) IBOutlet UILabel *header;
-@property (weak, nonatomic) IBOutlet UILabel *showLabel;
-@property (weak, nonatomic) IBOutlet UILabel *showLabel2;
+@property (nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UISwitch *notifySwitch;
+@property (nonatomic) FXFormController *formController;
+@property (nonatomic, weak) IBOutlet UISwitch *locationSwitch;
+@property (nonatomic, weak) IBOutlet UILabel *header;
+@property (nonatomic, weak) IBOutlet UILabel *showLabel;
+@property (nonatomic, weak) IBOutlet UILabel *showLabel2;
 
-@property (weak, nonatomic) IBOutlet UILabel *hide1;
-@property (weak, nonatomic) IBOutlet UIView *hide2;
-@property (weak, nonatomic) IBOutlet UILabel *hide3;
-@property (weak, nonatomic) IBOutlet UISwitch *hide4;
-@property (weak, nonatomic) IBOutlet UILabel *hide5;
-@property (weak, nonatomic) IBOutlet UIView *hide6;
-@property (weak, nonatomic) IBOutlet UILabel *hide7;
-@property (weak, nonatomic) IBOutlet UISwitch *hide8;
-@property (weak, nonatomic) IBOutlet UIButton *bgB;
-@property (weak, nonatomic) IBOutlet UIButton *bgA;
-@property (weak, nonatomic) IBOutlet UIButton *bgC;
+@property (nonatomic, weak) IBOutlet UILabel *hide1;
+@property (nonatomic, weak) IBOutlet UIView *hide2;
+@property (nonatomic, weak) IBOutlet UILabel *hide3;
+@property (nonatomic, weak) IBOutlet UISwitch *hide4;
+@property (nonatomic, weak) IBOutlet UILabel *hide5;
+@property (nonatomic, weak) IBOutlet UIView *hide6;
+@property (nonatomic, weak) IBOutlet UILabel *hide7;
+@property (nonatomic, weak) IBOutlet UISwitch *hide8;
+@property (nonatomic, weak) IBOutlet UIButton *bgB;
+@property (nonatomic, weak) IBOutlet UIButton *bgA;
+@property (nonatomic, weak) IBOutlet UIButton *bgC;
 - (IBAction)onSelectBgA:(id)sender;
 - (IBAction)onSelectBgB:(id)sender;
 - (IBAction)onSelectBgC:(id)sender;

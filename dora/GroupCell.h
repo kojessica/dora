@@ -10,13 +10,13 @@
 
 @interface GroupCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *secondPost;
-@property (weak, nonatomic) IBOutlet UILabel *firstPost;
-@property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *wrapper;
-@property (weak, nonatomic) IBOutlet UILabel *totalPost;
-@property (weak, nonatomic) IBOutlet UILabel *lastUpdated;
-@property (weak, nonatomic) IBOutlet UIView *bottomView;
-@property (weak, nonatomic) IBOutlet UIView *topView;
+@property (nonatomic, weak) IBOutlet UILabel *secondPost;
+@property (nonatomic, weak) IBOutlet UILabel *firstPost;
+@property (nonatomic, weak) IBOutlet UILabel *name;
+@property (nonatomic, weak) IBOutlet UILabel *wrapper;
+@property (nonatomic, weak) IBOutlet UILabel *totalPost;
+@property (nonatomic, weak) IBOutlet UILabel *lastUpdated;
+@property (nonatomic, weak) IBOutlet UIView *bottomView;
+@property (nonatomic, weak) IBOutlet UIView *topView;
 - (void)initWithGroup:(Group*)group;
 @end

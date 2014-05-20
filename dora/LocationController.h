@@ -21,8 +21,8 @@
     __weak id delegate;
 }
 
-@property (nonatomic, strong) CLLocationManager* locationManager;
-@property (nonatomic, strong) CLLocation* location;
+@property (nonatomic) CLLocationManager* locationManager;
+@property (nonatomic) CLLocation* location;
 @property (nonatomic, weak) id  delegate;
 
 + (LocationController*)sharedLocationController; // Singleton method

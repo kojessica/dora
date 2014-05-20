@@ -35,10 +35,10 @@
 @property (retain) NSNumber *flags;
 @property (retain) NSNumber *dislikes;
 @property (retain) PFGeoPoint *location;
-@property (strong, nonatomic) NSDate *updatedAt;
+@property (nonatomic) NSDate *updatedAt;
 @property (retain) NSNumber *popularity;
 @property (retain) NSString *newKey;
-@property (strong, nonatomic) NSNumber *age;
-@property (strong, nonatomic) NSNumber *gender;
+@property (nonatomic) NSNumber *age;
+@property (nonatomic) NSNumber *gender;
 
 @end

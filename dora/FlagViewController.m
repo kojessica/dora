@@ -11,7 +11,7 @@
 @interface FlagViewController ()
 
 @property (nonatomic, assign) BOOL isSelected;
-@property (nonatomic, strong) id prevSender;
+@property (nonatomic) id prevSender;
 -(void)selectRadio:(id)sender;
 
 @end

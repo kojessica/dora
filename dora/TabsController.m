@@ -20,10 +20,10 @@ static const float yOffset = 68.f;
 
 @interface TabsController ()
 
-@property (strong,nonatomic) UIView *contentContainerView;
-@property (strong,nonatomic) UIView *tabButtonsContainerView;
-@property (strong,nonatomic) UIView *indicatorView;
-@property (assign,nonatomic) BOOL isPresent;
+@property (nonatomic) UIView *contentContainerView;
+@property (nonatomic) UIView *tabButtonsContainerView;
+@property (nonatomic) UIView *indicatorView;
+@property (nonatomic, assign) BOOL isPresent;
 
 @end
 

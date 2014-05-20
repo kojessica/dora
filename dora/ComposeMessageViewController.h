@@ -11,12 +11,12 @@
 #import "Group.h"
 #import "Post.h"
 @interface ComposeMessageViewController : UIViewController <UITextViewDelegate>
-@property (strong, nonatomic) Group *group;
-@property (strong, nonatomic) User *user;
+@property (nonatomic) Group *group;
+@property (nonatomic) User *user;
 - (IBAction)didClickSend:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *backButton;
-@property (weak, nonatomic) IBOutlet UIButton *doneButton;
-@property (weak, nonatomic) IBOutlet UITextView *composedText;
+@property (nonatomic, weak) IBOutlet UIButton *backButton;
+@property (nonatomic, weak) IBOutlet UIButton *doneButton;
+@property (nonatomic, weak) IBOutlet UITextView *composedText;
 - (IBAction)onCancelButton:(id)sender;
 
 @end

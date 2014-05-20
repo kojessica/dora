@@ -22,7 +22,7 @@
 - (NSArray *)setAllGroups;
 - (void)loadHomeView;
 - (void)createNewGroup:(NSString *)needToCreate;
-@property (strong,nonatomic) NSArray *groupsNames;
+@property (nonatomic) NSArray *groupsNames;
 
 @end
 

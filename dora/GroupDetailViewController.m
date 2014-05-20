@@ -29,19 +29,19 @@ CGFloat newHeight = 107.f;
 
 @interface GroupDetailViewController ()
 
-@property (atomic,strong) __block NSMutableArray *posts;
-@property (nonatomic,strong) CMPopTipView *popTipView;
-@property (nonatomic,strong) CMPopTipView *receivedPostCounterView;
-@property (assign, nonatomic) int selectedRow;
-@property (assign, nonatomic) int numberOfNewPosts;
-@property (nonatomic, strong) NSNumber* currentlyDisplayedPosts;
-@property (nonatomic, strong) NSNumber* numberOfResultsToFetch;
-@property (strong, nonatomic) NSIndexPath *previousHighlightedIndexPath;
+@property (atomic) __block NSMutableArray *posts;
+@property (nonatomic) CMPopTipView *popTipView;
+@property (nonatomic) CMPopTipView *receivedPostCounterView;
+@property (nonatomic, assign) int selectedRow;
+@property (nonatomic, assign) int numberOfNewPosts;
+@property (nonatomic) NSNumber* currentlyDisplayedPosts;
+@property (nonatomic) NSNumber* numberOfResultsToFetch;
+@property (nonatomic) NSIndexPath *previousHighlightedIndexPath;
 @property (nonatomic, assign) CGFloat totalViewHeight;
 @property (nonatomic, assign) BOOL reachedEnd;
 @property (nonatomic, assign) BOOL waitingForReload;
-@property (strong, nonatomic) PostCell *currentCell;
-@property (assign, nonatomic) int numberOfPosts;
+@property (nonatomic) PostCell *currentCell;
+@property (nonatomic, assign) int numberOfPosts;
 - (void)showSubscribeHelper:(NSString *)content;
 
 @end

@@ -10,8 +10,8 @@
 @interface GroupDetailCollectionViewLayout()
 
 // arrays to keep track of insert, delete index paths
-@property (nonatomic, strong) NSMutableArray *deleteIndexPaths;
-@property (nonatomic, strong) NSMutableArray *insertIndexPaths;
+@property (nonatomic) NSMutableArray *deleteIndexPaths;
+@property (nonatomic) NSMutableArray *insertIndexPaths;
 
 @end
 

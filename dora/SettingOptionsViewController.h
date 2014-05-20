@@ -11,7 +11,7 @@
 @interface SettingOptionsViewController : FXFormViewController
 
 - (IBAction)onBackToSetting:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *selectLabel;
-@property (weak, nonatomic) IBOutlet UILabel *header;
+@property (nonatomic, weak) IBOutlet UILabel *selectLabel;
+@property (nonatomic, weak) IBOutlet UILabel *header;
 
 @end

@@ -9,9 +9,9 @@
 
 @interface SearchResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *searchInputBox;
-@property (strong, nonatomic) NSArray *groupObjects;
-@property (weak, nonatomic) IBOutlet UITableView *resultsTable;
+@property (nonatomic, weak) IBOutlet UITextField *searchInputBox;
+@property (nonatomic) NSArray *groupObjects;
+@property (nonatomic, weak) IBOutlet UITableView *resultsTable;
 - (IBAction)onBackButton:(id)sender;
 
 @end

@@ -21,13 +21,13 @@
 
 @interface PostCell : UICollectionViewCell <UserActionsDelegate>
 
-@property (weak, nonatomic) IBOutlet UIView *postView;
-@property (weak, nonatomic) IBOutlet UILabel *message;
-@property (weak, nonatomic) IBOutlet UILabel *gender;
-@property (weak, nonatomic) IBOutlet UILabel *age;
-@property (weak, nonatomic) IBOutlet UILabel *posted;
-@property (assign, nonatomic) BOOL isSelected;
-@property (weak, nonatomic) Post *post;
+@property (nonatomic, weak) IBOutlet UIView *postView;
+@property (nonatomic, weak) IBOutlet UILabel *message;
+@property (nonatomic, weak) IBOutlet UILabel *gender;
+@property (nonatomic, weak) IBOutlet UILabel *age;
+@property (nonatomic, weak) IBOutlet UILabel *posted;
+@property (nonatomic, assign) BOOL isSelected;
+@property (nonatomic, weak) Post *post;
 @property (nonatomic, weak) id<DoraCollectionViewDelegate> delegate;
 - (id)cellWithPost:(Post *)post;
 -(void)unselectCell;

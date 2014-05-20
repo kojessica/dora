@@ -11,12 +11,12 @@
 
 @interface FlagViewController : UIViewController
 
-@property (strong, nonatomic) Group *group;
-@property (strong, nonatomic) Post *post;
-@property (weak, nonatomic) IBOutlet UIButton *backButton;
-@property (weak, nonatomic) IBOutlet UILabel *label;
-@property (weak, nonatomic) IBOutlet UILabel *label2;
-@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+@property (nonatomic) Group *group;
+@property (nonatomic) Post *post;
+@property (nonatomic, weak) IBOutlet UIButton *backButton;
+@property (nonatomic, weak) IBOutlet UILabel *label;
+@property (nonatomic, weak) IBOutlet UILabel *label2;
+@property (nonatomic, weak) IBOutlet UIButton *doneButton;
 - (IBAction)onBack:(id)sender;
 - (IBAction)onDone:(id)sender;
 

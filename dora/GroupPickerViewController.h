@@ -13,10 +13,10 @@
 @interface GroupPickerViewController : UIViewController <UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource, MLPAutoCompleteTextFieldDelegate>
 
 @property (weak) IBOutlet MLPAutoCompleteTextField *autocompleteTextField;
-@property (weak, nonatomic) IBOutlet UILabel *totally;
-@property (weak, nonatomic) IBOutlet UILabel *anonymous;
+@property (nonatomic, weak) IBOutlet UILabel *totally;
+@property (nonatomic, weak) IBOutlet UILabel *anonymous;
 
-@property (strong, nonatomic) NSArray *groupObjects;
+@property (nonatomic) NSArray *groupObjects;
 
 //Set this to true to prevent auto complete terms from returning instantly.
 @property (assign) BOOL simulateLatency;

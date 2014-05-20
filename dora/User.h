@@ -29,10 +29,10 @@
 @property (retain) NSNumber *age;
 @property (retain) NSNumber *gender;
 @property (retain) NSString *groupName;
-@property (strong,nonatomic) NSArray *likedPosts;
-@property (strong,nonatomic) NSArray *subscribedGroups;
-@property (strong,nonatomic) NSArray *unsubscribedGroups;
-@property (strong,nonatomic) NSArray *flaggedPosts;
+@property (nonatomic) NSArray *likedPosts;
+@property (nonatomic) NSArray *subscribedGroups;
+@property (nonatomic) NSArray *unsubscribedGroups;
+@property (nonatomic) NSArray *flaggedPosts;
 @property (retain) PFGeoPoint *location;
-@property (strong, nonatomic) NSString *backgroundImage;
+@property (nonatomic) NSString *backgroundImage;
 @end

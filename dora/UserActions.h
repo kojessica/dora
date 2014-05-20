@@ -21,13 +21,13 @@
 
 @interface UserActions : UIView <UserActionsDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *likeButton;
-@property (weak, nonatomic) IBOutlet UIButton *shareButton;
-@property (weak, nonatomic) IBOutlet UIButton *flagButton;
+@property (nonatomic, weak) IBOutlet UIButton *likeButton;
+@property (nonatomic, weak) IBOutlet UIButton *shareButton;
+@property (nonatomic, weak) IBOutlet UIButton *flagButton;
 @property (nonatomic, weak) id<UserActionsDelegate> delegate;
-@property (weak, nonatomic) IBOutlet UILabel *likeCount;
-@property (weak, nonatomic) IBOutlet UILabel *shareCount;
-@property (strong, nonatomic) Post *post;
+@property (nonatomic, weak) IBOutlet UILabel *likeCount;
+@property (nonatomic, weak) IBOutlet UILabel *shareCount;
+@property (nonatomic) Post *post;
 @property (nonatomic, assign) int rowNum;
 
 - (IBAction)onLikeButton:(id)sender;

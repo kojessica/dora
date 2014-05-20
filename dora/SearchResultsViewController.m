@@ -14,8 +14,8 @@
 
 @interface SearchResultsViewController ()
 
-@property (strong,nonatomic) NSArray *groupObjs;
-@property (strong,nonatomic) NSArray *suggestedGroups;
+@property (nonatomic) NSArray *groupObjs;
+@property (nonatomic) NSArray *suggestedGroups;
 @property (nonatomic,assign) BOOL hasResults;
 @property (nonatomic,strong) NSString *needToCreate;
 - (void)reloadResults;

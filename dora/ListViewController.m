@@ -17,11 +17,11 @@
 
 @interface ListViewController ()
 
-@property (strong, nonatomic) NSArray *listGroup;
-@property (assign, nonatomic) BOOL detailviewIsPresent;
-@property (strong, nonatomic) Post *post1;
-@property (strong, nonatomic) Post *post2;
-@property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (nonatomic) NSArray *listGroup;
+@property (nonatomic, assign) BOOL detailviewIsPresent;
+@property (nonatomic) Post *post1;
+@property (nonatomic) Post *post2;
+@property (nonatomic) UIRefreshControl *refreshControl;
 
 @end
 

@@ -20,10 +20,10 @@
 + (void)getPopularGroupsWithCompletion:(void(^) (NSArray *objects, NSError *error))completion;
 + (Group*)createGroupWithName:(NSString*)name location:(CLLocation*) location completion:(void(^)(PFObject *object, NSError *error))completion;
 @property (retain) NSString *name;
-@property (strong,nonatomic) NSString *objectId;
+@property (nonatomic) NSString *objectId;
 @property (retain) NSNumber *popularIndex;
 @property (retain) NSNumber *totalPosts;
-@property (strong, nonatomic) NSDate *updatedAt;
+@property (nonatomic) NSDate *updatedAt;
 @property (retain) PFGeoPoint *location;
-@property (strong, nonatomic) NSString *firstPost;
-@property (strong, nonatomic) NSString *secondPost;@end
+@property (nonatomic) NSString *firstPost;
+@property (nonatomic) NSString *secondPost;@end
