@@ -238,15 +238,14 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         
         [Post postWithUser:[User currentUser] group:[self group] text:post.text location:nil newKey:newkey completion:^(PFObject *result, NSError *error){
             NSUInteger count = 0;
-                        for (Post *existingPost in self.posts) {
-                                if([existingPost.newKey isEqualToString:newkey]) {
-                                        break;
-                                    }
-                                count++;
-                            }
-//            [self.posts setObject:nil atIndexedSubscript:count];
-//                        [self.posts setObject:result atIndexedSubscript:count];
-            [self.posts setObject:result atIndexedSubscript:0];
+            for (Post *existingPost in self.posts) {
+                if([existingPost.newKey isEqualToString:newkey]) {
+                    break;
+                }
+                count++;
+            }
+            [self.posts removeObjectAtIndex:count];
+            [self.posts insertObject:result atIndex:count];
         }];
     } else if ([[notification name] isEqualToString:@"flagThisPost"]) {
         
