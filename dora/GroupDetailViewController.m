@@ -75,13 +75,13 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
     _numberOfNewPosts = 0;
     _waitingForReload = NO;
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
-    [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
-    self.numberOfResultsToFetch = [NSNumber numberWithInt:20];
-    self.currentlyDisplayedPosts = [NSNumber numberWithInt:0];
-    self.postTable.collectionViewLayout = [[GroupDetailCollectionViewLayout alloc] init];
+    [_postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
+    _numberOfResultsToFetch = [NSNumber numberWithInt:20];
+    _currentlyDisplayedPosts = [NSNumber numberWithInt:0];
+    _postTable.collectionViewLayout = [[GroupDetailCollectionViewLayout alloc] init];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
-    [self.postTable addSubview:refreshControl];
+    [_postTable addSubview:refreshControl];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [[NSNotificationCenter defaultCenter]
@@ -89,23 +89,23 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
                selector:@selector(didReceivePushNotification:)
                name:UIApplicationDidReceiveRemoteNotification
                object:nil];
-    self.writeButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
-    self.groupLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
-    [self.groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.name]];
+    _writeButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
+    _groupLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
+    [_groupLabel setText:[NSString stringWithFormat: @"@%@", self.group.name]];
     if (self.group.objectId != nil) {
         [Post retrieveRecentPostsFromGroup:self.group number:[self numberOfResultsToFetch] skipNumber:[self currentlyDisplayedPosts] completion:^(NSArray *objects, NSError *error) {
             [refreshControl endRefreshing];
-            self.currentlyDisplayedPosts = [NSNumber numberWithInt:[self currentlyDisplayedPosts].intValue + (int)[objects count]];
+            _currentlyDisplayedPosts = [NSNumber numberWithInt:[self currentlyDisplayedPosts].intValue + (int)[objects count]];
             for(Post* post in objects) {
                 CGFloat postHeight = [self cellHeightWithPost:post] + [self cellLayoutHeight];
-                self.totalViewHeight += postHeight;
+                _totalViewHeight += postHeight;
             }
-            self.posts = [NSMutableArray arrayWithArray:objects];
+            _posts = [NSMutableArray arrayWithArray:objects];
             PFInstallation *currentInstallation = [PFInstallation currentInstallation];
             [currentInstallation addUniqueObject:self.group.name forKey:@"channels"];
             [currentInstallation saveInBackground];
             //[self reloadTable];
-            [self.postTable reloadData];
+            [_postTable reloadData];
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         }];
     } else {
@@ -124,10 +124,10 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
             [self showSubscribeHelper:@"Auto-followed"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"shouldUpdateFollowingGroups" object:nil];
         }
-        [self.subscribeButton setImage:[UIImage imageNamed:@"pin_icon.png"] forState:UIControlStateSelected];
-        [self.subscribeButton setSelected:YES];
+        [_subscribeButton setImage:[UIImage imageNamed:@"pin_icon.png"] forState:UIControlStateSelected];
+        [_subscribeButton setSelected:YES];
     } else {
-        [self.subscribeButton setSelected:NO];
+        [_subscribeButton setSelected:NO];
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self

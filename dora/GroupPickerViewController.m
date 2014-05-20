@@ -46,21 +46,21 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHideWithNotification:) name:UIKeyboardDidHideNotification object:nil];
     
-    self.autocompleteTextField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
-    self.autocompleteTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-    self.testWithAutoCompleteObjectsInsteadOfStrings = YES;
+    _autocompleteTextField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
+    _autocompleteTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    _testWithAutoCompleteObjectsInsteadOfStrings = YES;
     [self setAllGroups];
     
-    [self.autocompleteTextField setAutoCompleteTableAppearsAsKeyboardAccessory:NO];
-    [self.autocompleteTextField setBorderStyle:UITextBorderStyleRoundedRect];
-    [self.autocompleteTextField setAutoCompleteTableBackgroundColor:[UIColor whiteColor]];
-    [self.autocompleteTextField setAutoCompleteTableCellTextColor:[UIColor colorWithRed:50/255 green:50/255 blue:50/255 alpha:1]];
-    self.totally.font = [UIFont fontWithName:@"ProximaNovaBold" size:20.f];
-    self.anonymous.font = [UIFont fontWithName:@"ProximaNovaRegular" size:20.f];
+    [_autocompleteTextField setAutoCompleteTableAppearsAsKeyboardAccessory:NO];
+    [_autocompleteTextField setBorderStyle:UITextBorderStyleRoundedRect];
+    [_autocompleteTextField setAutoCompleteTableBackgroundColor:[UIColor whiteColor]];
+    [_autocompleteTextField setAutoCompleteTableCellTextColor:[UIColor colorWithRed:50/255 green:50/255 blue:50/255 alpha:1]];
+    _totally.font = [UIFont fontWithName:@"ProximaNovaBold" size:20.f];
+    _anonymous.font = [UIFont fontWithName:@"ProximaNovaRegular" size:20.f];
     [self setBackgroundImage];
     
     //set location of the textfield
-    self.autocompleteTextField.frame = CGRectMake(self.autocompleteTextField.frame.origin.x, self.view.frame.size.height, self.autocompleteTextField.frame.size.width, self.autocompleteTextField.frame.size.height);
+    _autocompleteTextField.frame = CGRectMake(self.autocompleteTextField.frame.origin.x, self.view.frame.size.height, self.autocompleteTextField.frame.size.width, self.autocompleteTextField.frame.size.height);
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveNotification:)
                                                  name:@"goHome"

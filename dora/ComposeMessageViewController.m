@@ -28,10 +28,10 @@
 {
     [super viewDidLoad];
     _composedText.delegate = self;
-    [self.backButton setTitle:[NSString stringWithFormat:@" @%@", self.group.name] forState:UIControlStateNormal];
-    self.backButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:15];
-    self.doneButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:13];
-    [self.composedText becomeFirstResponder];
+    [_backButton setTitle:[NSString stringWithFormat:@" @%@", self.group.name] forState:UIControlStateNormal];
+    _backButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:15];
+    _doneButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:13];
+    [_composedText becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning

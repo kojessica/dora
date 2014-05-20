@@ -22,14 +22,14 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.view.backgroundColor = [UIColor colorWithRed:228/255.0f green:228/255.0f blue:228/255.0f alpha:1.0f];
-        [self.hide1 removeFromSuperview];
-        [self.hide2 removeFromSuperview];
-        [self.hide3 removeFromSuperview];
-        [self.hide4 removeFromSuperview];
-        [self.hide5 removeFromSuperview];
-        [self.hide6 removeFromSuperview];
-        [self.hide7 removeFromSuperview];
-        [self.hide8 removeFromSuperview];
+        [_hide1 removeFromSuperview];
+        [_hide2 removeFromSuperview];
+        [_hide3 removeFromSuperview];
+        [_hide4 removeFromSuperview];
+        [_hide5 removeFromSuperview];
+        [_hide6 removeFromSuperview];
+        [_hide7 removeFromSuperview];
+        [_hide8 removeFromSuperview];
     }
     return self;
 }
@@ -38,20 +38,20 @@
 {
     [super viewDidLoad];
     _formController = [[FXFormController alloc] init];
-    self.formController.tableView = self.tableView;
-    self.formController.delegate = self;
-    self.formController.form = [[SettingForm alloc] init];
-    [self.notifySwitch setOn:YES animated:YES];
-    [self.locationSwitch setOn:YES animated:YES];
-    self.header.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
-    self.showLabel.font = [UIFont fontWithName:@"ProximaNovaRegular" size:13];
-    self.showLabel2.font = [UIFont fontWithName:@"ProximaNovaRegular" size:13];
-    self.bgA.layer.cornerRadius = 13;
-    self.bgA.clipsToBounds = YES;
-    self.bgB.layer.cornerRadius = 13;
-    self.bgB.clipsToBounds = YES;
-    self.bgC.layer.cornerRadius = 13;
-    self.bgC.clipsToBounds = YES;
+    _formController.tableView = self.tableView;
+    _formController.delegate = self;
+    _formController.form = [[SettingForm alloc] init];
+    [_notifySwitch setOn:YES animated:YES];
+    [_locationSwitch setOn:YES animated:YES];
+    _header.font = [UIFont fontWithName:@"ProximaNovaBold" size:16];
+    _showLabel.font = [UIFont fontWithName:@"ProximaNovaRegular" size:13];
+    _showLabel2.font = [UIFont fontWithName:@"ProximaNovaRegular" size:13];
+    _bgA.layer.cornerRadius = 13;
+    _bgA.clipsToBounds = YES;
+    _bgB.layer.cornerRadius = 13;
+    _bgB.clipsToBounds = YES;
+    _bgC.layer.cornerRadius = 13;
+    _bgC.clipsToBounds = YES;
     
     User *currentUser = [User currentUser];
     if ([currentUser.backgroundImage isEqualToString:@"C"])
