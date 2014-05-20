@@ -14,9 +14,9 @@
 - (NSArray *)fields
 {
     User *currentUser = [User currentUser];
-    self.gender = [currentUser.gender intValue];
-    self.age = [currentUser.age unsignedIntegerValue];
-    self.nickname = currentUser.nickname;
+    _gender = [currentUser.gender intValue];
+    _age = [currentUser.age unsignedIntegerValue];
+    _nickname = currentUser.nickname;
     
     return @[
              

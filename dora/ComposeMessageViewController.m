@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.composedText.delegate = self;
+    _composedText.delegate = self;
     [self.backButton setTitle:[NSString stringWithFormat:@" @%@", self.group.name] forState:UIControlStateNormal];
     self.backButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:15];
     self.doneButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:13];
@@ -49,16 +49,13 @@
 }
 
 - (IBAction)didClickSend:(id)sender {
-    NSLog(@"%@", [self group]);
-    NSLog(@"%@", [self composedText].text);
-    NSLog(@"%@", [[LocationController sharedLocationController] locationManager].location);
+//    NSLog(@"%@", [self group]);
+//    NSLog(@"%@", [self composedText].text);
+//    NSLog(@"%@", [[LocationController sharedLocationController] locationManager].location);
     
     if ([[self composedText].text length] > 0) {
         NSString *newkey = [Post setRandomKey];
-        
-//        [Post postWithUser:[User currentUser] group:[self group] text:[self composedText].text location:[[LocationController sharedLocationController] locationManager].location newKey:newkey];
         [self dismissViewControllerAnimated:YES completion:nil];
-        
         
         Post *post = [Post object];
         post.text = [self composedText].text;

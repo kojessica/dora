@@ -34,7 +34,7 @@ static const float yOffset = 68.f;
 	[super viewDidLoad];
     
 	CGRect rect = CGRectMake(0.0f, yOffset, self.view.bounds.size.width, self.tabBarHeight);
-	self.tabButtonsContainerView = [[UIView alloc] initWithFrame:rect];
+	_tabButtonsContainerView = [[UIView alloc] initWithFrame:rect];
 	[self.view addSubview:self.tabButtonsContainerView];
     
 	rect.origin.y = self.tabBarHeight + yOffset;
@@ -43,18 +43,18 @@ static const float yOffset = 68.f;
 	self.contentContainerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	[self.view addSubview:self.contentContainerView];
     
-    self.indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width / [self.viewControllers count], 5.f)];
+    _indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width / [self.viewControllers count], 5.f)];
     self.indicatorView.layer.backgroundColor =  [[UIColor colorWithRed:82/255.0f green:97/255.0f blue:76/255.0f alpha:1.0f] CGColor];
 
 	[self.view addSubview:self.indicatorView];
     
-    self.searchInputBox.delegate = self;
+    _searchInputBox.delegate = self;
     [self.searchInputBox resignFirstResponder];
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 8, 10)];
-    self.searchInputBox.leftView = paddingView;
-    self.searchInputBox.leftViewMode = UITextFieldViewModeAlways;
-    self.searchInputBox.font = [UIFont fontWithName:@"ProximaNovaBold" size:11];
-    self.isPresent = YES;
+    _searchInputBox.leftView = paddingView;
+    _searchInputBox.leftViewMode = UITextFieldViewModeAlways;
+    _searchInputBox.font = [UIFont fontWithName:@"ProximaNovaBold" size:11];
+    _isPresent = YES;
     
     CGRect currentframe = self.settingButton.frame;
     [self.settingButton setFrame: CGRectMake(currentframe.origin.x, currentframe.origin.y, 38, 44)];

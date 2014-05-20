@@ -35,7 +35,7 @@
     self.doneButton.titleLabel.font = [UIFont fontWithName:@"ProximaNovaBold" size:13];
     self.label.font = [UIFont fontWithName:@"ProximaNovaRegular" size:14];
     self.label2.font = [UIFont fontWithName:@"ProximaNovaRegular" size:14];
-    self.isSelected = NO;
+    _isSelected = NO;
 }
 
 - (void)didReceiveMemoryWarning

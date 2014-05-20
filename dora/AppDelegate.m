@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, TDBButtonTag) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [Post registerSubclass];
     [Group registerSubclass];
     [User registerSubclass];
@@ -61,7 +61,7 @@ typedef NS_ENUM(NSInteger, TDBButtonTag) {
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabBarController];
         nav.navigationBar.hidden = YES;
         
-        self.window.rootViewController = nav;
+        _window.rootViewController = nav;
         [self.window makeKeyAndVisible];
     } else {
         [User setCurrentUser];

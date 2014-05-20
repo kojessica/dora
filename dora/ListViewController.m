@@ -27,12 +27,12 @@
 @end
 
 @implementation ListViewController
-
+@synthesize refreshControl = _refreshControl;
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"GroupCell" bundle:nil] forCellReuseIdentifier:@"GroupCell"];
-    self.refreshControl = [[UIRefreshControl alloc] init];
+    _refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:self.refreshControl];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -127,7 +127,7 @@
     
     GroupCell *cell = (GroupCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    [cell setGroup:[self.listGroup objectAtIndex:(NSUInteger)indexPath.row]];
+    [cell initWithGroup:[self.listGroup objectAtIndex:(NSUInteger)indexPath.row]];
     [cell setBackgroundColor:[UIColor clearColor]];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 	return cell;

@@ -67,13 +67,13 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.postTable.delegate = self;
-    self.postTable.dataSource = self;
-    self.previousHighlightedIndexPath = nil;
-    self.selectedRow = -1;
-    self.totalViewHeight = 0;
-    self.numberOfNewPosts = 0;
-    self.waitingForReload = NO;
+    _postTable.delegate = self;
+    _postTable.dataSource = self;
+    _previousHighlightedIndexPath = nil;
+    _selectedRow = -1;
+    _totalViewHeight = 0;
+    _numberOfNewPosts = 0;
+    _waitingForReload = NO;
     UINib *customNib = [UINib nibWithNibName:@"PostCell" bundle:nil];
     [self.postTable registerNib:customNib forCellWithReuseIdentifier:@"PostCell"];
     self.numberOfResultsToFetch = [NSNumber numberWithInt:20];
@@ -237,13 +237,13 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
         [self insertGhostPost:post];
         
         [Post postWithUser:[User currentUser] group:[self group] text:post.text location:nil newKey:newkey completion:^(PFObject *result, NSError *error){
-//            NSUInteger count = 0;
-//                        for (Post *existingPost in self.posts) {
-//                                if([existingPost.newKey isEqualToString:newkey]) {
-//                                        break;
-//                                    }
-//                                count++;
-//                            }
+            NSUInteger count = 0;
+                        for (Post *existingPost in self.posts) {
+                                if([existingPost.newKey isEqualToString:newkey]) {
+                                        break;
+                                    }
+                                count++;
+                            }
 //            [self.posts setObject:nil atIndexedSubscript:count];
 //                        [self.posts setObject:result atIndexedSubscript:count];
             [self.posts setObject:result atIndexedSubscript:0];

@@ -19,5 +19,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lastUpdated;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (weak, nonatomic) IBOutlet UIView *topView;
-- (void)setGroup:(Group*)group;
+- (void)initWithGroup:(Group*)group;
 @end

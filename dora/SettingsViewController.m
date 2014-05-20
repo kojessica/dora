@@ -37,7 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.formController = [[FXFormController alloc] init];
+    _formController = [[FXFormController alloc] init];
     self.formController.tableView = self.tableView;
     self.formController.delegate = self;
     self.formController.form = [[SettingForm alloc] init];

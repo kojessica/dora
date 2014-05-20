@@ -25,37 +25,37 @@
     // Configure the view for the selected state
 }
 
-- (void)setGroup:(Group*)group
+- (void)initWithGroup:(Group*)group
 {
    
-    self.name.font = [UIFont fontWithName:@"ProximaNovaBold" size:15];
-    self.firstPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:15];
-    self.secondPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:15];
-    self.totalPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
-    self.lastUpdated.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
+    _name.font = [UIFont fontWithName:@"ProximaNovaBold" size:15];
+    _firstPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:15];
+    _secondPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:15];
+    _totalPost.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
+    _lastUpdated.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
     
-    self.name.text = group.name;
-    self.name.text = [NSString stringWithFormat:(@"@%@"), group.name];
-    self.totalPost.text = [group.totalPosts stringValue];
-    self.lastUpdated.text = [Timestamp relativeTimeWithTimestamp:group.updatedAt];
+    _name.text = group.name;
+    _name.text = [NSString stringWithFormat:(@"@%@"), group.name];
+    _totalPost.text = [group.totalPosts stringValue];
+    _lastUpdated.text = [Timestamp relativeTimeWithTimestamp:group.updatedAt];
     
     if (group.firstPost) {
-        self.firstPost.text = [NSString stringWithFormat:(@"\"%@\""), group.firstPost];
+        _firstPost.text = [NSString stringWithFormat:(@"\"%@\""), group.firstPost];
     } else {
-        self.firstPost.text = @"";
+        _firstPost.text = @"";
     }
     
     if (group.secondPost) {
-        self.secondPost.text = [NSString stringWithFormat:(@"\"%@\""), group.secondPost];
+        _secondPost.text = [NSString stringWithFormat:(@"\"%@\""), group.secondPost];
     } else {
-        self.secondPost.text = @"";
+        _secondPost.text = @"";
     }
     
-    self.topView.layer.cornerRadius = 2;
-    self.topView.layer.masksToBounds = YES;
+    _topView.layer.cornerRadius = 2;
+    _topView.layer.masksToBounds = YES;
     
-    self.bottomView.layer.cornerRadius = 2;
-    self.bottomView.layer.masksToBounds = YES;
+    _bottomView.layer.cornerRadius = 2;
+    _bottomView.layer.masksToBounds = YES;
 }
 
 @end

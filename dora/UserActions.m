@@ -19,9 +19,9 @@
         NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"UserActions" owner:self options:nil];
         id mainView = [subviewArray objectAtIndex:0];
         [self addSubview:mainView];
-        self.likeCount.text = @"";
-        self.likeCount.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
-        self.shareCount.text = @"";
+        _likeCount.text = @"";
+        _likeCount.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
+        _shareCount.text = @"";
     }
     return self;
 }
@@ -32,8 +32,7 @@
         [User updateLikedPosts:self.post.objectId ByIncrement:NO];
         float decremented = [self.post.likes integerValue] - 1;
         int decreInt = (int) decremented;
-        self.likeCount.text = [NSString stringWithFormat:(@"%d"), decreInt];
-        
+        [_likeCount setText:[NSString stringWithFormat:(@"%d"), decreInt]];
         [sender setImage:[UIImage imageNamed:@"heart_white_empty.png"] forState:UIControlStateNormal];
         [sender setSelected:NO];
         [self.delegate didUnlikePost:self.post];
@@ -43,8 +42,7 @@
         float incremented = [self.post.likes integerValue] + 1;
         int increInt = (int) incremented;
         
-        self.likeCount.text = [NSString stringWithFormat:(@"%d"), increInt];
-        
+        [_likeCount setText:[NSString stringWithFormat:(@"%d"), increInt]];
         [sender setImage:[UIImage imageNamed:@"heart_selected_icon.png"] forState:UIControlStateSelected];
         
         UIButton *button = (UIButton*)sender;
@@ -75,11 +73,11 @@
 }
 
 - (IBAction)onShareButton:(id)sender {
-    [self.delegate shareThisPost:self.post];
+    [_delegate shareThisPost:self.post];
 }
 
 - (IBAction)onFlagButton:(id)sender {
-    [self.delegate flagThisPost:self.post WithSender:sender];
+    [_delegate flagThisPost:self.post WithSender:sender];
 }
 
 @end

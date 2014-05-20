@@ -43,7 +43,7 @@ static unsigned int maximumNumCharacters = 20;
     self.resultsTable.delegate = self;
     self.resultsTable.dataSource = self;
     self.searchInputBox.delegate = self;
-    self.hasResults = YES;
+    _hasResults = YES;
     
     UINib* myCellNib = [UINib nibWithNibName:@"CustomSearchCell" bundle:nil];
     [self.resultsTable registerNib:myCellNib forCellReuseIdentifier:@"CustomSearchCell"];

@@ -97,7 +97,7 @@
     GroupCell *cell = (GroupCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [cell setGroup:[self.listGroup objectAtIndex:(NSUInteger)indexPath.row]];
+    [cell initWithGroup:[self.listGroup objectAtIndex:(NSUInteger)indexPath.row]];
     
     cell.name.text = [NSString stringWithFormat:(@"#%zd  %@"), (NSInteger)(indexPath.row+1), cell.name.text];
     [cell setBackgroundColor:[UIColor clearColor]];

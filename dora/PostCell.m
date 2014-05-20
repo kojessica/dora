@@ -34,8 +34,8 @@ CGFloat cellNewHeight = 107.f;
     //TODO(jessicako): replace currentUser with getUserInfoById
     _post = post;
     _postView.backgroundColor = [UIColor whiteColor];
-    if (self.postView.frame.size.width > cellDefaultWidth) {
-        self.postView.frame = CGRectMake(8.f, 8.f, self.postView.frame.size.width - cellWidthOffset, self.postView.frame.size.height - cellHeightOffset);
+    if (_postView.frame.size.width > cellDefaultWidth) {
+        _postView.frame = CGRectMake(8.f, 8.f, self.postView.frame.size.width - cellWidthOffset, self.postView.frame.size.height - cellHeightOffset);
     }
     NSLog(@"postViewframe in a normal cell = %@\n", NSStringFromCGRect(self.postView.frame));
     
@@ -43,14 +43,14 @@ CGFloat cellNewHeight = 107.f;
 
     User *currentUser = [User currentUser];
     NSLog(@"%@", currentUser);
-    self.message.font = [UIFont fontWithName:@"ProximaNovaRegular" size:14];
-    self.age.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
-    self.gender.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
-    self.posted.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
+    _message.font = [UIFont fontWithName:@"ProximaNovaRegular" size:14];
+    _age.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
+    _gender.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
+    _posted.font = [UIFont fontWithName:@"ProximaNovaRegular" size:11];
     
-    self.message.text = post.text;
-    self.age.text = [[post age] stringValue];
-    self.posted.text = [NSString stringWithFormat:(@"%@"), [Timestamp relativeTimeWithTimestamp:post.updatedAt]];
+    _message.text = post.text;
+    _age.text = [[post age] stringValue];
+    _posted.text = [NSString stringWithFormat:(@"%@"), [Timestamp relativeTimeWithTimestamp:post.updatedAt]];
     
     NSNumber *gender = [post gender];
     if (gender) {
@@ -61,8 +61,8 @@ CGFloat cellNewHeight = 107.f;
         }
     }
     
-    self.postView.layer.cornerRadius = 2;
-    self.postView.layer.masksToBounds = YES;
+    _postView.layer.cornerRadius = 2;
+    _postView.layer.masksToBounds = YES;
     UserActions *tempActionBar = (UserActions *)[self viewWithTag:100];
     if(tempActionBar)
         [tempActionBar removeFromSuperview];
