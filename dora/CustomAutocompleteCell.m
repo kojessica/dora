@@ -5,9 +5,8 @@
 //  Created by Jessica Ko on 4/8/14.
 //  Copyright (c) 2014 Jessica Ko. All rights reserved.
 //
-
+@import QuartzCore;
 #import "CustomAutocompleteCell.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation CustomAutocompleteCell
 

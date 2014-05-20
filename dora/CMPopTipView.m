@@ -22,9 +22,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-
+@import QuartzCore;
 #import "CMPopTipView.h"
-#import <QuartzCore/QuartzCore.h>
 
 @interface CMPopTipView ()
 {

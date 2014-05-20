@@ -5,9 +5,8 @@
 //  Created by Benjamin Chang on 4/9/14.
 //  Copyright (c) 2014 Jessica Ko. All rights reserved.
 //
-
-#import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
+@import Foundation;
+@import CoreLocation;
 
 // protocol for sending location updates to another view controller
 @protocol LocationControllerDelegate

@@ -5,7 +5,7 @@
 //  Created by Jessica Ko on 4/23/14.
 //  Copyright (c) 2014 Jessica Ko. All rights reserved.
 //
-
+@import QuartzCore;
 #import "PopularListViewController.h"
 #import "TabsController.h"
 #import "GroupCell.h"
@@ -14,7 +14,6 @@
 #import "MBProgressHUD.h"
 #import "AFNetworking.h"
 #import "Post.h"
-#import <QuartzCore/QuartzCore.h>
 
 @interface PopularListViewController ()
 

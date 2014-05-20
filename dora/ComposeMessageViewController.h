@@ -5,8 +5,7 @@
 //  Created by Benjamin Chang on 4/11/14.
 //  Copyright (c) 2014 Jessica Ko. All rights reserved.
 //
-
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "User.h"
 #import "Parse/Parse.h"
 #import "Group.h"

@@ -38,8 +38,7 @@
  
  */
 
-
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import <float.h>
 
 // used to indicate that stringB is nil

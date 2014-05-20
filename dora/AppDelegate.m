@@ -5,7 +5,7 @@
 //  Created by Jessica Ko on 4/1/14.
 //  Copyright (c) 2014 Jessica Ko. All rights reserved.
 //
-
+@import QuartzCore;
 #import "AppDelegate.h"
 #import "TDBWalkthrough.h"
 #import <Parse/Parse.h>
@@ -13,7 +13,6 @@
 #import "Group.h"
 #import "Post.h"
 #import "GroupPickerViewController.h"
-#import <QuartzCore/QuartzCore.h>
 #import "LocationController.h"
 #import "ListViewController.h"
 #import "PopularListViewController.h"

@@ -32,7 +32,7 @@
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wobjc-missing-property-synthesis"
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 
 #ifndef FXForms

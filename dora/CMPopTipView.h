@@ -85,8 +85,7 @@
 	}
  
  */
-
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 typedef enum {
     PointDirectionAny = 0,

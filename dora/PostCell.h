@@ -5,8 +5,8 @@
 //  Created by Jessica Ko on 4/15/14.
 //  Copyright (c) 2014 Jessica Ko. All rights reserved.
 //
+@import UIKit;
 
-#import <UIKit/UIKit.h>
 #import "Post.h"
 #import "UserActions.h"
 

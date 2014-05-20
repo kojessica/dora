@@ -5,8 +5,7 @@
 //  Created by Jessica Ko on 4/18/14.
 //  Copyright (c) 2014 Jessica Ko. All rights reserved.
 //
-
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface Timestamp : NSObject
 

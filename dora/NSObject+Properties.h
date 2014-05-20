@@ -5,8 +5,7 @@
 //  Created by Martin Rybak on 3/7/14.
 //  Adapted from https://github.com/greenisus/NSObject-NSCoding
 //
-
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSObject (Properties)
 

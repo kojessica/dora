@@ -5,9 +5,8 @@
 //  Created by Jessica Ko on 4/1/14.
 //  Copyright (c) 2014 Jessica Ko. All rights reserved.
 //
-
-#import <Foundation/Foundation.h>
-#import "CoreLocation/CoreLocation.h"
+@import Foundation;
+@import CoreLocation;
 #import "Parse/Parse.h"
 #import "Parse/PFObject+subclass.h"
 #import "Group.h"
