@@ -611,7 +611,7 @@ NSString * const UIApplicationDidReceiveRemoteNotification = @"NewPost";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PostCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostCell" forIndexPath:indexPath];
-    [self doAnim:cell];
+   // [self doAnim:cell];
     [cell cellWithPost:[self.posts objectAtIndex:(NSUInteger)indexPath.row]];
     cell.delegate = self;
     if(self.selectedRow == indexPath.row) {

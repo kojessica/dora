@@ -11,7 +11,10 @@
 @property (nonatomic, assign) CGPoint center;
 @property (nonatomic, assign) CGFloat radius;
 @property (nonatomic, assign) NSInteger cellCount;
+@property (nonatomic, strong) UIDynamicAnimator *dynamicAnimator;
 
+@property (nonatomic, strong) NSMutableSet *visibleIndexPathsSet;
+@property (nonatomic, assign) CGFloat latestDelta;
 @property (nonatomic, readonly) CGFloat maxParallaxOffset;
 
 @end
